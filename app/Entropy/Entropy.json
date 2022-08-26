@@ -5,15 +5,17 @@
     "App": 1,
     "Button1": 6,
     "HtmlText1": 5,
+    "Label1": 8,
     "SendButton": 3,
+    "Template": 7,
     "TextInput1": 4
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "08/25/2022 11:05:11",
+  "HeaderLastSavedDateTimeUTC": "08/26/2022 09:53:05",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
-    "6ea35d85-93af-4c5d-9a7a-bf033dd7f190": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/25f3b8a1cf6946ff965b1e5325b331eb\""
+    "6ea35d85-93af-4c5d-9a7a-bf033dd7f190": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/09d4f67e2832421abcc61581d26fd78c\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {},
@@ -29,27 +31,30 @@
   "OrderXMLTemplate": {
     "button": 2,
     "htmlViewer": 1,
+    "label": 3,
     "text": 0
   },
   "PublishOrderIndices": {
     "App": 0,
     "Button1": 2,
     "HtmlText1": 1,
+    "Label1": 0,
     "SendButton": 0,
+    "Template": 0,
     "TextInput1": 0
   },
   "ResourcesJsonIndices": {},
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.9641842,
+    "AnalysisLoadTime": 0.8714456,
     "ControlCount": {
       "button": 1,
       "htmlViewer": 1,
       "screen": 1,
       "text": 1
     },
-    "DeserializationLoadTime": 1.0278773,
+    "DeserializationLoadTime": 0.8590189,
     "ErrorCount": 0
   },
   "WasLocalDatabaseReferencesEmpty": true
