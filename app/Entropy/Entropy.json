@@ -1,23 +1,152 @@
 {
-  "ComponentIndexes": {},
+  "ComponentIndexes": {
+    "SkillsFootprint": 3
+  },
   "ControlUniqueGuids": {},
-  "ControlUniqueIds": {},
+  "ControlUniqueIds": {
+    "App": 1,
+    "Button1": 7,
+    "Group1": 18,
+    "Group1_1": 34,
+    "Group1_2": 38,
+    "Group1_3": 42,
+    "Group1_4": 46,
+    "Home": 3,
+    "HtmlText1": 6,
+    "Image1": 14,
+    "Image1_1": 31,
+    "Image1_2": 35,
+    "Image1_3": 39,
+    "Image1_4": 43,
+    "Label1": 9,
+    "Label2": 11,
+    "Label3": 12,
+    "Label4": 16,
+    "Label4_1": 33,
+    "Label4_2": 37,
+    "Label4_3": 41,
+    "Label4_4": 45,
+    "Label5": 17,
+    "Label5_1": 32,
+    "Label5_2": 36,
+    "Label5_3": 40,
+    "Label5_4": 44,
+    "SendButton": 4,
+    "SkillsFootprint": 10,
+    "Template": 8,
+    "TextInput1": 5
+  },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
+  "HeaderLastSavedDateTimeUTC": "08/26/2022 10:43:45",
   "IsLegacyComponentAllowGlobalScopeCase": false,
-  "LocalConnectionIDReferences": {},
+  "LocalConnectionIDReferences": {
+    "6ea35d85-93af-4c5d-9a7a-bf033dd7f190": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/09d4f67e2832421abcc61581d26fd78c\""
+  },
   "LocalDatabaseReferencesAsEmpty": false,
-  "LocalResourceFileNames": {},
-  "LocalResourceRootPaths": {},
-  "OrderComponentMetadata": {},
-  "OrderComponentTemplate": {},
-  "OrderDataSource": {},
-  "OrderGroupControls": {},
+  "LocalResourceFileNames": {
+    "np_research_1762317_FF9500 Copy": "e8843eea-bc58-408a-a0b6-abb27b99626f.svg"
+  },
+  "LocalResourceRootPaths": {
+    "np_research_1762317_FF9500 Copy": "https://docserverpwaprodwus.blob.core.windows.net/dbd68f34-1dce-43ae-ad7f-86c6a69a9160-1/resource/4a747cd6-33e2-4e46-bc18-b8c602578b35.svg?sv=2017-04-17&sr=b&sig=3AT%2BqD%2FZJT2wjV5%2BjjPf6QEiuFQQ0Y92zBo7qXXarTU%3D&spr=https&se=2022-08-27T10%3A32%3A49Z&sp=r"
+  },
+  "OrderComponentMetadata": {
+    "503dd4008be042fa94fecfcc30a76234": 0
+  },
+  "OrderComponentTemplate": {
+    "503dd4008be042fa94fecfcc30a76234": 0
+  },
+  "OrderDataSource": {
+    "Office365Outlook": 0
+  },
+  "OrderGroupControls": {
+    "Group1": {
+      "Image1": 0,
+      "Label4": 2,
+      "Label5": 1
+    },
+    "Group1_1": {
+      "Image1_1": 0,
+      "Label4_1": 2,
+      "Label5_1": 1
+    },
+    "Group1_2": {
+      "Image1_2": 0,
+      "Label4_2": 2,
+      "Label5_2": 1
+    },
+    "Group1_3": {
+      "Image1_3": 0,
+      "Label4_3": 2,
+      "Label5_3": 1
+    },
+    "Group1_4": {
+      "Image1_4": 0,
+      "Label4_4": 2,
+      "Label5_4": 1
+    }
+  },
   "OrderPcfTemplate": {},
   "OrderTemplate": {},
-  "OrderXMLTemplate": {},
-  "PublishOrderIndices": {},
-  "ResourcesJsonIndices": {},
+  "OrderXMLTemplate": {
+    "button": 2,
+    "htmlViewer": 1,
+    "image": 4,
+    "label": 3,
+    "text": 0
+  },
+  "PublishOrderIndices": {
+    "App": 0,
+    "Button1": 6,
+    "Group1": 0,
+    "Group1_1": 0,
+    "Group1_2": 0,
+    "Group1_3": 0,
+    "Group1_4": 0,
+    "Home": 2,
+    "HtmlText1": 5,
+    "Image1": 0,
+    "Image1_1": 0,
+    "Image1_2": 0,
+    "Image1_3": 0,
+    "Image1_4": 0,
+    "Label1": 8,
+    "Label2": 0,
+    "Label3": 0,
+    "Label4": 0,
+    "Label4_1": 0,
+    "Label4_2": 0,
+    "Label4_3": 0,
+    "Label4_4": 0,
+    "Label5": 0,
+    "Label5_1": 0,
+    "Label5_2": 0,
+    "Label5_3": 0,
+    "Label5_4": 0,
+    "SendButton": 3,
+    "SkillsFootprint": 0,
+    "Template": 7,
+    "TextInput1": 4
+  },
+  "ResourcesJsonIndices": {
+    "Image-np_research_1762317_FF9500 Copy": 1,
+    "Image-SampleImage": 0
+  },
   "RuleScreenIdWithoutScreen": {},
-  "TemplateVersions": {}
+  "TemplateVersions": {},
+  "VolatileProperties": {
+    "AnalysisLoadTime": 0.8686234,
+    "ControlCount": {
+      "button": 1,
+      "group": 7,
+      "htmlViewer": 1,
+      "image": 7,
+      "label": 15,
+      "screen": 3,
+      "text": 1
+    },
+    "DeserializationLoadTime": 0.3669121,
+    "ErrorCount": 0
+  },
+  "WasLocalDatabaseReferencesEmpty": true
 }
