@@ -1,61 +1,23 @@
 {
   "ComponentIndexes": {},
   "ControlUniqueGuids": {},
-  "ControlUniqueIds": {
-    "App": 1,
-    "Button1": 6,
-    "HtmlText1": 5,
-    "Label1": 8,
-    "SendButton": 3,
-    "Template": 7,
-    "TextInput1": 4
-  },
+  "ControlUniqueIds": {},
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "08/26/2022 09:53:06",
   "IsLegacyComponentAllowGlobalScopeCase": false,
-  "LocalConnectionIDReferences": {
-    "6ea35d85-93af-4c5d-9a7a-bf033dd7f190": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/09d4f67e2832421abcc61581d26fd78c\""
-  },
+  "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {},
   "LocalResourceRootPaths": {},
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
-  "OrderDataSource": {
-    "Office365Outlook": 0
-  },
+  "OrderDataSource": {},
   "OrderGroupControls": {},
   "OrderPcfTemplate": {},
   "OrderTemplate": {},
-  "OrderXMLTemplate": {
-    "button": 2,
-    "htmlViewer": 1,
-    "label": 3,
-    "text": 0
-  },
-  "PublishOrderIndices": {
-    "App": 0,
-    "Button1": 2,
-    "HtmlText1": 1,
-    "Label1": 0,
-    "SendButton": 0,
-    "Template": 0,
-    "TextInput1": 0
-  },
+  "OrderXMLTemplate": {},
+  "PublishOrderIndices": {},
   "ResourcesJsonIndices": {},
   "RuleScreenIdWithoutScreen": {},
-  "TemplateVersions": {},
-  "VolatileProperties": {
-    "AnalysisLoadTime": 0.8714456,
-    "ControlCount": {
-      "button": 1,
-      "htmlViewer": 1,
-      "screen": 1,
-      "text": 1
-    },
-    "DeserializationLoadTime": 0.8590189,
-    "ErrorCount": 0
-  },
-  "WasLocalDatabaseReferencesEmpty": true
+  "TemplateVersions": {}
 }
