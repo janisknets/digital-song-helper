@@ -1,23 +1,79 @@
 {
-  "ComponentIndexes": {},
+  "ComponentIndexes": {
+    "Component1": 3
+  },
   "ControlUniqueGuids": {},
-  "ControlUniqueIds": {},
+  "ControlUniqueIds": {
+    "App": 1,
+    "Button1": 7,
+    "Component1": 10,
+    "ContainerLeft": 17,
+    "ContainerRight": 19,
+    "Home": 3,
+    "HtmlText1": 6,
+    "Label1": 9,
+    "Label2_1": 20,
+    "SendButton": 4,
+    "Template": 8,
+    "TextInput1": 5
+  },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
+  "HeaderLastSavedDateTimeUTC": "08/26/2022 10:37:39",
   "IsLegacyComponentAllowGlobalScopeCase": false,
-  "LocalConnectionIDReferences": {},
+  "LocalConnectionIDReferences": {
+    "6ea35d85-93af-4c5d-9a7a-bf033dd7f190": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/10b696a9961641d7b68bd90b3d41e9a4\""
+  },
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {},
   "LocalResourceRootPaths": {},
-  "OrderComponentMetadata": {},
-  "OrderComponentTemplate": {},
-  "OrderDataSource": {},
+  "OrderComponentMetadata": {
+    "73261c08fdb74db7aeb4a54be08108bd": 0
+  },
+  "OrderComponentTemplate": {
+    "73261c08fdb74db7aeb4a54be08108bd": 0
+  },
+  "OrderDataSource": {
+    "Office365Outlook": 0
+  },
   "OrderGroupControls": {},
   "OrderPcfTemplate": {},
   "OrderTemplate": {},
-  "OrderXMLTemplate": {},
-  "PublishOrderIndices": {},
+  "OrderXMLTemplate": {
+    "button": 2,
+    "groupContainer": 4,
+    "htmlViewer": 1,
+    "label": 3,
+    "text": 0
+  },
+  "PublishOrderIndices": {
+    "App": 0,
+    "Button1": 2,
+    "Component1": 0,
+    "ContainerLeft": 4,
+    "ContainerRight": 6,
+    "Home": 2,
+    "HtmlText1": 1,
+    "Label1": 3,
+    "Label2_1": 5,
+    "SendButton": 3,
+    "Template": 7,
+    "TextInput1": 0
+  },
   "ResourcesJsonIndices": {},
   "RuleScreenIdWithoutScreen": {},
-  "TemplateVersions": {}
+  "TemplateVersions": {},
+  "VolatileProperties": {
+    "AnalysisLoadTime": 0.8353968,
+    "ControlCount": {
+      "button": 1,
+      "htmlViewer": 1,
+      "label": 2,
+      "screen": 3,
+      "text": 1
+    },
+    "DeserializationLoadTime": 1.0434002,
+    "ErrorCount": 0
+  },
+  "WasLocalDatabaseReferencesEmpty": true
 }
