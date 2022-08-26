@@ -442,7 +442,7 @@ SendButton As screen:
             "</html>"
         Width: =997
         X: =216
-        Y: =122
+        Y: =142
         ZIndex: =2
 
     TextInput1 As text:
