@@ -1,55 +1,62 @@
 {
   "ComponentIndexes": {
-    "Component1": 4,
+    "iconPlusText": 6,
     "SkillsFootprintHeader": 5,
-    "SkillsFootprintItem": 3
+    "SkillsFootprintItem": 3,
+    "Talents": 4
   },
   "ControlUniqueGuids": {},
   "ControlUniqueIds": {
     "App": 1,
-    "Button1": 34,
-    "Component1": 26,
-    "ContainerLeft": 27,
-    "ContainerRight": 29,
-    "Group1": 21,
-    "Home": 30,
-    "HtmlText1": 33,
-    "Image1": 7,
-    "Label1": 36,
-    "Label2_1": 28,
-    "Label2_2": 47,
-    "Label3": 5,
-    "Label4": 6,
-    "Label5": 8,
-    "SendButton": 31,
-    "SkillsFootprintHeader": 46,
-    "SkillsFootprintItem": 3,
-    "Template": 35,
-    "TextInput1": 32
+    "Button1": 19,
+    "ContainerLeft": 4,
+    "ContainerRight": 6,
+    "Group1": 12,
+    "Home": 15,
+    "HtmlText1": 18,
+    "iconPlusText": 22,
+    "Image1": 10,
+    "Image2": 25,
+    "Label1": 21,
+    "Label2": 23,
+    "Label2_1": 5,
+    "Label2_2": 14,
+    "Label3": 8,
+    "Label4": 9,
+    "Label5": 11,
+    "Label6": 24,
+    "SendButton": 16,
+    "SkillsFootprintHeader": 13,
+    "SkillsFootprintItem": 7,
+    "Talents": 3,
+    "Template": 20,
+    "TextInput1": 17
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "08/26/2022 11:10:32",
+  "HeaderLastSavedDateTimeUTC": "08/26/2022 12:21:27",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
-    "6ea35d85-93af-4c5d-9a7a-bf033dd7f190": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/09d4f67e2832421abcc61581d26fd78c\""
+    "6ea35d85-93af-4c5d-9a7a-bf033dd7f190": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/10b696a9961641d7b68bd90b3d41e9a4\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {
     "np_research_1762317_FF9500 Copy": "0001.svg"
   },
   "LocalResourceRootPaths": {
-    "np_research_1762317_FF9500 Copy": "https://docserverpwaprodwus.blob.core.windows.net/dbd68f34-1dce-43ae-ad7f-86c6a69a9160-1/resource/Assets0Images00001.svg?sv=2017-04-17&sr=b&sig=5CbC6ypLU25x86cvVgVRS2%2BaBA0MMAUl0gMUzqR%2FV4s%3D&spr=https&se=2022-08-27T10%3A58%3A50Z&sp=r"
+    "np_research_1762317_FF9500 Copy": "https://docserverpwaprodwus.blob.core.windows.net/6d9c62a9-4580-498e-b533-35b3066a751d-1/resource/Assets0Images00001.svg?sv=2017-04-17&sr=b&sig=WqMJgd6ti%2BDmDeZjdSgoBJ1HydHlXY6Rvyq4EZ3cdeg%3D&spr=https&se=2022-08-27T12%3A14%3A52Z&sp=r"
   },
   "OrderComponentMetadata": {
-    "4239e58b3de9415799dc4b54039103ac": 1,
-    "503dd4008be042fa94fecfcc30a76234": 0,
-    "73261c08fdb74db7aeb4a54be08108bd": 2
+    "4239e58b3de9415799dc4b54039103ac": 2,
+    "503dd4008be042fa94fecfcc30a76234": 1,
+    "73261c08fdb74db7aeb4a54be08108bd": 0,
+    "c776de9331294fea9c3519d9e868677c": 3
   },
   "OrderComponentTemplate": {
-    "4239e58b3de9415799dc4b54039103ac": 1,
-    "503dd4008be042fa94fecfcc30a76234": 0,
-    "73261c08fdb74db7aeb4a54be08108bd": 2
+    "4239e58b3de9415799dc4b54039103ac": 2,
+    "503dd4008be042fa94fecfcc30a76234": 1,
+    "73261c08fdb74db7aeb4a54be08108bd": 0,
+    "c776de9331294fea9c3519d9e868677c": 3
   },
   "OrderDataSource": {
     "Office365Outlook": 0
@@ -65,33 +72,37 @@
   "OrderTemplate": {},
   "OrderXMLTemplate": {
     "button": 2,
-    "groupContainer": 5,
+    "groupContainer": 4,
     "htmlViewer": 1,
-    "image": 4,
+    "image": 5,
     "label": 3,
     "text": 0
   },
   "PublishOrderIndices": {
     "App": 0,
-    "Button1": 33,
-    "Component1": 1,
-    "ContainerLeft": 2,
-    "ContainerRight": 3,
-    "Group1": 23,
+    "Button1": 2,
+    "ContainerLeft": 9,
+    "ContainerRight": 11,
+    "Group1": 5,
     "Home": 29,
-    "HtmlText1": 32,
-    "Image1": 9,
-    "Label1": 35,
-    "Label2_1": 4,
-    "Label2_2": 6,
-    "Label3": 7,
+    "HtmlText1": 1,
+    "iconPlusText": 0,
+    "Image1": 7,
+    "Image2": 14,
+    "Label1": 3,
+    "Label2": 13,
+    "Label2_1": 10,
+    "Label2_2": 12,
+    "Label3": 4,
     "Label4": 8,
-    "Label5": 10,
+    "Label5": 6,
+    "Label6": 15,
     "SendButton": 30,
     "SkillsFootprintHeader": 0,
     "SkillsFootprintItem": 5,
+    "Talents": 1,
     "Template": 34,
-    "TextInput1": 31
+    "TextInput1": 0
   },
   "ResourcesJsonIndices": {
     "Image-np_research_1762317_FF9500 Copy": 1,
@@ -100,20 +111,21 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.9064494,
+    "AnalysisLoadTime": 0.9379793,
     "ControlCount": {
+      "4239e58b3de9415799dc4b54039103ac": 1,
       "503dd4008be042fa94fecfcc30a76234": 1,
       "73261c08fdb74db7aeb4a54be08108bd": 1,
       "button": 1,
-      "group": 7,
+      "group": 1,
       "groupContainer": 2,
       "htmlViewer": 1,
-      "image": 7,
-      "label": 19,
+      "image": 1,
+      "label": 6,
       "screen": 3,
       "text": 1
     },
-    "DeserializationLoadTime": 0.6611963,
+    "DeserializationLoadTime": 1.2092418,
     "ErrorCount": 0
   },
   "WasLocalDatabaseReferencesEmpty": true

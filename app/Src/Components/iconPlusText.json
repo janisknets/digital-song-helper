@@ -5,8 +5,8 @@
     "AllowAccessToGlobals": false,
     "AllowCustomization": true,
     "Description": "",
-    "Name": "Component1",
-    "TemplateGuid": "73261c08fdb74db7aeb4a54be08108bd"
+    "Name": "iconPlusText",
+    "TemplateGuid": "c776de9331294fea9c3519d9e868677c"
   },
   "ComponentType": "CanvasComponent",
   "CustomGroupControlTemplateName": "",
@@ -19,8 +19,8 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637971074306763214",
-  "Name": "73261c08fdb74db7aeb4a54be08108bd",
+  "LastModifiedTimestamp": "637971129332289052",
+  "Name": "c776de9331294fea9c3519d9e868677c",
   "OverridableProperties": {},
-  "Version": "637971051064193431"
+  "Version": "637971121575294812"
 }

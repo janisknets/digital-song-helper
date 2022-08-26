@@ -1,4 +1,4 @@
-Component1 As CanvasComponent:
+Talents As CanvasComponent:
     Fill: =RGBA(0, 0, 0, 0)
     Height: =376
     Width: =960

@@ -5,8 +5,8 @@
     "AllowAccessToGlobals": false,
     "AllowCustomization": true,
     "Description": "",
-    "Name": "SkillsFootprintHeader",
-    "TemplateGuid": "4239e58b3de9415799dc4b54039103ac"
+    "Name": "Talents",
+    "TemplateGuid": "73261c08fdb74db7aeb4a54be08108bd"
   },
   "ComponentType": "CanvasComponent",
   "CustomGroupControlTemplateName": "",
@@ -19,8 +19,8 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637971119927946476",
-  "Name": "4239e58b3de9415799dc4b54039103ac",
+  "LastModifiedTimestamp": "637971121547069670",
+  "Name": "73261c08fdb74db7aeb4a54be08108bd",
   "OverridableProperties": {},
-  "Version": "637971088172532549"
+  "Version": "637971051064193431"
 }
