@@ -1,0 +1,329 @@
+"CreateNewCampaign As screen.'tabletLayout_Email_ver3.0'":
+
+    LblRecipientCount1_2 As label:
+        PaddingLeft: =0
+        Size: =13
+        Text: ="Subject"
+        Width: =68
+        Wrap: =false
+        X: =316
+        Y: =207
+        ZIndex: =4
+
+    TextSearchBox1_1 As text:
+        AccessibleLabel: ="Search people or add email address. At least one recipient is required for a successful submission."
+        BorderColor: =RGBA(128, 128, 128, 1)
+        BorderThickness: =1
+        Default: =""
+        HintText: ="Enter text"
+        PaddingLeft: =50
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Width: =583
+        X: =400
+        Y: =207
+        ZIndex: =5
+
+    AddIcon1_1 As icon.Add:
+        Height: =TextSearchBox1_1.Height
+        Icon: =Icon.Add
+        OnSelect: |-
+            =Collect(MyPeople,           
+            {DisplayName: TextSearchBox1_1.Text, UserPrincipalName: TextSearchBox1_1.Text, Mail: TextSearchBox1_1.Text});           
+            Reset(TextSearchBox1_1)
+        PaddingBottom: =5
+        PaddingLeft: =5
+        PaddingRight: =5
+        PaddingTop: =5
+        TabIndex: =0
+        Tooltip: ="Select to add user to collection"
+        Visible: |-
+            =!IsBlank(TextSearchBox1_1.Text) &&           
+            
+            /*Is user entry a valid email address*/           
+            IsMatch(TextSearchBox1_1.Text, Match.Email)           &&
+            
+            Not(Trim(TextSearchBox1_1.Text) in MyPeople.UserPrincipalName)
+        Width: =70
+        X: =957
+        Y: =207
+        ZIndex: =7
+
+    EmailPeopleGallery1_1 As gallery.SelectedUsersTabletGallery:
+        AccessibleLabel: ="User selected people"
+        BorderColor: =TextSearchBox1_1.BorderColor
+        Height: |-
+            =/*Height adjusts to number of items in gallery*/
+            Min((Self.TemplateHeight + Self.TemplatePadding * 2) * RoundUp(CountRows(Self.AllItems) / 4, 0), 182)
+        Items: |-
+            =/*Collection of user selected people*/
+            MyPeople
+        Layout: =Layout.Vertical
+        ShowScrollbar: =Self.Height >= 182
+        TemplateSize: =42
+        Width: =Parent.Width - Self.X * 2
+        WrapCount: =4
+        X: =180
+        Y: =247
+        ZIndex: =8
+
+        Rectangle1_1 As rectangle:
+            Height: =Parent.TemplateHeight
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            ZIndex: =1
+
+        Title1_1 As label:
+            FocusedBorderThickness: =2
+            Height: =EmailPeopleGallery1_1.TemplateHeight
+            OnSelect: =Set(_selectedUser, ThisItem)
+            PaddingLeft: =10
+            Size: =13
+            TabIndex: =If(PeopleBrowseGallery1_1.Visible, -1, 0)
+            Text: =ThisItem.DisplayName
+            VerticalAlign: =Middle
+            Width: =EmailPeopleGallery1_1.TemplateWidth - iconRemove1_1.Width + 10
+            Wrap: =false
+            ZIndex: =2
+
+        iconRemove1_1 As icon.Cancel:
+            AccessibleLabel: =iconRemove1_1.Tooltip
+            Color: =Title1_1.Color
+            Height: =EmailPeopleGallery1_1.TemplateHeight
+            Icon: =Icon.Cancel
+            OnSelect: =Remove(MyPeople, LookUp(MyPeople, UserPrincipalName = ThisItem.UserPrincipalName))
+            PaddingBottom: =9
+            PaddingLeft: =9
+            PaddingRight: =9
+            PaddingTop: =9
+            TabIndex: =If(PeopleBrowseGallery1_1.Visible, -1, 0)
+            Tooltip: ="Select to remove user from collection"
+            Width: =Self.Height
+            X: =EmailPeopleGallery1_1.TemplateWidth - Self.Width
+            ZIndex: =3
+
+    PeopleBrowseGallery1_1 As gallery.PeoplePickerGallerySmallTablet:
+        AccessibleLabel: ="User look up search results"
+        BorderThickness: =2
+        Fill: =Parent.Fill
+        Height: =If(Self.Visible, Parent.Height / 2 + 200, 0)
+        Items: |-
+            =/*Only use Office 365 Users operation if user has started searching*/
+            If(!IsBlank(Trim(TextSearchBox1_1.Text)), Office365Users.SearchUser({searchTerm: Trim(TextSearchBox1_1.Text), top: 15}))
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =104
+        Visible: =!IsBlank(Trim(TextSearchBox1_1.Text))
+        Width: =Parent.Width - Self.X * 2
+        X: =185
+        Y: =189
+        ZIndex: =13
+
+        Rectangle2_1 As rectangle:
+            BorderColor: =Title2_1.Color
+            BorderThickness: =If(ThisItem.UserPrincipalName in MyPeople.UserPrincipalName, 4, 0)
+            Fill: =RGBA(0,0,0,0)
+            Height: =Parent.TemplateHeight
+            HoverFill: =RGBA(0,0,0,0)
+            OnSelect: =Select(Title2_1)
+            Width: =Parent.TemplateWidth
+            ZIndex: =1
+
+        Title2_1 As label:
+            BorderColor: =Self.Color
+            FocusedBorderThickness: =2
+            OnSelect: |-
+                =/*Select user, clear search contents and if this user hasn't been added to MyPeople collection, add them*/
+                Concurrent(
+                Set(_selectedUser, ThisItem),
+                Reset(TextSearchBox1_1),
+                If(Not(ThisItem.UserPrincipalName in MyPeople.UserPrincipalName), Collect(MyPeople, ThisItem)))
+            Size: =17
+            TabIndex: =0
+            Text: =ThisItem.DisplayName
+            VerticalAlign: =Middle
+            Width: =PeopleBrowseGallery1_1.TemplateWidth - 2 * Self.X
+            Wrap: =false
+            X: =16
+            Y: =4
+            ZIndex: =2
+
+        Subtitle1_1 As label:
+            Color: =ColorFade(Title2_1.Color, 0.20)
+            FocusedBorderThickness: =2
+            OnSelect: =Select(Title2_1)
+            Size: =17
+            Text: =ThisItem.UserPrincipalName
+            VerticalAlign: =Middle
+            Width: =PeopleBrowseGallery1_1.TemplateWidth - 2 * Self.X
+            Wrap: =false
+            X: =Title2_1.X
+            Y: =Title2_1.Y + Title2_1.Height + 3
+            ZIndex: =3
+
+        Separator1_1 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =4
+
+    RichTextEditor1_1 As richTextEditor:
+        BorderColor: =RGBA(128, 128, 128, 1)
+        Default: ="Enter some <strong>HTML</strong> here."
+        Height: =252
+        Width: =653
+        X: =330
+        Y: =394
+        ZIndex: =14
+
+    LblRecipientCount1_3 As label:
+        PaddingLeft: =0
+        Size: =13
+        Text: ="Editor"
+        Width: =84
+        Wrap: =false
+        X: =246
+        Y: =500
+        ZIndex: =15
+
+    Button2_1 As button:
+        BorderThickness: =0
+        Fill: =RGBA(230, 230, 230, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Cancel"
+        Width: =130
+        X: =695
+        Y: =685
+        ZIndex: =16
+
+    Button3_1 As button:
+        BorderThickness: =0
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Save"
+        Width: =130
+        X: =845
+        Y: =685
+        ZIndex: =17
+
+    Label1_1 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =53
+        Size: =24
+        Text: ="Create New Campaign"
+        Width: =644
+        X: =312
+        Y: =96
+        ZIndex: =18
+
+    Button4_1 As button:
+        BorderThickness: =0
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Campaigns"
+        X: =322
+        Y: =42
+        ZIndex: =19
+
+    Button5_1 As button:
+        BorderThickness: =0
+        Fill: =RGBA(230, 230, 230, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Templates"
+        X: =482
+        Y: =42
+        ZIndex: =20
+
+    LblRecipientCount1_4 As label:
+        PaddingLeft: =0
+        Size: =13
+        Text: ="Template"
+        Width: =101
+        Wrap: =false
+        X: =317
+        Y: =263
+        ZIndex: =21
+
+    LblRecipientCount1_5 As label:
+        PaddingLeft: =0
+        Size: =13
+        Text: ="Upload File"
+        Width: =101
+        Wrap: =false
+        X: =317
+        Y: =316
+        ZIndex: =23
+
+    LblRecipientCount1_6 As label:
+        PaddingLeft: =0
+        Size: =13
+        Text: ="Title"
+        Width: =68
+        Wrap: =false
+        X: =317
+        Y: =149
+        ZIndex: =25
+
+    TextSearchBox1_4 As text:
+        AccessibleLabel: ="Search people or add email address. At least one recipient is required for a successful submission."
+        BorderColor: =RGBA(128, 128, 128, 1)
+        BorderThickness: =1
+        Default: =""
+        HintText: ="Enter text"
+        PaddingLeft: =50
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Width: =611
+        X: =372
+        Y: =149
+        ZIndex: =26
+
+    Button3_2 As button:
+        BorderThickness: =0
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="CTA"
+        Width: =92
+        X: =983
+        Y: =316
+        ZIndex: =27
+
+    Dropdown1 As dropdown:
+        BorderColor: =RGBA(128, 128, 128, 1)
+        BorderThickness: =1
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronFill: =RGBA(0, 0, 0, 1)
+        Items: =DropDownSample
+        Width: =565
+        X: =418
+        Y: =263
+        ZIndex: =28
+
+    Dropdown1_1 As dropdown:
+        BorderColor: =RGBA(128, 128, 128, 1)
+        BorderThickness: =1
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronFill: =RGBA(0, 0, 0, 1)
+        Items: =DropDownSample
+        Width: =551
+        X: =431
+        Y: =316
+        ZIndex: =29
+
