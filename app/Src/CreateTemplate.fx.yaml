@@ -6,18 +6,18 @@
         Text: ="Title"
         Width: =68
         Wrap: =false
-        X: =164
-        Y: =148
+        X: =163
+        Y: =211
         ZIndex: =4
 
     TextSearchBox1 As text:
         AccessibleLabel: ="Search people or add email address. At least one recipient is required for a successful submission."
         Default: =""
-        HintText: ="Search people or add email address"
+        HintText: ="Enter text"
         PaddingLeft: =50
         Width: =653
-        X: =232
-        Y: =148
+        X: =231
+        Y: =211
         ZIndex: =5
 
     AddIcon1 As icon.Add:
@@ -165,11 +165,11 @@
             ZIndex: =4
 
     RichTextEditor1 As richTextEditor:
-        Default: ="Enter some <strong>rich text</strong> here."
+        Default: ="Enter some <strong>HTML</strong> here."
         Height: =362
         Width: =653
-        X: =232
-        Y: =227
+        X: =231
+        Y: =275
         ZIndex: =14
 
     LblRecipientCount1_1 As label:
@@ -178,22 +178,61 @@
         Text: ="Editor"
         Width: =84
         Wrap: =false
-        X: =147
-        Y: =372
+        X: =156
+        Y: =436
         ZIndex: =15
 
     Button2 As button:
         Fill: =RGBA(230, 230, 230, 1)
         Height: =52
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Text: ="Cancel"
         X: =531
-        Y: =639
+        Y: =672
         ZIndex: =16
 
     Button3 As button:
         Height: =52
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Text: ="Save"
         X: =725
-        Y: =639
+        Y: =672
         ZIndex: =17
+
+    Label1 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =52
+        Size: =24
+        Text: ="Create New Template"
+        Width: =654
+        X: =230
+        Y: =129
+        ZIndex: =18
+
+    Button4 As button:
+        Fill: =RGBA(230, 230, 230, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Campaigns"
+        X: =317
+        Y: =56
+        ZIndex: =19
+
+    Button5 As button:
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Templates"
+        X: =477
+        Y: =56
+        ZIndex: =20
 
