@@ -1,8 +1,0 @@
-Template As screen:
-
-    Label1 As label:
-        Text: ="Baltic SONG"
-        X: =40
-        Y: =40
-        ZIndex: =1
-
