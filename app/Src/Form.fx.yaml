@@ -20,6 +20,7 @@ Form As screen:
             MaxLength: =DataSourceInfo([@Table1], DataSourceInfo.MaxLength, "Title1")
             Required: =false
             Update: =DataCardValue11.Text
+            Visible: =varTabSelected=1
             Width: =956
             X: =0
             Y: =0
@@ -87,6 +88,7 @@ Form As screen:
             MaxLength: =DataSourceInfo([@Table1], DataSourceInfo.MaxLength, "Title2")
             Required: =false
             Update: =DataCardValue12.Text
+            Visible: =varTabSelected=2
             Width: =956
             X: =0
             Y: =1
