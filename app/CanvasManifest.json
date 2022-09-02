@@ -108,6 +108,7 @@
     "SendButton",
     "Home",
     "CreateTemplate",
-    "CreateNewCampaign"
+    "CreateNewCampaign",
+    "Form"
   ]
 }

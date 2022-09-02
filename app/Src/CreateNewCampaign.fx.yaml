@@ -226,29 +226,6 @@
         Y: =96
         ZIndex: =18
 
-    Button4_1 As button:
-        BorderThickness: =0
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Text: ="Campaigns"
-        X: =322
-        Y: =42
-        ZIndex: =19
-
-    Button5_1 As button:
-        BorderThickness: =0
-        Fill: =RGBA(230, 230, 230, 1)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Text: ="Templates"
-        X: =482
-        Y: =42
-        ZIndex: =20
-
     LblRecipientCount1_4 As label:
         PaddingLeft: =0
         Size: =13
@@ -338,17 +315,20 @@
         TemplatePadding: =0
         TemplateSize: =163
         Width: =330
-        X: =726
-        Y: =30
+        X: =317
+        Y: =29
         ZIndex: =30
 
         Button10 As button:
             BorderThickness: =0
             Color: =
+            DisabledBorderColor: =Self.Fill
+            DisabledColor: =RGBA(255, 255, 255, 1)
             Fill: |-
                 =ColorValue("#0078D4")
             Height: =42
-            OnSelect: =Select(Parent)
+            OnSelect: =Set(varTabSelected, ThisItem.ID)
+            PressedBorderColor: =RGBA(166, 166, 166, 1)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -356,6 +336,6 @@
             Text: =ThisItem.Label
             Width: =159
             X: =4
-            Y: =5
+            Y: =3
             ZIndex: =1
 
