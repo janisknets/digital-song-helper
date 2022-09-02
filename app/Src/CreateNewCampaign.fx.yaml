@@ -204,6 +204,8 @@
 
     Button3_1 As button:
         BorderThickness: =0
+        Fill: |-
+            =ColorValue("#0078D4")
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -295,6 +297,8 @@
 
     Button3_2 As button:
         BorderThickness: =0
+        Fill: |-
+            =ColorValue("#0078D4")
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -326,4 +330,32 @@
         X: =431
         Y: =316
         ZIndex: =29
+
+    Gallery3 As gallery.galleryHorizontal:
+        Height: =52
+        Items: |-
+            =Table({ID:1,Label:"Campaigns"},{ID:2,Label:"Templates"})
+        TemplatePadding: =0
+        TemplateSize: =163
+        Width: =330
+        X: =726
+        Y: =30
+        ZIndex: =30
+
+        Button10 As button:
+            BorderThickness: =0
+            Color: =
+            Fill: |-
+                =ColorValue("#0078D4")
+            Height: =42
+            OnSelect: =Select(Parent)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: =ThisItem.Label
+            Width: =159
+            X: =4
+            Y: =5
+            ZIndex: =1
 
