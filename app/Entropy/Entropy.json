@@ -109,7 +109,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "09/02/2022 12:26:25",
+  "HeaderLastSavedDateTimeUTC": "09/02/2022 12:50:55",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "1511313e-9875-4d63-8a7a-5f47782d793d": "\"/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/019edb5e8ed34475913a5853a36f639f\"",
@@ -267,7 +267,7 @@
   "VolatileProperties": {
     "AnalysisLoadTime": 1.49791,
     "ControlCount": {
-      "button": 12,
+      "button": 13,
       "c776de9331294fea9c3519d9e868677c": 1,
       "dropdown": 2,
       "gallery": 6,
