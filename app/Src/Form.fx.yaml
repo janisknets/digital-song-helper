@@ -87,6 +87,7 @@ Form As screen:
                 ZIndex: =4
 
         Title2_DataCard1 As typedDataCard.textualEditCard:
+            BorderColor: =RGBA(179, 179, 179, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Title2"
             Default: =ThisItem.Title2
@@ -402,6 +403,7 @@ Form As screen:
                 ZIndex: =1
 
             DataCardValue8 As richTextEditor:
+                BorderColor: =RGBA(179, 179, 179, 1)
                 Default: =Parent.Default
                 DisplayMode: =Parent.DisplayMode
                 Height: =260
@@ -435,6 +437,7 @@ Form As screen:
                 ZIndex: =4
 
         Editor_DataCard2 As typedDataCard.richTextEditorEditCard:
+            BorderColor: =RGBA(179, 179, 179, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Editor"
             Default: =ThisItem.Editor
@@ -460,6 +463,7 @@ Form As screen:
                 ZIndex: =1
 
             DataCardValue10 As richTextEditor:
+                BorderColor: =RGBA(179, 179, 179, 1)
                 Default: =Parent.Default
                 DisplayMode: =Parent.DisplayMode
                 Height: =260
