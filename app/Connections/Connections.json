@@ -79,5 +79,38 @@
     "dependencies": {},
     "dependents": [],
     "id": "9dbc8f0e-45a9-4c28-83c0-f549b858ecf8"
+  },
+  "cb7d9ef6-d2ef-466c-aa89-24ca403bfdcf": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1591/1.0.1591.2961/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://ts.accenture.com/sites/THERIGA": {
+        "dataSources": {
+          "CampaignList": {
+            "tableName": "fa162762-ad7c-41c8-991b-4996a94ba85c"
+          },
+          "EmailTemplate": {
+            "tableName": "dc289038-327f-48c1-a2b9-825e495c763b"
+          },
+          "EmailTemplate_1": {
+            "tableName": "dc289038-327f-48c1-a2b9-825e495c763b"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "EmailTemplate",
+      "EmailTemplate_1",
+      "CampaignList"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "cb7d9ef6-d2ef-466c-aa89-24ca403bfdcf"
   }
 }
