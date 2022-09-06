@@ -32,8 +32,11 @@
       "ID": "ID",
       "Modified": "Modified",
       "Project": "Project",
+      "Rolecontact": "Role Fulfillment Contact",
+      "RolePrimaryContact": "Role Primary Contact",
       "RoleTitle": "Role Title",
-      "Title": "Title"
+      "Template": "Role Description",
+      "Title": "Role Id"
     },
     "DatasetName": "https://ts.accenture.com/sites/THERIGA",
     "EncodeDataset": true,
