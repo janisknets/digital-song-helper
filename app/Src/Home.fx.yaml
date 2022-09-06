@@ -39,6 +39,67 @@ Home As screen:
             Y: =3
             ZIndex: =1
 
+    "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
+        Height: =526
+        Items: =CampaignList
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =Min(104, Self.Height - 60)
+        X: =660
+        Y: =81
+        ZIndex: =1
+
+        Title5 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Title
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =16
+            ZIndex: =1
+
+        Subtitle4 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.DateCreated
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =Title5.Y + Title5.Height + 4
+            ZIndex: =2
+
+        NextArrow3 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =3
+
+        Separator4 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =4
+
     Button7 As button:
         OnSelect: =SubmitForm(Form6);
         Text: ="Save"
@@ -54,72 +115,6 @@ Home As screen:
         Y: =124
         ZIndex: =4
 
-        DateCreated_DataCard1 As typedDataCard.dateEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="DateCreated"
-            Default: =ThisItem.DateCreated
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@CampaignList],DataSourceInfo.DisplayName,"DateCreated")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =73
-            Required: =false
-            Update: =DataCardValue25.SelectedDate
-            Width: =516
-            X: =0
-            Y: =1
-            ZIndex: =5
-
-            DataCardKey25 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =(Parent.Width - 60) * 0.4
-                Wrap: =false
-                X: =30
-                Y: =10 + (DataCardValue25.Height / 2) - (Self.Height / 2)
-                ZIndex: =1
-
-            DataCardValue25 As datepicker:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultDate: =Parent.Default
-                DisplayMode: =Parent.DisplayMode
-                EndYear: =Year(Today())+100
-                Height: =37
-                IsEditable: =true
-                PaddingBottom: =0
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                StartYear: =1899
-                Tooltip: =Parent.DisplayName
-                Width: =318
-                X: =167
-                Y: =13
-                ZIndex: =2
-
-            ErrorMessage25 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue25.Y + DataCardValue25.Height
-                ZIndex: =3
-
-            StarVisible25 As label:
-                Align: =Align.Center
-                Height: =DataCardKey25.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey25.Y
-                ZIndex: =4
-
         Title_DataCard5 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Title"
@@ -131,6 +126,7 @@ Home As screen:
             MaxLength: =DataSourceInfo([@CampaignList], DataSourceInfo.MaxLength, "Title")
             Required: =true
             Update: =DataCardValue24.Text
+            Visible: =varTabSelected = 1
             Width: =516
             X: =0
             Y: =0
@@ -189,6 +185,73 @@ Home As screen:
                 Y: =DataCardKey24.Y
                 ZIndex: =4
 
+        DateCreated_DataCard1 As typedDataCard.dateEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="DateCreated"
+            Default: =ThisItem.DateCreated
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@CampaignList],DataSourceInfo.DisplayName,"DateCreated")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =73
+            Required: =false
+            Update: =DataCardValue25.SelectedDate
+            Visible: =varTabSelected = 1
+            Width: =516
+            X: =0
+            Y: =1
+            ZIndex: =5
+
+            DataCardKey25 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10 + (DataCardValue25.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            DataCardValue25 As datepicker:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultDate: =Parent.Default
+                DisplayMode: =Parent.DisplayMode
+                EndYear: =Year(Today())+100
+                Height: =37
+                IsEditable: =true
+                PaddingBottom: =0
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                StartYear: =1899
+                Tooltip: =Parent.DisplayName
+                Width: =318
+                X: =167
+                Y: =13
+                ZIndex: =2
+
+            ErrorMessage25 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue25.Y + DataCardValue25.Height
+                ZIndex: =3
+
+            StarVisible25 As label:
+                Align: =Align.Center
+                Height: =DataCardKey25.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey25.Y
+                ZIndex: =4
+
         Attachments_DataCard5 As typedDataCard.attachmentsEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="{Attachments}"
@@ -199,6 +262,7 @@ Home As screen:
             Height: =135
             Required: =false
             Update: =DataCardValue26.Attachments
+            Visible: =varTabSelected = 1
             Width: =516
             X: =0
             Y: =2
