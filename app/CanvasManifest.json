@@ -110,6 +110,7 @@
     "CreateTemplate",
     "CreateNewCampaign",
     "Form",
-    "Upload"
+    "Upload",
+    "CampaignScreen"
   ]
 }
