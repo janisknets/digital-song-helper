@@ -111,6 +111,7 @@
     "Test",
     "EditCampaign",
     "CreateNew",
-    "NewCamp"
+    "NewCamp",
+    "Preview"
   ]
 }

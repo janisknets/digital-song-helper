@@ -3,6 +3,7 @@ NewCamp As screen:
     Form6 As form:
         DataSource: =NewCampaign
         DefaultMode: =FormMode.New
+        Height: =575
         NumberOfColumns: =1
         OnSuccess: |-
             =SubmitForm(Form6);
@@ -10,9 +11,70 @@ NewCamp As screen:
                 "Success: form was successfully saved",
                 NotificationType.Success
             );
-        X: =252
-        Y: =144
+        Width: =816
+        X: =248
+        Y: =99
         ZIndex: =1
+
+        "'Message (html)_DataCard5' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Message_x0028_html_x0029_"
+            Default: =ThisItem.'Message (html)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"Message_x0028_html_x0029_")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =279
+            MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "Message_x0028_html_x0029_")
+            Required: =false
+            Update: =
+            Width: =816
+            X: =0
+            Y: =4
+            ZIndex: =1
+
+            DataCardKey44 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =140
+                Wrap: =false
+                X: =55
+                Y: =68
+                ZIndex: =1
+
+            ErrorMessage43 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =
+                ZIndex: =3
+
+            StarVisible43 As label:
+                Align: =Align.Center
+                Height: =DataCardKey44.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey44.Y
+                ZIndex: =4
+
+            RichTextEditor6 As richTextEditor:
+                Default: |
+                    =$"Hello First_Name! <br></br> My name is Sender_Name. Writing you regarding Open role Role_ID for Project_Name.<br></br>Let me know if this role is still open, will be happy to jump on a call to discuss potential candidates"
+                Height: =266
+                Width: =560
+                X: =206
+                Y: =10
+                ZIndex: =5
 
         Title_DataCard5 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
@@ -21,11 +83,11 @@ NewCamp As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"Title")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =61
             MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "Title")
             Required: =true
             Update: =DataCardValue26.Text
-            Width: =800
+            Width: =816
             X: =0
             Y: =0
             ZIndex: =2
@@ -94,7 +156,7 @@ NewCamp As screen:
             MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "Subject")
             Required: =false
             Update: =DataCardValue27.Text
-            Width: =800
+            Width: =816
             X: =0
             Y: =1
             ZIndex: =2
@@ -163,7 +225,7 @@ NewCamp As screen:
             MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "Template")
             Required: =false
             Update: =DataCardValue28.Text
-            Width: =800
+            Width: =816
             X: =0
             Y: =2
             ZIndex: =2
@@ -228,10 +290,10 @@ NewCamp As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"{Attachments}")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =107
             Required: =false
             Update: =DataCardValue30.Attachments
-            Width: =800
+            Width: =816
             X: =0
             Y: =3
             ZIndex: =2
@@ -240,7 +302,6 @@ NewCamp As screen:
                 AutoHeight: =true
                 Height: =34
                 Text: ="Upload file"
-                Width: =(Parent.Width - 60) * 0.4
                 Wrap: =false
                 X: =30
                 Y: =10 + (DataCardValue30.Height / 2) - (Self.Height / 2)
@@ -249,7 +310,7 @@ NewCamp As screen:
             DataCardValue30 As attachments:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DisplayMode: =Parent.DisplayMode
-                Height: =103
+                Height: =87
                 IsInDataCard: =true
                 Items: =Parent.Default
                 PaddingBottom: =5
@@ -287,86 +348,27 @@ NewCamp As screen:
                 Y: =DataCardKey30.Y
                 ZIndex: =4
 
-        "'Message (html)_DataCard3' As typedDataCard.textualEditCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Message_x0028_html_x0029_"
-            Default: =ThisItem.'Message (html)'
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"Message_x0028_html_x0029_")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =191
-            MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "Message_x0028_html_x0029_")
-            Required: =false
-            Update: =
-            Width: =800
-            X: =0
-            Y: =4
-            ZIndex: =2
-
-            DataCardKey29 As label:
-                Height: =47
-                Text: =Parent.DisplayName
-                Width: =176
-                Wrap: =false
-                X: =30
-                Y: =66
-                ZIndex: =1
-
-            ErrorMessage29 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =ThisItem.'Comments associated with the content approval of this list item'
-                ZIndex: =3
-
-            StarVisible29 As label:
-                Align: =Align.Center
-                Height: =DataCardKey29.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey29.Y
-                ZIndex: =4
-
-            RichTextEditor2 As richTextEditor:
-                Default: |-
-                    ="Hello" + EmailTemplate.Name + "!";
-                    
-                    "My name is Sender_Name. Writing you regarding Open role <Role_ID> for <Project_Name>.  Let me know if this role is still open, will be happy to jump on a call to discuss potential candidates"
-                Height: =169
-                Width: =551
-                X: =219
-                Y: =10
-                ZIndex: =5
-
     Button13 As button:
+        Fill: =RGBA(0, 134, 208, 1)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Text: ="Cancel"
-        X: =468
-        Y: =663
+        X: =492
+        Y: =702
         ZIndex: =2
 
     Button14 As button:
+        Fill: =RGBA(0, 134, 208, 1)
         OnSelect: =SubmitForm(Form6); ResetForm(Form6); Navigate(Home);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Text: ="Save"
-        X: =703
-        Y: =663
+        X: =708
+        Y: =702
         ZIndex: =3
 
     Label7 As label:
@@ -375,7 +377,7 @@ NewCamp As screen:
         Size: =24
         Text: ="Create New Campaign"
         Width: =450
-        X: =503
-        Y: =59
+        X: =492
+        Y: =36
         ZIndex: =4
 
