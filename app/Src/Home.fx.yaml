@@ -11,7 +11,7 @@ Home As screen:
         ZIndex: =1
 
         Title5 As label:
-            Height: =Self.Size * 1.8
+            Height: =30
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
@@ -19,13 +19,13 @@ Home As screen:
             PaddingTop: =0
             Text: =ThisItem.Title
             VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - 104
-            X: =32
-            Y: =16
+            Width: =474
+            X: =91
+            Y: =22
             ZIndex: =1
 
         Subtitle4 As label:
-            Height: =Self.Size * 1.8
+            Height: =30
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
@@ -33,9 +33,9 @@ Home As screen:
             PaddingTop: =0
             Text: =ThisItem.DateCreated
             VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - 104
-            X: =32
-            Y: =Title5.Y + Title5.Height + 4
+            Width: =477
+            X: =91
+            Y: =52
             ZIndex: =2
 
         NextArrow3 As icon.ChevronRight:
@@ -61,14 +61,23 @@ Home As screen:
             Y: =Parent.TemplateHeight - 1
             ZIndex: =4
 
+        Checkbox2 As checkbox:
+            Height: =48
+            OnSelect: =Select(Parent)
+            Text: =""
+            Width: =51
+            X: =25
+            Y: =22
+            ZIndex: =7
+
     Button7 As button:
         Fill: =RGBA(0, 134, 208, 1)
-        OnSelect: =SubmitForm(Form2);
+        OnSelect: =Remove(CampaignList, Gallery1.Selected);Refresh(CampaignList);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Text: ="Save"
+        Text: ="Delete"
         X: =711
         Y: =636
         ZIndex: =3
