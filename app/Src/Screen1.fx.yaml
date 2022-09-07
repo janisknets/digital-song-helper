@@ -2,6 +2,7 @@ Screen1 As screen:
 
     Form5 As form:
         DataSource: =NewCampaign
+        DefaultMode: =FormMode.New
         Height: =550
         NumberOfColumns: =1
         Width: =846
@@ -20,6 +21,7 @@ Screen1 As screen:
             MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "Title")
             Required: =true
             Update: =DataCardValue17.Text
+            Visible: =true
             Width: =846
             X: =0
             Y: =0
@@ -89,6 +91,7 @@ Screen1 As screen:
             MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "Subject")
             Required: =false
             Update: =DataCardValue18.Text
+            Visible: =varTabSelected = 1
             Width: =846
             X: =0
             Y: =1
@@ -158,6 +161,7 @@ Screen1 As screen:
             MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "Template")
             Required: =false
             Update: =DataCardValue19.Text
+            Visible: =varTabSelected = 1
             Width: =846
             X: =0
             Y: =2
@@ -226,6 +230,7 @@ Screen1 As screen:
             Height: =115
             Required: =false
             Update: =DataCardValue21.Attachments
+            Visible: =varTabSelected = 1
             Width: =846
             X: =0
             Y: =3
