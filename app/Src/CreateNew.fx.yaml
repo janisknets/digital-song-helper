@@ -3,7 +3,6 @@ CreateNew As screen:
 
     Form2 As form:
         DataSource: =Table1
-        DefaultMode: =FormMode.New
         Height: =657
         NumberOfColumns: =1
         Width: =956

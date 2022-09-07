@@ -100,6 +100,9 @@
           },
           "EmailTemplate_1": {
             "tableName": "dc289038-327f-48c1-a2b9-825e495c763b"
+          },
+          "NewCampaign": {
+            "tableName": "ad6f6764-1cdb-41e2-887a-47cf4a574528"
           }
         }
       }
@@ -107,7 +110,8 @@
     "dataSources": [
       "EmailTemplate",
       "EmailTemplate_1",
-      "CampaignList"
+      "CampaignList",
+      "NewCampaign"
     ],
     "dependencies": {},
     "dependents": [],

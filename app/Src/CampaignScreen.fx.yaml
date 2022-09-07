@@ -4,8 +4,8 @@ CampaignScreen As screen:
         DataSource: =CampaignList
         DefaultMode: =FormMode.New
         NumberOfColumns: =1
-        X: =56
-        Y: =104
+        X: =264
+        Y: =112
         ZIndex: =1
 
         html_DataCard1 As typedDataCard.urlEditCard:
@@ -206,4 +206,37 @@ CampaignScreen As screen:
                 Wrap: =false
                 Y: =DataCardKey4.Y
                 ZIndex: =4
+
+    Label5 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =37
+        Size: =24
+        Text: ="Edit Campaign"
+        Width: =358
+        X: =485
+        Y: =55
+        ZIndex: =2
+
+    Button9 As button:
+        Fill: =RGBA(0, 134, 208, 1)
+        OnSelect: =SubmitForm(Form3);
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Save"
+        X: =683
+        Y: =640
+        ZIndex: =3
+
+    Button10 As button:
+        Fill: =RGBA(0, 134, 208, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Cancel"
+        X: =463
+        Y: =640
+        ZIndex: =4
 
