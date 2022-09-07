@@ -2,7 +2,7 @@ Home As screen:
 
     "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
         Height: =417
-        Items: =CampaignList
+        Items: =NewCampaign
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(104, Self.Height - 60)
@@ -31,7 +31,7 @@ Home As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.DateCreated
+            Text: =ThisItem.Subject
             VerticalAlign: =VerticalAlign.Top
             Width: =477
             X: =91
@@ -72,14 +72,14 @@ Home As screen:
 
     Button7 As button:
         Fill: =RGBA(0, 134, 208, 1)
-        OnSelect: =Remove(CampaignList, Gallery1.Selected);Refresh(CampaignList);
+        OnSelect: =Remove(NewCampaign, Gallery1.Selected);Refresh(NewCampaign);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Text: ="Delete"
-        X: =711
-        Y: =636
+        X: =480
+        Y: =627
         ZIndex: =3
 
     Label3 As label:
@@ -94,13 +94,13 @@ Home As screen:
 
     Button8 As button:
         Fill: =RGBA(0, 134, 208, 1)
-        OnSelect: =Navigate(CreateNew);
+        OnSelect: =Navigate(NewCamp);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Text: ="Create new"
-        X: =492
-        Y: =636
+        X: =677
+        Y: =627
         ZIndex: =5
 
