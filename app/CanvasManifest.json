@@ -109,8 +109,7 @@
     "SendButton",
     "Home",
     "Test",
-    "Upload",
-    "CampaignScreen",
+    "EditCampaign",
     "CreateNew"
   ]
 }

@@ -1,4 +1,4 @@
-CampaignScreen As screen:
+EditCampaign As screen:
 
     Form3 As form:
         DataSource: =CampaignList
