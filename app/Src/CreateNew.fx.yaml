@@ -5,6 +5,13 @@ CreateNew As screen:
         DefaultMode: =FormMode.New
         Height: =550
         NumberOfColumns: =1
+        OnFailure: =f
+        OnSuccess: |-
+            =SubmitForm(Form5);
+            Notify(
+                "Success: form was successfully saved",
+                NotificationType.Success
+            );
         Width: =846
         X: =260
         Y: =120
@@ -398,7 +405,9 @@ CreateNew As screen:
 
     Button12 As button:
         Fill: =RGBA(0, 134, 208, 1)
-        OnSelect: =SubmitForm(Form5); Refresh(NewCampaign);
+        OnSelect: |-
+            =SubmitForm(Form5);
+             
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
