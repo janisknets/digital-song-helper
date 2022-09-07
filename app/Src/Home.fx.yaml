@@ -1,13 +1,13 @@
 Home As screen:
 
     "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
-        Height: =526
+        Height: =417
         Items: =CampaignList
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(104, Self.Height - 60)
-        X: =364
-        Y: =138
+        X: =348
+        Y: =164
         ZIndex: =1
 
         Title5 As label:
@@ -85,7 +85,7 @@ Home As screen:
 
     Button8 As button:
         Fill: =RGBA(0, 134, 208, 1)
-        OnSelect: =Navigate(Form);
+        OnSelect: =Navigate(CreateNew);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0

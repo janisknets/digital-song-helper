@@ -108,9 +108,7 @@
   "ScreenOrder": [
     "SendButton",
     "Home",
-    "CreateTemplate",
-    "CreateNewCampaign",
-    "Form",
+    "CreateNew",
     "Upload",
     "CampaignScreen"
   ]

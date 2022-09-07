@@ -1,4 +1,4 @@
-Form As screen:
+CreateNew As screen:
     Fill: =
 
     Form2 As form:
