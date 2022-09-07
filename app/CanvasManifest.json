@@ -108,9 +108,9 @@
   "ScreenOrder": [
     "SendButton",
     "Home",
-    "CreateNew",
+    "Test",
     "Upload",
     "CampaignScreen",
-    "Screen1"
+    "CreateNew"
   ]
 }
