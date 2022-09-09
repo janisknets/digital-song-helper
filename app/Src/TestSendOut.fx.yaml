@@ -2,7 +2,7 @@
 
     RectQuickActionBar1 As rectangle:
         Fill: =RGBA(255, 255, 255, 1)
-        Height: =64
+        Height: =24
         Width: =Parent.Width
         ZIndex: =3
 
@@ -14,7 +14,7 @@
         Width: =103
         Wrap: =false
         X: =213
-        Y: =70
+        Y: =47
         ZIndex: =5
 
     TextSearchBox1 As text:
@@ -28,8 +28,8 @@
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Width: =765
-        X: =316
-        Y: =70
+        X: =321
+        Y: =47
         ZIndex: =6
 
     SearchIcon1 As icon.Search:
@@ -132,8 +132,8 @@
         Text: ="*Subject"
         Width: =118
         Wrap: =false
-        X: =261
-        Y: =145
+        X: =262
+        Y: =127
         ZIndex: =10
 
     TextEmailSubject1 As text:
@@ -147,8 +147,8 @@
         RadiusTopRight: =0
         TabIndex: =If(PeopleBrowseGallery1.Visible, -1, 0)
         Width: =701
-        X: =380
-        Y: =145
+        X: =379
+        Y: =127
         ZIndex: =11
 
     LblEmailMessage1 As label:
@@ -158,8 +158,8 @@
         Text: ="Message"
         Width: =119
         Wrap: =false
-        X: =261
-        Y: =251
+        X: =262
+        Y: =236
         ZIndex: =12
 
     PeopleBrowseGallery1 As gallery.PeoplePickerGallerySmallTablet:
@@ -689,7 +689,7 @@
             "</html>"
         Width: =997
         X: =213
-        Y: =349
+        Y: =339
         ZIndex: =16
 
     TextInput2 As text:
@@ -701,6 +701,6 @@
         RadiusTopRight: =0
         Width: =701
         X: =380
-        Y: =232
+        Y: =213
         ZIndex: =17
 
