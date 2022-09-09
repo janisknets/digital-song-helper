@@ -797,12 +797,12 @@ TestPreview As screen:
         ZIndex: =2
 
     HtmlText2 As htmlViewer:
-        Height: =88
+        Height: =479
         HtmlText: |
             =Source.Text
-        Width: =482
-        X: =176
-        Y: =656
+        Width: =1047
+        X: =160
+        Y: =268
         ZIndex: =3
 
     Form1 As form:
