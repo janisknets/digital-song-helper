@@ -110,8 +110,9 @@
     "Home",
     "Test",
     "EditCampaign",
-    "CreateNew",
+    "ViewCampaign",
     "NewCamp",
+    "TestCreateNew",
     "TestPreview",
     "TestSendOut"
   ]
