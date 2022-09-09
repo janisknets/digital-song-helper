@@ -376,3 +376,15 @@ EditCampaign As screen:
         Y: =640
         ZIndex: =4
 
+    Button4 As button:
+        Fill: =RGBA(0, 134, 208, 1)
+        OnSelect: =Navigate(TestSendOut);
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Preview"
+        X: =1068
+        Y: =484
+        ZIndex: =5
+
