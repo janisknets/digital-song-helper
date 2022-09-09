@@ -792,8 +792,8 @@ TestPreview As screen:
             "
         Visible: =false
         Width: =343
-        X: =176
-        Y: =581
+        X: =168
+        Y: =189
         ZIndex: =2
 
     HtmlText2 As htmlViewer:
