@@ -1230,7 +1230,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateLblEmailMessage.ID%",
       "Name": "LblEmailMessage1",
-      "ParentIndex": 10,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1444,7 +1444,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateLblEmailSubject.ID%",
       "Name": "LblEmailSubject1",
-      "ParentIndex": 8,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1869,7 +1869,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%BrowseContainer.ID%",
       "Name": "PeopleBrowseGallery1",
-      "ParentIndex": 7,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2359,14 +2359,7 @@
     "RTEBody": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "\"Enter some <strong>rich text</strong> here.\"",
-          "InvariantPropertyName": "Default",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Default",
         "X",
         "Y",
         "Width",
@@ -2385,7 +2378,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "RTEBody",
-      "ParentIndex": 11,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3167,7 +3160,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateTextEmailSubject.ID%",
       "Name": "TextEmailSubject1",
-      "ParentIndex": 9,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
