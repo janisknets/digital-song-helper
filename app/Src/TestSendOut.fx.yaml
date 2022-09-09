@@ -2,44 +2,42 @@
 
     RTEBody As richTextEditor:
         Default: =
-        Height: =250
-        Width: =1302
-        X: =32
-        Y: =331
+        Height: =219
+        Width: =765
+        X: =316
+        Y: =344
         ZIndex: =2
 
     RectQuickActionBar1 As rectangle:
+        Fill: =RGBA(255, 255, 255, 1)
         Height: =64
         Width: =Parent.Width
         ZIndex: =3
 
-    LblAppName1 As label:
-        Height: =64
-        PaddingLeft: =0
-        Text: ="Email"
-        Width: =Parent.Width - Self.X - 64
-        Wrap: =false
-        X: =32
-        ZIndex: =4
-
     LblRecipientCount1 As label:
+        Height: =43
         PaddingLeft: =0
         Size: =13
         Text: ="*To (" &CountRows(MyPeople) & ")"
-        Width: =EmailPeopleGallery1.Width
+        Width: =103
         Wrap: =false
-        X: =32
-        Y: =RectQuickActionBar1.Height + 15
+        X: =213
+        Y: =119
         ZIndex: =5
 
     TextSearchBox1 As text:
         AccessibleLabel: ="Search people or add email address. At least one recipient is required for a successful submission."
         Default: =""
+        Height: =43
         HintText: ="Search people or add email address"
         PaddingLeft: =50
-        Width: =Parent.Width - Self.X * 2
-        X: =32
-        Y: =LblRecipientCount1.Y + LblRecipientCount1.Height + 3
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Width: =765
+        X: =316
+        Y: =119
         ZIndex: =6
 
     SearchIcon1 As icon.Search:
@@ -134,33 +132,40 @@
             ZIndex: =3
 
     LblEmailSubject1 As label:
+        Height: =43
         PaddingLeft: =0
         Size: =13
         Text: ="*Subject"
-        Width: =Parent.Width - Self.X * 2
+        Width: =118
         Wrap: =false
-        X: =32
-        Y: =EmailPeopleGallery1.Y + EmailPeopleGallery1.Height + 16
+        X: =262
+        Y: =218
         ZIndex: =10
 
     TextEmailSubject1 As text:
         AccessibleLabel: ="A subject is required to send an email."
         Default: ="Support From Baltic Song for Client Name"
+        Height: =43
         HintText: ="Add a subject"
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         TabIndex: =If(PeopleBrowseGallery1.Visible, -1, 0)
-        Width: =Parent.Width - Self.X * 2
-        X: =32
-        Y: =LblEmailSubject1.Y + LblEmailSubject1.Height + 3
+        Width: =701
+        X: =380
+        Y: =218
         ZIndex: =11
 
     LblEmailMessage1 As label:
+        Height: =47
         PaddingLeft: =0
         Size: =13
         Text: ="Message"
-        Width: =200
+        Width: =119
         Wrap: =false
-        X: =32
-        Y: =TextEmailSubject1.Y + TextEmailSubject1.Height + 16
+        X: =197
+        Y: =430
         ZIndex: =12
 
     PeopleBrowseGallery1 As gallery.PeoplePickerGallerySmallTablet:

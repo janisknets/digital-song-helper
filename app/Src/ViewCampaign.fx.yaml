@@ -366,12 +366,12 @@ ViewCampaign As screen:
 
     Button10_3 As button:
         Fill: =RGBA(0, 134, 208, 1)
-        OnSelect: =Navigate(Home);
+        OnSelect: =Navigate(EditCampaign);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Text: ="Cancel"
+        Text: ="Edit"
         X: =463
         Y: =640
         ZIndex: =4
