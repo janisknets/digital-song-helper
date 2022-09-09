@@ -1,7 +1,7 @@
 "TestSendOut As screen.'tabletLayout_Email_ver3.0'":
 
     RTEBody As richTextEditor:
-        Default: ="Enter some <strong>rich text</strong> here."
+        Default: =$"Hello {CampaignList.'Role Fulfillment Contact'}"
         Height: =250
         Width: =1292
         X: =32
