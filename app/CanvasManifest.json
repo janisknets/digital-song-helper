@@ -112,7 +112,7 @@
     "EditCampaign",
     "CreateNew",
     "NewCamp",
-    "SendOutTest",
-    "TestPreview"
+    "TestPreview",
+    "TestSendOut"
   ]
 }
