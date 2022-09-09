@@ -1298,36 +1298,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "TestPreview.Form1.'Message (html)_DataCard3'.RichTextEditor4.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TestPreview.Form1.'Message (html)_DataCard3'.RichTextEditor4.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "TestPreview",
-                "type": "TestPreview.Form1.'Message (html)_DataCard3'.RichTextEditor4"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App._selectedUser"
                 }
               ],
@@ -1491,36 +1461,6 @@
                 "member": "Default",
                 "module": "EditCampaign",
                 "type": "EditCampaign.Form3.'Message (html)_DataCard4'.RichTextEditor7"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TestPreview.Form1.'Message (html)_DataCard3'.RichTextEditor4.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TestPreview.Form1.'Message (html)_DataCard3'.RichTextEditor4.Default",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "TestPreview",
-                "type": "TestPreview.Form1.'Message (html)_DataCard3'.RichTextEditor4"
               }
             }
           ],
