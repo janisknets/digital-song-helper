@@ -378,7 +378,7 @@ EditCampaign As screen:
 
     Button4 As button:
         Fill: =RGBA(0, 134, 208, 1)
-        OnSelect: =Navigate(TestSendOut);
+        OnSelect: =Navigate(SendOut);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0

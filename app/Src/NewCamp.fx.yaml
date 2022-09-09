@@ -350,6 +350,7 @@ NewCamp As screen:
 
     Button13 As button:
         Fill: =RGBA(0, 134, 208, 1)
+        OnSelect: =Navigate(Home);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -383,12 +384,12 @@ NewCamp As screen:
 
     Button3 As button:
         Fill: =RGBA(0, 134, 208, 1)
-        OnSelect: =Navigate(TestSendOut);
+        OnSelect: =Navigate(SendOut);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Text: ="Button"
+        Text: ="Preview"
         X: =1092
         Y: =532
         ZIndex: =5

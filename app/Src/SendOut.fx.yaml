@@ -1,4 +1,4 @@
-"TestSendOut As screen.'tabletLayout_Email_ver3.0'":
+"SendOut As screen.'tabletLayout_Email_ver3.0'":
 
     RectQuickActionBar1 As rectangle:
         Fill: =RGBA(255, 255, 255, 1)
