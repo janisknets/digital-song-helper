@@ -366,7 +366,7 @@ ViewCampaign As screen:
 
     Button10_3 As button:
         Fill: =RGBA(0, 134, 208, 1)
-        OnSelect: =Navigate(Home)
+        OnSelect: =Navigate(Home);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
