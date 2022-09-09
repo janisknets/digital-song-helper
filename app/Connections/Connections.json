@@ -95,6 +95,12 @@
           "CampaignList": {
             "tableName": "fa162762-ad7c-41c8-991b-4996a94ba85c"
           },
+          "Data": {
+            "tableName": "03b2060b-5c50-4c41-b15d-d9d3172b35aa"
+          },
+          "Data_1": {
+            "tableName": "03b2060b-5c50-4c41-b15d-d9d3172b35aa"
+          },
           "EmailTemplate": {
             "tableName": "dc289038-327f-48c1-a2b9-825e495c763b"
           },
@@ -111,7 +117,9 @@
       "EmailTemplate",
       "EmailTemplate_1",
       "CampaignList",
-      "NewCampaign"
+      "NewCampaign",
+      "Data",
+      "Data_1"
     ],
     "dependencies": {},
     "dependents": [],
