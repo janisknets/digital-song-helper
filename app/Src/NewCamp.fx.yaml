@@ -381,3 +381,15 @@ NewCamp As screen:
         Y: =36
         ZIndex: =4
 
+    Button3 As button:
+        Fill: =RGBA(0, 134, 208, 1)
+        OnSelect: =Navigate(TestSendOut);
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Button"
+        X: =1092
+        Y: =532
+        ZIndex: =5
+
