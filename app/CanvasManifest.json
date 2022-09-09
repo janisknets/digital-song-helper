@@ -108,10 +108,10 @@
   "ScreenOrder": [
     "SendButton",
     "Home",
-    "Test",
     "EditCampaign",
     "ViewCampaign",
     "NewCamp",
+    "Test",
     "TestCreateNew",
     "TestPreview",
     "TestSendOut"

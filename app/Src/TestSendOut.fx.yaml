@@ -1,13 +1,5 @@
 "TestSendOut As screen.'tabletLayout_Email_ver3.0'":
 
-    RTEBody As richTextEditor:
-        Default: =
-        Height: =219
-        Width: =765
-        X: =316
-        Y: =344
-        ZIndex: =2
-
     RectQuickActionBar1 As rectangle:
         Fill: =RGBA(255, 255, 255, 1)
         Height: =64
@@ -22,7 +14,7 @@
         Width: =103
         Wrap: =false
         X: =213
-        Y: =119
+        Y: =70
         ZIndex: =5
 
     TextSearchBox1 As text:
@@ -37,7 +29,7 @@
         RadiusTopRight: =0
         Width: =765
         X: =316
-        Y: =119
+        Y: =70
         ZIndex: =6
 
     SearchIcon1 As icon.Search:
@@ -89,30 +81,32 @@
             MyPeople
         Layout: =Layout.Vertical
         ShowScrollbar: =Self.Height >= 182
-        TemplateSize: =42
-        Width: =Parent.Width - Self.X * 2
+        TemplateSize: =-5
+        Width: =1045
         WrapCount: =4
-        X: =27
+        X: =93
         Y: =TextSearchBox1.Y + TextSearchBox1.Height
         ZIndex: =9
 
         Rectangle3 As rectangle:
-            Height: =Parent.TemplateHeight
+            Height: =42
             OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth
+            Width: =229
+            X: =39
             ZIndex: =1
 
         Title1 As label:
             FocusedBorderThickness: =2
-            Height: =EmailPeopleGallery1.TemplateHeight
+            Height: =42
             OnSelect: =Set(_selectedUser, ThisItem)
             PaddingLeft: =10
             Size: =13
             TabIndex: =If(PeopleBrowseGallery1.Visible, -1, 0)
             Text: =ThisItem.DisplayName
             VerticalAlign: =Middle
-            Width: =EmailPeopleGallery1.TemplateWidth - iconRemove1.Width + 10
+            Width: =236
             Wrap: =false
+            X: =32
             ZIndex: =2
 
         iconRemove1 As icon.Cancel:
@@ -138,8 +132,8 @@
         Text: ="*Subject"
         Width: =118
         Wrap: =false
-        X: =262
-        Y: =218
+        X: =261
+        Y: =145
         ZIndex: =10
 
     TextEmailSubject1 As text:
@@ -154,7 +148,7 @@
         TabIndex: =If(PeopleBrowseGallery1.Visible, -1, 0)
         Width: =701
         X: =380
-        Y: =218
+        Y: =145
         ZIndex: =11
 
     LblEmailMessage1 As label:
@@ -164,8 +158,8 @@
         Text: ="Message"
         Width: =119
         Wrap: =false
-        X: =197
-        Y: =430
+        X: =261
+        Y: =251
         ZIndex: =12
 
     PeopleBrowseGallery1 As gallery.PeoplePickerGallerySmallTablet:
@@ -238,9 +232,9 @@
         Height: =52
         OnSelect: |-
             =Set(_emailRecipientString, Concat(MyPeople, Mail & ";"));           
-            Office365Outlook.SendEmailV2(_emailRecipientString, TextEmailSubject1.Text, RTEBody.HtmlText, {Importance:"Normal"});           
+            Office365Outlook.SendEmailV2(_emailRecipientString, TextEmailSubject1.Text, TextInput2.Text, {Importance:"Normal"});           
             Reset(TextEmailSubject1);           
-            Reset(RTEBody);           
+            Reset(TextInput2);           
             Clear(MyPeople)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
@@ -248,8 +242,8 @@
         RadiusTopRight: =0
         Text: ="Launch Campaign"
         Width: =188
-        X: =589
-        Y: =640
+        X: =588
+        Y: =670
         ZIndex: =14
 
     Gallery4 As gallery.galleryVertical:
@@ -258,7 +252,455 @@
         Layout: =Layout.Vertical
         TemplateSize: =25
         Width: =1284
-        X: =25
-        Y: =589
+        X: =18
+        Y: =625
         ZIndex: =15
+
+    HtmlText1_1 As htmlViewer:
+        Height: =275
+        HtmlText: |-
+            ="<!DOCTYPE html>" &
+            "<html xmlns:v=" & Char(34) & "urn:schemas-microsoft-com:vml" & Char(34) & " xmlns:o=" & Char(34) & "urn:schemas-microsoft-com:office:office" & Char(34) & " lang=" & Char(34) & "en" & Char(34) & ">" &
+            "" &
+            "<head>" &
+            "	<title></title>" &
+            "	<meta http-equiv=" & Char(34) & "Content-Type" & Char(34) & " content=" & Char(34) & "text/html; charset=utf-8" & Char(34) & ">" &
+            "	<meta name=" & Char(34) & "viewport" & Char(34) & " content=" & Char(34) & "width=device-width, initial-scale=1.0" & Char(34) & ">" &
+            "	<!--[if mso]><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></xml><![endif]-->" &
+            "	<style>" &
+            "		* {" &
+            "			box-sizing: border-box;" &
+            "		}" &
+            "" &
+            "		body {" &
+            "			margin: 0;" &
+            "			padding: 0;" &
+            "		}" &
+            "" &
+            "		a[x-apple-data-detectors] {" &
+            "			color: inherit !important;" &
+            "			text-decoration: inherit !important;" &
+            "		}" &
+            "" &
+            "		#MessageViewBody a {" &
+            "			color: inherit;" &
+            "			text-decoration: none;" &
+            "		}" &
+            "" &
+            "		p {" &
+            "			line-height: inherit" &
+            "		}" &
+            "" &
+            "" &
+            "		@media (max-width:520px) {" &
+            "			.row-content {" &
+            "		width: 100% !important;" &
+            "			}" &
+            "" &
+            "			.image_block img.big {" &
+            "				width: auto !important;" &
+            "			}" &
+            "" &
+            "			.column .border {" &
+            "				display: none;" &
+            "			}" &
+            "" &
+            "			table {" &
+            "				table-layout: fixed !important;" &
+            "			}" &
+            "" &
+            "			.stack .column {" &
+            "				width: 100%;" &
+            "				display: block;" &
+            "			}" &
+            "		}" &
+            "	</style>" &
+            "</head>" &
+            "" &
+            "<body style=" & Char(34) & "background-color: #FFFFFF; margin: 0; padding: 0; -webkit-text-size-adjust: none; text-size-adjust: none;" & Char(34) & ">" &
+            "	<table class=" & Char(34) & "nl-container" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #FFFFFF;" & Char(34) & ">" &
+            "		<tbody>" &
+            "			<tr>" &
+            "				<td>" &
+            "					<table class=" & Char(34) & "row row-1" & Char(34) & " align=" & Char(34) & "center" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "						<tbody>" &
+            "							<tr>" &
+            "								<td>" &
+            "									<table class=" & Char(34) & "row-content" & Char(34) & " align=" & Char(34) & "center" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000000; width: 960px;" & Char(34) & " width=" & Char(34) & "960" & Char(34) & ">" &
+            "										<tbody>" &
+            "											<tr>" &
+            "												<td class=" & Char(34) & "column column-1" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" & Char(34) & ">" &
+            "													<table class=" & Char(34) & "image_block" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "														<tr>" &
+            "															<td style=" & Char(34) & "width:100%;padding-right:0px;padding-left:0px;" & Char(34) & ">" &
+            "																<div align=" & Char(34) & "center" & Char(34) & " style=" & Char(34) & "line-height:0px" & Char(34) & "><img class=" & Char(34) & "big" & Char(34) & " src=" & Char(34) & "https://interactive.accenture.lv/wp-content/email_template/Song_template-Header.jpg" & Char(34) & " style=" & Char(34) & "display: block; height: auto; border: 0; width: 960px; max-width: 100%;" & Char(34) & " width=" & Char(34) & "960" & Char(34) & "></div>" &
+            "															</td>" &
+            "														</tr>" &
+            "													</table>" &
+            "												</td>" &
+            "											</tr>" &
+            "										</tbody>" &
+            "									</table>" &
+            "								</td>" &
+            "							</tr>" &
+            "						</tbody>" &
+            "					</table>" &
+            "					<table class=" & Char(34) & "row row-2" & Char(34) & " align=" & Char(34) & "center" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "						<tbody>" &
+            "							<tr>" &
+            "								<td>" &
+            "									<table class=" & Char(34) & "row-content" & Char(34) & " align=" & Char(34) & "center" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000000; width: 960px;" & Char(34) & " width=" & Char(34) & "960" & Char(34) & ">" &
+            "										<tbody>" &
+            "											<tr>" &
+            "												<td class=" & Char(34) & "column column-1" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" & Char(34) & ">" &
+            "													<table class=" & Char(34) & "image_block" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "														<tr>" &
+            "															<td style=" & Char(34) & "width:100%;padding-right:0px;padding-left:0px;" & Char(34) & ">" &
+            "																<div align=" & Char(34) & "center" & Char(34) & " style=" & Char(34) & "line-height:0px" & Char(34) & "><img class=" & Char(34) & "big" & Char(34) & " src=" & Char(34) & "https://interactive.accenture.lv/wp-content/email_template/Song_template-content.jpg" & Char(34) & " style=" & Char(34) & "display: block; height: auto; border: 0; width: 960px; max-width: 100%;" & Char(34) & " width=" & Char(34) & "960" & Char(34) & "></div>" &
+            "															</td>" &
+            "														</tr>" &
+            "													</table>" &
+            "												</td>" &
+            "											</tr>" &
+            "										</tbody>" &
+            "									</table>" &
+            "								</td>" &
+            "							</tr>" &
+            "						</tbody>" &
+            "					</table>" &
+            "					<table class=" & Char(34) & "row row-3" & Char(34) & " align=" & Char(34) & "center" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "						<tbody>" &
+            "							<tr>" &
+            "								<td>" &
+            "									<table class=" & Char(34) & "row-content" & Char(34) & " align=" & Char(34) & "center" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000000; width: 960px;" & Char(34) & " width=" & Char(34) & "960" & Char(34) & ">" &
+            "										<tbody>" &
+            "											<tr>" &
+            "												<td class=" & Char(34) & "column column-1" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" & Char(34) & ">" &
+            "													<table class=" & Char(34) & "image_block" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "														<tr>" &
+            "															<td style=" & Char(34) & "width:100%;padding-right:0px;padding-left:0px;" & Char(34) & ">" &
+            "																<div align=" & Char(34) & "center" & Char(34) & " style=" & Char(34) & "line-height:0px" & Char(34) & "><a href=" & Char(34) & "https://go.accenture.com/InteractiveTalents" & Char(34) & " target=" & Char(34) & "_blank" & Char(34) & " style=" & Char(34) & "outline:none" & Char(34) & " tabindex=" & Char(34) & "-1" & Char(34) & "><img class=" & Char(34) & "big" & Char(34) & " src=" & Char(34) & "https://interactive.accenture.lv/wp-content/email_template/Song_template-availability.jpg" & Char(34) & " style=" & Char(34) & "display: block; height: auto; border: 0; width: 960px; max-width: 100%;" & Char(34) & " width=" & Char(34) & "960" & Char(34) & "></a></div>" &
+            "															</td>" &
+            "														</tr>" &
+            "													</table>" &
+            "												</td>" &
+            "											</tr>" &
+            "										</tbody>" &
+            "									</table>" &
+            "								</td>" &
+            "							</tr>" &
+            "						</tbody>" &
+            "					</table>" &
+            "					<table class=" & Char(34) & "row row-4" & Char(34) & " align=" & Char(34) & "center" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "						<tbody>" &
+            "							<tr>" &
+            "								<td>" &
+            "									<table class=" & Char(34) & "row-content" & Char(34) & " align=" & Char(34) & "center" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000000; width: 960px;" & Char(34) & " width=" & Char(34) & "960" & Char(34) & ">" &
+            "										<tbody>" &
+            "											<tr>" &
+            "												<td class=" & Char(34) & "column column-1" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" & Char(34) & ">" &
+            "													<table class=" & Char(34) & "image_block" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "														<tr>" &
+            "															<td style=" & Char(34) & "width:100%;padding-right:0px;padding-left:0px;" & Char(34) & ">" &
+            "																<div align=" & Char(34) & "center" & Char(34) & " style=" & Char(34) & "line-height:0px" & Char(34) & "><img class=" & Char(34) & "big" & Char(34) & " src=" & Char(34) & "https://interactive.accenture.lv/wp-content/email_template/Song_template-skills.jpg" & Char(34) & " style=" & Char(34) & "display: block; height: auto; border: 0; width: 960px; max-width: 100%;" & Char(34) & " width=" & Char(34) & "960" & Char(34) & "></div>" &
+            "															</td>" &
+            "														</tr>" &
+            "													</table>" &
+            "												</td>" &
+            "											</tr>" &
+            "										</tbody>" &
+            "									</table>" &
+            "								</td>" &
+            "							</tr>" &
+            "						</tbody>" &
+            "					</table>" &
+            "					<table class=" & Char(34) & "row row-5" & Char(34) & " align=" & Char(34) & "center" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "						<tbody>" &
+            "							<tr>" &
+            "								<td>" &
+            "									<table class=" & Char(34) & "row-content stack" & Char(34) & " align=" & Char(34) & "center" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000000; width: 320px;" & Char(34) & " width=" & Char(34) & "320" & Char(34) & ">" &
+            "										<tbody>" &
+            "											<tr>" &
+            "												<td class=" & Char(34) & "column column-1" & Char(34) & " width=" & Char(34) & "640" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" & Char(34) & ">" &
+            "													<table class=" & Char(34) & "image_block" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "														<tr>" &
+            "															<td style=" & Char(34) & "width:100%;padding-right:0px;padding-left:0px;padding-top:0px;" & Char(34) & ">" &
+            "																<div align=" & Char(34) & "center" & Char(34) & " style=" & Char(34) & "line-height:0px" & Char(34) & "><img src=" & Char(34) & "https://interactive.accenture.lv/wp-content/email_template/Song_template-portfolio.jpg" & Char(34) & " style=" & Char(34) & "display: block; height: auto; border: 0; width: 320px;" & Char(34) & " width=" & Char(34) & "320" & Char(34) & " alt=" & Char(34) & "I'm an image" & Char(34) & " title=" & Char(34) & "I'm an image" & Char(34) & "></div>" &
+            "															</td>" &
+            "														</tr>" &
+            "													</table>" &
+            "												</td>" &
+            "												<td class=" & Char(34) & "column column-2" & Char(34) & " width=" & Char(34) & "640" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" & Char(34) & ">" &
+            "													<table class=" & Char(34) & "image_block" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "														<tr>" &
+            "															<td style=" & Char(34) & "width:100%;padding-right:0px;padding-left:0px;padding-top:0px;" & Char(34) & ">" &
+            "																<div align=" & Char(34) & "center" & Char(34) & " style=" & Char(34) & "line-height:0px" & Char(34) & "><a href=" & Char(34) & "https://go.accenture.com/cmtcases" & Char(34) & " target=" & Char(34) & "_blank" & Char(34) & " style=" & Char(34) & "outline:none" & Char(34) & " tabindex=" & Char(34) & "-1" & Char(34) & "><img src=" & Char(34) & "https://interactive.accenture.lv/wp-content/email_template/Song_template-portfolio-cmt.jpg" & Char(34) & " style=" & Char(34) & "display: block; height: auto; border: 0; width: 320px;" & Char(34) & " width=" & Char(34) & "320" & Char(34) & " alt=" & Char(34) & "Communications, Media & Technology" & Char(34) & " title=" & Char(34) & "Communications, Media & Technology" & Char(34) & "></a></div>" &
+            "															</td>" &
+            "														</tr>" &
+            "													</table>" &
+            "													<table class=" & Char(34) & "image_block" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "														<tr>" &
+            "															<td style=" & Char(34) & "width:100%;padding-right:0px;padding-left:0px;" & Char(34) & ">" &
+            "																<div align=" & Char(34) & "center" & Char(34) & " style=" & Char(34) & "line-height:0px" & Char(34) & "><a href=" & Char(34) & "https://go.accenture.com/prdcases" & Char(34) & " target=" & Char(34) & "_blank" & Char(34) & " style=" & Char(34) & "outline:none" & Char(34) & " tabindex=" & Char(34) & "-1" & Char(34) & "><img src=" & Char(34) & "https://interactive.accenture.lv/wp-content/email_template/Song_template-portfolio-prd.jpg" & Char(34) & " style=" & Char(34) & "display: block; height: auto; border: 0; width: 320px;" & Char(34) & " width=" & Char(34) & "320" & Char(34) & " alt=" & Char(34) & "Products Industry" & Char(34) & " title=" & Char(34) & "Products Industry" & Char(34) & "></a></div>" &
+            "															</td>" &
+            "														</tr>" &
+            "													</table>" &
+            "													<table class=" & Char(34) & "image_block" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "														<tr>" &
+            "															<td style=" & Char(34) & "width:100%;padding-right:0px;padding-left:0px;" & Char(34) & ">" &
+            "																<div align=" & Char(34) & "center" & Char(34) & " style=" & Char(34) & "line-height:0px" & Char(34) & "><a href=" & Char(34) & "https://go.accenture.com/fscases" & Char(34) & " target=" & Char(34) & "_blank" & Char(34) & " style=" & Char(34) & "outline:none" & Char(34) & " tabindex=" & Char(34) & "-1" & Char(34) & "><img src=" & Char(34) & "https://interactive.accenture.lv/wp-content/email_template/Song_template-portfolio-fs.jpg" & Char(34) & " style=" & Char(34) & "display: block; height: auto; border: 0; width: 320px;" & Char(34) & " width=" & Char(34) & "320" & Char(34) & " alt=" & Char(34) & "Financial Services" & Char(34) & " title=" & Char(34) & "Financial Services" & Char(34) & "></a></div>" &
+            "															</td>" &
+            "														</tr>" &
+            "													</table>" &
+            "													<table class=" & Char(34) & "image_block" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "														<tr>" &
+            "															<td style=" & Char(34) & "width:100%;padding-right:0px;padding-left:0px;" & Char(34) & ">" &
+            "																<div align=" & Char(34) & "center" & Char(34) & " style=" & Char(34) & "line-height:0px" & Char(34) & "><a href=" & Char(34) & "https://go.accenture.com/rescases" & Char(34) & " target=" & Char(34) & "_blank" & Char(34) & " style=" & Char(34) & "outline:none" & Char(34) & " tabindex=" & Char(34) & "-1" & Char(34) & "><img src=" & Char(34) & "https://interactive.accenture.lv/wp-content/email_template/Song_template-portfolio-res.jpg" & Char(34) & " style=" & Char(34) & "display: block; height: auto; border: 0; width: 320px;" & Char(34) & " width=" & Char(34) & "320" & Char(34) & " alt=" & Char(34) & "Resources Industry" & Char(34) & " title=" & Char(34) & "Resources Industry" & Char(34) & "></a></div>" &
+            "															</td>" &
+            "														</tr>" &
+            "													</table>" &
+            "												</td>" &
+            "												<td class=" & Char(34) & "column column-3" & Char(34) & " width=" & Char(34) & "640" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" & Char(34) & ">" &
+            "													<table class=" & Char(34) & "image_block" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "														<tr>" &
+            "															<td style=" & Char(34) & "width:100%;padding-right:0px;padding-left:0px;padding-top:0px;" & Char(34) & ">" &
+            "																<div align=" & Char(34) & "center" & Char(34) & " style=" & Char(34) & "line-height:0px" & Char(34) & "><a href=" & Char(34) & "https://go.accenture.com/hpscases" & Char(34) & " target=" & Char(34) & "_blank" & Char(34) & " style=" & Char(34) & "outline:none" & Char(34) & " tabindex=" & Char(34) & "-1" & Char(34) & "><img src=" & Char(34) & "https://interactive.accenture.lv/wp-content/email_template/Song_template-portfolio-hps.jpg" & Char(34) & " style=" & Char(34) & "display: block; height: auto; border: 0; width: 320px;" & Char(34) & " width=" & Char(34) & "320" & Char(34) & " alt=" & Char(34) & "Health & Public Services" & Char(34) & " title=" & Char(34) & "Health & Public Services" & Char(34) & "></a></div>" &
+            "															</td>" &
+            "														</tr>" &
+            "													</table>" &
+            "													<table class=" & Char(34) & "image_block" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "														<tr>" &
+            "															<td style=" & Char(34) & "width:100%;padding-right:0px;padding-left:0px;" & Char(34) & ">" &
+            "																<div align=" & Char(34) & "center" & Char(34) & " style=" & Char(34) & "line-height:0px" & Char(34) & "><a href=" & Char(34) & "https://go.accenture.com/LowCodeProjects" & Char(34) & " target=" & Char(34) & "_blank" & Char(34) & " style=" & Char(34) & "outline:none" & Char(34) & " tabindex=" & Char(34) & "-1" & Char(34) & "><img src=" & Char(34) & "https://interactive.accenture.lv/wp-content/email_template/Song_template-portfolio-lowcode.jpg" & Char(34) & " style=" & Char(34) & "display: block; height: auto; border: 0; width: 320px;" & Char(34) & " width=" & Char(34) & "320" & Char(34) & " alt=" & Char(34) & "LowCode" & Char(34) & " title=" & Char(34) & "LowCode" & Char(34) & "></a></div>" &
+            "															</td>" &
+            "														</tr>" &
+            "													</table>" &
+            "													<table class=" & Char(34) & "image_block" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "														<tr>" &
+            "															<td style=" & Char(34) & "width:100%;padding-right:0px;padding-left:0px;" & Char(34) & ">" &
+            "																<div align=" & Char(34) & "center" & Char(34) & " style=" & Char(34) & "line-height:0px" & Char(34) & "><img src=" & Char(34) & "https://interactive.accenture.lv/wp-content/email_template/Song_template-portfolio-aem.jpg" & Char(34) & " style=" & Char(34) & "display: block; height: auto; border: 0; width: 320px;" & Char(34) & " width=" & Char(34) & "320" & Char(34) & " alt=" & Char(34) & "Adobe Experience Manager" & Char(34) & " title=" & Char(34) & "Adobe Experience Manager" & Char(34) & "></div>" &
+            "															</td>" &
+            "														</tr>" &
+            "													</table>" &
+            "													<table class=" & Char(34) & "image_block" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "														<tr>" &
+            "															<td style=" & Char(34) & "width:100%;padding-right:0px;padding-left:0px;" & Char(34) & ">" &
+            "																<div align=" & Char(34) & "center" & Char(34) & " style=" & Char(34) & "line-height:0px" & Char(34) & "><img src=" & Char(34) & "https://interactive.accenture.lv/wp-content/email_template/Song_template-portfolio-metaverse.jpg" & Char(34) & " style=" & Char(34) & "display: block; height: auto; border: 0; width: 320px;" & Char(34) & " width=" & Char(34) & "320" & Char(34) & " alt=" & Char(34) & "Metaverse" & Char(34) & " title=" & Char(34) & "Metaverse" & Char(34) & "></div>" &
+            "															</td>" &
+            "														</tr>" &
+            "													</table>" &
+            "												</td>" &
+            "											</tr>" &
+            "										</tbody>" &
+            "									</table>" &
+            "								</td>" &
+            "							</tr>" &
+            "						</tbody>" &
+            "					</table>" &
+            "					<table class=" & Char(34) & "row row-6" & Char(34) & " align=" & Char(34) & "center" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "						<tbody>" &
+            "							<tr>" &
+            "								<td>" &
+            "									<table class=" & Char(34) & "row-content" & Char(34) & " align=" & Char(34) & "center" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000000; width: 960px;" & Char(34) & " width=" & Char(34) & "960" & Char(34) & ">" &
+            "										<tbody>" &
+            "											<tr>" &
+            "												<td class=" & Char(34) & "column column-1" & Char(34) & " width=" & Char(34) & "960" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" & Char(34) & ">" &
+            "													<table class=" & Char(34) & "image_block" & Char(34) & " width=" & Char(34) & "960" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "														<tr>" &
+            "															<td style=" & Char(34) & "width:960px;padding-right:0px;padding-left:0px;" & Char(34) & ">" &
+            "																<div align=" & Char(34) & "center" & Char(34) & " style=" & Char(34) & "line-height:0px" & Char(34) & "><a href=" & Char(34) & "mailto:baltic.song@accenture.com?subject=Interested%20in%20Baltic%20Song%20services" & Char(34) & " target=" & Char(34) & "_blank" & Char(34) & " style=" & Char(34) & "outline:none" & Char(34) & " tabindex=" & Char(34) & "-1" & Char(34) & "><img class=" & Char(34) & "big" & Char(34) & " src=" & Char(34) & "https://interactive.accenture.lv/wp-content/email_template/Song_template-contacts.jpg" & Char(34) & " style=" & Char(34) & "display: block; height: auto; border: 0; width: 960px;" & Char(34) & " width=" & Char(34) & "960" & Char(34) & "></a></div>" &
+            "															</td>" &
+            "														</tr>" &
+            "													</table>" &
+            "												</td>" &
+            "											</tr>" &
+            "										</tbody>" &
+            "									</table>" &
+            "								</td>" &
+            "							</tr>" &
+            "						</tbody>" &
+            "					</table>" &
+            "					<table class=" & Char(34) & "row row-7" & Char(34) & " align=" & Char(34) & "center" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "						<tbody>" &
+            "							<tr>" &
+            "								<td>" &
+            "									<table class=" & Char(34) & "row-content stack" & Char(34) & " align=" & Char(34) & "center" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000000; width: 960px;" & Char(34) & " width=" & Char(34) & "960" & Char(34) & ">" &
+            "										<tbody>" &
+            "											<tr>" &
+            "												<td class=" & Char(34) & "column column-1" & Char(34) & " width=" & Char(34) & "50%" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" & Char(34) & ">" &
+            "													<table class=" & Char(34) & "image_block" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "														<tr>" &
+            "															<td style=" & Char(34) & "width:100%;padding-right:0px;padding-left:0px;" & Char(34) & ">" &
+            "																<div align=" & Char(34) & "center" & Char(34) & " style=" & Char(34) & "line-height:0px" & Char(34) & "><a href=" & Char(34) & "mailto:k.auzarejs-auzers@accenture.com?subject=Interested%20in%20Baltic%20Song%20services" & Char(34) & " target=" & Char(34) & "_blank" & Char(34) & " style=" & Char(34) & "outline:none" & Char(34) & " tabindex=" & Char(34) & "-1" & Char(34) & "><img src=" & Char(34) & "https://interactive.accenture.lv/wp-content/email_template/Song_template-contacts-kaspars.jpg" & Char(34) & " style=" & Char(34) & "display: block; height: auto; border: 0; width: 480px; max-width: 100%;" & Char(34) & " width=" & Char(34) & "480" & Char(34) & " alt=" & Char(34) & "Kaspars Auzarejs-Auzers" & Char(34) & " title=" & Char(34) & "Kaspars Auzarejs-Auzers" & Char(34) & "></a></div>" &
+            "															</td>" &
+            "														</tr>" &
+            "													</table>" &
+            "													<table class=" & Char(34) & "image_block" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "														<tr>" &
+            "															<td style=" & Char(34) & "width:100%;padding-right:0px;padding-left:0px;" & Char(34) & ">" &
+            "																<div align=" & Char(34) & "center" & Char(34) & " style=" & Char(34) & "line-height:0px" & Char(34) & "><a href=" & Char(34) & "mailto:sergejs.savrancuks@accenture.com?subject=Interested%20in%20Baltic%20Song%20services" & Char(34) & " target=" & Char(34) & "_blank" & Char(34) & " style=" & Char(34) & "outline:none" & Char(34) & " tabindex=" & Char(34) & "-1" & Char(34) & "><img src=" & Char(34) & "https://interactive.accenture.lv/wp-content/email_template/Song_template-contacts-sergejs_s.jpg" & Char(34) & " style=" & Char(34) & "display: block; height: auto; border: 0; width: 480px; max-width: 100%;" & Char(34) & " width=" & Char(34) & "480" & Char(34) & " alt=" & Char(34) & "Sergejs Savrancuks" & Char(34) & " title=" & Char(34) & "Sergejs Savrancuks" & Char(34) & "></a></div>" &
+            "															</td>" &
+            "														</tr>" &
+            "													</table>" &
+            "													<table class=" & Char(34) & "image_block" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "														<tr>" &
+            "															<td style=" & Char(34) & "width:100%;padding-right:0px;padding-left:0px;" & Char(34) & ">" &
+            "																<div align=" & Char(34) & "center" & Char(34) & " style=" & Char(34) & "line-height:0px" & Char(34) & "><a href=" & Char(34) & "mailto:janis.knets@accenture.com?subject=Interested%20in%20Baltic%20Song%20services" & Char(34) & " target=" & Char(34) & "_blank" & Char(34) & " style=" & Char(34) & "outline:none" & Char(34) & " tabindex=" & Char(34) & "-1" & Char(34) & "><img src=" & Char(34) & "https://interactive.accenture.lv/wp-content/email_template/Song_template-contacts-janis.jpg" & Char(34) & " style=" & Char(34) & "display: block; height: auto; border: 0; width: 480px; max-width: 100%;" & Char(34) & " width=" & Char(34) & "480" & Char(34) & " alt=" & Char(34) & "Janis Knets" & Char(34) & " title=" & Char(34) & "Janis Knets" & Char(34) & "></a></div>" &
+            "															</td>" &
+            "														</tr>" &
+            "													</table>" &
+            "												</td>" &
+            "												<td class=" & Char(34) & "column column-2" & Char(34) & " width=" & Char(34) & "50%" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" & Char(34) & ">" &
+            "													<table class=" & Char(34) & "image_block" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "														<tr>" &
+            "															<td style=" & Char(34) & "width:100%;padding-right:0px;padding-left:0px;" & Char(34) & ">" &
+            "																<div align=" & Char(34) & "center" & Char(34) & " style=" & Char(34) & "line-height:0px" & Char(34) & "><a href=" & Char(34) & "mailto:imants.losans@accenture.com?subject=Interested%20in%20Baltic%20Song%20services" & Char(34) & " target=" & Char(34) & "_blank" & Char(34) & " style=" & Char(34) & "outline:none" & Char(34) & " tabindex=" & Char(34) & "-1" & Char(34) & "><img src=" & Char(34) & "https://interactive.accenture.lv/wp-content/email_template/Song_template-contacts-imants.jpg" & Char(34) & " style=" & Char(34) & "display: block; height: auto; border: 0; width: 480px; max-width: 100%;" & Char(34) & " width=" & Char(34) & "480" & Char(34) & " alt=" & Char(34) & "Imants Losans" & Char(34) & " title=" & Char(34) & "Imants Losans" & Char(34) & "></a></div>" &
+            "															</td>" &
+            "														</tr>" &
+            "													</table>" &
+            "													<table class=" & Char(34) & "image_block" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "														<tr>" &
+            "															<td style=" & Char(34) & "width:100%;padding-right:0px;padding-left:0px;" & Char(34) & ">" &
+            "																<div align=" & Char(34) & "center" & Char(34) & " style=" & Char(34) & "line-height:0px" & Char(34) & "><a href=" & Char(34) & "mailto:sergejs.nosals@accenture.com?subject=Interested%20in%20Baltic%20Song%20services" & Char(34) & " target=" & Char(34) & "_blank" & Char(34) & " style=" & Char(34) & "outline:none" & Char(34) & " tabindex=" & Char(34) & "-1" & Char(34) & "><img src=" & Char(34) & "https://interactive.accenture.lv/wp-content/email_template/Song_template-contacts-sergejs_n.jpg" & Char(34) & " style=" & Char(34) & "display: block; height: auto; border: 0; width: 480px; max-width: 100%;" & Char(34) & " width=" & Char(34) & "480" & Char(34) & " alt=" & Char(34) & "Sergejs Nosals" & Char(34) & " title=" & Char(34) & "Sergejs Nosals" & Char(34) & "></a></div>" &
+            "															</td>" &
+            "														</tr>" &
+            "													</table>" &
+            "													<table class=" & Char(34) & "image_block" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "														<tr>" &
+            "															<td style=" & Char(34) & "width:100%;padding-right:0px;padding-left:0px;" & Char(34) & ">" &
+            "																<div align=" & Char(34) & "center" & Char(34) & " style=" & Char(34) & "line-height:0px" & Char(34) & "><a href=" & Char(34) & "mailto:liga.bethere@accenture.com?subject=Interested%20in%20Baltic%20Song%20services" & Char(34) & " target=" & Char(34) & "_blank" & Char(34) & " style=" & Char(34) & "outline:none" & Char(34) & " tabindex=" & Char(34) & "-1" & Char(34) & "><img src=" & Char(34) & "https://interactive.accenture.lv/wp-content/email_template/Song_template-contacts-liga.jpg" & Char(34) & " style=" & Char(34) & "display: block; height: auto; border: 0; width: 480px; max-width: 100%;" & Char(34) & " width=" & Char(34) & "480" & Char(34) & " alt=" & Char(34) & "Liga Bethere" & Char(34) & " title=" & Char(34) & "Liga Bethere" & Char(34) & "></a></div>" &
+            "															</td>" &
+            "														</tr>" &
+            "													</table>" &
+            "												</td>" &
+            "											</tr>" &
+            "										</tbody>" &
+            "									</table>" &
+            "								</td>" &
+            "							</tr>" &
+            "						</tbody>" &
+            "					</table>" &
+            "					<table class=" & Char(34) & "row row-8" & Char(34) & " align=" & Char(34) & "center" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "						<tbody>" &
+            "							<tr>" &
+            "								<td>" &
+            "									<table class=" & Char(34) & "row-content" & Char(34) & " align=" & Char(34) & "center" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000000; width: 960px;" & Char(34) & " width=" & Char(34) & "960" & Char(34) & ">" &
+            "										<tbody>" &
+            "											<tr>" &
+            "												<td class=" & Char(34) & "column column-1" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" & Char(34) & ">" &
+            "													<table class=" & Char(34) & "image_block" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "														<tr>" &
+            "															<td style=" & Char(34) & "width:100%;padding-right:0px;padding-left:0px;" & Char(34) & ">" &
+            "																<div align=" & Char(34) & "center" & Char(34) & " style=" & Char(34) & "line-height:0px" & Char(34) & "><img class=" & Char(34) & "big" & Char(34) & " src=" & Char(34) & "https://interactive.accenture.lv/wp-content/email_template/Song_template-follow.jpg" & Char(34) & " style=" & Char(34) & "display: block; height: auto; border: 0; width: 960px; max-width: 100%;" & Char(34) & " width=" & Char(34) & "960" & Char(34) & "></div>" &
+            "															</td>" &
+            "														</tr>" &
+            "													</table>" &
+            "												</td>" &
+            "											</tr>" &
+            "										</tbody>" &
+            "									</table>" &
+            "								</td>" &
+            "							</tr>" &
+            "						</tbody>" &
+            "					</table>" &
+            "					<table class=" & Char(34) & "row row-9" & Char(34) & " align=" & Char(34) & "center" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-size: auto;" & Char(34) & ">" &
+            "						<tbody>" &
+            "							<tr>" &
+            "								<td>" &
+            "									<table class=" & Char(34) & "row-content stack" & Char(34) & " align=" & Char(34) & "center" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-size: auto; background-color: #131416; color: #000000; width: 960px;" & Char(34) & " width=" & Char(34) & "960" & Char(34) & ">" &
+            "										<tbody>" &
+            "											<tr>" &
+            "												<td class=" & Char(34) & "column column-1" & Char(34) & " width=" & Char(34) & "8.333333%" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" & Char(34) & ">" &
+            "													<table class=" & Char(34) & "image_block" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "														<tr>" &
+            "															<td style=" & Char(34) & "width:100%;padding-right:0px;padding-left:0px;padding-bottom:5px;" & Char(34) & ">" &
+            "																<div style=" & Char(34) & "line-height:0px" & Char(34) & "><img src=" & Char(34) & "https://interactive.accenture.lv/wp-content/email_template/Song_template-follow-bg.jpg" & Char(34) & " style=" & Char(34) & "display: block; height: auto; border: 0; width: 68px; max-width: 100%;" & Char(34) & " width=" & Char(34) & "68" & Char(34) & "></div>" &
+            "															</td>" &
+            "														</tr>" &
+            "													</table>" &
+            "												</td>" &
+            "												<td class=" & Char(34) & "column column-2" & Char(34) & " width=" & Char(34) & "16.666666666666668%" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" & Char(34) & ">" &
+            "													<table class=" & Char(34) & "image_block" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "														<tr>" &
+            "															<td style=" & Char(34) & "width:100%;padding-right:0px;padding-left:0px;padding-bottom:5px;" & Char(34) & ">" &
+            "																<div align=" & Char(34) & "center" & Char(34) & " style=" & Char(34) & "line-height:0px" & Char(34) & "><a href=" & Char(34) & "https://baltics.accenture.com/business-groups/digital/interactive" & Char(34) & " target=" & Char(34) & "_blank" & Char(34) & " style=" & Char(34) & "outline:none" & Char(34) & " tabindex=" & Char(34) & "-1" & Char(34) & "><img src=" & Char(34) & "https://interactive.accenture.lv/wp-content/email_template/Song_template-follow-portal.jpg" & Char(34) & " style=" & Char(34) & "display: block; height: auto; border: 0; width: 137px; max-width: 100%;" & Char(34) & " width=" & Char(34) & "137" & Char(34) & " alt=" & Char(34) & "Baltic ATC Portal" & Char(34) & " title=" & Char(34) & "Baltic ATC Portal" & Char(34) & "></a></div>" &
+            "															</td>" &
+            "														</tr>" &
+            "													</table>" &
+            "												</td>" &
+            "												<td class=" & Char(34) & "column column-3" & Char(34) & " width=" & Char(34) & "16.666666666666668%" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" & Char(34) & ">" &
+            "													<table class=" & Char(34) & "image_block" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "														<tr>" &
+            "															<td style=" & Char(34) & "width:100%;padding-right:0px;padding-left:0px;padding-bottom:5px;" & Char(34) & ">" &
+            "																<div align=" & Char(34) & "center" & Char(34) & " style=" & Char(34) & "line-height:0px" & Char(34) & "><a href=" & Char(34) & "https://mediaexchange.accenture.com/channel/Baltic+Song/149205772/subscribe" & Char(34) & " target=" & Char(34) & "_blank" & Char(34) & " style=" & Char(34) & "outline:none" & Char(34) & " tabindex=" & Char(34) & "-1" & Char(34) & "><img src=" & Char(34) & "https://interactive.accenture.lv/wp-content/email_template/Song_template-follow-mx.jpg" & Char(34) & " style=" & Char(34) & "display: block; height: auto; border: 0; width: 137px; max-width: 100%;" & Char(34) & " width=" & Char(34) & "137" & Char(34) & " alt=" & Char(34) & "Media Exchange" & Char(34) & " title=" & Char(34) & "Media Exchange" & Char(34) & "></a></div>" &
+            "															</td>" &
+            "														</tr>" &
+            "													</table>" &
+            "												</td>" &
+            "												<td class=" & Char(34) & "column column-4" & Char(34) & " width=" & Char(34) & "16.666666666666668%" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" & Char(34) & ">" &
+            "													<table class=" & Char(34) & "image_block" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "														<tr>" &
+            "															<td style=" & Char(34) & "width:100%;padding-right:0px;padding-left:0px;padding-bottom:5px;" & Char(34) & ">" &
+            "																<div align=" & Char(34) & "center" & Char(34) & " style=" & Char(34) & "line-height:0px" & Char(34) & "><a href=" & Char(34) & "https://web.yammer.com/main/org/accenture.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiI1Nzg0ODAwNDYwOCJ9/all" & Char(34) & " target=" & Char(34) & "_blank" & Char(34) & " style=" & Char(34) & "outline:none" & Char(34) & " tabindex=" & Char(34) & "-1" & Char(34) & "><img src=" & Char(34) & "https://interactive.accenture.lv/wp-content/email_template/Song_template-follow-yammer.jpg" & Char(34) & " style=" & Char(34) & "display: block; height: auto; border: 0; width: 137px; max-width: 100%;" & Char(34) & " width=" & Char(34) & "137" & Char(34) & " alt=" & Char(34) & "Yammer" & Char(34) & " title=" & Char(34) & "Yammer" & Char(34) & "></a></div>" &
+            "															</td>" &
+            "														</tr>" &
+            "													</table>" &
+            "												</td>" &
+            "												<td class=" & Char(34) & "column column-5" & Char(34) & " width=" & Char(34) & "16.666666666666668%" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" & Char(34) & ">" &
+            "													<table class=" & Char(34) & "image_block" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "														<tr>" &
+            "															<td style=" & Char(34) & "width:100%;padding-right:0px;padding-left:0px;padding-bottom:5px;" & Char(34) & ">" &
+            "																<div align=" & Char(34) & "center" & Char(34) & " style=" & Char(34) & "line-height:0px" & Char(34) & "><a href=" & Char(34) & "https://blog.accenture.com/design/" & Char(34) & " target=" & Char(34) & "_blank" & Char(34) & " style=" & Char(34) & "outline:none" & Char(34) & " tabindex=" & Char(34) & "-1" & Char(34) & "><img src=" & Char(34) & "https://interactive.accenture.lv/wp-content/email_template/Song_template-follow-blog.jpg" & Char(34) & " style=" & Char(34) & "display: block; height: auto; border: 0; width: 137px; max-width: 100%;" & Char(34) & " width=" & Char(34) & "137" & Char(34) & " alt=" & Char(34) & "Accenture Blogs" & Char(34) & " title=" & Char(34) & "Accenture Blogs" & Char(34) & "></a></div>" &
+            "															</td>" &
+            "														</tr>" &
+            "													</table>" &
+            "												</td>" &
+            "												<td class=" & Char(34) & "column column-6" & Char(34) & " width=" & Char(34) & "16.666666666666668%" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" & Char(34) & ">" &
+            "													<table class=" & Char(34) & "image_block" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "														<tr>" &
+            "															<td style=" & Char(34) & "width:100%;padding-right:0px;padding-left:0px;padding-bottom:5px;" & Char(34) & ">" &
+            "																<div align=" & Char(34) & "right" & Char(34) & " style=" & Char(34) & "line-height:0px" & Char(34) & "><a href=" & Char(34) & "https://collections.accenture.com/collection.aspx?b=30105102-29b0-ec11-b135-0a0b3d281f9d" & Char(34) & " target=" & Char(34) & "_blank" & Char(34) & " style=" & Char(34) & "outline:none" & Char(34) & " tabindex=" & Char(34) & "-1" & Char(34) & "><img src=" & Char(34) & "https://interactive.accenture.lv/wp-content/email_template/Song_template-follow-collections.jpg" & Char(34) & " style=" & Char(34) & "display: block; height: auto; border: 0; width: 137px; max-width: 100%;" & Char(34) & " width=" & Char(34) & "137" & Char(34) & " alt=" & Char(34) & "Collections" & Char(34) & " title=" & Char(34) & "Collections" & Char(34) & "></a></div>" &
+            "															</td>" &
+            "														</tr>" &
+            "													</table>" &
+            "												</td>" &
+            "                        <td class=" & Char(34) & "column column-7" & Char(34) & " width=" & Char(34) & "8.333333%" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" & Char(34) & ">" &
+            "													<table class=" & Char(34) & "image_block" & Char(34) & " width=" & Char(34) & "100%" & Char(34) & " border=" & Char(34) & "0" & Char(34) & " cellpadding=" & Char(34) & "0" & Char(34) & " cellspacing=" & Char(34) & "0" & Char(34) & " role=" & Char(34) & "presentation" & Char(34) & " style=" & Char(34) & "mso-table-lspace: 0pt; mso-table-rspace: 0pt;" & Char(34) & ">" &
+            "														<tr>" &
+            "															<td style=" & Char(34) & "width:100%;padding-right:0px;padding-left:0px;padding-bottom:5px;" & Char(34) & ">" &
+            "																<div align=" & Char(34) & "right" & Char(34) & " style=" & Char(34) & "line-height:0px" & Char(34) & "><a href=" & Char(34) & "https://collections.accenture.com/collection.aspx?b=30105102-29b0-ec11-b135-0a0b3d281f9d" & Char(34) & " target=" & Char(34) & "_blank" & Char(34) & " style=" & Char(34) & "outline:none" & Char(34) & " tabindex=" & Char(34) & "-1" & Char(34) & "><img src=" & Char(34) & "https://interactive.accenture.lv/wp-content/email_template/Song_template-follow-bg.jpg" & Char(34) & " style=" & Char(34) & "display: block; height: auto; border: 0; width: 68px; max-width: 100%;" & Char(34) & " width=" & Char(34) & "68" & Char(34) & "></a></div>" &
+            "															</td>" &
+            "														</tr>" &
+            "													</table>" &
+            "												</td>" &
+            "											</tr>" &
+            "										</tbody>" &
+            "									</table>" &
+            "								</td>" &
+            "							</tr>" &
+            "						</tbody>" &
+            "					</table>" &
+            "				</td>" &
+            "			</tr>" &
+            "		</tbody>" &
+            "	</table><!-- End -->" &
+            "</body>" &
+            "" &
+            "</html>"
+        Width: =997
+        X: =213
+        Y: =349
+        ZIndex: =16
+
+    TextInput2 As text:
+        Default: ="Text input"
+        Height: =85
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Width: =701
+        X: =380
+        Y: =232
+        ZIndex: =17
 
