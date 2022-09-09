@@ -1,9 +1,17 @@
 "TestSendOut As screen.'tabletLayout_Email_ver3.0'":
 
+    RTEBody As richTextEditor:
+        Default: ="Enter some <strong>rich text</strong> here."
+        Height: =250
+        Width: =1292
+        X: =32
+        Y: =344
+        ZIndex: =1
+
     RectQuickActionBar1 As rectangle:
         Height: =64
         Width: =Parent.Width
-        ZIndex: =1
+        ZIndex: =2
 
     LblAppName1 As label:
         Height: =64
@@ -12,7 +20,7 @@
         Width: =Parent.Width - Self.X - 64
         Wrap: =false
         X: =32
-        ZIndex: =2
+        ZIndex: =3
 
     LblRecipientCount1 As label:
         PaddingLeft: =0
@@ -155,18 +163,6 @@
         Y: =TextEmailSubject1.Y + TextEmailSubject1.Height + 16
         ZIndex: =11
 
-    TextEmailMessage1 As text:
-        AccessibleLabel: ="Add a message"
-        Default: =""
-        Height: =238
-        HintText: ="Add a message"
-        Mode: =TextMode.MultiLine
-        TabIndex: =If(PeopleBrowseGallery1.Visible, -1, 0)
-        Width: =Parent.Width - Self.X * 2
-        X: =32
-        Y: =LblEmailMessage1.Y + LblEmailMessage1.Height + 3
-        ZIndex: =12
-
     PeopleBrowseGallery1 As gallery.PeoplePickerGallerySmallTablet:
         AccessibleLabel: ="User look up search results"
         BorderThickness: =2
@@ -182,7 +178,7 @@
         Width: =Parent.Width - Self.X * 2
         X: =32
         Y: =TextSearchBox1.Y + TextSearchBox1.Height
-        ZIndex: =13
+        ZIndex: =12
 
         Rectangle4 As rectangle:
             BorderColor: =Title2.Color
@@ -236,11 +232,10 @@
     Button2 As button:
         Height: =52
         OnSelect: |-
-            =          
-            Set(_emailRecipientString, Concat(MyPeople, Mail & ";"));           
-            Office365Outlook.SendEmail(_emailRecipientString, TextEmailSubject1.Text, TextEmailMessage1.Text, {Importance:"Normal"});           
+            =Set(_emailRecipientString, Concat(MyPeople, Mail & ";"));           
+            Office365Outlook.SendEmailV2(_emailRecipientString, TextEmailSubject1.Text, RTEBody.HtmlText, {Importance:"Normal"});           
             Reset(TextEmailSubject1);           
-            Reset(TextEmailMessage1);           
+            Reset(RTEBody);           
             Clear(MyPeople)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
@@ -250,5 +245,5 @@
         Width: =188
         X: =516
         Y: =628
-        ZIndex: =14
+        ZIndex: =13
 
