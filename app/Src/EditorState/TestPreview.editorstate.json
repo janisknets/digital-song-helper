@@ -216,7 +216,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey14",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4019,7 +4019,7 @@
       "LayoutName": "horizontal",
       "MetaDataIDKey": "",
       "Name": "Form1",
-      "ParentIndex": 3,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4123,7 +4123,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HtmlText2",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4373,7 +4373,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "RichTextEditor4",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4488,7 +4488,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Source",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

@@ -1,17 +1,17 @@
 "TestSendOut As screen.'tabletLayout_Email_ver3.0'":
 
     RTEBody As richTextEditor:
-        Default: =$"Hello {CampaignList.'Role Fulfillment Contact'}"
+        Default: =
         Height: =250
-        Width: =1292
+        Width: =1302
         X: =32
-        Y: =344
-        ZIndex: =1
+        Y: =331
+        ZIndex: =2
 
     RectQuickActionBar1 As rectangle:
         Height: =64
         Width: =Parent.Width
-        ZIndex: =2
+        ZIndex: =3
 
     LblAppName1 As label:
         Height: =64
@@ -20,7 +20,7 @@
         Width: =Parent.Width - Self.X - 64
         Wrap: =false
         X: =32
-        ZIndex: =3
+        ZIndex: =4
 
     LblRecipientCount1 As label:
         PaddingLeft: =0
@@ -30,7 +30,7 @@
         Wrap: =false
         X: =32
         Y: =RectQuickActionBar1.Height + 15
-        ZIndex: =4
+        ZIndex: =5
 
     TextSearchBox1 As text:
         AccessibleLabel: ="Search people or add email address. At least one recipient is required for a successful submission."
@@ -40,7 +40,7 @@
         Width: =Parent.Width - Self.X * 2
         X: =32
         Y: =LblRecipientCount1.Y + LblRecipientCount1.Height + 3
-        ZIndex: =5
+        ZIndex: =6
 
     SearchIcon1 As icon.Search:
         Height: =Self.Width
@@ -53,7 +53,7 @@
         Width: =TextSearchBox1.Height
         X: =TextSearchBox1.X + 5
         Y: =TextSearchBox1.Y
-        ZIndex: =6
+        ZIndex: =7
 
     AddIcon1 As icon.Add:
         Height: =TextSearchBox1.Height
@@ -78,7 +78,7 @@
         Width: =70
         X: =TextSearchBox1.X + TextSearchBox1.Width - Self.Width - 10
         Y: =TextSearchBox1.Y
-        ZIndex: =7
+        ZIndex: =8
 
     EmailPeopleGallery1 As gallery.SelectedUsersTabletGallery:
         AccessibleLabel: ="User selected people"
@@ -96,7 +96,7 @@
         WrapCount: =4
         X: =27
         Y: =TextSearchBox1.Y + TextSearchBox1.Height
-        ZIndex: =8
+        ZIndex: =9
 
         Rectangle3 As rectangle:
             Height: =Parent.TemplateHeight
@@ -141,17 +141,17 @@
         Wrap: =false
         X: =32
         Y: =EmailPeopleGallery1.Y + EmailPeopleGallery1.Height + 16
-        ZIndex: =9
+        ZIndex: =10
 
     TextEmailSubject1 As text:
         AccessibleLabel: ="A subject is required to send an email."
-        Default: =""
+        Default: ="Support From Baltic Song for Client Name"
         HintText: ="Add a subject"
         TabIndex: =If(PeopleBrowseGallery1.Visible, -1, 0)
         Width: =Parent.Width - Self.X * 2
         X: =32
         Y: =LblEmailSubject1.Y + LblEmailSubject1.Height + 3
-        ZIndex: =10
+        ZIndex: =11
 
     LblEmailMessage1 As label:
         PaddingLeft: =0
@@ -161,7 +161,7 @@
         Wrap: =false
         X: =32
         Y: =TextEmailSubject1.Y + TextEmailSubject1.Height + 16
-        ZIndex: =11
+        ZIndex: =12
 
     PeopleBrowseGallery1 As gallery.PeoplePickerGallerySmallTablet:
         AccessibleLabel: ="User look up search results"
@@ -178,7 +178,7 @@
         Width: =Parent.Width - Self.X * 2
         X: =32
         Y: =TextSearchBox1.Y + TextSearchBox1.Height
-        ZIndex: =12
+        ZIndex: =13
 
         Rectangle4 As rectangle:
             BorderColor: =Title2.Color
@@ -243,7 +243,17 @@
         RadiusTopRight: =0
         Text: ="Launch Campaign"
         Width: =188
-        X: =516
-        Y: =628
-        ZIndex: =13
+        X: =589
+        Y: =640
+        ZIndex: =14
+
+    Gallery4 As gallery.galleryVertical:
+        Height: =30
+        Items: =CampaignList
+        Layout: =Layout.Vertical
+        TemplateSize: =25
+        Width: =1284
+        X: =25
+        Y: =589
+        ZIndex: =15
 
