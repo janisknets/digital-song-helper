@@ -129,7 +129,8 @@ NewCamp As screen:
             Dropdown4 As dropdown:
                 Height: =43
                 Items: =Distinct('CampaignList', Title)
-                OnSelect: =Set(ContactsVar, LookUp(CampaignList, Title = Dropdown4.Selected.Result))
+                OnChange: =Set(ContactsVar, LookUp(CampaignList, Title = Dropdown4.Selected.Result))
+                OnSelect: =
                 Width: =578
                 X: =185
                 Y: =10
