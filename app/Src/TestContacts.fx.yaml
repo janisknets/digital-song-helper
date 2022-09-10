@@ -1,14 +1,19 @@
 TestContacts As screen:
 
     Dropdown1 As dropdown:
-        Items: =Distinct(NewCampaign, Title)
+        Items: =Distinct(CampaignList, Title)
+        OnChange: =Set(ContactsVar, LookUp(CampaignList, Title = Dropdown1.Selected.Result))
         X: =378
         Y: =60
         ZIndex: =1
 
     RichTextEditor2 As richTextEditor:
-        Default: ="Enter some <strong>rich text</strong> here."
+        Default: |-
+            =$"Hello <First_Name>!<br></br>
+            My name is {ContactsVar.'Role Primary Contact'}. Writing you regarding Open role {ContactsVar.Title} for {ContactsVar.Project}.<br></br>Let me know if this role is still open, will be happy to jump on a call to discuss potential candidates."
+        Height: =238
+        OnChange: =
         X: =378
-        Y: =167
+        Y: =177
         ZIndex: =2
 
