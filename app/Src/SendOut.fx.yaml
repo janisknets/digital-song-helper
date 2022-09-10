@@ -693,7 +693,7 @@
         ZIndex: =16
 
     TextInput2 As text:
-        Default: ="Text input"
+        Default: =RichTextEditor6.HtmlText
         Height: =85
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
