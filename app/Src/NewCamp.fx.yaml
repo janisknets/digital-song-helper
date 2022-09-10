@@ -173,7 +173,7 @@ NewCamp As screen:
 
             DataCardValue27 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
+                Default: ="Support From Baltic Song for <Client Name>"
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =38
