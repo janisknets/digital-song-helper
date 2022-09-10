@@ -9,7 +9,7 @@ TestContacts As screen:
 
     RichTextEditor2 As richTextEditor:
         Default: |-
-            =$"Hello <First_Name>!<br></br>
+            =$"Hello {ContactsVar.'Role Fulfillment Contact'}!<br></br>
             My name is {ContactsVar.'Role Primary Contact'}. Writing you regarding Open role {ContactsVar.Title} for {ContactsVar.Project}.<br></br>Let me know if this role is still open, will be happy to jump on a call to discuss potential candidates."
         Height: =238
         OnChange: =
