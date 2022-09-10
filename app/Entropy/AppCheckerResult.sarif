@@ -891,19 +891,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "NewCamp.Form6.Template_DataCard4.DataCardValue28.AccessibleLabel"
+                  "fullyQualifiedName": "TestContacts.Dropdown1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "NewCamp.Form6.Template_DataCard4.DataCardValue28.AccessibleLabel",
+                  "fullyQualifiedName": "TestContacts.Dropdown1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "NewCamp",
-                "type": "NewCamp.Form6.Template_DataCard4.DataCardValue28"
+                "module": "TestContacts",
+                "type": "TestContacts.Dropdown1"
               }
             }
           ],
@@ -1114,6 +1114,66 @@
                 "member": "AccessibleLabel",
                 "module": "ViewCampaign",
                 "type": "ViewCampaign.Form3_1.'Message (html)_DataCard4_1'.RichTextEditor7_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TestContacts.RichTextEditor2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TestContacts.RichTextEditor2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "TestContacts",
+                "type": "TestContacts.RichTextEditor2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "NewCamp.Form6.Template_DataCard4.Dropdown2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "NewCamp.Form6.Template_DataCard4.Dropdown2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "NewCamp",
+                "type": "NewCamp.Form6.Template_DataCard4.Dropdown2"
               }
             }
           ],

@@ -29,7 +29,7 @@ NewCamp As screen:
             Update: =
             Width: =816
             X: =0
-            Y: =4
+            Y: =3
             ZIndex: =1
 
             DataCardKey44 As label:
@@ -224,7 +224,7 @@ NewCamp As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "Template")
             Required: =false
-            Update: =DataCardValue28.Text
+            Update: =
             Width: =816
             X: =0
             Y: =2
@@ -237,26 +237,8 @@ NewCamp As screen:
                 Width: =(Parent.Width - 60) * 0.4
                 Wrap: =false
                 X: =30
-                Y: =10 + (DataCardValue28.Height / 2) - (Self.Height / 2)
+                Y: =16
                 ZIndex: =1
-
-            DataCardValue28 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
-                Height: =37
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Tooltip: =Parent.DisplayName
-                Width: =559
-                X: =211
-                Y: =13
-                ZIndex: =2
 
             ErrorMessage28 As label:
                 AutoHeight: =true
@@ -270,7 +252,7 @@ NewCamp As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue28.Y + DataCardValue28.Height
+                Y: =
                 ZIndex: =3
 
             StarVisible28 As label:
@@ -282,6 +264,14 @@ NewCamp As screen:
                 Wrap: =false
                 Y: =DataCardKey28.Y
                 ZIndex: =4
+
+            Dropdown2 As dropdown:
+                Height: =39
+                Items: =Distinct('TemplateList', Title)
+                Width: =573
+                X: =190
+                Y: =10
+                ZIndex: =5
 
         Attachments_DataCard5 As typedDataCard.attachmentsEditCard:
             BorderStyle: =BorderStyle.Solid
@@ -295,7 +285,7 @@ NewCamp As screen:
             Update: =DataCardValue30.Attachments
             Width: =816
             X: =0
-            Y: =3
+            Y: =4
             ZIndex: =2
 
             DataCardKey30 As label:

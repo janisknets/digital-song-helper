@@ -1,0 +1,14 @@
+TestContacts As screen:
+
+    Dropdown1 As dropdown:
+        Items: =Distinct(NewCampaign, Title)
+        X: =378
+        Y: =60
+        ZIndex: =1
+
+    RichTextEditor2 As richTextEditor:
+        Default: ="Enter some <strong>rich text</strong> here."
+        X: =378
+        Y: =167
+        ZIndex: =2
+

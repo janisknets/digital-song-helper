@@ -95,6 +95,9 @@
           "CampaignList": {
             "tableName": "fa162762-ad7c-41c8-991b-4996a94ba85c"
           },
+          "CampaignList_1": {
+            "tableName": "fa162762-ad7c-41c8-991b-4996a94ba85c"
+          },
           "EmailTemplate": {
             "tableName": "dc289038-327f-48c1-a2b9-825e495c763b"
           },
@@ -103,6 +106,9 @@
           },
           "NewCampaign": {
             "tableName": "ad6f6764-1cdb-41e2-887a-47cf4a574528"
+          },
+          "TemplateList": {
+            "tableName": "492f519b-ed56-4112-a982-2d2e8963289a"
           }
         }
       }
@@ -111,7 +117,9 @@
       "EmailTemplate",
       "EmailTemplate_1",
       "CampaignList",
-      "NewCampaign"
+      "NewCampaign",
+      "CampaignList_1",
+      "TemplateList"
     ],
     "dependencies": {},
     "dependents": [],
