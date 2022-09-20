@@ -1191,19 +1191,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "NewCamp.Form6_1.Subject_DataCard4_1.DataCardValue27_1.AccessibleLabel"
+                  "fullyQualifiedName": "NewCamp.Form6_1.Title_DataCard1.DataCardValue1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "NewCamp.Form6_1.Subject_DataCard4_1.DataCardValue27_1.AccessibleLabel",
+                  "fullyQualifiedName": "NewCamp.Form6_1.Title_DataCard1.DataCardValue1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "NewCamp",
-                "type": "NewCamp.Form6_1.Subject_DataCard4_1.DataCardValue27_1"
+                "type": "NewCamp.Form6_1.Title_DataCard1.DataCardValue1"
               }
             }
           ],
