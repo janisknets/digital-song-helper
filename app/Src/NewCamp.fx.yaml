@@ -26,7 +26,7 @@ NewCamp As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"Message_x0028_html_x0029_")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =376
+            Height: =438
             MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "Message_x0028_html_x0029_")
             Required: =false
             Update: =
@@ -63,10 +63,10 @@ NewCamp As screen:
 
             RichTextEditor3 As richTextEditor:
                 Default: ="Enter some <strong>rich text</strong> here."
-                Height: =275
+                Height: =322
                 Width: =617
                 X: =157
-                Y: =49
+                Y: =31
                 ZIndex: =6
 
             Label4 As label:
@@ -109,7 +109,7 @@ NewCamp As screen:
                 Default: =
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
-                Height: =38
+                Height: =37
                 HintText: ="Enter text"
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
@@ -118,9 +118,9 @@ NewCamp As screen:
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Tooltip: =Parent.DisplayName
-                Width: =582
-                X: =187
-                Y: =11
+                Width: =627
+                X: =142
+                Y: =12
                 ZIndex: =2
 
             ErrorMessage27_1 As label:
@@ -524,7 +524,7 @@ NewCamp As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Text: ="Preview"
-        X: =1092
-        Y: =532
+        X: =1084
+        Y: =386
         ZIndex: =6
 
