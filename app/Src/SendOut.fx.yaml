@@ -138,7 +138,7 @@
 
     TextEmailSubject1 As text:
         AccessibleLabel: ="A subject is required to send an email."
-        Default: ="Support From Baltic Song for Client Name"
+        Default: =DataCardValue27
         Height: =43
         HintText: ="Add a subject"
         RadiusBottomLeft: =0
