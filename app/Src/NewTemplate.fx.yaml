@@ -1,0 +1,11 @@
+NewTemplate As screen:
+    OnVisible: =varTabSelected = 2
+
+    Label1 As label:
+        Height: =96
+        Text: ="Create Template"
+        Width: =293
+        X: =40
+        Y: =40
+        ZIndex: =1
+

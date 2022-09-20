@@ -116,6 +116,7 @@
     "SendOut",
     "TestCreateNew",
     "TestPreview",
-    "TestContacts"
+    "TestContacts",
+    "NewTemplate"
   ]
 }

@@ -165,8 +165,8 @@ Home As screen:
         TemplatePadding: =0
         TemplateSize: =163
         Width: =330
-        X: =376
-        Y: =63
+        X: =496
+        Y: =36
         ZIndex: =11
 
         Button10_4 As button:
