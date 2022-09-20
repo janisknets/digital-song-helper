@@ -24,7 +24,7 @@ NewCamp As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"Message_x0028_html_x0029_")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =279
+            Height: =324
             MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "Message_x0028_html_x0029_")
             Required: =false
             Update: =
@@ -167,7 +167,7 @@ NewCamp As screen:
 
             DataCardValue27 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =$"Support From Baltic Song for..."
+                Default: =$"Support From Baltic Song for {ContactsVar.'Project Master Client'}"
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =38
