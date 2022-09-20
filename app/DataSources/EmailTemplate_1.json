@@ -29,14 +29,11 @@
       "Created": "Created",
       "Editor": "Modified By",
       "Editor#Claims": "Modified By Claims",
+      "html": "html",
       "ID": "ID",
       "Modified": "Modified",
-      "Project": "Project",
-      "Rolecontact": "Role Fulfillment Contact",
-      "RolePrimaryContact": "Role Primary Contact",
-      "RoleTitle": "Role Title",
-      "Template": "Role Description",
-      "Title": "Role Id"
+      "Title": "Role Id",
+      "Title0": "Title (Title0)"
     },
     "DatasetName": "https://ts.accenture.com/sites/THERIGA",
     "EncodeDataset": true,

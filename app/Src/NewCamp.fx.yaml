@@ -3,7 +3,7 @@ NewCamp As screen:
     OnVisible: =varTabSelected = 1
 
     Form6_1 As form:
-        DataSource: =NewCampaign
+        DataSource: =EmailTemplate
         DefaultMode: =FormMode.New
         Height: =575
         NumberOfColumns: =1
@@ -21,13 +21,13 @@ NewCamp As screen:
 
         Title_DataCard1 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
-            DataField: ="Title"
+            DataField: ="Title0"
             Default: =ThisItem.Title
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"Title")
+            DisplayName: =DataSourceInfo([@EmailTemplate],DataSourceInfo.DisplayName,"Title0")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "Title")
+            MaxLength: =DataSourceInfo([@EmailTemplate], DataSourceInfo.MaxLength, "Title0")
             Required: =false
             Update: =DataCardValue1.Text
             Width: =816
@@ -58,8 +58,8 @@ NewCamp As screen:
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Tooltip: =Parent.DisplayName
-                Width: =650
-                X: =134
+                Width: =644
+                X: =140
                 Y: =13
                 ZIndex: =2
 
@@ -91,7 +91,7 @@ NewCamp As screen:
         "'Message (html)_DataCard5_1' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Message_x0028_html_x0029_"
-            Default: =ThisItem.'Message (html)'
+            Default: =
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"Message_x0028_html_x0029_")
             Fill: =RGBA(0, 0, 0, 0)
@@ -495,8 +495,8 @@ NewCamp As screen:
     Button14 As button:
         Fill: =RGBA(0, 134, 208, 1)
         OnSelect: |-
-            =If(varTabSelected = 1, SubmitForm(Form6), SubmitForm(Form6_1)); 
-            If(varTabSelected = 1, ResetForm(Form6), ResetForm(Form6_1)); 
+            =If(varTabSelected = 1, SubmitForm(Form6), SubmitForm(Form6_1));
+            ResetForm(Form6); 
             Navigate(Home);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
@@ -528,4 +528,43 @@ NewCamp As screen:
         X: =1084
         Y: =386
         ZIndex: =6
+
+    Gallery3_4 As gallery.galleryHorizontal:
+        Height: =52
+        Items: |-
+            =Table({ID:1,Label:"Campaigns"},{ID:2,Label:"Templates"})
+        TemplatePadding: =0
+        TemplateSize: =163
+        Width: =330
+        X: =516
+        Y: =56
+        ZIndex: =7
+
+        Button10_5 As button:
+            BorderThickness: =0
+            Color: |-
+                =If(varTabSelected = ThisItem.ID, White, ColorValue("#A6A6A6"))
+            DisabledBorderColor: =
+            DisabledColor: =RGBA(255, 255, 255, 1)
+            DisabledFill: |-
+                =ColorValue("#F4F4F4")
+            Fill: |-
+                =If(varTabSelected = ThisItem.ID, ColorValue("#0078D4"), ColorValue("#F4F4F4"))
+            FocusedBorderColor: =
+            FocusedBorderThickness: =
+            Height: =42
+            HoverBorderColor: =
+            HoverColor: =White
+            HoverFill: =If(varTabSelected = ThisItem.ID, ColorFade(RGBA(0, 120, 212, 1), -20%), ColorFade(RGBA(244, 244, 244, 1), -20%))
+            OnSelect: =Set(varTabSelected, ThisItem.ID); Navigate(NewCamp);
+            PressedBorderColor: =
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: =ThisItem.Label
+            Width: =159
+            X: =4
+            Y: =3
+            ZIndex: =1
 
