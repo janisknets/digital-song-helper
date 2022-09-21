@@ -495,7 +495,7 @@ NewCamp As screen:
     Button14 As button:
         Fill: =RGBA(0, 134, 208, 1)
         OnSelect: |-
-            =If(varTabSelected = 1, SubmitForm(Form6), SubmitForm(Form6_1));
+            =SubmitForm(Form6);
             ResetForm(Form6); 
             Navigate(Home);
         RadiusBottomLeft: =0
