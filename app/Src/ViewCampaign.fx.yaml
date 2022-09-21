@@ -354,14 +354,14 @@ ViewCampaign As screen:
 
     Button9_1 As button:
         Fill: =RGBA(0, 134, 208, 1)
-        OnSelect: =SubmitForm(Form3_1);
+        OnSelect: =Navigate(Home);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Text: ="Save"
-        X: =683
-        Y: =640
+        Text: ="Cancel"
+        X: =485
+        Y: =628
         ZIndex: =3
 
     Button10_3 As button:
@@ -372,8 +372,8 @@ ViewCampaign As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Text: ="Edit"
-        X: =463
-        Y: =640
+        X: =707
+        Y: =628
         ZIndex: =4
 
     Button4_1 As button:

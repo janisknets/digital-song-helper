@@ -507,16 +507,6 @@ NewCamp As screen:
         Y: =702
         ZIndex: =4
 
-    Label7 As label:
-        FontWeight: =FontWeight.Bold
-        Height: =41
-        Size: =24
-        Text: =If(varTabSelected = 1, "Create New Campaign", "Create New Template")
-        Width: =450
-        X: =492
-        Y: =36
-        ZIndex: =5
-
     Button3 As button:
         Fill: =RGBA(0, 134, 208, 1)
         OnSelect: =Navigate(SendOut);
