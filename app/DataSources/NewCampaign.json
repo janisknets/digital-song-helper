@@ -36,7 +36,9 @@
       "Modified": "Modified",
       "Subject": "Subject",
       "Template": "Template",
-      "Title": "Title"
+      "Template#Id": "Template Id",
+      "Title": "Title",
+      "UploadFile": "Upload File"
     },
     "DatasetName": "https://ts.accenture.com/sites/THERIGA",
     "EncodeDataset": true,

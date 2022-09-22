@@ -113,10 +113,6 @@
     "EditCampaign",
     "ViewCampaign",
     "NewCamp",
-    "SendOut",
-    "TestCreateNew",
-    "TestPreview",
-    "TestContacts",
-    "NewTemplate"
+    "SendOut"
   ]
 }
