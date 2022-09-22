@@ -64,9 +64,8 @@ EditScreen1 As screen:
 
             RichTextEditor4 As richTextEditor:
                 Default: |-
-                    ="Hello First_Name!<br></br>
-                    My name is Sender_Name. Writing you regarding Open role Role_ID for Project_Name.<br></br>
-                    Let me know if this role is still open, will be happy to jump on a call to discuss potential candidates."
+                    =$"Hello {ContactsVar.'Role Fulfillment Contact'}!<br></br>
+                    My name is {ContactsVar.'Role Primary Contact'}. Writing you regarding Open role {ContactsVar.Title} for {ContactsVar.Project}.<br></br>Let me know if this role is still open, will be happy to jump on a call to discuss potential candidates."
                 Height: =209
                 Width: =593
                 X: =225
@@ -240,13 +239,15 @@ EditScreen1 As screen:
             DataCardValue4 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultSelectedItems: =Parent.Default
-                DisplayFields: =["Value"]
+                DisplayFields: =["Result"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =38
-                Items: =Choices([@NewCampaign].Template)
+                IsSearchable: =false
+                Items: =Distinct(CampaignList, Title)
+                OnChange: =Set(ContactsVar, LookUp(CampaignList, Title = DataCardValue4.Selected.Result))
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["Value"]
-                SearchItems: =Choices(NewCampaign.Template,DataCardValue4.SearchText)
+                SearchFields: =["Result"]
+                SearchItems: =[]
                 SelectMultiple: =false
                 Tooltip: =Parent.DisplayName
                 Width: =596
