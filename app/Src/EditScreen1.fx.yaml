@@ -2,8 +2,9 @@ EditScreen1 As screen:
 
     EditForm1 As form:
         DataSource: =NewCampaign
-        DefaultMode: =FormMode.New
+        Item: =BrowseGallery1.Selected
         NumberOfColumns: =1
+        OnSuccess: =Back()
         Width: =848
         X: =255
         Y: =153
