@@ -155,7 +155,7 @@ DetailScreen1 As screen:
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"Message_x0028_html_x0029_")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =40
+            Height: =244
             Required: =false
             Width: =852
             X: =0
@@ -163,26 +163,20 @@ DetailScreen1 As screen:
             ZIndex: =2
 
             DataCardKey12 As label:
-                AutoHeight: =true
-                Height: =34
+                Height: =36
                 Text: =Parent.DisplayName
-                Width: =(Parent.Width - 60) * 0.4
+                Width: =204
                 Wrap: =false
-                X: =30
-                Y: =10 + (DataCardValue12.Height / 2) - (Self.Height / 2)
+                X: =26
+                Y: =97
                 ZIndex: =1
 
-            DataCardValue12 As label:
-                DisplayMode: =Parent.DisplayMode
-                Height: =202
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Default
-                Width: =518
-                X: =252
-                Y: =21
-                ZIndex: =2
+            RichTextEditor2 As richTextEditor:
+                Default: =ThisItem.'Message (html)'
+                Height: =228
+                Width: =587
+                X: =230
+                ZIndex: =3
 
         "'Upload File_DataCard2' As typedDataCard.textualViewCard":
             BorderStyle: =BorderStyle.Solid

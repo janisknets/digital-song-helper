@@ -2,11 +2,71 @@ EditScreen1 As screen:
 
     EditForm1 As form:
         DataSource: =NewCampaign
+        DefaultMode: =FormMode.New
         NumberOfColumns: =1
         Width: =848
         X: =255
         Y: =153
         ZIndex: =1
+
+        "'Message (html)_DataCard3' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Message_x0028_html_x0029_"
+            Default: =ThisItem.'Message (html)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"Message_x0028_html_x0029_")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =201
+            MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "Message_x0028_html_x0029_")
+            Required: =false
+            Update: =RichTextEditor4.HtmlText
+            Width: =848
+            X: =0
+            Y: =4
+            ZIndex: =1
+
+            DataCardKey6 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10 + (RichTextEditor4.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            ErrorMessage6 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =RichTextEditor4.Y + RichTextEditor4.Height
+                ZIndex: =3
+
+            StarVisible6 As label:
+                Align: =Align.Center
+                Height: =DataCardKey6.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey6.Y
+                ZIndex: =4
+
+            RichTextEditor4 As richTextEditor:
+                Default: ="Enter some <strong>rich text</strong> here."
+                Height: =173
+                Width: =593
+                X: =225
+                Y: =20
+                ZIndex: =5
 
         Title_DataCard2 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
@@ -105,7 +165,7 @@ EditScreen1 As screen:
 
             DataCardValue3 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
+                Default: ="Support From Baltic Song for <Client Name>"
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =38
@@ -276,75 +336,6 @@ EditScreen1 As screen:
                 Width: =30
                 Wrap: =false
                 Y: =DataCardKey8.Y
-                ZIndex: =4
-
-        "'Message (html)_DataCard1' As typedDataCard.textualEditCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Message_x0028_html_x0029_"
-            Default: =ThisItem.'Message (html)'
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"Message_x0028_html_x0029_")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =152
-            MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "Message_x0028_html_x0029_")
-            Required: =false
-            Update: =DataCardValue5.Text
-            Width: =848
-            X: =0
-            Y: =4
-            ZIndex: =2
-
-            DataCardKey5 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =(Parent.Width - 60) * 0.4
-                Wrap: =false
-                X: =30
-                Y: =10 + (DataCardValue5.Height / 2) - (Self.Height / 2)
-                ZIndex: =1
-
-            DataCardValue5 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
-                Height: =122
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Tooltip: =Parent.DisplayName
-                Width: =588
-                X: =228
-                Y: =12
-                ZIndex: =2
-
-            ErrorMessage5 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue5.Y + DataCardValue5.Height
-                ZIndex: =3
-
-            StarVisible5 As label:
-                Align: =Align.Center
-                Height: =DataCardKey5.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey5.Y
                 ZIndex: =4
 
     Button11 As button:

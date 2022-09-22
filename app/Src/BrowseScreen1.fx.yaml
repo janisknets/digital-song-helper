@@ -86,7 +86,7 @@ BrowseScreen1 As screen:
 
     TextSearchBox2 As text:
         BorderThickness: =1
-        Default: ="Text input"
+        Default: =
         Height: =52
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
@@ -107,10 +107,10 @@ BrowseScreen1 As screen:
         ZIndex: =5
 
     Rectangle2 As rectangle:
-        Height: =0
-        Width: =640
+        Height: =2
+        Width: =725
         X: =326
-        Y: =92
+        Y: =209
         ZIndex: =6
 
     Button6 As button:
