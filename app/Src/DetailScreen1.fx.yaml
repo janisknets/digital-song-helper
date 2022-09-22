@@ -1,14 +1,46 @@
 DetailScreen1 As screen:
+    OnVisible: |-
+        =UpdateContext({varShowPopup: false})
 
     FormViewer1 As formViewer:
         DataSource: =NewCampaign
         Height: =478
         Item: =BrowseGallery1.Selected
         NumberOfColumns: =1
-        Width: =852
-        X: =258
-        Y: =144
+        Width: =912
+        X: =251
+        Y: =157
         ZIndex: =1
+
+        "'Message (html)_DataCard6' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Message_x0028_html_x0029_"
+            Default: =ThisItem.'Message (html)'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"Message_x0028_html_x0029_")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =276
+            Required: =false
+            Width: =912
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey7 As label:
+                Text: =Parent.DisplayName
+                Width: =208
+                Wrap: =false
+                X: =41
+                Y: =82
+                ZIndex: =1
+
+            HtmlText3 As htmlViewer:
+                Height: =184
+                HtmlText: =ThisItem.'Message (html)' 
+                Width: =543
+                X: =249
+                Y: =48
+                ZIndex: =3
 
         Title_DataCard3 As typedDataCard.textualViewCard:
             BorderStyle: =BorderStyle.Solid
@@ -19,7 +51,7 @@ DetailScreen1 As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
-            Width: =852
+            Width: =912
             X: =0
             Y: =0
             ZIndex: =2
@@ -55,7 +87,7 @@ DetailScreen1 As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
-            Width: =852
+            Width: =912
             X: =0
             Y: =1
             ZIndex: =2
@@ -82,139 +114,6 @@ DetailScreen1 As screen:
                 Y: =6
                 ZIndex: =2
 
-        Template_DataCard2 As typedDataCard.comboBoxViewCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Template"
-            Default: =ThisItem.Template
-            DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"Template")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =DataCardValue11.Selected
-            Width: =852
-            X: =0
-            Y: =2
-            ZIndex: =2
-
-            DataCardKey11 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =(Parent.Width - 60) * 0.4
-                Wrap: =false
-                X: =30
-                Y: =10 + (DataCardValue11.Height / 2) - (Self.Height / 2)
-                ZIndex: =1
-
-            DataCardValue11 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Parent.Default
-                DisplayFields: =["Value"]
-                DisplayMode: =Parent.DisplayMode
-                Height: =37
-                Items: =Choices([@NewCampaign].Template)
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["Value"]
-                SearchItems: =Choices(NewCampaign.Template,DataCardValue11.SearchText)
-                SelectMultiple: =false
-                Width: =512
-                X: =258
-                Y: =13
-                ZIndex: =2
-
-            ErrorMessage9 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue11.Y + DataCardValue11.Height
-                ZIndex: =3
-
-            StarVisible9 As label:
-                Align: =Align.Center
-                Height: =DataCardKey11.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey11.Y
-                ZIndex: =4
-
-        "'Message (html)_DataCard2' As typedDataCard.textualViewCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Message_x0028_html_x0029_"
-            Default: =ThisItem.'Message (html)'
-            DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"Message_x0028_html_x0029_")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =244
-            Required: =false
-            Width: =852
-            X: =0
-            Y: =3
-            ZIndex: =2
-
-            DataCardKey12 As label:
-                Height: =36
-                Text: =Parent.DisplayName
-                Width: =204
-                Wrap: =false
-                X: =26
-                Y: =97
-                ZIndex: =1
-
-            RichTextEditor2 As richTextEditor:
-                Default: =ThisItem.'Message (html)'
-                Height: =228
-                Width: =587
-                X: =230
-                ZIndex: =3
-
-        "'Upload File_DataCard2' As typedDataCard.textualViewCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="UploadFile"
-            Default: =ThisItem.'Upload File'
-            DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"UploadFile")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =40
-            Required: =false
-            Width: =852
-            X: =0
-            Y: =4
-            ZIndex: =2
-
-            DataCardKey14 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =(Parent.Width - 60) * 0.4
-                Wrap: =false
-                X: =30
-                Y: =10 + (DataCardValue14.Height / 2) - (Self.Height / 2)
-                ZIndex: =1
-
-            DataCardValue14 As label:
-                AutoHeight: =true
-                DisplayMode: =Parent.DisplayMode
-                Height: =27
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Default
-                Width: =(Parent.Width - 60) * 0.6
-                X: =DataCardKey14.X + DataCardKey14.Width
-                Y: =10
-                ZIndex: =2
-
     Button15 As button:
         OnSelect: =EditForm(EditForm1);Navigate(EditScreen1, ScreenTransition.None)
         RadiusBottomLeft: =0
@@ -227,7 +126,8 @@ DetailScreen1 As screen:
         ZIndex: =2
 
     Button16 As button:
-        OnSelect: =Remove([@NewCampaign], BrowseGallery1.Selected); If (IsEmpty(Errors([@NewCampaign], BrowseGallery1.Selected)), Back())
+        OnSelect: |-
+            =UpdateContext({varShowPopup: true})
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -256,4 +156,57 @@ DetailScreen1 As screen:
         X: =284
         Y: =63
         ZIndex: =8
+
+    DeletePopup As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =13
+
+        Rectangle1_1 As rectangle:
+            Fill: =RGBA(204, 231, 246, 1)
+            Height: =308
+            Visible: =varShowPopup = true
+            Width: =726
+            X: =320
+            Y: =184
+            ZIndex: =9
+
+        Button8_1 As button:
+            Fill: =RGBA(0, 134, 208, 1)
+            OnSelect: |-
+                =UpdateContext({varShowPopup:false}); Navigate(DetailScreen1);
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: ="Cancel"
+            Visible: =varShowPopup = true
+            X: =695
+            Y: =410
+            ZIndex: =10
+
+        Button7_1 As button:
+            Fill: =RGBA(0, 134, 208, 1)
+            OnSelect: |-
+                =UpdateContext({varShowPopup:false}); Remove([@NewCampaign], BrowseGallery1.Selected); If (IsEmpty(Errors([@NewCampaign], BrowseGallery1.Selected)), Back())
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: ="Delete"
+            Visible: =varShowPopup = true
+            X: =495
+            Y: =410
+            ZIndex: =11
+
+        Label8 As label:
+            Height: =101
+            Text: ="Are you sure you want to delete the record?"
+            Visible: =varShowPopup = true
+            Width: =311
+            X: =518
+            Y: =252
+            ZIndex: =12
 
