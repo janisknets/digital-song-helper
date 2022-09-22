@@ -113,6 +113,9 @@
     "EditCampaign",
     "ViewCampaign",
     "NewCamp",
-    "SendOut"
+    "SendOut",
+    "BrowseScreen1",
+    "DetailScreen1",
+    "EditScreen1"
   ]
 }
