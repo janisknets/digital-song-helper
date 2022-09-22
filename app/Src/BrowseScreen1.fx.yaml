@@ -21,10 +21,11 @@ BrowseScreen1 As screen:
         Y: =45
         ZIndex: =2
 
-    "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
+    "BrowseGallery1 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
         Height: =414
         Items: =SortByColumns(Filter([@NewCampaign], StartsWith(Title, TextSearchBox2.Text)), "Title", If(SortDescending1, Descending, Ascending))
         Layout: =Layout.Vertical
+        OnSelect: =Navigate(DetailScreen1, ScreenTransition.None)
         TemplatePadding: =0
         TemplateSize: =Min(104, Self.Height - 60)
         Width: =725
@@ -135,11 +136,11 @@ BrowseScreen1 As screen:
 
     Label1 As label:
         FontWeight: =FontWeight.Bold
-        Height: =45
+        Height: =54
         Size: =24
         Text: ="Campaign List"
-        Width: =367
-        X: =452
-        Y: =53
+        Width: =333
+        X: =474
+        Y: =30
         ZIndex: =9
 
