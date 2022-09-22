@@ -278,3 +278,13 @@
         Y: =213
         ZIndex: =17
 
+    Icon5 As icon.BackArrow:
+        Color: =RGBA(50, 86, 160, 1)
+        Height: =54
+        Icon: =Icon.BackArrow
+        OnSelect: =Back()
+        Width: =58
+        X: =120
+        Y: =36
+        ZIndex: =18
+
