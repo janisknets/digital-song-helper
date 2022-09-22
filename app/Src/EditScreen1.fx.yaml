@@ -2,12 +2,13 @@ EditScreen1 As screen:
 
     EditForm1 As form:
         DataSource: =NewCampaign
+        Height: =518
         Item: =BrowseGallery1.Selected
         NumberOfColumns: =1
         OnSuccess: =Back()
         Width: =848
-        X: =255
-        Y: =153
+        X: =257
+        Y: =131
         ZIndex: =1
 
         "'Message (html)_DataCard3' As typedDataCard.textualEditCard":
@@ -17,7 +18,7 @@ EditScreen1 As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"Message_x0028_html_x0029_")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =201
+            Height: =241
             MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "Message_x0028_html_x0029_")
             Required: =false
             Update: =RichTextEditor4.HtmlText
@@ -62,8 +63,11 @@ EditScreen1 As screen:
                 ZIndex: =4
 
             RichTextEditor4 As richTextEditor:
-                Default: ="Enter some <strong>rich text</strong> here."
-                Height: =173
+                Default: |-
+                    ="Hello First_Name!<br></br>
+                    My name is Sender_Name. Writing you regarding Open role Role_ID for Project_Name.<br></br>
+                    Let me know if this role is still open, will be happy to jump on a call to discuss potential candidates."
+                Height: =209
                 Width: =593
                 X: =225
                 Y: =20
@@ -166,10 +170,11 @@ EditScreen1 As screen:
 
             DataCardValue3 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: ="Support From Baltic Song for <Client Name>"
+                Default: =
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =38
+                HintText: ="Support From Baltic Song for <Client Name>"
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
@@ -346,8 +351,8 @@ EditScreen1 As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Text: ="Cacel"
-        X: =562
-        Y: =665
+        X: =561
+        Y: =684
         ZIndex: =2
 
     Button12 As button:
@@ -358,7 +363,7 @@ EditScreen1 As screen:
         RadiusTopRight: =0
         Text: ="Save"
         X: =790
-        Y: =665
+        Y: =684
         ZIndex: =3
 
     Label7 As label:
@@ -368,6 +373,6 @@ EditScreen1 As screen:
         Text: ="Create New Campaign"
         Width: =401
         X: =549
-        Y: =63
+        Y: =43
         ZIndex: =4
 
