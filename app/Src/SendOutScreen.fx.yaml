@@ -1,52 +1,46 @@
 "SendOutScreen As screen.'tabletLayout_Email_ver3.0'":
 
-    RectQuickActionBar3 As rectangle:
+    RectQuickActionBar2 As rectangle:
         Fill: =RGBA(255, 255, 255, 1)
         Height: =64
         Width: =Parent.Width
         ZIndex: =1
 
-    LblAppName2 As label:
-        Color: =RGBA(0, 0, 0, 1)
-        Fill: =RGBA(255, 255, 255, 1)
-        FontWeight: =FontWeight.Bold
-        Height: =66
+    LblAppName1 As label:
+        Height: =64
         PaddingLeft: =0
-        Size: =24
-        Text: ="Launch Campaign"
-        Width: =376
+        Text: ="Email"
+        Width: =Parent.Width - Self.X - 64
         Wrap: =false
-        X: =541
-        Y: =33
+        X: =32
         ZIndex: =2
 
-    LblRecipientCount3 As label:
-        Height: =46
+    LblRecipientCount2 As label:
+        Height: =43
         PaddingLeft: =0
         Size: =13
         Text: ="*To (" &CountRows(MyPeople) & ")"
-        Width: =161
+        Width: =170
         Wrap: =false
-        X: =131
-        Y: =145
+        X: =32
+        Y: =RectQuickActionBar2.Height + 15
         ZIndex: =4
 
-    TextSearchBox4 As text:
+    TextSearchBox3 As text:
         AccessibleLabel: ="Search people or add email address. At least one recipient is required for a successful submission."
         Default: =""
-        Height: =53
         HintText: ="Search people or add email address"
         PaddingLeft: =50
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Width: =938
-        X: =298
-        Y: =138
+        Width: =934
+        X: =207
+        Y: =85
         ZIndex: =5
 
-    SearchIcon3 As icon.Search:
+    SearchIcon2 As icon.Search:
         Height: =Self.Width
         Icon: =Icon.Search
         PaddingBottom: =8
@@ -54,18 +48,18 @@
         PaddingRight: =8
         PaddingTop: =8
         Tooltip: ="Search"
-        Width: =TextSearchBox4.Height
-        X: =TextSearchBox4.X + 5
-        Y: =TextSearchBox4.Y
+        Width: =TextSearchBox3.Height
+        X: =TextSearchBox3.X + 5
+        Y: =TextSearchBox3.Y
         ZIndex: =6
 
-    AddIcon3 As icon.Add:
-        Height: =TextSearchBox4.Height
+    AddIcon2 As icon.Add:
+        Height: =TextSearchBox3.Height
         Icon: =Icon.Add
         OnSelect: |-
             =Collect(MyPeople,           
-            {DisplayName: TextSearchBox4.Text, UserPrincipalName: TextSearchBox4.Text, Mail: TextSearchBox4.Text});           
-            Reset(TextSearchBox4)
+            {DisplayName: TextSearchBox3.Text, UserPrincipalName: TextSearchBox3.Text, Mail: TextSearchBox3.Text});           
+            Reset(TextSearchBox3)
         PaddingBottom: =5
         PaddingLeft: =5
         PaddingRight: =5
@@ -73,182 +67,181 @@
         TabIndex: =0
         Tooltip: ="Select to add user to collection"
         Visible: |-
-            =!IsBlank(TextSearchBox4.Text) &&           
+            =!IsBlank(TextSearchBox3.Text) &&           
             
             /*Is user entry a valid email address*/           
-            IsMatch(TextSearchBox4.Text, Match.Email)           &&
+            IsMatch(TextSearchBox3.Text, Match.Email)           &&
             
-            Not(Trim(TextSearchBox4.Text) in MyPeople.UserPrincipalName)
+            Not(Trim(TextSearchBox3.Text) in MyPeople.UserPrincipalName)
         Width: =70
-        X: =TextSearchBox4.X + TextSearchBox4.Width - Self.Width - 10
-        Y: =TextSearchBox4.Y
+        X: =TextSearchBox3.X + TextSearchBox3.Width - Self.Width - 10
+        Y: =TextSearchBox3.Y
         ZIndex: =7
 
-    EmailPeopleGallery3 As gallery.SelectedUsersTabletGallery:
+    EmailPeopleGallery2 As gallery.SelectedUsersTabletGallery:
         AccessibleLabel: ="User selected people"
-        BorderColor: =TextSearchBox4.BorderColor
-        Height: |-
-            =/*Height adjusts to number of items in gallery*/
-            Min((Self.TemplateHeight + Self.TemplatePadding * 2) * RoundUp(CountRows(Self.AllItems) / 4, 0), 182)
+        BorderColor: =TextSearchBox3.BorderColor
+        Height: =55
         Items: |-
             =/*Collection of user selected people*/
             MyPeople
         Layout: =Layout.Vertical
         ShowScrollbar: =Self.Height >= 182
         TemplateSize: =42
-        Width: =Parent.Width - Self.X * 2
+        Width: =934
         WrapCount: =4
-        X: =27
-        Y: =TextSearchBox4.Y + TextSearchBox4.Height
+        X: =202
+        Y: =TextSearchBox3.Y + TextSearchBox3.Height
         ZIndex: =8
 
-        Rectangle7 As rectangle:
+        Rectangle5 As rectangle:
             Height: =Parent.TemplateHeight
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
             ZIndex: =1
 
-        Title7 As label:
+        Title3 As label:
             FocusedBorderThickness: =2
-            Height: =EmailPeopleGallery3.TemplateHeight
+            Height: =EmailPeopleGallery2.TemplateHeight
             OnSelect: =Set(_selectedUser, ThisItem)
             PaddingLeft: =10
             Size: =13
-            TabIndex: =If(PeopleBrowseGallery3.Visible, -1, 0)
+            TabIndex: =If(PeopleBrowseGallery2.Visible, -1, 0)
             Text: =ThisItem.DisplayName
             VerticalAlign: =Middle
-            Width: =EmailPeopleGallery3.TemplateWidth - iconRemove3.Width + 10
+            Width: =EmailPeopleGallery2.TemplateWidth - iconRemove2.Width + 10
             Wrap: =false
             ZIndex: =2
 
-        iconRemove3 As icon.Cancel:
-            AccessibleLabel: =iconRemove3.Tooltip
-            Color: =Title7.Color
-            Height: =EmailPeopleGallery3.TemplateHeight
+        iconRemove2 As icon.Cancel:
+            AccessibleLabel: =iconRemove2.Tooltip
+            Color: =Title3.Color
+            Height: =EmailPeopleGallery2.TemplateHeight
             Icon: =Icon.Cancel
             OnSelect: =Remove(MyPeople, LookUp(MyPeople, UserPrincipalName = ThisItem.UserPrincipalName))
             PaddingBottom: =9
             PaddingLeft: =9
             PaddingRight: =9
             PaddingTop: =9
-            TabIndex: =If(PeopleBrowseGallery3.Visible, -1, 0)
+            TabIndex: =If(PeopleBrowseGallery2.Visible, -1, 0)
             Tooltip: ="Select to remove user from collection"
             Width: =Self.Height
-            X: =EmailPeopleGallery3.TemplateWidth - Self.Width
+            X: =EmailPeopleGallery2.TemplateWidth - Self.Width
             ZIndex: =3
 
-    LblEmailSubject3 As label:
-        Height: =60
+    LblEmailSubject2 As label:
+        Height: =35
         PaddingLeft: =0
         Size: =13
         Text: ="*Subject"
-        Width: =182
+        Width: =155
         Wrap: =false
-        X: =121
-        Y: =256
+        X: =52
+        Y: =239
         ZIndex: =9
 
-    TextEmailSubject3 As text:
+    TextEmailSubject2 As text:
         AccessibleLabel: ="A subject is required to send an email."
         Default: =""
-        Height: =52
+        Height: =36
         HintText: ="Add a subject"
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        TabIndex: =If(PeopleBrowseGallery3.Visible, -1, 0)
-        Width: =938
-        X: =303
-        Y: =256
+        TabIndex: =If(PeopleBrowseGallery2.Visible, -1, 0)
+        Width: =934
+        X: =207
+        Y: =241
         ZIndex: =10
 
-    LblEmailMessage3 As label:
+    LblEmailMessage2 As label:
+        Height: =46
         PaddingLeft: =0
         Size: =13
         Text: ="Message"
-        Width: =200
+        Width: =157
         Wrap: =false
-        X: =98
-        Y: =454
+        X: =45
+        Y: =339
         ZIndex: =11
 
-    TextEmailMessage2 As text:
+    TextEmailMessage1 As text:
         AccessibleLabel: ="Add a message"
         Default: =""
-        Height: =224
+        Height: =135
         HintText: ="Add a message"
         Mode: =TextMode.MultiLine
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        TabIndex: =If(PeopleBrowseGallery3.Visible, -1, 0)
-        Width: =938
-        X: =303
-        Y: =377
+        TabIndex: =If(PeopleBrowseGallery2.Visible, -1, 0)
+        Width: =934
+        X: =207
+        Y: =353
         ZIndex: =12
 
-    PeopleBrowseGallery3 As gallery.PeoplePickerGallerySmallTablet:
+    PeopleBrowseGallery2 As gallery.PeoplePickerGallerySmallTablet:
         AccessibleLabel: ="User look up search results"
         BorderThickness: =2
         Fill: =Parent.Fill
-        Height: =If(Self.Visible, Parent.Height / 2 + 200, 0)
+        Height: =568
         Items: |-
             =/*Only use Office 365 Users operation if user has started searching*/
-            If(!IsBlank(Trim(TextSearchBox4.Text)), Office365Users.SearchUser({searchTerm: Trim(TextSearchBox4.Text), top: 15}))
+            If(!IsBlank(Trim(TextSearchBox3.Text)), Office365Users.SearchUser({searchTerm: Trim(TextSearchBox3.Text), top: 15}))
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =104
-        Visible: =!IsBlank(Trim(TextSearchBox4.Text))
-        Width: =1075
-        X: =188
-        Y: =184
+        Visible: =!IsBlank(Trim(TextSearchBox3.Text))
+        Width: =934
+        X: =207
+        Y: =TextSearchBox3.Y + TextSearchBox3.Height
         ZIndex: =13
 
-        Rectangle8 As rectangle:
-            BorderColor: =Title8.Color
+        Rectangle6 As rectangle:
+            BorderColor: =Title4.Color
             BorderThickness: =If(ThisItem.UserPrincipalName in MyPeople.UserPrincipalName, 4, 0)
             Fill: =RGBA(0,0,0,0)
             Height: =Parent.TemplateHeight
             HoverFill: =RGBA(0,0,0,0)
-            OnSelect: =Select(Title8)
+            OnSelect: =Select(Title4)
             Width: =Parent.TemplateWidth
             ZIndex: =1
 
-        Title8 As label:
+        Title4 As label:
             BorderColor: =Self.Color
             FocusedBorderThickness: =2
             OnSelect: |-
                 =/*Select user, clear search contents and if this user hasn't been added to MyPeople collection, add them*/
                 Concurrent(
                 Set(_selectedUser, ThisItem),
-                Reset(TextSearchBox4),
+                Reset(TextSearchBox3),
                 If(Not(ThisItem.UserPrincipalName in MyPeople.UserPrincipalName), Collect(MyPeople, ThisItem)))
             Size: =17
             TabIndex: =0
             Text: =ThisItem.DisplayName
             VerticalAlign: =Middle
-            Width: =PeopleBrowseGallery3.TemplateWidth - 2 * Self.X
+            Width: =PeopleBrowseGallery2.TemplateWidth - 2 * Self.X
             Wrap: =false
             X: =16
             Y: =4
             ZIndex: =2
 
-        Subtitle3 As label:
-            Color: =ColorFade(Title8.Color, 0.20)
+        Subtitle2 As label:
+            Color: =ColorFade(Title4.Color, 0.20)
             FocusedBorderThickness: =2
-            OnSelect: =Select(Title8)
+            OnSelect: =Select(Title4)
             Size: =17
             Text: =ThisItem.UserPrincipalName
             VerticalAlign: =Middle
-            Width: =PeopleBrowseGallery3.TemplateWidth - 2 * Self.X
+            Width: =PeopleBrowseGallery2.TemplateWidth - 2 * Self.X
             Wrap: =false
-            X: =Title8.X
-            Y: =Title8.Y + Title8.Height + 3
+            X: =Title4.X
+            Y: =Title4.Y + Title4.Height + 3
             ZIndex: =3
 
-        Separator3 As rectangle:
+        Separator2 As rectangle:
             Height: =1
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
@@ -256,20 +249,40 @@
             ZIndex: =4
 
     Button5 As button:
-        Height: =50
+        Height: =54
         OnSelect: |-
             =Set(_emailRecipientString, Concat(MyPeople, Mail & ";"));           
-            Office365Outlook.SendEmail(_emailRecipientString, TextEmailSubject3.Text, TextEmailMessage2.Text, {Importance:"Normal"});           
-            Reset(TextEmailSubject3);           
-            Reset(TextEmailMessage2);           
+            Office365Outlook.SendEmailV2(_emailRecipientString, TextEmailSubject2.Text, TextEmailMessage1.Text, {Importance:"Normal"});           
+            Reset(TextEmailSubject2);           
+            Reset(TextEmailMessage1);           
             Clear(MyPeople)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Text: ="Send"
-        Width: =184
-        X: =664
-        Y: =648
+        Text: ="Launch "
+        Width: =200
+        X: =692
+        Y: =676
         ZIndex: =14
+
+    Button17 As button:
+        Height: =54
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Preview Template"
+        Width: =206
+        X: =436
+        Y: =676
+        ZIndex: =15
+
+    TextEmailMessage11 As htmlViewer:
+        Height: =52
+        HtmlText: =BrowseGallery1.Selected.'Message (html)'
+        Width: =934
+        X: =202
+        Y: =567
+        ZIndex: =16
 

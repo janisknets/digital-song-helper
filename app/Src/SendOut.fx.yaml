@@ -73,9 +73,7 @@
     EmailPeopleGallery1 As gallery.SelectedUsersTabletGallery:
         AccessibleLabel: ="User selected people"
         BorderColor: =TextSearchBox1.BorderColor
-        Height: |-
-            =/*Height adjusts to number of items in gallery*/
-            Min((Self.TemplateHeight + Self.TemplatePadding * 2) * RoundUp(CountRows(Self.AllItems) / 4, 0), 182)
+        Height: =48
         Items: |-
             =/*Collection of user selected people*/
             MyPeople
