@@ -5,10 +5,11 @@ EditScreen1 As screen:
         DefaultMode: =FormMode.New
         Height: =377
         NumberOfColumns: =1
+        OnSuccess: =ResetForm(EditForm2); NewForm(EditForm2); Navigate(BrowseScreen1);
         Visible: =If(varTabSelected = 2, true, false)
         X: =282
         Y: =168
-        ZIndex: =1
+        ZIndex: =2
 
         Title_DataCard1 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
@@ -148,7 +149,7 @@ EditScreen1 As screen:
         Width: =848
         X: =257
         Y: =131
-        ZIndex: =2
+        ZIndex: =3
 
         "'Message (html)_DataCard3' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
@@ -496,10 +497,10 @@ EditScreen1 As screen:
         Text: ="Cacel"
         X: =561
         Y: =684
-        ZIndex: =3
+        ZIndex: =4
 
     Button12 As button:
-        OnSelect: =If(varTabSelected = 1, SubmitForm(EditForm1), SubmitForm(EditForm2))
+        OnSelect: =If(varTabSelected = 1, SubmitForm(EditForm1), SubmitForm(EditForm2)); 
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -507,7 +508,7 @@ EditScreen1 As screen:
         Text: ="Save"
         X: =790
         Y: =684
-        ZIndex: =4
+        ZIndex: =5
 
     Label7 As label:
         FontWeight: =FontWeight.Bold
@@ -516,7 +517,7 @@ EditScreen1 As screen:
         Width: =401
         X: =532
         Y: =91
-        ZIndex: =5
+        ZIndex: =6
 
     Gallery3_5 As gallery.galleryHorizontal:
         Height: =52
@@ -527,7 +528,7 @@ EditScreen1 As screen:
         Width: =330
         X: =460
         Y: =23
-        ZIndex: =6
+        ZIndex: =7
 
         Button10_6 As button:
             BorderThickness: =0
