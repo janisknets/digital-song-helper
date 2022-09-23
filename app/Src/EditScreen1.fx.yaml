@@ -152,6 +152,7 @@ EditScreen1 As screen:
             MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "Subject")
             Required: =false
             Update: =DataCardValue3.Text
+            Visible: =If(varTabSelected = 1, true, false)
             Width: =848
             X: =0
             Y: =1
@@ -221,6 +222,7 @@ EditScreen1 As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue4.Selected
+            Visible: =If(varTabSelected = 1, true, false)
             Width: =848
             X: =0
             Y: =2
@@ -290,6 +292,7 @@ EditScreen1 As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue8.Attachments
+            Visible: =If(varTabSelected = 1, true, false)
             Width: =848
             X: =0
             Y: =3
@@ -369,11 +372,49 @@ EditScreen1 As screen:
 
     Label7 As label:
         FontWeight: =FontWeight.Bold
-        Height: =54
         Size: =24
         Text: ="Create New Campaign"
         Width: =401
-        X: =549
-        Y: =43
+        X: =532
+        Y: =91
         ZIndex: =4
+
+    Gallery3_5 As gallery.galleryHorizontal:
+        Height: =52
+        Items: |-
+            =Table({ID:1,Label:"Campaigns"},{ID:2,Label:"Templates"})
+        TemplatePadding: =0
+        TemplateSize: =163
+        Width: =330
+        X: =460
+        Y: =23
+        ZIndex: =5
+
+        Button10_6 As button:
+            BorderThickness: =0
+            Color: |-
+                =If(varTabSelected = ThisItem.ID, White, ColorValue("#A6A6A6"))
+            DisabledBorderColor: =
+            DisabledColor: =RGBA(255, 255, 255, 1)
+            DisabledFill: |-
+                =ColorValue("#F4F4F4")
+            Fill: |-
+                =If(varTabSelected = ThisItem.ID, ColorValue("#0078D4"), ColorValue("#F4F4F4"))
+            FocusedBorderColor: =
+            FocusedBorderThickness: =
+            Height: =42
+            HoverBorderColor: =
+            HoverColor: =White
+            HoverFill: =If(varTabSelected = ThisItem.ID, ColorFade(RGBA(0, 120, 212, 1), -20%), ColorFade(RGBA(244, 244, 244, 1), -20%))
+            OnSelect: =Set(varTabSelected, ThisItem.ID);
+            PressedBorderColor: =
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: =ThisItem.Label
+            Width: =159
+            X: =4
+            Y: =3
+            ZIndex: =1
 
