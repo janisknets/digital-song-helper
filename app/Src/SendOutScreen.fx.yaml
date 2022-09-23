@@ -20,10 +20,10 @@
         PaddingLeft: =0
         Size: =13
         Text: ="*To (" &CountRows(MyPeople) & ")"
-        Width: =170
+        Width: =154
         Wrap: =false
-        X: =32
-        Y: =RectQuickActionBar2.Height + 15
+        X: =53
+        Y: =82
         ZIndex: =4
 
     TextSearchBox3 As text:
@@ -156,14 +156,14 @@
         ZIndex: =10
 
     LblEmailMessage2 As label:
-        Height: =46
+        Height: =38
         PaddingLeft: =0
         Size: =13
         Text: ="Message"
-        Width: =157
+        Width: =144
         Wrap: =false
-        X: =45
-        Y: =339
+        X: =58
+        Y: =354
         ZIndex: =11
 
     TextEmailMessage1 As text:
@@ -249,7 +249,6 @@
             ZIndex: =4
 
     Button5 As button:
-        Height: =54
         OnSelect: |-
             =Set(_emailRecipientString, Concat(MyPeople, Mail & ";"));           
             Office365Outlook.SendEmailV2(_emailRecipientString, TextEmailSubject2.Text, TextEmailMessage1.Text, {Importance:"Normal"});           
@@ -263,11 +262,10 @@
         Text: ="Launch "
         Width: =200
         X: =692
-        Y: =676
+        Y: =693
         ZIndex: =14
 
     Button17 As button:
-        Height: =54
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -275,7 +273,7 @@
         Text: ="Preview Template"
         Width: =206
         X: =436
-        Y: =676
+        Y: =693
         ZIndex: =15
 
     TextEmailMessage11 As htmlViewer:
