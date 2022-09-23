@@ -1,0 +1,47 @@
+PreviewScreen As screen:
+
+    HtmlText2 As htmlViewer:
+        Height: =430
+        HtmlText: |-
+            ="<!DOCTYPE html>
+            <html lang='en'>
+            <head>
+            <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+            <meta name='viewport' content='width=device-width'>
+            <title></title>
+            <style></style>
+            </head>
+            
+            <body>
+            <div id='email' style='width:600px;'>
+            
+            <!-- Header --> 
+            <table role='presentation' border='0' cellspacing='0' width='100%'>
+            <tr>
+            <td>
+            </td>
+            </tr>
+            </table>
+            
+            <!-- Body --> 
+            <table role='presentation' border='0' cellspacing='0' width='100%'>
+            <tr>
+            <td style ='color:#A100FF; font-size:30px; text-align:center'>Accenture Song Baltic ATC
+            </td> 
+            </tr>
+            </table>
+            
+            <!-- Footer -->
+            <table role='presentation' border='0' cellspacing='0' width='100%'>
+            <tr>
+            <td> 
+            </td>
+            </tr>
+            </table> 
+            </div>
+            </body>"
+        Width: =1102
+        X: =122
+        Y: =46
+        ZIndex: =1
+
