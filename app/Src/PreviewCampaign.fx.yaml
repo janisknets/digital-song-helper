@@ -5,7 +5,7 @@ PreviewCampaign As screen:
     EditForm1_1 As form:
         DataSource: =NewCampaign
         DefaultMode: =FormMode.New
-        Height: =518
+        Height: =572
         NumberOfColumns: =1
         OnSuccess: =Back()
         Visible: =If(varTabSelected = 1, true, false)
@@ -351,36 +351,14 @@ PreviewCampaign As screen:
                 Y: =DataCardKey8_1.Y
                 ZIndex: =4
 
-    Button11_1 As button:
-        OnSelect: =ResetForm(EditForm1_1);Back()
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Text: ="Cacel"
-        X: =561
-        Y: =684
-        ZIndex: =4
-
-    Button12_1 As button:
-        OnSelect: =SubmitForm(EditForm1_1);
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Text: ="Save"
-        X: =790
-        Y: =684
-        ZIndex: =5
-
     Label7_2 As label:
         FontWeight: =FontWeight.Bold
         Height: =37
         Size: =24
         Text: ="Preview Campaign"
         Width: =351
-        X: =599
-        Y: =64
+        X: =557
+        Y: =53
         ZIndex: =6
 
     Icon4_1 As icon.Send:
@@ -390,9 +368,17 @@ PreviewCampaign As screen:
         OnSelect: |-
             =UpdateContext({varShowPopup: true})
         Width: =46
-        X: =1059
-        Y: =64
+        X: =1037
+        Y: =52
         ZIndex: =7
+
+    Icon5_1 As icon.BackArrow:
+        Height: =48
+        Icon: =Icon.BackArrow
+        OnSelect: =ResetForm(EditForm1_1);Back()
+        X: =290
+        Y: =53
+        ZIndex: =12
 
     DeletePopup_1 As group:
         Height: =5

@@ -488,7 +488,7 @@ EditScreen1 As screen:
         Height: =48
         Icon: =Icon.BackArrow
         OnSelect: =ResetForm(EditForm1);Back();
-        X: =193
+        X: =258
         Y: =27
         ZIndex: =9
 
