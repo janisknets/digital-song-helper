@@ -13,32 +13,53 @@ PreviewScreen As screen:
             </head>
             
             <body>
-            <div id='email' style='width:600px;'>
-            
-            <!-- Header --> 
-            <table role='presentation' border='0' cellspacing='0' width='100%'>
-            <tr>
-            <td>
-            </td>
-            </tr>
+            <table border='0' cellpadding='0' cellspacing='0' height='100%' width='100%' id='bodyTable'>
+                <tr>
+                    <td align='center' valign='top'>
+                        <table border='0' cellpadding='20' cellspacing='0' width='600' id='emailContainer'>
+                            <tr>
+                                <td align='center' valign='top'>
+                                    <table border='0' cellpadding='20' cellspacing='0' width='100%' id='emailHeader'>
+                                        <tr>
+                                            <td align='center' valign='top'>
+                                            <td style ='color:#A100FF; font-size:30px;'>Accenture Song Baltic ATC
+                                            </td>
+                                                This is where my header content goes.
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align='center' valign='top'>
+                                    <table border='0' cellpadding='20' cellspacing='0' width='100%' id='emailBody'>
+                                        <tr>
+                                            <td align='center' valign='top'>
+                                                This is where my body content goes.
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align='center' valign='top'>
+                                    <table border='0' cellpadding='20' cellspacing='0' width='100%' id='emailFooter'>
+                                        <tr>
+                                            <td align='center' valign='top'>
+                                                This is where my footer content goes.
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
             </table>
             
-            <!-- Body --> 
-            <table role='presentation' border='0' cellspacing='0' width='100%'>
-            <tr>
-            <td style ='color:#A100FF; font-size:30px; text-align:center'>Accenture Song Baltic ATC
-            </td> 
-            </tr>
-            </table>
             
-            <!-- Footer -->
-            <table role='presentation' border='0' cellspacing='0' width='100%'>
-            <tr>
-            <td> 
-            </td>
-            </tr>
-            </table> 
-            </div>
+            
+            
             </body>"
         Width: =1102
         X: =122
