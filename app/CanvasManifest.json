@@ -112,8 +112,8 @@
     "BrowseScreen1",
     "DetailScreen1",
     "EditScreen1",
+    "PreviewCampaign",
     "SendOutScreen",
-    "PreviewScreen",
-    "Screen1"
+    "PreviewScreen"
   ]
 }
