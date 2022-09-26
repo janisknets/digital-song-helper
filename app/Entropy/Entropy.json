@@ -1,6 +1,6 @@
 {
   "ComponentIndexes": {
-    "iconPlusText": 6
+    "iconPlusText": 7
   },
   "ControlUniqueGuids": {},
   "ControlUniqueIds": {
@@ -61,6 +61,7 @@
     "HtmlText1": 80,
     "HtmlText2": 8,
     "HtmlText3": 109,
+    "HtmlText4": 119,
     "Icon1": 86,
     "Icon2": 85,
     "Icon3": 84,
@@ -91,6 +92,7 @@
     "RectQuickActionBar2": 10,
     "RichTextEditor1": 72,
     "RichTextEditor4": 61,
+    "Screen1": 118,
     "SearchIcon2": 14,
     "SendButton": 78,
     "SendOutScreen": 9,
@@ -123,7 +125,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "09/26/2022 08:30:33",
+  "HeaderLastSavedDateTimeUTC": "09/26/2022 08:51:38",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "1511313e-9875-4d63-8a7a-5f47782d793d": "\"/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/5b56abdc7f9648b7a7d4ea3c0fb5ef2b\"",
@@ -245,6 +247,7 @@
     "HtmlText1": 1,
     "HtmlText2": 104,
     "HtmlText3": 28,
+    "HtmlText4": 105,
     "Icon1": 6,
     "Icon2": 5,
     "Icon3": 4,
@@ -252,10 +255,10 @@
     "Icon7": 17,
     "iconPlusText": 1,
     "iconRemove2": 90,
-    "Image2": 106,
+    "Image2": 107,
     "Label1": 3,
-    "Label2": 105,
-    "Label6": 107,
+    "Label2": 106,
+    "Label6": 108,
     "Label7": 40,
     "Label7_1": 18,
     "Label8": 32,
@@ -275,6 +278,7 @@
     "RectQuickActionBar2": 80,
     "RichTextEditor1": 74,
     "RichTextEditor4": 63,
+    "Screen1": 0,
     "SearchIcon2": 84,
     "SendButton": 115,
     "SendOutScreen": 0,

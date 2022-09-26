@@ -1,6 +1,6 @@
 {
   "ControlStates": {
-    "HtmlText2": {
+    "HtmlText4": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "DisplayMode",
@@ -36,7 +36,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "HtmlText2",
+      "Name": "HtmlText4",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -124,7 +124,7 @@
       "StyleName": "",
       "Type": "ControlInfo"
     },
-    "PreviewScreen": {
+    "Screen1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Fill",
@@ -144,18 +144,13 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "PreviewScreen",
+      "Name": "Screen1",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
           "Category": "Design",
-          "PropertyName": "Width",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Height",
+          "PropertyName": "Fill",
           "RuleProviderType": "Unknown"
         },
         {
@@ -165,17 +160,12 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Fill",
+          "PropertyName": "Height",
           "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
-          "PropertyName": "LoadingSpinner",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "LoadingSpinnerColor",
+          "PropertyName": "Width",
           "RuleProviderType": "Unknown"
         },
         {
@@ -187,11 +177,21 @@
           "Category": "Design",
           "PropertyName": "Orientation",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "LoadingSpinner",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "LoadingSpinnerColor",
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "defaultScreenStyle",
       "Type": "ControlInfo"
     }
   },
-  "TopParentName": "PreviewScreen"
+  "TopParentName": "Screen1"
 }

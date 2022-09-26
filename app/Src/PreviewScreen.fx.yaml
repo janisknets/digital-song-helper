@@ -1,7 +1,7 @@
 PreviewScreen As screen:
 
     HtmlText2 As htmlViewer:
-        Height: =430
+        Height: =628
         HtmlText: |-
             ="<!DOCTYPE html>
             <html lang='en'>
@@ -21,10 +21,8 @@ PreviewScreen As screen:
                                 <td align='center' valign='top'>
                                     <table border='0' cellpadding='20' cellspacing='0' width='100%' id='emailHeader'>
                                         <tr>
-                                            <td align='center' valign='top'>
-                                            <td style ='color:#A100FF; font-size:30px;'>Accenture Song Baltic ATC
-                                            </td>
-                                                This is where my header content goes.
+                                            <td align='center' valign='top' style ='color:#A100FF; font-size:30px;'>
+                                                Accenture Song Baltic ATC                                        
                                             </td>
                                         </tr>
                                     </table>

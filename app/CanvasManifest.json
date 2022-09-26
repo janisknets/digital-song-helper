@@ -113,6 +113,7 @@
     "DetailScreen1",
     "EditScreen1",
     "SendOutScreen",
-    "PreviewScreen"
+    "PreviewScreen",
+    "Screen1"
   ]
 }
