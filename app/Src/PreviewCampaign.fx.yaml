@@ -101,7 +101,7 @@ PreviewCampaign As screen:
 
             DataCardValue2_1 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
+                Default: =DataCardValue2
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =38
@@ -171,7 +171,7 @@ PreviewCampaign As screen:
 
             DataCardValue3_1 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =
+                Default: =DataCardValue3
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =38
