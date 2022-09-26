@@ -23,9 +23,9 @@ BrowseScreen1 As screen:
 
     "BrowseGallery1 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
         Height: =414
-        Items: =SortByColumns(Filter([@NewCampaign], StartsWith(Title, TextSearchBox2.Text)), "Title", If(SortDescending1, Descending, Ascending))
+        Items: =SortByColumns(Filter([@TemplateList], StartsWith(Title, TextSearchBox2.Text)), "Title", If(SortDescending1, Descending, Ascending))
         Layout: =Layout.Vertical
-        OnSelect: =Navigate(DetailScreen1, ScreenTransition.None)
+        OnSelect: =Navigate(EditScreen1, ScreenTransition.None)
         TemplatePadding: =0
         TemplateSize: =Min(104, Self.Height - 60)
         Width: =725
@@ -54,7 +54,7 @@ BrowseScreen1 As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.Subject
+            Text: =ThisItem.'Template Title'
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
@@ -138,7 +138,7 @@ BrowseScreen1 As screen:
         FontWeight: =FontWeight.Bold
         Height: =54
         Size: =24
-        Text: ="Campaign List"
+        Text: ="Template List"
         Width: =333
         X: =474
         Y: =30

@@ -2,8 +2,8 @@ PreviewCampaign As screen:
 
     EditForm1_1 As form:
         DataSource: =NewCampaign
+        DefaultMode: =FormMode.New
         Height: =518
-        Item: =BrowseGallery1.Selected
         NumberOfColumns: =1
         OnSuccess: =Back()
         Visible: =If(varTabSelected = 1, true, false)
@@ -171,7 +171,7 @@ PreviewCampaign As screen:
 
             DataCardValue3_1 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =DataCardValue3
+                Default: =DataCardValue4
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =38

@@ -200,7 +200,7 @@ DetailScreen1 As screen:
         Button7_1 As button:
             Fill: =RGBA(0, 134, 208, 1)
             OnSelect: |-
-                =UpdateContext({varShowPopup:false}); Remove([@NewCampaign], BrowseGallery1.Selected); If (IsEmpty(Errors([@NewCampaign], BrowseGallery1.Selected)), Back())
+                =UpdateContext({varShowPopup:false}); Remove([@TemplateList], BrowseGallery1.Selected); If (IsEmpty(Errors([@TemplateList], BrowseGallery1.Selected)), Back())
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
