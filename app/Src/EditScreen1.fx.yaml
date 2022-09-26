@@ -489,12 +489,12 @@ EditScreen1 As screen:
                 ZIndex: =4
 
     Button11 As button:
-        OnSelect: =ResetForm(EditForm1);Back()
+        OnSelect: =Navigate(PreviewCampaign);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Text: ="Cacel"
+        Text: ="Preview"
         X: =561
         Y: =684
         ZIndex: =4
@@ -558,10 +558,11 @@ EditScreen1 As screen:
             Y: =3
             ZIndex: =1
 
-    Button2 As button:
-        OnSelect: =Navigate(PreviewCampaign);
-        Text: ="Preview"
-        X: =1133
-        Y: =545
-        ZIndex: =8
+    Icon5 As icon.BackArrow:
+        Height: =48
+        Icon: =Icon.BackArrow
+        OnSelect: =ResetForm(EditForm1);Back();
+        X: =193
+        Y: =27
+        ZIndex: =9
 
