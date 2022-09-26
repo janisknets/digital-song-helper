@@ -9,7 +9,7 @@ PreviewCampaign As screen:
         NumberOfColumns: =1
         OnSuccess: =Back()
         Visible: =If(varTabSelected = 1, true, false)
-        Width: =848
+        Width: =879
         X: =257
         Y: =131
         ZIndex: =3
@@ -25,7 +25,7 @@ PreviewCampaign As screen:
             MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "Message_x0028_html_x0029_")
             Required: =false
             Update: =RichTextEditor4_1.HtmlText
-            Width: =848
+            Width: =879
             X: =0
             Y: =4
             ZIndex: =1
@@ -71,7 +71,7 @@ PreviewCampaign As screen:
                     My name is {ContactsVar.'Role Primary Contact'}. Writing you regarding Open role {ContactsVar.Title} for {ContactsVar.Project}.<br></br>Let me know if this role is still open, will be happy to jump on a call to discuss potential candidates."
                 Height: =236
                 Width: =593
-                X: =225
+                X: =192
                 Y: =20
                 ZIndex: =5
 
@@ -86,7 +86,7 @@ PreviewCampaign As screen:
             MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "Title")
             Required: =false
             Update: =DataCardValue2_1.Text
-            Width: =848
+            Width: =879
             X: =0
             Y: =0
             ZIndex: =2
@@ -115,7 +115,7 @@ PreviewCampaign As screen:
                 RadiusTopRight: =0
                 Tooltip: =Parent.DisplayName
                 Width: =596
-                X: =221
+                X: =189
                 Y: =11
                 ZIndex: =2
 
@@ -156,7 +156,7 @@ PreviewCampaign As screen:
             Required: =false
             Update: =DataCardValue3_1.Text
             Visible: =true
-            Width: =848
+            Width: =879
             X: =0
             Y: =1
             ZIndex: =2
@@ -186,7 +186,7 @@ PreviewCampaign As screen:
                 RadiusTopRight: =0
                 Tooltip: =Parent.DisplayName
                 Width: =594
-                X: =223
+                X: =190
                 Y: =11
                 ZIndex: =2
 
@@ -226,7 +226,7 @@ PreviewCampaign As screen:
             Required: =false
             Update: =DataCardValue4_1.Selected
             Visible: =true
-            Width: =848
+            Width: =879
             X: =0
             Y: =2
             ZIndex: =2
@@ -256,7 +256,7 @@ PreviewCampaign As screen:
                 SelectMultiple: =false
                 Tooltip: =Parent.DisplayName
                 Width: =596
-                X: =221
+                X: =189
                 Y: =11
                 ZIndex: =2
 
@@ -296,7 +296,7 @@ PreviewCampaign As screen:
             Required: =false
             Update: =DataCardValue8_1.Attachments
             Visible: =true
-            Width: =848
+            Width: =879
             X: =0
             Y: =3
             ZIndex: =2
@@ -322,7 +322,7 @@ PreviewCampaign As screen:
                 PaddingTop: =5
                 Tooltip: =Parent.DisplayName
                 Width: =588
-                X: =228
+                X: =189
                 Y: =9
                 ZIndex: =2
 
