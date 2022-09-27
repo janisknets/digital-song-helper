@@ -735,7 +735,7 @@ PreviewCampaign As screen:
         ZIndex: =13
 
     Button3 As button:
-        OnSelect: =Office365Outlook.SendEmailV2("anna.shagoyan@accenture.com", DataCardValue3_1.Text, HtmlText1_1.HtmlText);  
+        OnSelect: =Office365Outlook.SendEmailV2(User().Email, DataCardValue3_1.Text, RichTextEditor4_1.HtmlText)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
