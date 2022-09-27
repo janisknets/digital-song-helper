@@ -143,14 +143,14 @@ EditScreen1 As screen:
     EditForm1 As form:
         DataSource: =TemplateList
         DefaultMode: =FormMode.New
-        Height: =518
+        Height: =556
         Item: =BrowseGallery1.Selected
         NumberOfColumns: =1
         OnSuccess: =Back()
         Visible: =If(varTabSelected = 1, true, false)
         Width: =910
         X: =227
-        Y: =131
+        Y: =92
         ZIndex: =3
 
         Title_DataCard2 As typedDataCard.textualEditCard:
@@ -181,7 +181,7 @@ EditScreen1 As screen:
 
             DataCardValue2 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
+                Default: =BrowseGallery1.Selected.Title
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =37
@@ -295,7 +295,7 @@ EditScreen1 As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@TemplateList],DataSourceInfo.DisplayName,"html")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =287
+            Height: =344
             MaxLength: =DataSourceInfo([@TemplateList], DataSourceInfo.MaxLength, "html")
             Required: =false
             Update: =HtmlText3.HtmlText
@@ -340,7 +340,7 @@ EditScreen1 As screen:
                 ZIndex: =4
 
             HtmlText3 As htmlViewer:
-                Height: =269
+                Height: =330
                 HtmlText: |-
                     ="<!DOCTYPE html>" &
                     "<html xmlns:v=" & Char(34) & "urn:schemas-microsoft-com:vml" & Char(34) & " xmlns:o=" & Char(34) & "urn:schemas-microsoft-com:office:office" & Char(34) & " lang=" & Char(34) & "en" & Char(34) & ">" &
@@ -796,55 +796,6 @@ EditScreen1 As screen:
         X: =790
         Y: =684
         ZIndex: =5
-
-    Label7 As label:
-        FontWeight: =FontWeight.Bold
-        Size: =24
-        Text: =If(varTabSelected = 1, "Create New Campaign", "Create New Template")
-        Width: =401
-        X: =532
-        Y: =91
-        ZIndex: =6
-
-    Gallery3_5 As gallery.galleryHorizontal:
-        Height: =52
-        Items: |-
-            =Table({ID:1,Label:"Campaigns"},{ID:2,Label:"Templates"})
-        TemplatePadding: =0
-        TemplateSize: =163
-        Visible: =If(FormMode.New, true, false)
-        Width: =330
-        X: =532
-        Y: =27
-        ZIndex: =7
-
-        Button10_6 As button:
-            BorderThickness: =0
-            Color: |-
-                =If(varTabSelected = ThisItem.ID, White, ColorValue("#A6A6A6"))
-            DisabledBorderColor: =
-            DisabledColor: =RGBA(255, 255, 255, 1)
-            DisabledFill: |-
-                =ColorValue("#F4F4F4")
-            Fill: |-
-                =If(varTabSelected = ThisItem.ID, ColorValue("#0078D4"), ColorValue("#F4F4F4"))
-            FocusedBorderColor: =
-            FocusedBorderThickness: =
-            Height: =42
-            HoverBorderColor: =
-            HoverColor: =White
-            HoverFill: =If(varTabSelected = ThisItem.ID, ColorFade(RGBA(0, 120, 212, 1), -20%), ColorFade(RGBA(244, 244, 244, 1), -20%))
-            OnSelect: =Set(varTabSelected, ThisItem.ID);
-            PressedBorderColor: =
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Text: =ThisItem.Label
-            Width: =159
-            X: =4
-            Y: =4
-            ZIndex: =1
 
     Icon5 As icon.BackArrow:
         Height: =48
