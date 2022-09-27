@@ -52,7 +52,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateAddIcon.ID%",
       "Name": "AddIcon2",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -837,7 +837,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%SelectedUsersGallery.ID%",
       "Name": "EmailPeopleGallery2",
-      "ParentIndex": 7,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1075,7 +1075,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HtmlText1_1",
-      "ParentIndex": 0,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1427,7 +1427,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateLblAppName.ID%",
       "Name": "LblAppName1",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1862,7 +1862,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateLblEmailSubject.ID%",
       "Name": "LblEmailSubject2",
-      "ParentIndex": 9,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2076,7 +2076,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateLblRecipientCount.ID%",
       "Name": "LblRecipientCount2",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2294,7 +2294,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%BrowseContainer.ID%",
       "Name": "PeopleBrowseGallery2",
-      "ParentIndex": 8,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2723,7 +2723,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateRectQuickActionBar.ID%",
       "Name": "RectQuickActionBar2",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2844,7 +2844,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateSearchIcon.ID%",
       "Name": "SearchIcon2",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3565,7 +3565,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateTextEmailSubject.ID%",
       "Name": "TextEmailSubject2",
-      "ParentIndex": 10,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3915,7 +3915,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateTextSearchBox.ID%",
       "Name": "TextSearchBox3",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

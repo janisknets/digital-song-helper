@@ -1,4 +1,5 @@
 BrowseScreen1 As screen:
+    OnVisible: =
 
     Icon3 As icon.Reload:
         Color: =RGBA(56, 96, 178, 1)
@@ -114,7 +115,7 @@ BrowseScreen1 As screen:
         ZIndex: =6
 
     Button6 As button:
-        OnSelect: =NewForm(EditForm1);Navigate(EditScreen1, ScreenTransition.None)
+        OnSelect: =NewForm(EditForm1);Navigate(EditScreen1, ScreenTransition.None); Set(varShowForm,true)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0

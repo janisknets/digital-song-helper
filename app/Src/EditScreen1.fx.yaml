@@ -1,4 +1,5 @@
 EditScreen1 As screen:
+    OnVisible: =
 
     EditForm2 As form:
         DataSource: =TemplateList
@@ -450,6 +451,7 @@ EditScreen1 As screen:
             =Table({ID:1,Label:"Campaigns"},{ID:2,Label:"Templates"})
         TemplatePadding: =0
         TemplateSize: =163
+        Visible: =varShowForm
         Width: =330
         X: =532
         Y: =27
