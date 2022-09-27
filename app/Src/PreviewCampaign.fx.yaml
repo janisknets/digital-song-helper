@@ -104,7 +104,7 @@ PreviewCampaign As screen:
 
             DataCardValue3_1 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =DataCardValue4
+                Default: =$"Support from Baltic Song for {ContactsVar.'Role Fulfillment Contact'}"
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =38
