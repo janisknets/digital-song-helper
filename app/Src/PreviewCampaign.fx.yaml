@@ -8,7 +8,6 @@ PreviewCampaign As screen:
         Height: =644
         NumberOfColumns: =1
         OnSuccess: =Back()
-        Visible: =If(varTabSelected = 1, true, false)
         Width: =1194
         X: =52
         Y: =79

@@ -635,7 +635,7 @@ EditScreen1 As screen:
                 ZIndex: =6
 
     Button11 As button:
-        OnSelect: =DisplayMode.Edit
+        OnSelect: =Navigate(PreviewCampaign);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
