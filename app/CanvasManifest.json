@@ -110,6 +110,7 @@
   "ScreenOrder": [
     "BrowseScreen1",
     "EditScreen1",
+    "NewScreen1",
     "PreviewCampaign",
     "SendOutScreen",
     "PreviewScreen",

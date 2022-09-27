@@ -1,0 +1,428 @@
+NewScreen1 As screen:
+    OnVisible: =
+
+    EditForm2_1 As form:
+        DataSource: =TemplateList
+        DefaultMode: =FormMode.New
+        Height: =377
+        NumberOfColumns: =1
+        OnSuccess: =ResetForm(EditForm2_1); NewForm(EditForm2_1); Navigate(BrowseScreen1);
+        Visible: =If(varTabSelected = 2, true, false)
+        X: =282
+        Y: =168
+        ZIndex: =2
+
+        Title_DataCard1_1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Title"
+            Default: =ThisItem.Title
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@TemplateList],DataSourceInfo.DisplayName,"Title")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@TemplateList], DataSourceInfo.MaxLength, "Title")
+            Required: =true
+            Update: =DataCardValue1_1.Text
+            Width: =800
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+            DataCardKey1_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10 + (DataCardValue1_1.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            DataCardValue1_1 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =38
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =599
+                X: =170
+                Y: =11
+                ZIndex: =2
+
+            ErrorMessage1_1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue1_1.Y + DataCardValue1_1.Height
+                ZIndex: =3
+
+            StarVisible1_1 As label:
+                Align: =Align.Center
+                Height: =DataCardKey1_1.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey1_1.Y
+                ZIndex: =4
+
+        "'html _DataCard1_1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="html"
+            Default: =ThisItem.'html '
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@TemplateList],DataSourceInfo.DisplayName,"html")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =293
+            MaxLength: =DataSourceInfo([@TemplateList], DataSourceInfo.MaxLength, "html")
+            Required: =false
+            Update: =RichTextEditor1_1.HtmlText
+            Width: =800
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            DataCardKey5_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =148
+                Wrap: =false
+                X: =30
+                Y: =10 + (RichTextEditor1_1.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            ErrorMessage5_1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =RichTextEditor1_1.Y + RichTextEditor1_1.Height
+                ZIndex: =3
+
+            StarVisible5_1 As label:
+                Align: =Align.Center
+                Height: =DataCardKey5_1.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey5_1.Y
+                ZIndex: =4
+
+            RichTextEditor1_1 As richTextEditor:
+                Default: ="Enter some <strong>rich text</strong> here."
+                Height: =236
+                Width: =606
+                X: =165
+                Y: =33
+                ZIndex: =6
+
+    EditForm1_2 As form:
+        DataSource: =TemplateList
+        DefaultMode: =FormMode.New
+        Height: =518
+        Item: =BrowseGallery1.Selected
+        NumberOfColumns: =1
+        OnSuccess: =Back()
+        Visible: =If(varTabSelected = 1, true, false)
+        Width: =910
+        X: =227
+        Y: =131
+        ZIndex: =3
+
+        Title_DataCard2_1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Title"
+            Default: =ThisItem.Title
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@TemplateList],DataSourceInfo.DisplayName,"Title")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@TemplateList], DataSourceInfo.MaxLength, "Title")
+            Required: =true
+            Update: =DataCardValue2_1.Text
+            Width: =910
+            X: =0
+            Y: =0
+            ZIndex: =4
+
+            DataCardKey2_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10 + (DataCardValue2_1.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            DataCardValue2_1 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =37
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =702
+                X: =177
+                Y: =12
+                ZIndex: =2
+
+            ErrorMessage2_1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue2_1.Y + DataCardValue2_1.Height
+                ZIndex: =3
+
+            StarVisible2_1 As label:
+                Align: =Align.Center
+                Height: =DataCardKey2_1.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey2_1.Y
+                ZIndex: =4
+
+        Attachments_DataCard1_1 As typedDataCard.attachmentsEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="{Attachments}"
+            Default: =ThisItem.Attachments
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@TemplateList],DataSourceInfo.DisplayName,"{Attachments}")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =146
+            Required: =false
+            Update: =DataCardValue5_1.Attachments
+            Width: =910
+            X: =0
+            Y: =1
+            ZIndex: =4
+
+            DataCardKey6_2 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10 + (DataCardValue5_1.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            DataCardValue5_1 As attachments:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DisplayMode: =Parent.DisplayMode
+                Height: =99
+                IsInDataCard: =true
+                Items: =Parent.Default
+                PaddingBottom: =5
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingRight: =5
+                PaddingTop: =5
+                Tooltip: =Parent.DisplayName
+                Width: =700
+                X: =179
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage6_2 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue5_1.Y + DataCardValue5_1.Height
+                ZIndex: =3
+
+            StarVisible6_2 As label:
+                Align: =Align.Center
+                Height: =DataCardKey6_2.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey6_2.Y
+                ZIndex: =4
+
+        "'html _DataCard2_1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="html"
+            Default: =ThisItem.'html '
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@TemplateList],DataSourceInfo.DisplayName,"html")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =287
+            MaxLength: =DataSourceInfo([@TemplateList], DataSourceInfo.MaxLength, "html")
+            Required: =false
+            Update: =RichTextEditor2.HtmlText
+            Width: =910
+            X: =0
+            Y: =2
+            ZIndex: =4
+
+            DataCardKey3_2 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10 + (RichTextEditor2.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            ErrorMessage3_2 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =RichTextEditor2.Y + RichTextEditor2.Height
+                ZIndex: =3
+
+            StarVisible3_2 As label:
+                Align: =Align.Center
+                Height: =DataCardKey3_2.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey3_2.Y
+                ZIndex: =4
+
+            RichTextEditor2 As richTextEditor:
+                Default: ="Enter some <strong>rich text</strong> here."
+                Height: =269
+                Width: =710
+                X: =170
+                Y: =13
+                ZIndex: =7
+
+    Button11_1 As button:
+        OnSelect: =Navigate(BrowseScreen1);
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Cancel"
+        X: =561
+        Y: =684
+        ZIndex: =4
+
+    Button12_1 As button:
+        OnSelect: =If(varTabSelected = 1, SubmitForm(EditForm1_2), SubmitForm(EditForm2_1)); 
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Save"
+        X: =790
+        Y: =684
+        ZIndex: =5
+
+    Label7_1 As label:
+        FontWeight: =FontWeight.Bold
+        Size: =24
+        Text: =If(varTabSelected = 1, "Create New Campaign", "Create New Template")
+        Width: =401
+        X: =532
+        Y: =91
+        ZIndex: =6
+
+    Gallery3_6 As gallery.galleryHorizontal:
+        Height: =52
+        Items: |-
+            =Table({ID:1,Label:"Campaigns"},{ID:2,Label:"Templates"})
+        TemplatePadding: =0
+        TemplateSize: =163
+        Visible: =If(FormMode.New, true, false)
+        Width: =330
+        X: =532
+        Y: =27
+        ZIndex: =7
+
+        Button10_7 As button:
+            BorderThickness: =0
+            Color: |-
+                =If(varTabSelected = ThisItem.ID, White, ColorValue("#A6A6A6"))
+            DisabledBorderColor: =
+            DisabledColor: =RGBA(255, 255, 255, 1)
+            DisabledFill: |-
+                =ColorValue("#F4F4F4")
+            Fill: |-
+                =If(varTabSelected = ThisItem.ID, ColorValue("#0078D4"), ColorValue("#F4F4F4"))
+            FocusedBorderColor: =
+            FocusedBorderThickness: =
+            Height: =42
+            HoverBorderColor: =
+            HoverColor: =White
+            HoverFill: =If(varTabSelected = ThisItem.ID, ColorFade(RGBA(0, 120, 212, 1), -20%), ColorFade(RGBA(244, 244, 244, 1), -20%))
+            OnSelect: =Set(varTabSelected, ThisItem.ID);
+            PressedBorderColor: =
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: =ThisItem.Label
+            Width: =159
+            X: =4
+            Y: =4
+            ZIndex: =1
+
+    Icon5_2 As icon.BackArrow:
+        Height: =48
+        Icon: =Icon.BackArrow
+        OnSelect: =ResetForm(EditForm1_2);Back();
+        X: =258
+        Y: =27
+        ZIndex: =9
+

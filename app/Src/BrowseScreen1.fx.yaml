@@ -116,7 +116,7 @@ BrowseScreen1 As screen:
         ZIndex: =6
 
     Button6 As button:
-        OnSelect: =NewForm(EditForm1);Navigate(EditScreen1, ScreenTransition.None); Set(varShowForm,true)
+        OnSelect: =NewForm(EditForm1);Navigate(NewScreen1, ScreenTransition.None); Set(varShowForm,true)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0

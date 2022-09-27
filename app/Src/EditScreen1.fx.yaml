@@ -142,6 +142,7 @@ EditScreen1 As screen:
 
     EditForm1 As form:
         DataSource: =TemplateList
+        DefaultMode: =FormMode.New
         Height: =518
         Item: =BrowseGallery1.Selected
         NumberOfColumns: =1
@@ -811,7 +812,7 @@ EditScreen1 As screen:
             =Table({ID:1,Label:"Campaigns"},{ID:2,Label:"Templates"})
         TemplatePadding: =0
         TemplateSize: =163
-        Visible: =varShowForm
+        Visible: =If(FormMode.New, true, false)
         Width: =330
         X: =532
         Y: =27
