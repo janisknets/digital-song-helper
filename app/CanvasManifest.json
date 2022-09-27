@@ -108,11 +108,11 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
-    "SendButton",
     "BrowseScreen1",
     "EditScreen1",
     "PreviewCampaign",
     "SendOutScreen",
-    "PreviewScreen"
+    "PreviewScreen",
+    "SendButton"
   ]
 }
