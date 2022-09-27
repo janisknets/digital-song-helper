@@ -9,8 +9,8 @@ PreviewCampaign As screen:
         NumberOfColumns: =1
         OnSuccess: =Back()
         Visible: =If(varTabSelected = 1, true, false)
-        Width: =1048
-        X: =178
+        Width: =1194
+        X: =52
         Y: =79
         ZIndex: =3
 
@@ -25,7 +25,7 @@ PreviewCampaign As screen:
             MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "Message_x0028_html_x0029_")
             Required: =false
             Update: =RichTextEditor4_1.HtmlText
-            Width: =1048
+            Width: =1194
             X: =0
             Y: =2
             ZIndex: =1
@@ -70,7 +70,7 @@ PreviewCampaign As screen:
                     =$"Hello {ContactsVar.'Role Fulfillment Contact'}!<br></br>
                     My name is {ContactsVar.'Role Primary Contact'}. Writing you regarding Open role {ContactsVar.Title} for {ContactsVar.Project}.<br></br>Let me know if this role is still open, will be happy to jump on a call to discuss potential candidates."
                 Height: =212
-                Width: =716
+                Width: =846
                 X: =192
                 Y: =20
                 ZIndex: =5
@@ -87,7 +87,7 @@ PreviewCampaign As screen:
             Required: =false
             Update: =DataCardValue3_1.Text
             Visible: =true
-            Width: =1048
+            Width: =1194
             X: =0
             Y: =0
             ZIndex: =2
@@ -116,7 +116,7 @@ PreviewCampaign As screen:
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Tooltip: =Parent.DisplayName
-                Width: =715
+                Width: =855
                 X: =190
                 Y: =11
                 ZIndex: =2
@@ -157,7 +157,7 @@ PreviewCampaign As screen:
             Required: =false
             Update: =DataCardValue4_1.Selected
             Visible: =true
-            Width: =1048
+            Width: =1194
             X: =0
             Y: =1
             ZIndex: =2
@@ -186,7 +186,7 @@ PreviewCampaign As screen:
                 SearchItems: =[]
                 SelectMultiple: =false
                 Tooltip: =Parent.DisplayName
-                Width: =714
+                Width: =849
                 X: =189
                 Y: =11
                 ZIndex: =2
@@ -729,8 +729,8 @@ PreviewCampaign As screen:
             "</body>" &
             "" &
             "</html>"
-        Width: =877
-        X: =213
+        Width: =849
+        X: =240
         Y: =450
         ZIndex: =13
 
