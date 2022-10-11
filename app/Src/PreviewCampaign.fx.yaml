@@ -741,7 +741,7 @@ PreviewCampaign As screen:
         ZIndex: =13
 
     Button3 As button:
-        OnSelect: =Office365Outlook.SendEmailV2(User().Email, DataCardValue3_1.Text, RichTextEditor4_1.HtmlText)
+        OnSelect: =SendEmail.Run();
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
