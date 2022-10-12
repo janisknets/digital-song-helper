@@ -28,12 +28,24 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
+        "6ea35d85-93af-4c5d-9a7a-bf033dd7f190": {
+          "value": "shared_office365"
+        },
+        "cb7d9ef6-d2ef-466c-aa89-24ca403bfdcf": {
+          "value": "shared_sharepointonline"
+        },
         "workflowEntityId": {},
         "workflowName": {
           "value": "a35d6f3b-0db4-4839-aca6-a3319ef7df6e"
         }
       },
       "parameterHintsV2": {
+        "shared_office365": {
+          "value": "6ea35d85-93af-4c5d-9a7a-bf033dd7f190"
+        },
+        "shared_sharepointonline": {
+          "value": "cb7d9ef6-d2ef-466c-aa89-24ca403bfdcf"
+        },
         "workflowEntityId": {},
         "workflowName": {
           "value": "a35d6f3b-0db4-4839-aca6-a3319ef7df6e"
@@ -96,9 +108,64 @@
     ],
     "dependencies": {},
     "dependents": [
-      "4066e6ec-1418-4c13-a7f3-326c7495cf14"
+      "4066e6ec-1418-4c13-a7f3-326c7495cf14",
+      "91c449b1-422d-472e-b29e-e06c18e20448"
     ],
     "id": "6ea35d85-93af-4c5d-9a7a-bf033dd7f190"
+  },
+  "91c449b1-422d-472e-b29e-e06c18e20448": {
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-107.westus.logic.azure.com:443/workflows/c32c24d96f3b4e0da669a7b406666ea1/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=m8ATYFnAYT2dDc2M0QlbykxFWkOunhtTtWNy5HPKMfE",
+      "workflowEndpoint": "/subscriptions/be4c2756-6fa8-4d1b-91ba-70dc75410b5a/resourceGroups/e0793d390939496db129198edd916feb-aad03f0601544ddd901e81d95fa7518f/providers/Microsoft.Logic/workflows/e4d93b0c-422f-4cf1-b5d3-4ae0f4476865",
+      "workflowName": "e4d93b0c-422f-4cf1-b5d3-4ae0f4476865",
+      "workflowPath": "/subscriptions/be4c2756-6fa8-4d1b-91ba-70dc75410b5a/resourceGroups/e0793d390939496db129198edd916feb-aad03f0601544ddd901e81d95fa7518f/providers/Microsoft.Logic/workflows/e4d93b0c-422f-4cf1-b5d3-4ae0f4476865"
+    },
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "6ea35d85-93af-4c5d-9a7a-bf033dd7f190": {
+          "value": "shared_office365"
+        },
+        "9dbc8f0e-45a9-4c28-83c0-f549b858ecf8": {
+          "value": "shared_office365users"
+        },
+        "cb7d9ef6-d2ef-466c-aa89-24ca403bfdcf": {
+          "value": "shared_sharepointonline"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "e4d93b0c-422f-4cf1-b5d3-4ae0f4476865"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_office365": {
+          "value": "6ea35d85-93af-4c5d-9a7a-bf033dd7f190"
+        },
+        "shared_office365users": {
+          "value": "9dbc8f0e-45a9-4c28-83c0-f549b858ecf8"
+        },
+        "shared_sharepointonline": {
+          "value": "cb7d9ef6-d2ef-466c-aa89-24ca403bfdcf"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "e4d93b0c-422f-4cf1-b5d3-4ae0f4476865"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "SendUserEmail"
+    ],
+    "dependencies": {
+      "shared_office365": "6ea35d85-93af-4c5d-9a7a-bf033dd7f190",
+      "shared_office365users": "9dbc8f0e-45a9-4c28-83c0-f549b858ecf8",
+      "shared_sharepointonline": "cb7d9ef6-d2ef-466c-aa89-24ca403bfdcf"
+    },
+    "dependents": [],
+    "id": "91c449b1-422d-472e-b29e-e06c18e20448"
   },
   "9dbc8f0e-45a9-4c28-83c0-f549b858ecf8": {
     "connectionParameters": {
@@ -114,7 +181,9 @@
       "Office365Users"
     ],
     "dependencies": {},
-    "dependents": [],
+    "dependents": [
+      "91c449b1-422d-472e-b29e-e06c18e20448"
+    ],
     "id": "9dbc8f0e-45a9-4c28-83c0-f549b858ecf8"
   },
   "cb7d9ef6-d2ef-466c-aa89-24ca403bfdcf": {
@@ -160,7 +229,8 @@
     ],
     "dependencies": {},
     "dependents": [
-      "4066e6ec-1418-4c13-a7f3-326c7495cf14"
+      "4066e6ec-1418-4c13-a7f3-326c7495cf14",
+      "91c449b1-422d-472e-b29e-e06c18e20448"
     ],
     "id": "cb7d9ef6-d2ef-466c-aa89-24ca403bfdcf"
   }

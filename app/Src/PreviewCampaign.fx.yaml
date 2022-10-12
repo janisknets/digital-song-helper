@@ -741,7 +741,7 @@ PreviewCampaign As screen:
         ZIndex: =13
 
     Button3 As button:
-        OnSelect: =SendEmail.Run();
+        OnSelect: =SendUserEmail.Run();
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
