@@ -1,0 +1,162 @@
+MainScreen1 As screen:
+    OnVisible: =
+
+    Icon3_1 As icon.Reload:
+        Color: =RGBA(56, 96, 178, 1)
+        Height: =54
+        Icon: =Icon.Reload
+        OnSelect: =Refresh([@NewCampaign])
+        Width: =41
+        X: =819
+        Y: =38
+        ZIndex: =1
+
+    "BrowseGallery1_1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+        Height: =414
+        Items: =SortByColumns(Filter([@NewCampaign], StartsWith(Title, TextSearchBox2_1.Text)), "Title", If(SortDescending1, Descending, Ascending))
+        Layout: =Layout.Vertical
+        OnSelect: =Navigate(EditScreen1, ScreenTransition.None)
+        TemplatePadding: =0
+        TemplateSize: =124
+        Width: =735
+        X: =316
+        Y: =209
+        ZIndex: =1
+
+        Title1 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Title
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =16
+            ZIndex: =1
+
+        Subtitle1 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Created
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =Title1.Y + Title1.Height + 2
+            ZIndex: =2
+
+        Body1 As label:
+            Height: =36
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'Count of contacts'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =Subtitle1.Y + Subtitle1.Height + 4
+            ZIndex: =3
+
+        NextArrow1 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Navigate(EditScreen1);
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator1 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+    Icon2_1 As icon.ArrowsUpDown:
+        Color: =RGBA(56, 96, 178, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =39
+        Icon: =Icon.Sort
+        OnSelect: |-
+            =UpdateContext({SortDescending1: !SortDescending1})
+        Width: =56
+        X: =860
+        Y: =45
+        ZIndex: =2
+
+    TextSearchBox2_1 As text:
+        BorderThickness: =1
+        Default: =
+        Height: =52
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Width: =578
+        X: =452
+        Y: =124
+        ZIndex: =4
+
+    Icon1_1 As icon.Search:
+        Color: =RGBA(191, 190, 190, 1)
+        Height: =52
+        Icon: =Icon.Search
+        Width: =59
+        X: =363
+        Y: =124
+        ZIndex: =5
+
+    Rectangle2_1 As rectangle:
+        Height: =2
+        Width: =725
+        X: =326
+        Y: =209
+        ZIndex: =6
+
+    Button6_3 As button:
+        OnSelect: =NewForm(EditForm1);Navigate(NewScreen1, ScreenTransition.None); Set(varShowForm,true)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Create New"
+        X: =700
+        Y: =685
+        ZIndex: =7
+
+    Button6_2 As button:
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Cancel"
+        X: =481
+        Y: =685
+        ZIndex: =8
+
+    Label1_1 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =54
+        Size: =24
+        Text: ="Campaign List"
+        Width: =333
+        X: =474
+        Y: =30
+        ZIndex: =9
+

@@ -28,6 +28,7 @@
       "CampaignTitle": "CampaignTitle",
       "CampaignTitle#Id": "CampaignTitle Id",
       "ComplianceAssetId": "Compliance Asset Id",
+      "Countofcontacts": "Count of contacts",
       "Created": "Created",
       "Editor": "Modified By",
       "Editor#Claims": "Modified By Claims",
