@@ -136,7 +136,7 @@ MainScreen1 As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Text: ="Create New"
-        X: =700
+        X: =734
         Y: =685
         ZIndex: =7
 
@@ -146,7 +146,7 @@ MainScreen1 As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Text: ="Cancel"
-        X: =481
+        X: =474
         Y: =685
         ZIndex: =8
 
