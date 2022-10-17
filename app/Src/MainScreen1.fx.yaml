@@ -58,7 +58,7 @@ MainScreen1 As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =Concatenate(ThisItem.'Count of contacts', " " , "Contacts reached")
+            Text: =Concatenate(ThisItem.'Count of contacts', " " , "contacts reached")
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
