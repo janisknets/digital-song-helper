@@ -8,6 +8,7 @@ NewScreen1 As screen:
         NumberOfColumns: =1
         OnSuccess: =ResetForm(EditForm2_1); NewForm(EditForm2_1); Navigate(BrowseScreen1);
         Visible: =If(varTabSelected = 2, true, false)
+        Width: =855
         X: =282
         Y: =168
         ZIndex: =2
@@ -23,7 +24,7 @@ NewScreen1 As screen:
             MaxLength: =DataSourceInfo([@TemplateList], DataSourceInfo.MaxLength, "Title")
             Required: =true
             Update: =DataCardValue1_1.Text
-            Width: =800
+            Width: =855
             X: =0
             Y: =0
             ZIndex: =2
@@ -92,7 +93,7 @@ NewScreen1 As screen:
             MaxLength: =DataSourceInfo([@TemplateList], DataSourceInfo.MaxLength, "html")
             Required: =false
             Update: =RichTextEditor1_1.HtmlText
-            Width: =800
+            Width: =855
             X: =0
             Y: =1
             ZIndex: =2
@@ -569,7 +570,7 @@ NewScreen1 As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Text: ="Cancel"
-        X: =561
+        X: =744
         Y: =684
         ZIndex: =4
 
@@ -580,7 +581,7 @@ NewScreen1 As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Text: ="Save"
-        X: =790
+        X: =977
         Y: =684
         ZIndex: =5
 
