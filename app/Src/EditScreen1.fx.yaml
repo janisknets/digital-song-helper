@@ -155,7 +155,7 @@ EditScreen1 As screen:
             DataField: ="Template"
             Default: =ThisItem.Template
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"Template")
+            DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"TemplateList")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
