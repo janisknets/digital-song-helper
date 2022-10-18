@@ -109,7 +109,7 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
-    "MainScreen1",
+    "CampaignScreen",
     "BrowseScreen1",
     "EditScreen1",
     "EditTemplate",
@@ -118,6 +118,7 @@
     "PreviewTemplate",
     "SendOutScreen",
     "PreviewScreen",
-    "SendButton"
+    "SendButton",
+    "TestMainScreen1"
   ]
 }

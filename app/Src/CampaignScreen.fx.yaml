@@ -1,41 +1,29 @@
-BrowseScreen1 As screen:
+CampaignScreen As screen:
     OnVisible: =
 
-    Icon3 As icon.Reload:
+    Icon3_2 As icon.Reload:
         Color: =RGBA(56, 96, 178, 1)
         Height: =54
         Icon: =Icon.Reload
-        OnSelect: =Refresh([@TemplateList])
+        OnSelect: =Refresh([@NewCampaign])
         Width: =41
         X: =819
         Y: =38
         ZIndex: =1
 
-    Icon2 As icon.ArrowsUpDown:
-        Color: =RGBA(56, 96, 178, 1)
-        Fill: =RGBA(255, 255, 255, 1)
-        Height: =39
-        Icon: =Icon.Sort
-        OnSelect: |-
-            =UpdateContext({SortDescending1: !SortDescending1})
-        Width: =56
-        X: =860
-        Y: =45
-        ZIndex: =2
-
-    "BrowseGallery1 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
+    "BrowseGallery1_3 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
         Height: =414
-        Items: =SortByColumns(Filter([@TemplateList], StartsWith(Title, TextSearchBox2.Text)), "Title", If(SortDescending1, Descending, Ascending))
+        Items: =SortByColumns(Filter([@NewCampaign], StartsWith(Title, TextSearchBox2_2.Text)), "Title", If(SortDescending1, Descending, Ascending))
         Layout: =Layout.Vertical
         OnSelect: =Navigate(EditScreen1, ScreenTransition.None)
         TemplatePadding: =0
-        TemplateSize: =Min(104, Self.Height - 60)
+        TemplateSize: =127
         Width: =725
         X: =326
         Y: =209
-        ZIndex: =3
+        ZIndex: =1
 
-        Title6 As label:
+        Title2 As label:
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -49,7 +37,7 @@ BrowseScreen1 As screen:
             Y: =16
             ZIndex: =1
 
-        Subtitle5 As label:
+        Subtitle3 As label:
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -60,14 +48,28 @@ BrowseScreen1 As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
-            Y: =Title6.Y + Title6.Height + 4
+            Y: =Title2.Y + Title2.Height + 2
             ZIndex: =2
 
-        NextArrow4 As icon.ChevronRight:
+        Body2 As label:
+            Height: =38
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =Concatenate(ThisItem.'Count of contacts', " contacts reached")
+            VerticalAlign: =VerticalAlign.Top
+            Width: =621
+            X: =32
+            Y: =Subtitle3.Y + Subtitle3.Height + 4
+            ZIndex: =3
+
+        NextArrow2 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
             Height: =60
             Icon: =Icon.ChevronRight
-            OnSelect: =Navigate(EditTemplate);
+            OnSelect: =Navigate(EditScreen1);
             PaddingBottom: =10
             PaddingLeft: =10
             PaddingRight: =10
@@ -77,16 +79,28 @@ BrowseScreen1 As screen:
             Width: =60
             X: =Parent.TemplateWidth - Self.Width - 5
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-            ZIndex: =3
+            ZIndex: =4
 
-        Separator5 As rectangle:
+        Separator3 As rectangle:
             Height: =1
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - 1
-            ZIndex: =4
+            ZIndex: =5
 
-    TextSearchBox2 As text:
+    Icon2_2 As icon.ArrowsUpDown:
+        Color: =RGBA(56, 96, 178, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =39
+        Icon: =Icon.Sort
+        OnSelect: |-
+            =UpdateContext({SortDescending1: !SortDescending1})
+        Width: =56
+        X: =860
+        Y: =45
+        ZIndex: =2
+
+    TextSearchBox2_2 As text:
         BorderThickness: =1
         Default: =
         Height: =52
@@ -99,7 +113,7 @@ BrowseScreen1 As screen:
         Y: =124
         ZIndex: =4
 
-    Icon1 As icon.Search:
+    Icon1_2 As icon.Search:
         Color: =RGBA(191, 190, 190, 1)
         Height: =52
         Icon: =Icon.Search
@@ -108,14 +122,14 @@ BrowseScreen1 As screen:
         Y: =124
         ZIndex: =5
 
-    Rectangle2 As rectangle:
+    Rectangle2_2 As rectangle:
         Height: =2
         Width: =725
         X: =326
         Y: =209
         ZIndex: =6
 
-    Button6 As button:
+    Button6_5 As button:
         OnSelect: =NewForm(EditForm1);Navigate(NewScreen1, ScreenTransition.None); Set(varShowForm,true)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
@@ -126,22 +140,22 @@ BrowseScreen1 As screen:
         Y: =685
         ZIndex: =7
 
-    Button6_1 As button:
-        OnSelect: =Navigate(CampaignScreen);
+    Button6_4 As button:
+        OnSelect: =Navigate(BrowseScreen1);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Text: ="Campaign List"
+        Text: ="Template List"
         X: =481
         Y: =685
         ZIndex: =8
 
-    Label1 As label:
+    Label1_1 As label:
         FontWeight: =FontWeight.Bold
         Height: =54
         Size: =24
-        Text: ="Template List"
+        Text: ="Campaign List"
         Width: =333
         X: =474
         Y: =30

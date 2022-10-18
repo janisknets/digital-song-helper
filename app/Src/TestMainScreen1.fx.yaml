@@ -1,4 +1,4 @@
-MainScreen1 As screen:
+TestMainScreen1 As screen:
     OnVisible: =
 
     "BrowseGallery1_2 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":

@@ -146,7 +146,7 @@ EditTemplate As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Text: ="Preview"
-        X: =923
+        X: =899
         Y: =684
         ZIndex: =4
 
@@ -176,7 +176,7 @@ EditTemplate As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Text: ="Cancel"
-        X: =401
+        X: =429
         Y: =684
         ZIndex: =10
 
