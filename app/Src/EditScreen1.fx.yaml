@@ -404,7 +404,7 @@ EditScreen1 As screen:
                 ZIndex: =4
 
             RichTextEditor2 As richTextEditor:
-                Default: ="Enter some <strong>rich text</strong> here."
+                Default: =Parent.Default
                 Height: =186
                 Width: =653
                 X: =225
