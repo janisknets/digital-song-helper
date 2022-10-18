@@ -132,7 +132,7 @@ EditTemplate As screen:
                 ZIndex: =4
 
             RichTextEditor3 As richTextEditor:
-                Default: ="Enter some <strong>rich text</strong> here."
+                Default: =Parent.Default
                 Height: =437
                 Width: =731
                 X: =150
