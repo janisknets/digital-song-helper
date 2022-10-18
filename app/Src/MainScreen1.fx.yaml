@@ -1,15 +1,69 @@
 MainScreen1 As screen:
     OnVisible: =
 
-    Icon3_1 As icon.Reload:
-        Color: =RGBA(56, 96, 178, 1)
-        Height: =54
-        Icon: =Icon.Reload
-        OnSelect: =Refresh([@NewCampaign])
-        Width: =41
-        X: =819
-        Y: =38
+    "BrowseGallery1_2 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
+        Height: =414
+        Items: =SortByColumns(Filter([@TemplateList], StartsWith(Title, TextSearchBox2_1.Text)), "Title", If(SortDescending1, Descending, Ascending))
+        Layout: =Layout.Vertical
+        OnSelect: =Navigate(EditScreen1, ScreenTransition.None)
+        TemplatePadding: =0
+        TemplateSize: =Min(104, Self.Height - 60)
+        Visible: =If(varTabSelected = 4,true,false)
+        Width: =725
+        X: =346
+        Y: =229
         ZIndex: =1
+
+        Title6_1 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Title
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =16
+            ZIndex: =1
+
+        Subtitle5_1 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: = Text(ThisItem.Created,"dd-mmm-yyyy")
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =Title6_1.Y + Title6_1.Height + 4
+            ZIndex: =2
+
+        NextArrow4_1 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Navigate(EditTemplate);
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =3
+
+        Separator5_1 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =4
 
     "BrowseGallery1_1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
         Height: =414
@@ -18,10 +72,11 @@ MainScreen1 As screen:
         OnSelect: =Navigate(EditScreen1, ScreenTransition.None)
         TemplatePadding: =0
         TemplateSize: =124
+        Visible: =If(varTabSelected = 3,true,false)
         Width: =735
         X: =316
         Y: =209
-        ZIndex: =1
+        ZIndex: =2
 
         Title1 As label:
             Height: =Self.Size * 1.8
@@ -88,6 +143,16 @@ MainScreen1 As screen:
             Y: =Parent.TemplateHeight - 1
             ZIndex: =5
 
+    Icon3_1 As icon.Reload:
+        Color: =RGBA(56, 96, 178, 1)
+        Height: =54
+        Icon: =Icon.Reload
+        OnSelect: =If(varTabSelected = 3, Refresh([@NewCampaign]), Refresh([@TemplateList]))
+        Width: =41
+        X: =819
+        Y: =38
+        ZIndex: =3
+
     Icon2_1 As icon.ArrowsUpDown:
         Color: =RGBA(56, 96, 178, 1)
         Fill: =RGBA(255, 255, 255, 1)
@@ -98,7 +163,7 @@ MainScreen1 As screen:
         Width: =56
         X: =860
         Y: =45
-        ZIndex: =2
+        ZIndex: =4
 
     TextSearchBox2_1 As text:
         BorderThickness: =1
@@ -111,7 +176,7 @@ MainScreen1 As screen:
         Width: =578
         X: =452
         Y: =124
-        ZIndex: =4
+        ZIndex: =5
 
     Icon1_1 As icon.Search:
         Color: =RGBA(191, 190, 190, 1)
@@ -120,14 +185,14 @@ MainScreen1 As screen:
         Width: =59
         X: =363
         Y: =124
-        ZIndex: =5
+        ZIndex: =6
 
     Rectangle2_1 As rectangle:
         Height: =2
         Width: =725
         X: =326
         Y: =209
-        ZIndex: =6
+        ZIndex: =7
 
     Button6_3 As button:
         OnSelect: =NewForm(EditForm1);Navigate(NewScreen1, ScreenTransition.None); Set(varShowForm,true)
@@ -138,7 +203,7 @@ MainScreen1 As screen:
         Text: ="Create New"
         X: =700
         Y: =685
-        ZIndex: =7
+        ZIndex: =8
 
     Button6_2 As button:
         RadiusBottomLeft: =0
@@ -148,15 +213,45 @@ MainScreen1 As screen:
         Text: ="Cancel"
         X: =474
         Y: =685
-        ZIndex: =8
-
-    Label1_1 As label:
-        FontWeight: =FontWeight.Bold
-        Height: =54
-        Size: =24
-        Text: ="Campaign List"
-        Width: =333
-        X: =474
-        Y: =30
         ZIndex: =9
+
+    Gallery3_7 As gallery.galleryHorizontal:
+        Height: =52
+        Items: |-
+            =Table({ID:3,Label:"Campaign List"},{ID:4,Label:"Template List"})
+        TemplatePadding: =0
+        TemplateSize: =163
+        Visible: =If(FormMode.New, true, false)
+        Width: =330
+        X: =452
+        Y: =38
+        ZIndex: =10
+
+        Button10_8 As button:
+            BorderThickness: =0
+            Color: |-
+                =If(varTabSelected = ThisItem.ID, White, ColorValue("#A6A6A6"))
+            DisabledBorderColor: =
+            DisabledColor: =RGBA(255, 255, 255, 1)
+            DisabledFill: |-
+                =ColorValue("#F4F4F4")
+            Fill: |-
+                =If(varTabSelected = ThisItem.ID, ColorValue("#0078D4"), ColorValue("#F4F4F4"))
+            FocusedBorderColor: =
+            FocusedBorderThickness: =
+            Height: =42
+            HoverBorderColor: =
+            HoverColor: =White
+            HoverFill: =If(varTabSelected = ThisItem.ID, ColorFade(RGBA(0, 120, 212, 1), -20%), ColorFade(RGBA(244, 244, 244, 1), -20%))
+            OnSelect: =Set(varTabSelected, ThisItem.ID);
+            PressedBorderColor: =
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: =ThisItem.Label
+            Width: =159
+            X: =4
+            Y: =4
+            ZIndex: =1
 
