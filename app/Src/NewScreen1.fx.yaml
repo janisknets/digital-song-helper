@@ -251,7 +251,7 @@ NewScreen1 As screen:
 
             DataCardValue3 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
+                Default: ="Support From Baltic Song for <Client Name>"
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =37
@@ -546,7 +546,9 @@ NewScreen1 As screen:
                 ZIndex: =4
 
             RichTextEditor1 As richTextEditor:
-                Default: ="Enter some <strong>rich text</strong> here."
+                Default: |-
+                    =$"Hello !<br></br>
+                    My name is . Writing you regarding Open role  for .<br></br>Let me know if this role is still open, will be happy to jump on a call to discuss potential candidates."
                 Width: =660
                 X: =220
                 Y: =10
