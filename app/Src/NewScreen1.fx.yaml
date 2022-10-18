@@ -1,6 +1,44 @@
 NewScreen1 As screen:
     OnVisible: =
 
+    Preview As button:
+        OnSelect: =If(varTabSelected = 1, Navigate(PreviewCampaign), Navigate(PreviewTemplate));
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Preview"
+        X: =920
+        Y: =684
+        ZIndex: =1
+
+    Cancel As button:
+        OnSelect: =Navigate(BrowseScreen1);
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Cancel"
+        X: =450
+        Y: =684
+        ZIndex: =2
+
+    Save As button:
+        OnSelect: |-
+            =If(varTabSelected = 1, SubmitForm(EditForm1_2), SubmitForm(EditForm2_1)); 
+            Notify(
+                "Success: form was successfully saved",
+                NotificationType.Success
+            );
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Save"
+        X: =685
+        Y: =684
+        ZIndex: =3
+
     EditForm2_1 As form:
         DataSource: =TemplateList
         DefaultMode: =FormMode.New
@@ -11,7 +49,7 @@ NewScreen1 As screen:
         Width: =855
         X: =282
         Y: =168
-        ZIndex: =2
+        ZIndex: =4
 
         Title_DataCard1_1 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
@@ -152,7 +190,7 @@ NewScreen1 As screen:
         Width: =910
         X: =227
         Y: =131
-        ZIndex: =3
+        ZIndex: =5
 
         Title_DataCard1 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
@@ -555,33 +593,6 @@ NewScreen1 As screen:
                 Y: =10
                 ZIndex: =5
 
-    Button11_1 As button:
-        OnSelect: =Navigate(BrowseScreen1);
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Text: ="Cancel"
-        X: =744
-        Y: =684
-        ZIndex: =4
-
-    Button12_1 As button:
-        OnSelect: |-
-            =If(varTabSelected = 1, SubmitForm(EditForm1_2), SubmitForm(EditForm2_1)); 
-            Notify(
-                "Success: form was successfully saved",
-                NotificationType.Success
-            );
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Text: ="Save"
-        X: =977
-        Y: =684
-        ZIndex: =5
-
     Label7_1 As label:
         FontWeight: =FontWeight.Bold
         Size: =24
@@ -637,5 +648,5 @@ NewScreen1 As screen:
         OnSelect: =ResetForm(EditForm1_2);Back();
         X: =258
         Y: =27
-        ZIndex: =9
+        ZIndex: =8
 

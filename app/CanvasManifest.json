@@ -115,6 +115,7 @@
     "EditTemplate",
     "NewScreen1",
     "PreviewCampaign",
+    "PreviewTemplate",
     "SendOutScreen",
     "PreviewScreen",
     "SendButton"
