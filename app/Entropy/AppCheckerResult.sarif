@@ -1244,19 +1244,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "NewScreen1.EditForm1_2.'Message (html)_DataCard1'.DataCardValue6.AccessibleLabel"
+                  "fullyQualifiedName": "NewScreen1.EditForm1_2.'Message (html)_DataCard1'.RichTextEditor1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "NewScreen1.EditForm1_2.'Message (html)_DataCard1'.DataCardValue6.AccessibleLabel",
+                  "fullyQualifiedName": "NewScreen1.EditForm1_2.'Message (html)_DataCard1'.RichTextEditor1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "NewScreen1",
-                "type": "NewScreen1.EditForm1_2.'Message (html)_DataCard1'.DataCardValue6"
+                "type": "NewScreen1.EditForm1_2.'Message (html)_DataCard1'.RichTextEditor1"
               }
             }
           ],

@@ -144,7 +144,7 @@ NewScreen1 As screen:
     EditForm1_2 As form:
         DataSource: =NewCampaign
         DefaultMode: =FormMode.New
-        Height: =518
+        Height: =541
         Item: =BrowseGallery1_1.Selected
         NumberOfColumns: =1
         OnSuccess: =Back()
@@ -501,10 +501,10 @@ NewScreen1 As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"Message_x0028_html_x0029_")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =176
+            Height: =191
             MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "Message_x0028_html_x0029_")
             Required: =false
-            Update: =DataCardValue6.Text
+            Update: =RichTextEditor1.HtmlText
             Width: =910
             X: =0
             Y: =5
@@ -517,26 +517,8 @@ NewScreen1 As screen:
                 Width: =(Parent.Width - 60) * 0.4
                 Wrap: =false
                 X: =30
-                Y: =10 + (DataCardValue6.Height / 2) - (Self.Height / 2)
+                Y: =10 + (RichTextEditor1.Height / 2) - (Self.Height / 2)
                 ZIndex: =1
-
-            DataCardValue6 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
-                Height: =138
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Tooltip: =Parent.DisplayName
-                Width: =656
-                X: =222
-                Y: =12
-                ZIndex: =2
 
             ErrorMessage7 As label:
                 AutoHeight: =true
@@ -550,7 +532,7 @@ NewScreen1 As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue6.Y + DataCardValue6.Height
+                Y: =RichTextEditor1.Y + RichTextEditor1.Height
                 ZIndex: =3
 
             StarVisible7 As label:
@@ -562,6 +544,13 @@ NewScreen1 As screen:
                 Wrap: =false
                 Y: =DataCardKey7.Y
                 ZIndex: =4
+
+            RichTextEditor1 As richTextEditor:
+                Default: ="Enter some <strong>rich text</strong> here."
+                Width: =660
+                X: =220
+                Y: =10
+                ZIndex: =5
 
     Button11_1 As button:
         OnSelect: =Navigate(BrowseScreen1);
