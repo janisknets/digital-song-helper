@@ -181,10 +181,11 @@ EditScreen1 As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =37
+                IsSearchable: =false
                 Items: =Choices([@NewCampaign].Template)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices(NewCampaign.Template,DataCardValue7.SearchText)
+                SearchItems: =[]
                 SelectMultiple: =false
                 Tooltip: =Parent.DisplayName
                 Width: =660

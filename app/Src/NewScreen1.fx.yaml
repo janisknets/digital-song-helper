@@ -297,7 +297,7 @@ NewScreen1 As screen:
             DataField: ="Template"
             Default: =ThisItem.Template
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"Template")
+            DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"TemplateList")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
@@ -323,10 +323,11 @@ NewScreen1 As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =37
-                Items: =Choices([@NewCampaign].Template)
+                IsSearchable: =false
+                Items: =Choices([@NewCampaign].TemplateList)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices(NewCampaign.Template,DataCardValue4.SearchText)
+                SearchItems: =[]
                 SelectMultiple: =false
                 Tooltip: =Parent.DisplayName
                 Width: =668

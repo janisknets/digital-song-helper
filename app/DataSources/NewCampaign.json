@@ -36,8 +36,8 @@
       "Message_x0028_html_x0029_": "Message (html)",
       "Modified": "Modified",
       "Subject": "Subject",
-      "Template": "Template",
-      "Template#Id": "Template Id",
+      "TemplateList": "Template",
+      "TemplateList#Id": "Template Id",
       "Title": "Title",
       "UploadFile": "Upload File"
     },
