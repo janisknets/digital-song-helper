@@ -1364,19 +1364,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "EditScreen1.EditForm1.'Message (html)_DataCard2'.DataCardValue9.AccessibleLabel"
+                  "fullyQualifiedName": "EditScreen1.EditForm1.'Message (html)_DataCard2'.RichTextEditor2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "EditScreen1.EditForm1.'Message (html)_DataCard2'.DataCardValue9.AccessibleLabel",
+                  "fullyQualifiedName": "EditScreen1.EditForm1.'Message (html)_DataCard2'.RichTextEditor2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "EditScreen1",
-                "type": "EditScreen1.EditForm1.'Message (html)_DataCard2'.DataCardValue9"
+                "type": "EditScreen1.EditForm1.'Message (html)_DataCard2'.RichTextEditor2"
               }
             }
           ],
