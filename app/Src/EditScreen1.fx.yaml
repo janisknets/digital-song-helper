@@ -4,7 +4,7 @@ EditScreen1 As screen:
     EditForm1 As form:
         DataSource: =NewCampaign
         Height: =556
-        Item: =BrowseGallery1_1.Selected
+        Item: =BrowseGallery1_3.Selected
         NumberOfColumns: =1
         OnSuccess: =Back()
         Width: =910
