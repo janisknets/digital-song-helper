@@ -1,0 +1,171 @@
+EditTemplate As screen:
+    OnVisible: =
+
+    EditForm1_3 As form:
+        DataSource: =TemplateList
+        Height: =556
+        Item: =BrowseGallery1.Selected
+        NumberOfColumns: =1
+        OnSuccess: =Back()
+        Width: =910
+        X: =227
+        Y: =92
+        ZIndex: =3
+
+        Title_DataCard3 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Title"
+            Default: =ThisItem.Title
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@TemplateList],DataSourceInfo.DisplayName,"Title")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@TemplateList], DataSourceInfo.MaxLength, "Title")
+            Required: =true
+            Update: =DataCardValue15.Text
+            Width: =910
+            X: =0
+            Y: =0
+            ZIndex: =4
+
+            DataCardKey15 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10 + (DataCardValue15.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            DataCardValue15 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =727
+                X: =153
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage15 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue15.Y + DataCardValue15.Height
+                ZIndex: =3
+
+            StarVisible15 As label:
+                Align: =Align.Center
+                Height: =DataCardKey15.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey15.Y
+                ZIndex: =4
+
+        "'html _DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="html"
+            Default: =ThisItem.'html '
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@TemplateList],DataSourceInfo.DisplayName,"html")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =483
+            MaxLength: =DataSourceInfo([@TemplateList], DataSourceInfo.MaxLength, "html")
+            Required: =false
+            Update: =RichTextEditor3.HtmlText
+            Width: =910
+            X: =0
+            Y: =1
+            ZIndex: =4
+
+            DataCardKey16 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: ="Editor"
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10 + (RichTextEditor3.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            ErrorMessage16 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =RichTextEditor3.Y + RichTextEditor3.Height
+                ZIndex: =3
+
+            StarVisible16 As label:
+                Align: =Align.Center
+                Height: =DataCardKey16.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey16.Y
+                ZIndex: =4
+
+            RichTextEditor3 As richTextEditor:
+                Default: ="Enter some <strong>rich text</strong> here."
+                Height: =437
+                Width: =731
+                X: =150
+                Y: =20
+                ZIndex: =5
+
+    Button11_2 As button:
+        OnSelect: =Navigate(PreviewCampaign);
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Preview"
+        X: =561
+        Y: =684
+        ZIndex: =4
+
+    Button12_2 As button:
+        OnSelect: =SubmitForm(EditForm1_3);
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Save"
+        X: =790
+        Y: =684
+        ZIndex: =5
+
+    Icon5_3 As icon.BackArrow:
+        Height: =48
+        Icon: =Icon.BackArrow
+        OnSelect: =ResetForm(EditForm1_3);Back();
+        X: =258
+        Y: =27
+        ZIndex: =9
+

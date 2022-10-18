@@ -112,6 +112,7 @@
     "MainScreen1",
     "BrowseScreen1",
     "EditScreen1",
+    "EditTemplate",
     "NewScreen1",
     "PreviewCampaign",
     "SendOutScreen",
