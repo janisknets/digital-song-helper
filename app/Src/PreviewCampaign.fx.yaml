@@ -65,9 +65,7 @@ PreviewCampaign As screen:
                 ZIndex: =4
 
             RichTextEditor4_1 As richTextEditor:
-                Default: |-
-                    =$"Hello {ContactsVar.'Role Fulfillment Contact'}!<br></br>
-                    My name is {ContactsVar.'Role Primary Contact'}. Writing you regarding Open role {ContactsVar.Title} for {ContactsVar.Project}.<br></br>Let me know if this role is still open, will be happy to jump on a call to discuss potential candidates."
+                Default: =RichTextEditor1
                 Height: =212
                 Width: =853
                 X: =192
@@ -103,7 +101,7 @@ PreviewCampaign As screen:
 
             DataCardValue3_1 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =$"Support from Baltic Song for {ContactsVar.'Role Fulfillment Contact'}"
+                Default: =DataCardValue3
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =38
@@ -143,76 +141,6 @@ PreviewCampaign As screen:
                 Width: =30
                 Wrap: =false
                 Y: =DataCardKey3_1.Y
-                ZIndex: =4
-
-        Template_DataCard1_1 As typedDataCard.comboBoxEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Template"
-            Default: =ThisItem.Template
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"Template")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =DataCardValue4_1.Selected
-            Visible: =true
-            Width: =1194
-            X: =0
-            Y: =1
-            ZIndex: =2
-
-            DataCardKey4_1 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: ="Role ID"
-                Width: =(Parent.Width - 60) * 0.4
-                Wrap: =false
-                X: =30
-                Y: =10 + (DataCardValue4_1.Height / 2) - (Self.Height / 2)
-                ZIndex: =1
-
-            DataCardValue4_1 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Parent.Default
-                DisplayFields: =["Result"]
-                DisplayMode: =Parent.DisplayMode
-                Height: =38
-                IsSearchable: =false
-                Items: =Distinct(CampaignList, Title)
-                OnChange: =Set(ContactsVar, LookUp(CampaignList, Title = DataCardValue4_1.Selected.Result))
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["Result"]
-                SearchItems: =[]
-                SelectMultiple: =false
-                Tooltip: =Parent.DisplayName
-                Width: =856
-                X: =189
-                Y: =11
-                ZIndex: =2
-
-            ErrorMessage4_1 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue4_1.Y + DataCardValue4_1.Height
-                ZIndex: =3
-
-            StarVisible4_1 As label:
-                Align: =Align.Center
-                Height: =DataCardKey4_1.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey4_1.Y
                 ZIndex: =4
 
     Label7_2 As label:

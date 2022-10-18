@@ -146,7 +146,7 @@ EditTemplate As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Text: ="Preview"
-        X: =561
+        X: =923
         Y: =684
         ZIndex: =4
 
@@ -157,7 +157,7 @@ EditTemplate As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Text: ="Save"
-        X: =790
+        X: =662
         Y: =684
         ZIndex: =5
 
@@ -168,4 +168,15 @@ EditTemplate As screen:
         X: =258
         Y: =27
         ZIndex: =9
+
+    Button12_3 As button:
+        OnSelect: =Navigate(BrowseScreen1);
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Cancel"
+        X: =401
+        Y: =684
+        ZIndex: =10
 
