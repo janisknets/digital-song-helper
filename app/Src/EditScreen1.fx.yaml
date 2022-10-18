@@ -442,7 +442,7 @@ EditScreen1 As screen:
         ZIndex: =9
 
     Button12_1 As button:
-        OnSelect: =Navigate(TestMainScreen1);
+        OnSelect: =Navigate(CampaignScreen);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0

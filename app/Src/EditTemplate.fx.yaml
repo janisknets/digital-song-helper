@@ -140,7 +140,7 @@ EditTemplate As screen:
                 ZIndex: =5
 
     Button11_2 As button:
-        OnSelect: =Navigate(PreviewCampaign);
+        OnSelect: =Navigate(PreviewTemplate);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
