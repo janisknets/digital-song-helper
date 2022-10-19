@@ -30,6 +30,7 @@ NewScreen1 As screen:
                 "Success: form was successfully saved",
                 NotificationType.Success
             );
+            Back();
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
