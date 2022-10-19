@@ -117,8 +117,6 @@
     "PreviewCampaign",
     "PreviewTemplate",
     "SendOutScreen",
-    "PreviewScreen",
-    "SendButton",
-    "TestMainScreen1"
+    "ExcelScreen"
   ]
 }

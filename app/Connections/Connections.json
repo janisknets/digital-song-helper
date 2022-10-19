@@ -210,6 +210,9 @@
           "EmailTemplate_1": {
             "tableName": "dc289038-327f-48c1-a2b9-825e495c763b"
           },
+          "ExcelList": {
+            "tableName": "fa162762-ad7c-41c8-991b-4996a94ba85c"
+          },
           "NewCampaign": {
             "tableName": "ad6f6764-1cdb-41e2-887a-47cf4a574528"
           },
@@ -225,7 +228,8 @@
       "CampaignList",
       "NewCampaign",
       "CampaignList_1",
-      "TemplateList"
+      "TemplateList",
+      "ExcelList"
     ],
     "dependencies": {},
     "dependents": [
