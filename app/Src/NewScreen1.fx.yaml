@@ -30,7 +30,7 @@ NewScreen1 As screen:
                 "Success: form was successfully saved",
                 NotificationType.Success
             );
-            Back();
+            If(varTabSelected = 1, Navigate(CampaignScreen), Navigate(BrowseScreen1));
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
