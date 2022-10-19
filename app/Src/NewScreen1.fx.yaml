@@ -13,7 +13,7 @@ NewScreen1 As screen:
         ZIndex: =1
 
     Cancel As button:
-        OnSelect: =If(varTabSelected = 1, Navigate(TestMainScreen1), Navigate(BrowseScreen1));
+        OnSelect: =If(varTabSelected = 1, Navigate(CampaignScreen), Navigate(BrowseScreen1));
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
