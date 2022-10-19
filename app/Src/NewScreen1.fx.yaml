@@ -24,13 +24,12 @@ NewScreen1 As screen:
         ZIndex: =2
 
     Save As button:
-        OnSelect: |-
+        OnSelect: |
             =If(varTabSelected = 1, SubmitForm(EditForm1_2), SubmitForm(EditForm2_1)); 
             Notify(
                 "Success: form was successfully saved",
                 NotificationType.Success
             );
-            If(varTabSelected = 1, Navigate(CampaignScreen), Navigate(BrowseScreen1));
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -186,7 +185,7 @@ NewScreen1 As screen:
         Height: =541
         Item: =BrowseGallery1_1.Selected
         NumberOfColumns: =1
-        OnSuccess: =Back()
+        OnSuccess: =ResetForm(EditForm1_2); NewForm(EditForm1_2); Navigate(CampaignScreen);
         Visible: =If(varTabSelected = 1, true, false)
         Width: =910
         X: =227
@@ -364,6 +363,8 @@ NewScreen1 As screen:
                 Height: =37
                 IsSearchable: =false
                 Items: =Choices([@NewCampaign].Template)
+                OnSelect: |-
+                    =Patch(NewCampaign, ThisItem, {'Template': DataCardValue4});
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
                 SearchItems: =[]
