@@ -363,8 +363,7 @@ NewScreen1 As screen:
                 Height: =37
                 IsSearchable: =false
                 Items: =Choices([@NewCampaign].Template)
-                OnSelect: |-
-                    =Patch(NewCampaign, ThisItem, {'Template': DataCardValue4.Selected.Value});
+                OnSelect: =Choices([@NewCampaign].Template)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
                 SearchItems: =[]
