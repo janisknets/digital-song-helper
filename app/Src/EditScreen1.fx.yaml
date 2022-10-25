@@ -387,6 +387,7 @@ EditScreen1 As screen:
 
     Button1 As button:
         Height: =55
+        OnSelect: =SendUserEmail.Run();
         Text: ="Send Test"
         X: =1161
         Y: =450
