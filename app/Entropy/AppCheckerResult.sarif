@@ -901,36 +901,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "NewScreen1.EditForm1_2.'Upload File_DataCard1'.DataCardValue8.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "NewScreen1.EditForm1_2.'Upload File_DataCard1'.DataCardValue8.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "NewScreen1",
-                "type": "NewScreen1.EditForm1_2.'Upload File_DataCard1'.DataCardValue8"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "NewScreen1.EditForm1_2.Attachments_DataCard2.DataCardValue10.AccessibleLabel"
                 }
               ],

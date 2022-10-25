@@ -399,75 +399,6 @@ NewScreen1 As screen:
                 Y: =DataCardKey5.Y
                 ZIndex: =4
 
-        "'Upload File_DataCard1' As typedDataCard.textualEditCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="UploadFile"
-            Default: =ThisItem.'Upload File'
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"UploadFile")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "UploadFile")
-            Required: =false
-            Update: =DataCardValue8.Text
-            Width: =910
-            X: =0
-            Y: =3
-            ZIndex: =4
-
-            DataCardKey9 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =(Parent.Width - 60) * 0.4
-                Wrap: =false
-                X: =30
-                Y: =10 + (DataCardValue8.Height / 2) - (Self.Height / 2)
-                ZIndex: =1
-
-            DataCardValue8 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
-                Height: =37
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Tooltip: =Parent.DisplayName
-                Width: =666
-                X: =213
-                Y: =13
-                ZIndex: =2
-
-            ErrorMessage9 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue8.Y + DataCardValue8.Height
-                ZIndex: =3
-
-            StarVisible9 As label:
-                Align: =Align.Center
-                Height: =DataCardKey9.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey9.Y
-                ZIndex: =4
-
         Attachments_DataCard2 As typedDataCard.attachmentsEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="{Attachments}"
@@ -480,7 +411,7 @@ NewScreen1 As screen:
             Update: =DataCardValue10.Attachments
             Width: =910
             X: =0
-            Y: =4
+            Y: =3
             ZIndex: =4
 
             DataCardKey11 As label:
@@ -541,13 +472,13 @@ NewScreen1 As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"Message_x0028_html_x0029_")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =191
+            Height: =247
             MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "Message_x0028_html_x0029_")
             Required: =false
             Update: =RichTextEditor1.HtmlText
             Width: =910
             X: =0
-            Y: =5
+            Y: =4
             ZIndex: =4
 
             DataCardKey7 As label:
@@ -589,6 +520,7 @@ NewScreen1 As screen:
                 Default: |-
                     =$"Hello !<br></br>
                     My name is . Writing you regarding Open role  for .<br></br>Let me know if this role is still open, will be happy to jump on a call to discuss potential candidates."
+                Height: =222
                 Width: =660
                 X: =220
                 Y: =10
