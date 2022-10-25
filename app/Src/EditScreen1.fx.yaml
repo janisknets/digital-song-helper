@@ -385,6 +385,13 @@ EditScreen1 As screen:
         Y: =684
         ZIndex: =10
 
+    Button1 As button:
+        Height: =55
+        Text: ="Send Test"
+        X: =1161
+        Y: =450
+        ZIndex: =15
+
     DeletePopup_2 As group:
         Height: =5
         Width: =5
@@ -444,4 +451,11 @@ EditScreen1 As screen:
             X: =490
             Y: =173
             ZIndex: =14
+
+    Button2 As button:
+        Height: =53
+        Text: ="Send to contacts"
+        X: =1161
+        Y: =536
+        ZIndex: =16
 
