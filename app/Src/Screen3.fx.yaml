@@ -136,11 +136,13 @@
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =50
                 LayoutMinWidth: =320
-                TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(50, Self.Width - 60), Min(50, Self.Height - 60))
+                TemplatePadding: =0
+                TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(40, Self.Height - 60))
                 Width: =HeaderRoleId.Width
                 ZIndex: =2
 
                 TextInput1 As text:
+                    BorderThickness: =1
                     Default: =ThisItem.RoleID
                     OnSelect: =Select(Parent)
                     RadiusBottomLeft: =0
@@ -151,6 +153,7 @@
                     ZIndex: =1
 
                 TextInput1_1 As text:
+                    BorderThickness: =1
                     Default: =ThisItem.Title
                     OnSelect: =Select(Parent)
                     RadiusBottomLeft: =0
@@ -162,6 +165,7 @@
                     ZIndex: =2
 
                 TextInput1_2 As text:
+                    BorderThickness: =1
                     Default: =ThisItem.'Project Master Client'
                     OnSelect: =Select(Parent)
                     RadiusBottomLeft: =0
@@ -173,6 +177,7 @@
                     ZIndex: =3
 
                 TextInput1_3 As text:
+                    BorderThickness: =1
                     Default: =ThisItem.'Project'
                     OnSelect: =Select(Parent)
                     RadiusBottomLeft: =0
@@ -184,6 +189,7 @@
                     ZIndex: =4
 
                 TextInput1_4 As text:
+                    BorderThickness: =1
                     Default: =ThisItem.RoleDescription
                     OnSelect: =Select(Parent)
                     RadiusBottomLeft: =0
@@ -195,6 +201,7 @@
                     ZIndex: =5
 
                 TextInput1_5 As text:
+                    BorderThickness: =1
                     Default: =ThisItem.'Role Fulfillment Contact'
                     OnSelect: =Select(Parent)
                     RadiusBottomLeft: =0
@@ -206,6 +213,7 @@
                     ZIndex: =6
 
                 TextInput1_6 As text:
+                    BorderThickness: =1
                     Default: ="Text input"
                     OnSelect: =Select(Parent)
                     RadiusBottomLeft: =0
@@ -217,6 +225,7 @@
                     ZIndex: =7
 
                 TextInput1_7 As text:
+                    BorderThickness: =1
                     Default: ="Text input"
                     OnSelect: =Select(Parent)
                     RadiusBottomLeft: =0
