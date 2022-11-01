@@ -218,6 +218,9 @@
           },
           "TemplateList": {
             "tableName": "492f519b-ed56-4112-a982-2d2e8963289a"
+          },
+          "TestList": {
+            "tableName": "f455c56a-9cc4-4be6-a2e2-a1d67c7486f2"
           }
         }
       }
@@ -229,7 +232,8 @@
       "NewCampaign",
       "CampaignList_1",
       "TemplateList",
-      "ExcelList"
+      "ExcelList",
+      "TestList"
     ],
     "dependencies": {},
     "dependents": [

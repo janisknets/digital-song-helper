@@ -1,0 +1,136 @@
+"Screen3 As screen.'tabletAutoLayout_HeaderMainFooter_ver1.0'":
+
+    ScreenContainer1 As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =1
+
+        HeaderContainer1 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =75
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =2
+
+        MainSectionContainer1 As groupContainer.verticalAutoLayoutContainer:
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =3
+
+            GridHeader As groupContainer.manualLayoutContainer:
+                FillPortions: =0
+                Height: =50
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                ZIndex: =1
+
+                Button9 As button:
+                    Height: =50
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =12
+                    Text: ="Role ID"
+                    Width: =170
+                    X: =1
+                    ZIndex: =1
+
+                Button10 As button:
+                    Height: =50
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =12
+                    Text: ="Role Title"
+                    Width: =170
+                    X: =171
+                    ZIndex: =2
+
+                Button13 As button:
+                    Height: =50
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =12
+                    Text: ="Project Master Client"
+                    Width: =170
+                    X: =341
+                    ZIndex: =3
+
+                Button14 As button:
+                    Height: =50
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =12
+                    Text: ="Project"
+                    Width: =170
+                    X: =510
+                    ZIndex: =4
+
+                Button15 As button:
+                    Height: =50
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =12
+                    Text: ="Role Description"
+                    Width: =170
+                    X: =680
+                    ZIndex: =5
+
+                Button16 As button:
+                    Height: =50
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =12
+                    Text: ="Role Fulfillment Contact"
+                    Width: =170
+                    X: =850
+                    ZIndex: =6
+
+                Button19 As button:
+                    Height: =50
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =12
+                    Text: ="Role Primary Contact"
+                    Width: =170
+                    X: =1020
+                    ZIndex: =7
+
+                Button20 As button:
+                    Height: =50
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =12
+                    Text: ="Role Skills"
+                    Width: =170
+                    X: =1190
+                    ZIndex: =8
+
+        FooterContainer1 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =75
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =4
+
