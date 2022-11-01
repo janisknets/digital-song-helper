@@ -178,7 +178,7 @@
 
                 TextInput1_3 As text:
                     BorderThickness: =1
-                    Default: =ThisItem.'Project'
+                    Default: =ThisItem.Project
                     OnSelect: =Select(Parent)
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0

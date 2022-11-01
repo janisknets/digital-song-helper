@@ -119,6 +119,7 @@
     "SendOutScreen",
     "ExcelScreen",
     "Screen1",
-    "Screen3"
+    "Screen3",
+    "UploadExcel"
   ]
 }
