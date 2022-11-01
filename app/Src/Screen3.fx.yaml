@@ -134,14 +134,14 @@
             Gallery2 As gallery.galleryVertical:
                 Items: =colGridData
                 Layout: =Layout.Vertical
-                LayoutMinHeight: =287
+                LayoutMinHeight: =50
                 LayoutMinWidth: =320
-                TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+                TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(50, Self.Width - 60), Min(50, Self.Height - 60))
                 Width: =HeaderRoleId.Width
                 ZIndex: =2
 
                 TextInput1 As text:
-                    Default: ="Text input"
+                    Default: =ThisItem.RoleID
                     OnSelect: =Select(Parent)
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
@@ -151,7 +151,7 @@
                     ZIndex: =1
 
                 TextInput1_1 As text:
-                    Default: ="Text input"
+                    Default: =ThisItem.Title
                     OnSelect: =Select(Parent)
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
@@ -162,7 +162,7 @@
                     ZIndex: =2
 
                 TextInput1_2 As text:
-                    Default: ="Text input"
+                    Default: =ThisItem.'Project Master Client'
                     OnSelect: =Select(Parent)
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
@@ -173,7 +173,7 @@
                     ZIndex: =3
 
                 TextInput1_3 As text:
-                    Default: ="Text input"
+                    Default: =ThisItem.'Project'
                     OnSelect: =Select(Parent)
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
@@ -184,7 +184,7 @@
                     ZIndex: =4
 
                 TextInput1_4 As text:
-                    Default: ="Text input"
+                    Default: =ThisItem.RoleDescription
                     OnSelect: =Select(Parent)
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
@@ -195,7 +195,7 @@
                     ZIndex: =5
 
                 TextInput1_5 As text:
-                    Default: ="Text input"
+                    Default: =ThisItem.'Role Fulfillment Contact'
                     OnSelect: =Select(Parent)
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
