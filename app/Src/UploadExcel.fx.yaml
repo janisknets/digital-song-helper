@@ -16,7 +16,7 @@ UploadExcel As screen:
             Set(varBase64Only, Mid(varAttachment, Find(",", varAttachment)+1, Len(varAttachment)-Find(",", varAttachment) - 1));
             AttachExcel.Run(Last(AttachmentControl_1.Attachments).Name, varBase64Only);
         Text: ="Upload"
-        X: =954
+        X: =496
         Y: =38
         ZIndex: =3
 
@@ -24,11 +24,11 @@ UploadExcel As screen:
         BorderStyle: =BorderStyle.Solid
         DisplayMode: =DisplayMode.Edit
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =500
+        Height: =480
         Items: =TestList
         Width: =1227
         X: =65
-        Y: =120
+        Y: =166
         ZIndex: =4
 
         Title_Column1 As dataTableColumn.textualColumn:
@@ -173,7 +173,7 @@ UploadExcel As screen:
 
     AttachmentControl_1 As attachments:
         BorderColor: =
-        Height: =120
+        Height: =100
         IsInDataCard: =true
         Items: =
         OnAddFile: =
@@ -182,7 +182,7 @@ UploadExcel As screen:
         PaddingRight: =5
         PaddingTop: =5
         Tooltip: =
-        Width: =(Parent.Width - 60) * 0.6
+        Width: =333
         X: =130
         Y: =38
         ZIndex: =5
