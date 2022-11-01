@@ -6,6 +6,7 @@
   "ControlUniqueIds": {
     "AddIcon2": 174,
     "App": 1,
+    "Attachment": 91,
     "AttachmentControl": 116,
     "Attachments_DataCard1": 233,
     "Attachments_DataCard2": 90,
@@ -63,7 +64,6 @@
     "DataCardKey8": 241,
     "DataCardValue1": 78,
     "DataCardValue1_1": 102,
-    "DataCardValue10": 91,
     "DataCardValue14": 234,
     "DataCardValue15": 152,
     "DataCardValue2": 221,
@@ -258,7 +258,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "11/01/2022 15:05:53",
+  "HeaderLastSavedDateTimeUTC": "11/01/2022 17:22:03",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "1511313e-9875-4d63-8a7a-5f47782d793d": "\"/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/5b56abdc7f9648b7a7d4ea3c0fb5ef2b\"",
@@ -267,7 +267,7 @@
     "6ea35d85-93af-4c5d-9a7a-bf033dd7f190": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/09d4f67e2832421abcc61581d26fd78c\"",
     "91c449b1-422d-472e-b29e-e06c18e20448": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/e4d93b0c422f4cf1b5d34ae0f4476865-d7d8855277a45c3a\"",
     "9dbc8f0e-45a9-4c28-83c0-f549b858ecf8": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/2875d3df5d7745388dbf72eed9ae9bfe\"",
-    "b4633f66-b717-45d8-953a-dc4727bbed6a": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/289C6825850E40A7AC19C6B0EA9426A6-D7D8855277A45C3A\"",
+    "b4633f66-b717-45d8-953a-dc4727bbed6a": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/289c6825850e40a7ac19c6b0ea9426a6-d7d8855277a45c3a\"",
     "cb7d9ef6-d2ef-466c-aa89-24ca403bfdcf": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/01bd503637e743fbb5a6370cbafbc8aa\"",
     "f67f7638-5f07-403e-adf5-63845e38fb57": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/5c37716408f646b3bff19b6c03536847-d7d8855277a45c3a\""
   },
@@ -350,6 +350,7 @@
   "PublishOrderIndices": {
     "AddIcon2": 164,
     "App": 0,
+    "Attachment": 108,
     "AttachmentControl": 197,
     "Attachments_DataCard1": 48,
     "Attachments_DataCard2": 107,
@@ -407,7 +408,6 @@
     "DataCardKey8": 56,
     "DataCardValue1": 95,
     "DataCardValue1_1": 119,
-    "DataCardValue10": 108,
     "DataCardValue14": 49,
     "DataCardValue15": 71,
     "DataCardValue2": 36,

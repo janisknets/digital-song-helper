@@ -408,7 +408,7 @@ NewScreen1 As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue10.Attachments
+            Update: =Attachment.Attachments
             Width: =910
             X: =0
             Y: =3
@@ -421,14 +421,18 @@ NewScreen1 As screen:
                 Width: =(Parent.Width - 60) * 0.4
                 Wrap: =false
                 X: =30
-                Y: =10 + (DataCardValue10.Height / 2) - (Self.Height / 2)
+                Y: =10 + (Attachment.Height / 2) - (Self.Height / 2)
                 ZIndex: =1
 
-            DataCardValue10 As attachments:
+            Attachment As attachments:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Height: =94
                 IsInDataCard: =true
                 Items: =Parent.Default
+                OnAddFile: |-
+                    =Set(varAttachment, JSON(Image1.Image, JSONFormat.IncludeBinaryData));
+                    Set(varBase64Only, Mid(varAttachment, Find(",", varAttachment)+1, Len(varAttachment)-Find(",", varAttachment) - 1));
+                    AttachFiles.Run(Last(Attachment.Attachments).Name, varBase64Only);
                 PaddingBottom: =5
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PaddingRight: =5
@@ -451,7 +455,7 @@ NewScreen1 As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue10.Y + DataCardValue10.Height
+                Y: =Attachment.Y + Attachment.Height
                 ZIndex: =3
 
             StarVisible11 As label:
@@ -584,7 +588,7 @@ NewScreen1 As screen:
 
     Button7 As button:
         Height: =39
-        OnSelect: =Navigate(UploadExcel);
+        OnSelect: =
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0

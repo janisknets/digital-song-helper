@@ -4,7 +4,7 @@ Screen1 As screen:
         OnSelect: |-
             =Set(varAttachment, JSON(Image1.Image, JSONFormat.IncludeBinaryData));
             Set(varBase64Only, Mid(varAttachment, Find(",", varAttachment)+1, Len(varAttachment)-Find(",", varAttachment) - 1));
-            AttachFiles.Run(Last(AttachmentControl.Attachments).Name, varBase64Only)
+            AttachFiles.Run(Last(AttachmentControl.Attachments).Name, varBase64Only);
         Text: ="Button"
         X: =1065
         Y: =155
@@ -30,8 +30,8 @@ Screen1 As screen:
         Height: =122
         Image: =Last(AttachmentControl.Attachments).Value
         Width: =770
-        X: =231
-        Y: =222
+        X: =218
+        Y: =264
         ZIndex: =4
 
     Label3 As label:

@@ -983,19 +983,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "NewScreen1.EditForm1_2.Attachments_DataCard2.DataCardValue10.AccessibleLabel"
+                  "fullyQualifiedName": "NewScreen1.EditForm1_2.Attachments_DataCard2.Attachment.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "NewScreen1.EditForm1_2.Attachments_DataCard2.DataCardValue10.AccessibleLabel",
+                  "fullyQualifiedName": "NewScreen1.EditForm1_2.Attachments_DataCard2.Attachment.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "NewScreen1",
-                "type": "NewScreen1.EditForm1_2.Attachments_DataCard2.DataCardValue10"
+                "type": "NewScreen1.EditForm1_2.Attachments_DataCard2.Attachment"
               }
             }
           ],
