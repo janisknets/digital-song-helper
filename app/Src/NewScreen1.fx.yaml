@@ -426,7 +426,6 @@ NewScreen1 As screen:
 
             DataCardValue10 As attachments:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DisplayMode: =Parent.DisplayMode
                 Height: =94
                 IsInDataCard: =true
                 Items: =Parent.Default
@@ -582,4 +581,18 @@ NewScreen1 As screen:
         X: =258
         Y: =27
         ZIndex: =8
+
+    Button7 As button:
+        Height: =39
+        OnSelect: =Navigate(UploadExcel);
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =12
+        Text: ="View attachment"
+        Width: =148
+        X: =1150
+        Y: =345
+        ZIndex: =9
 
