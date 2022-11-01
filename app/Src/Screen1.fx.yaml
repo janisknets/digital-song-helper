@@ -1,11 +1,9 @@
 Screen1 As screen:
 
     Button4 As button:
-        OnSelect: |-
+        OnSelect: |
             =Set(varAttachment, JSON(Image1.Image, JSONFormat.IncludeBinaryData));
             Set(varBase64Only, Mid(varAttachment, Find(",", varAttachment)+1, Len(varAttachment)-Find(",", varAttachment) - 1));
-            Set(varFileLink,EasyUpload.Run(Last(AttachmentControl.Attachments).Name, varBase64Only).sharepointfilelink);
-            Reset(AttachmentControl);
         Text: ="Button"
         X: =1067
         Y: =94
@@ -13,7 +11,6 @@ Screen1 As screen:
 
     AttachmentControl As attachments:
         BorderColor: =
-        DisplayMode: =
         Height: =120
         IsInDataCard: =true
         Items: =

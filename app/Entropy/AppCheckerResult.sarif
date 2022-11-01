@@ -2242,17 +2242,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.varFileLink"
+                  "fullyQualifiedName": "App.varBase64Only"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.varFileLink",
+                  "fullyQualifiedName": "App.varBase64Only",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "varFileLink",
+                "member": "varBase64Only",
                 "module": "App",
                 "type": "App"
               }
