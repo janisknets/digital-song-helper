@@ -1,10 +1,7 @@
 Screen1 As screen:
 
     Button4 As button:
-        OnSelect: |-
-            =Set(varAttachment, JSON(Image1.Image, JSONFormat.IncludeBinaryData));
-            Set(varBase64Only, Mid(varAttachment, Find(",", varAttachment)+1, Len(varAttachment)-Find(",", varAttachment) - 1));
-            EasyUpload.Run(Last(AttachmentControl.Attachments).Name, varBase64Only);
+        OnSelect: =Launch(varFileLink)
         Text: ="Button"
         X: =1065
         Y: =155
@@ -15,7 +12,10 @@ Screen1 As screen:
         Height: =120
         IsInDataCard: =true
         Items: =
-        OnAddFile: =
+        OnAddFile: |-
+            =Set(varAttachment, JSON(Image1.Image, JSONFormat.IncludeBinaryData));
+            Set(varBase64Only, Mid(varAttachment, Find(",", varAttachment)+1, Len(varAttachment)-Find(",", varAttachment) - 1));
+            Set(varFileLink,EasyUpload.Run(Last(AttachmentControl.Attachments).Name, varBase64Only).sharepointfilelink);
         PaddingBottom: =5
         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
         PaddingRight: =5
