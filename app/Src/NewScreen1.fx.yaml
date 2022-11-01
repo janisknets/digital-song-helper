@@ -588,13 +588,13 @@ NewScreen1 As screen:
 
     Button7 As button:
         Height: =39
-        OnSelect: =
+        OnSelect: =Navigate(UploadExcel)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Size: =12
-        Text: ="View attachment"
+        Text: ="Upload"
         Width: =148
         X: =1150
         Y: =345

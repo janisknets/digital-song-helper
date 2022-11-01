@@ -1,18 +1,37 @@
 UploadExcel As screen:
 
+    Label4 As label:
+        Height: =44
+        Text: |-
+            ="Total number of contacts: " & CountRows(TestList)
+        Width: =265
+        X: =954
+        Y: =684
+        ZIndex: =2
+
+    Button4_1 As button:
+        Height: =49
+        OnSelect: |-
+            =Set(varAttachment, JSON(Image1.Image, JSONFormat.IncludeBinaryData));
+            Set(varBase64Only, Mid(varAttachment, Find(",", varAttachment)+1, Len(varAttachment)-Find(",", varAttachment) - 1));
+            AttachExcel.Run(Last(AttachmentControl.Attachments).Name, varBase64Only);
+        Text: ="Upload"
+        X: =954
+        Y: =38
+        ZIndex: =3
+
     DataTable1 As dataTable.datatable:
         BorderStyle: =BorderStyle.Solid
         DisplayMode: =DisplayMode.Edit
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =588
-        Items: =ExcelList
-        Width: =1259
+        Height: =500
+        Items: =TestList
+        Width: =1227
         X: =65
-        Y: =93
-        ZIndex: =1
+        Y: =120
+        ZIndex: =4
 
         Title_Column1 As dataTableColumn.textualColumn:
-            AutoWidth: =false
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Title"
             FieldName: ="Title"
@@ -21,34 +40,34 @@ UploadExcel As screen:
             LayoutHeight: =Parent.Height
             Order: =1
             Text: =ThisItem.Title
-            Width: =93
+            Width: =100
             X: =0
             Y: =0
             ZIndex: =1
 
-        "'Role Title_Column1' As dataTableColumn.textualColumn":
+        "'Project Master Client_Column1' As dataTableColumn.textualColumn":
             DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Role Title"
-            FieldName: ="RoleTitle"
+            FieldDisplayName: ="Project Master Client"
+            FieldName: ="Email"
             FieldVariantName: ="textualColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =2
-            Text: =ThisItem.'Role Title'
+            Text: =ThisItem.'Project Master Client'
             Width: =100
             X: =0
             Y: =0
             ZIndex: =2
 
-        "'Project Master Client_Column1' As dataTableColumn.textualColumn":
+        RoleID_Column1 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Project Master Client"
-            FieldName: ="ProjectMasterClient"
+            FieldDisplayName: ="RoleID"
+            FieldName: ="RoleID"
             FieldVariantName: ="textualColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =3
-            Text: =ThisItem.'Project Master Client'
+            Text: =ThisItem.RoleID
             Width: =100
             X: =0
             Y: =0
@@ -57,7 +76,7 @@ UploadExcel As screen:
         Project_Column1 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Project"
-            FieldName: ="Project"
+            FieldName: ="ProjectName"
             FieldVariantName: ="textualColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
@@ -68,15 +87,15 @@ UploadExcel As screen:
             Y: =0
             ZIndex: =4
 
-        "'Role Description_Column1' As dataTableColumn.textualColumn":
+        RoleDescription_Column1 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Role Description"
-            FieldName: ="Roledescription"
+            FieldDisplayName: ="RoleDescription"
+            FieldName: ="ClientName"
             FieldVariantName: ="textualColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =5
-            Text: =ThisItem.'Role Description'
+            Text: =ThisItem.RoleDescription
             Width: =100
             X: =0
             Y: =0
@@ -85,7 +104,7 @@ UploadExcel As screen:
         "'Role Fulfillment Contact_Column1' As dataTableColumn.textualColumn":
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Role Fulfillment Contact"
-            FieldName: ="RoleFulfillmentContact"
+            FieldName: ="RolePrimaryContact"
             FieldVariantName: ="textualColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
@@ -99,7 +118,7 @@ UploadExcel As screen:
         "'Role Primary Contact_Column1' As dataTableColumn.textualColumn":
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Role Primary Contact"
-            FieldName: ="RolePrimaryContact"
+            FieldName: ="RoleSkills"
             FieldVariantName: ="textualColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
@@ -111,26 +130,60 @@ UploadExcel As screen:
             ZIndex: =7
 
         "'Role Skills_Column1' As dataTableColumn.textualColumn":
-            AutoWidth: =false
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Role Skills"
-            FieldName: ="RoleSkills"
+            FieldName: ="RoleSkills0"
             FieldVariantName: ="textualColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =8
             Text: =ThisItem.'Role Skills'
-            Width: =181
+            Width: =100
             X: =0
             Y: =0
             ZIndex: =8
 
-    Label4 As label:
-        Height: =44
-        Text: |-
-            ="Total number of contacts: " & CountRows(ExcelList)
-        Width: =265
-        X: =65
-        Y: =34
-        ZIndex: =2
+        Selected_Column1 As dataTableColumn.booleanColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Selected"
+            FieldName: ="Selected"
+            FieldVariantName: ="booleanColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =9
+            Text: =ThisItem.Selected
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =9
+
+        Attachments_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Attachments"
+            FieldName: ="{Attachments}"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =10
+            Text: =ThisItem.Attachments
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =10
+
+    AttachmentControl_1 As attachments:
+        BorderColor: =
+        Height: =120
+        IsInDataCard: =true
+        Items: =
+        OnAddFile: =
+        PaddingBottom: =5
+        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+        PaddingRight: =5
+        PaddingTop: =5
+        Tooltip: =
+        Width: =(Parent.Width - 60) * 0.6
+        X: =130
+        Y: =38
+        ZIndex: =5
 
