@@ -16,6 +16,11 @@
             LayoutMode: =LayoutMode.Auto
             ZIndex: =2
 
+            Button23 As button:
+                OnSelect: =ClearCollect(colGridData, TestList)
+                Text: ="Button"
+                ZIndex: =1
+
         MainSectionContainer1 As groupContainer.verticalAutoLayoutContainer:
             LayoutDirection: =LayoutDirection.Vertical
             LayoutMinHeight: =100
@@ -30,7 +35,7 @@
                 LayoutMinWidth: =250
                 ZIndex: =1
 
-                Button9 As button:
+                HeaderRoleId As button:
                     Height: =50
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
@@ -42,7 +47,7 @@
                     X: =1
                     ZIndex: =1
 
-                Button10 As button:
+                HeaderRoleTitle As button:
                     Height: =50
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
@@ -54,7 +59,7 @@
                     X: =171
                     ZIndex: =2
 
-                Button13 As button:
+                HeaderProjectMaster As button:
                     Height: =50
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
@@ -66,7 +71,7 @@
                     X: =341
                     ZIndex: =3
 
-                Button14 As button:
+                HeaderProject As button:
                     Height: =50
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
@@ -78,7 +83,7 @@
                     X: =510
                     ZIndex: =4
 
-                Button15 As button:
+                HeaderRoleDes As button:
                     Height: =50
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
@@ -90,7 +95,7 @@
                     X: =680
                     ZIndex: =5
 
-                Button16 As button:
+                HeaderRoleFulfil As button:
                     Height: =50
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
@@ -102,7 +107,7 @@
                     X: =850
                     ZIndex: =6
 
-                Button19 As button:
+                HeaderRolePrimary As button:
                     Height: =50
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
@@ -114,7 +119,7 @@
                     X: =1020
                     ZIndex: =7
 
-                Button20 As button:
+                HeaderRoleSkills As button:
                     Height: =50
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
@@ -126,11 +131,99 @@
                     X: =1190
                     ZIndex: =8
 
-        FooterContainer1 As groupContainer.horizontalAutoLayoutContainer:
-            FillPortions: =0
-            Height: =75
-            LayoutMinHeight: =100
-            LayoutMinWidth: =250
-            LayoutMode: =LayoutMode.Auto
-            ZIndex: =4
+            Gallery2 As gallery.galleryVertical:
+                Items: =colGridData
+                Layout: =Layout.Vertical
+                LayoutMinHeight: =287
+                LayoutMinWidth: =320
+                TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+                Width: =HeaderRoleId.Width
+                ZIndex: =2
+
+                TextInput1 As text:
+                    Default: ="Text input"
+                    OnSelect: =Select(Parent)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Width: =HeaderRoleId.Width
+                    ZIndex: =1
+
+                TextInput1_1 As text:
+                    Default: ="Text input"
+                    OnSelect: =Select(Parent)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Width: =HeaderRoleTitle.Width
+                    X: =170
+                    ZIndex: =2
+
+                TextInput1_2 As text:
+                    Default: ="Text input"
+                    OnSelect: =Select(Parent)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Width: =HeaderProjectMaster.Width
+                    X: =340
+                    ZIndex: =3
+
+                TextInput1_3 As text:
+                    Default: ="Text input"
+                    OnSelect: =Select(Parent)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Width: =HeaderProject.Width
+                    X: =510
+                    ZIndex: =4
+
+                TextInput1_4 As text:
+                    Default: ="Text input"
+                    OnSelect: =Select(Parent)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Width: =HeaderRoleDes.Width
+                    X: =680
+                    ZIndex: =5
+
+                TextInput1_5 As text:
+                    Default: ="Text input"
+                    OnSelect: =Select(Parent)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Width: =HeaderRoleId.Width
+                    X: =850
+                    ZIndex: =6
+
+                TextInput1_6 As text:
+                    Default: ="Text input"
+                    OnSelect: =Select(Parent)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Width: =HeaderRoleId.Width
+                    X: =1020
+                    ZIndex: =7
+
+                TextInput1_7 As text:
+                    Default: ="Text input"
+                    OnSelect: =Select(Parent)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Width: =HeaderRoleId.Width
+                    X: =1186
+                    ZIndex: =8
 
