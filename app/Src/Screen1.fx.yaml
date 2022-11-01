@@ -2,25 +2,45 @@ Screen1 As screen:
 
     Button4 As button:
         OnSelect: |-
-            =UpdateContext({Exceluploading:true}); SubmitForm(EditForm1_5)
+            =Set(varAttachment, JSON(Image1.Image, JSONFormat.IncludeBinaryData));
+            Set(varBase64Only, Mid(varAttachment, Find(",", varAttachment)+1, Len(varAttachment)-Find(",", varAttachment) - 1));
+            Set(varFileLink,EasyUpload.Run(Last(AttachmentControl.Attachments).Name, varBase64Only).sharepointfilelink);
+            Reset(AttachmentControl);
         Text: ="Button"
-        X: =542
-        Y: =252
+        X: =1067
+        Y: =94
         ZIndex: =2
 
-    DataCardValue18_1 As attachments:
+    AttachmentControl As attachments:
         BorderColor: =
-        DisplayMode: =Parent.DisplayMode
+        DisplayMode: =
         Height: =120
         IsInDataCard: =true
         Items: =
+        OnAddFile: =
         PaddingBottom: =5
         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
         PaddingRight: =5
         PaddingTop: =5
-        Tooltip: =Parent.DisplayName
+        Tooltip: =
         Width: =(Parent.Width - 60) * 0.6
         X: =231
         Y: =54
         ZIndex: =3
+
+    Image1 As image:
+        Height: =122
+        Image: =Last(AttachmentControl.Attachments).Value
+        Width: =770
+        X: =231
+        Y: =222
+        ZIndex: =4
+
+    Label3 As label:
+        Height: =159
+        Text: =varAttachment
+        Width: =757
+        X: =231
+        Y: =455
+        ZIndex: =5
 

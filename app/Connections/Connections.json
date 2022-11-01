@@ -234,8 +234,49 @@
     "dependencies": {},
     "dependents": [
       "4066e6ec-1418-4c13-a7f3-326c7495cf14",
-      "91c449b1-422d-472e-b29e-e06c18e20448"
+      "91c449b1-422d-472e-b29e-e06c18e20448",
+      "f67f7638-5f07-403e-adf5-63845e38fb57"
     ],
     "id": "cb7d9ef6-d2ef-466c-aa89-24ca403bfdcf"
+  },
+  "f67f7638-5f07-403e-adf5-63845e38fb57": {
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-101.westus.logic.azure.com:443/workflows/f26767a4c83a4eada54aaac575b674c6/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=HJ_NQyPgegCrZUpfc_Q61Ciae05iV_Kvs1IwcqGhmV0",
+      "workflowEndpoint": "/subscriptions/be4c2756-6fa8-4d1b-91ba-70dc75410b5a/resourceGroups/e0793d390939496db129198edd916feb-aad03f0601544ddd901e81d95fa7518f/providers/Microsoft.Logic/workflows/5c377164-08f6-46b3-bff1-9b6c03536847",
+      "workflowName": "5c377164-08f6-46b3-bff1-9b6c03536847",
+      "workflowPath": "/subscriptions/be4c2756-6fa8-4d1b-91ba-70dc75410b5a/resourceGroups/e0793d390939496db129198edd916feb-aad03f0601544ddd901e81d95fa7518f/providers/Microsoft.Logic/workflows/5c377164-08f6-46b3-bff1-9b6c03536847"
+    },
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "cb7d9ef6-d2ef-466c-aa89-24ca403bfdcf": {
+          "value": "shared_sharepointonline"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "5c377164-08f6-46b3-bff1-9b6c03536847"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_sharepointonline": {
+          "value": "cb7d9ef6-d2ef-466c-aa89-24ca403bfdcf"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "5c377164-08f6-46b3-bff1-9b6c03536847"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "EasyUpload"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "cb7d9ef6-d2ef-466c-aa89-24ca403bfdcf"
+    },
+    "dependents": [],
+    "id": "f67f7638-5f07-403e-adf5-63845e38fb57"
   }
 }
