@@ -1,12 +1,13 @@
 Screen1 As screen:
 
     Button4 As button:
-        OnSelect: |
+        OnSelect: |-
             =Set(varAttachment, JSON(Image1.Image, JSONFormat.IncludeBinaryData));
             Set(varBase64Only, Mid(varAttachment, Find(",", varAttachment)+1, Len(varAttachment)-Find(",", varAttachment) - 1));
+            AttachFiles.Run(Last(AttachmentControl.Attachments).Name, varBase64Only)
         Text: ="Button"
-        X: =1067
-        Y: =94
+        X: =1065
+        Y: =155
         ZIndex: =2
 
     AttachmentControl As attachments:
@@ -21,8 +22,8 @@ Screen1 As screen:
         PaddingTop: =5
         Tooltip: =
         Width: =(Parent.Width - 60) * 0.6
-        X: =231
-        Y: =54
+        X: =218
+        Y: =134
         ZIndex: =3
 
     Image1 As image:
@@ -40,4 +41,10 @@ Screen1 As screen:
         X: =231
         Y: =455
         ZIndex: =5
+
+    TextInput2 As text:
+        Default: ="Text input"
+        X: =218
+        Y: =60
+        ZIndex: =6
 

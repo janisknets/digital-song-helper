@@ -3,7 +3,7 @@
     "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
     "CdpRevision": {
       "BaseUrl": "/",
-      "LastChangedTimeString": "2022-08-09T16:45:52.0310000Z",
+      "LastChangedTimeString": "2022-10-25T16:15:37.5800000Z",
       "RevisionNumber": 1
     },
     "ConnectedDataSourceInfoNameMapping": {
@@ -39,7 +39,8 @@
       "TemplateList": "Template",
       "TemplateList#Id": "Template Id",
       "Title": "Title",
-      "UploadFile": "Upload File"
+      "UploadFile": "Upload File",
+      "UploadFile#Id": "Upload File Id"
     },
     "DatasetName": "https://ts.accenture.com/sites/THERIGA",
     "EncodeDataset": true,
