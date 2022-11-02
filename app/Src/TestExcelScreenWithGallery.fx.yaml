@@ -1,4 +1,4 @@
-ExcelScreen As screen:
+TestExcelScreenWithGallery As screen:
     OnVisible: =
 
     Icon3_3 As icon.Reload:

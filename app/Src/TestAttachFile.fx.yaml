@@ -1,4 +1,4 @@
-Screen1 As screen:
+TestAttachFile As screen:
 
     Button4 As button:
         OnSelect: =Launch(varFileLink)
