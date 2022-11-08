@@ -12,12 +12,13 @@ UploadExcel As screen:
     Button4_1 As button:
         Height: =49
         OnSelect: |-
-            =Set(varAttachment, JSON(Image1_1.Image, JSONFormat.IncludeBinaryData));
+            =Set(varResponse, Blank());
+            Set(varAttachment, JSON(Image1_1.Image, JSONFormat.IncludeBinaryData));
             Set(varBase64Only, Mid(varAttachment, Find(",", varAttachment)+1, Len(varAttachment)-Find(",", varAttachment) - 1));
-            ExcelUpload.Run(Last(AttachmentControl_1.Attachments).Name, varBase64Only);
+            Set(varResponse, ExcelUpload.Run(Last(AttachmentControl_1.Attachments).Name, varBase64Only).status);
             Reset(AttachmentControl_1);
-            Refresh(TestList)
-        Text: ="Upload"
+            If(!IsBlank(varResponse), Refresh(TestList));
+        Text: ="Import data"
         X: =496
         Y: =38
         ZIndex: =3
