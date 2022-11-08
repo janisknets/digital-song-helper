@@ -427,7 +427,7 @@ ImportExcelDataScreen As screen:
         OnSelect: =Set(varMenuIsOpen, true);
         Width: =48
         X: =40
-        Y: =20
+        Y: =40
         ZIndex: =10
 
     Container4_2 As groupContainer.manualLayoutContainer:

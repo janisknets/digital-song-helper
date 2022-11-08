@@ -105,7 +105,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "AttachmentControl_1",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -491,7 +491,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button10",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -784,7 +784,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button10_1",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1042,7 +1042,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button4_1",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2779,7 +2779,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Container4_2",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3387,7 +3387,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon4_4",
-      "ParentIndex": 0,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3564,7 +3564,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Image1_1",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4768,7 +4768,7 @@
         "ZIndex",
         "NavItems",
         "CurrentScreen",
-        "IsMenuOpen",
+        "OnChange",
         "OnReset"
       ],
       "HasDynamicProperties": false,
@@ -4800,11 +4800,6 @@
           "RuleProviderType": "System"
         },
         {
-          "Category": "Data",
-          "PropertyName": "IsMenuOpen",
-          "RuleProviderType": "System"
-        },
-        {
           "Category": "Design",
           "PropertyName": "ZIndex",
           "RuleProviderType": "Unknown"
@@ -4832,6 +4827,11 @@
         {
           "Category": "Design",
           "PropertyName": "Fill",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Behavior",
+          "PropertyName": "OnChange",
           "RuleProviderType": "System"
         },
         {

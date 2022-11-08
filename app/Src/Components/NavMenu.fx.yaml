@@ -2,9 +2,9 @@ NavMenu As CanvasComponent:
     CurrentScreen: =App.ActiveScreen
     Fill: =RGBA(0, 0, 0, 0)
     Height: =640
-    IsMenuOpen: =varComponentIsMenuOpen
     NavItems: =varMenuItems
-    OnReset: =Set(varComponentIsMenuOpen, false);
+    OnChange: =Set(varMenuIsOpen, false)
+    OnReset: =
     Width: =640
     X: =0
     Y: =0
@@ -30,6 +30,7 @@ NavMenu As CanvasComponent:
                 AutoDisableOnSelect: =false
                 BorderThickness: =0
                 DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                DisabledFill: =RGBA(0, 18, 107, 1)
                 DisplayMode: =If(ThisItem.Screen = NavMenu.CurrentScreen, DisplayMode.Disabled, DisplayMode.Edit)
                 Fill: =RGBA(136, 160, 209, 1)
                 OnSelect: =Navigate(ThisItem.Screen);
@@ -44,7 +45,7 @@ NavMenu As CanvasComponent:
         Icon6 As icon.Cancel:
             Height: =48
             Icon: =Icon.Cancel
-            OnSelect: =Set(varComponentIsMenuOpen, false)
+            OnSelect: =NavMenu.OnChange();
             Width: =48
             X: =Parent.Width - 50
             Y: =2

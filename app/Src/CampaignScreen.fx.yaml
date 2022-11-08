@@ -174,17 +174,18 @@ CampaignScreen As screen:
         OnSelect: =Set(varMenuIsOpen, true);
         Width: =48
         X: =40
-        Y: =20
+        Y: =40
         ZIndex: =10
 
     Container4 As groupContainer.manualLayoutContainer:
         Height: =Parent.Height - 80
-        Visible: =NavMenu_1.IsMenuOpen
+        Visible: =varMenuIsOpen
         Width: =220
         X: =20
         Y: =40
         ZIndex: =11
 
         NavMenu_1 As NavMenu:
+            OnChange: =Set(varMenuIsOpen, false);
             Width: =220
 
