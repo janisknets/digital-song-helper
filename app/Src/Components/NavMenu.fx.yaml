@@ -2,7 +2,9 @@ NavMenu As CanvasComponent:
     CurrentScreen: =App.ActiveScreen
     Fill: =RGBA(0, 0, 0, 0)
     Height: =640
+    IsMenuOpen: =varComponentIsMenuOpen
     NavItems: =varMenuItems
+    OnReset: =Set(varComponentIsMenuOpen, false);
     Width: =640
     X: =0
     Y: =0
@@ -15,20 +17,13 @@ NavMenu As CanvasComponent:
         ZIndex: =1
 
         "NavGallery As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
-            Height: =Parent.Height - NavGallery.Y
+            Height: =NavGallery.TemplateHeight * 3
             Items: =NavMenu.NavItems
             Layout: =Layout.Vertical
             TemplatePadding: =0
-            TemplateSize: =NavButton.Height + 1
-            Y: =50
+            TemplateSize: =NavButton.Height + 5
+            Y: =(Parent.Height / 2) - (Self.Height / 2)
             ZIndex: =1
-
-            Separator6 As rectangle:
-                Height: =1
-                OnSelect: =Select(Parent)
-                Width: =Parent.TemplateWidth
-                Y: =Parent.TemplateHeight - 1
-                ZIndex: =3
 
             NavButton As button:
                 Align: =Align.Left
@@ -49,6 +44,7 @@ NavMenu As CanvasComponent:
         Icon6 As icon.Cancel:
             Height: =48
             Icon: =Icon.Cancel
+            OnSelect: =Set(varComponentIsMenuOpen, false)
             Width: =48
             X: =Parent.Width - 50
             Y: =2

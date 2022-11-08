@@ -112,11 +112,12 @@ ImportExcelDataScreen As screen:
                 ZIndex: =1
 
                 RoleIdLabel As label:
-                    FontWeight: =FontWeight.Bold
+                    FontWeight: =FontWeight.Semibold
                     PaddingBottom: =0
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
+                    Size: =12
                     Text: ="Role Id"
                     Width: =Parent.Width
                     ZIndex: =1
@@ -145,11 +146,12 @@ ImportExcelDataScreen As screen:
                 ZIndex: =2
 
                 RoleDescriptionLabel As label:
-                    FontWeight: =FontWeight.Bold
+                    FontWeight: =FontWeight.Semibold
                     PaddingBottom: =0
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
+                    Size: =12
                     Text: ="Role Description"
                     Width: =Parent.Width
                     ZIndex: =1
@@ -177,11 +179,12 @@ ImportExcelDataScreen As screen:
                 ZIndex: =3
 
                 RoleContactLabel_2 As label:
-                    FontWeight: =FontWeight.Bold
+                    FontWeight: =FontWeight.Semibold
                     PaddingBottom: =0
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
+                    Size: =12
                     Text: ="Role Skills"
                     Width: =Parent.Width
                     ZIndex: =1
@@ -201,34 +204,31 @@ ImportExcelDataScreen As screen:
 
             Container3_4 As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
-                Height: =RoleContactLabel_1.Height + RoleContactValue_1.Height
+                Height: =100
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
                 ZIndex: =4
 
-                RoleContactLabel_1 As label:
-                    FontWeight: =FontWeight.Bold
+                Label2 As label:
+                    FontWeight: =FontWeight.Semibold
                     PaddingBottom: =0
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
+                    Size: =12
                     Text: ="Role Primary Contact"
                     Width: =Parent.Width
                     ZIndex: =1
 
-                RoleContactValue_1 As label:
-                    OnSelect: =
+                Label2_1 As label:
                     PaddingBottom: =0
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
-                    Size: =13
                     Text: =ThisItem.'Role Primary Contact'
                     Width: =Parent.Width
-                    X: =ProjectValue.X
-                    Y: =ProjectValue.Y + ProjectValue.Height + 4
                     ZIndex: =2
 
         ContainerRow1 As groupContainer.horizontalAutoLayoutContainer:
@@ -251,11 +251,12 @@ ImportExcelDataScreen As screen:
                 ZIndex: =3
 
                 RoleTitleLabel As label:
-                    FontWeight: =FontWeight.Bold
+                    FontWeight: =FontWeight.Semibold
                     PaddingBottom: =0
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
+                    Size: =12
                     Text: ="Role Title"
                     Width: =Parent.Width
                     ZIndex: =1
@@ -283,11 +284,12 @@ ImportExcelDataScreen As screen:
                 ZIndex: =5
 
                 ProjectClientLabel As label:
-                    FontWeight: =FontWeight.Bold
+                    FontWeight: =FontWeight.Semibold
                     PaddingBottom: =0
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
+                    Size: =12
                     Text: ="Project Master Client"
                     Width: =Parent.Width
                     ZIndex: =1
@@ -315,11 +317,12 @@ ImportExcelDataScreen As screen:
                 ZIndex: =6
 
                 ProjectLabel As label:
-                    FontWeight: =FontWeight.Bold
+                    FontWeight: =FontWeight.Semibold
                     PaddingBottom: =0
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
+                    Size: =12
                     Text: ="Project"
                     Width: =Parent.Width
                     ZIndex: =1
@@ -346,11 +349,12 @@ ImportExcelDataScreen As screen:
                 ZIndex: =7
 
                 RoleContactLabel As label:
-                    FontWeight: =FontWeight.Bold
+                    FontWeight: =FontWeight.Semibold
                     PaddingBottom: =0
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
+                    Size: =12
                     Text: ="Role Fulfillment Contact"
                     Width: =Parent.Width
                     ZIndex: =1
