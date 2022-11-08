@@ -58,7 +58,7 @@ CampaignScreen As screen:
 
         NextArrow2 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
-            Height: =60
+            Height: =48
             Icon: =Icon.ChevronRight
             OnSelect: |-
                 =Select(Parent);
@@ -70,9 +70,9 @@ CampaignScreen As screen:
             PaddingTop: =10
             TabIndex: =0
             Tooltip: ="View item details"
-            Width: =60
+            Width: =48
             X: =Parent.TemplateWidth - Self.Width - 5
-            Y: =54
+            Y: =68
             ZIndex: =4
 
         Separator3 As rectangle:
@@ -98,7 +98,7 @@ CampaignScreen As screen:
             PaddingTop: =10
             TabIndex: =0
             Tooltip: ="View item details"
-            Width: =60
+            Width: =48
             X: =Parent.TemplateWidth - Self.Width - 5
             ZIndex: =6
 

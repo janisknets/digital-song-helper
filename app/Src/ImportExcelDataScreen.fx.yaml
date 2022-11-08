@@ -67,7 +67,7 @@ ImportExcelDataScreen As screen:
 
         NextArrow1 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
-            Height: =60
+            Height: =48
             Icon: =Icon.ChevronRight
             OnSelect: |-
                 =Select(Parent);
@@ -79,7 +79,7 @@ ImportExcelDataScreen As screen:
             PaddingTop: =10
             TabIndex: =0
             Tooltip: ="View item details"
-            Width: =60
+            Width: =48
             X: =Parent.TemplateWidth - Self.Width - 5
             Y: =Parent.TemplateHeight - Self.Height - 20
             ZIndex: =1
@@ -375,7 +375,7 @@ ImportExcelDataScreen As screen:
         Delete1_1 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
             Color: =RGBA(255, 0, 0, 1)
-            Height: =60
+            Height: =48
             Icon: =Icon.Trash
             OnSelect: |-
                 =Select(Parent);
@@ -388,7 +388,7 @@ ImportExcelDataScreen As screen:
             PaddingTop: =10
             TabIndex: =0
             Tooltip: ="View item details"
-            Width: =60
+            Width: =48
             X: =Parent.TemplateWidth - Self.Width - 5
             Y: =20
             ZIndex: =5
