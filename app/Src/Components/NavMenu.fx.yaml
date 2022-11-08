@@ -2,8 +2,7 @@ NavMenu As CanvasComponent:
     CurrentScreen: =App.ActiveScreen
     Fill: =RGBA(0, 0, 0, 0)
     Height: =640
-    NavItems: |-
-        =Table({SampleStringField: "SampleText", SampleNumberField: 10, SampleBooleanField: true})
+    NavItems: =varMenuItems
     Width: =640
     X: =0
     Y: =0
@@ -16,10 +15,12 @@ NavMenu As CanvasComponent:
         ZIndex: =1
 
         "NavGallery As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+            Height: =Parent.Height - NavGallery.Y
+            Items: =NavMenu.NavItems
             Layout: =Layout.Vertical
             TemplatePadding: =0
-            TemplateSize: =Min(96, Self.Height - 60)
-            Y: =40
+            TemplateSize: =NavButton.Height + 1
+            Y: =50
             ZIndex: =1
 
             Separator6 As rectangle:
@@ -29,10 +30,27 @@ NavMenu As CanvasComponent:
                 Y: =Parent.TemplateHeight - 1
                 ZIndex: =3
 
-            Button4 As button:
+            NavButton As button:
                 Align: =Align.Left
-                OnSelect: =Select(Parent)
-                Text: =
+                AutoDisableOnSelect: =false
+                BorderThickness: =0
+                DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                DisplayMode: =If(ThisItem.Screen = NavMenu.CurrentScreen, DisplayMode.Disabled, DisplayMode.Edit)
+                Fill: =RGBA(136, 160, 209, 1)
+                OnSelect: =Navigate(ThisItem.Screen);
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Text: =ThisItem.Title
                 Width: =Parent.Width
                 ZIndex: =4
+
+        Icon6 As icon.Cancel:
+            Height: =48
+            Icon: =Icon.Cancel
+            Width: =48
+            X: =Parent.Width - 50
+            Y: =2
+            ZIndex: =2
 

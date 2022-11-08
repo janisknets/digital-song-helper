@@ -118,7 +118,7 @@
     "PreviewCampaignScreen",
     "PreviewTemplateScreen",
     "SendOutScreen",
-    "ImportExcelData",
-    "FormExcelData"
+    "ImportExcelDataScreen",
+    "FormExcelDataScreen"
   ]
 }

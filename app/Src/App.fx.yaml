@@ -1,7 +1,11 @@
 App As appinfo:
     BackEnabled: =false
     OnStart: |-
-        =Set(varMenuItems, Table({Title: "Campaings List", Screen: TemplatesScreen}, {Title: "Templates List", Screen: TemplatesScreen}));
+        =Set(varMenuItems, Table(
+            {Title: "Campaings List", Screen: TemplatesScreen}, 
+            {Title: "Templates List", Screen: TemplatesScreen},
+            {Title: "Recipient List", Screen: ImportExcelDataScreen}
+        ));
         TemplatesScreen
     StartScreen: =CampaignScreen
 

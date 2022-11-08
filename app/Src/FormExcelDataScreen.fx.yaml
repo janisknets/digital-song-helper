@@ -1,4 +1,4 @@
-FormExcelData As screen:
+FormExcelDataScreen As screen:
     OnVisible: |-
         =ResetForm(TestListForm);
         If(!IsBlank(varTestListItem), EditForm(TestListForm));
@@ -562,7 +562,7 @@ FormExcelData As screen:
         OnSelect: |-
             =SubmitForm(TestListForm);
             Set(varTestListItem, Blank());
-            Navigate(ImportExcelData);
+            Navigate(ImportExcelDataScreen);
         Text: ="Save"
         X: =1120
         Y: =616
@@ -573,7 +573,7 @@ FormExcelData As screen:
         HoverFill: =ColorFade(Self.BorderColor, 20%)
         OnSelect: |-
             =Set(varTestListItem, Blank());
-            Navigate(ImportExcelData);
+            Navigate(ImportExcelDataScreen);
         Text: ="Cancel"
         X: =891
         Y: =616
