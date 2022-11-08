@@ -1,8 +1,8 @@
 [
   {
     "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
-    "FlowNameId": "246615dc-0126-4f36-ae84-c3673d324f8d",
-    "Name": "AttachExcel",
+    "FlowNameId": "5192320d-8f97-407b-a03e-4098063391e2",
+    "Name": "AttachExcel_New",
     "ServiceKind": "ConnectedWadl",
     "Type": "ServiceInfo",
     "WorkflowEntityId": null

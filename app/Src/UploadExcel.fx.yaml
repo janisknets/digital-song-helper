@@ -14,7 +14,7 @@ UploadExcel As screen:
         OnSelect: |-
             =Set(varAttachment, JSON(Image1.Image, JSONFormat.IncludeBinaryData));
             Set(varBase64Only, Mid(varAttachment, Find(",", varAttachment)+1, Len(varAttachment)-Find(",", varAttachment) - 1));
-            AttachExcel.Run(Last(AttachmentControl_1.Attachments).Name, varBase64Only);
+            AttachExcel_New.Run(Last(AttachmentControl_1.Attachments).Name, varBase64Only);
         Text: ="Upload"
         X: =496
         Y: =38
