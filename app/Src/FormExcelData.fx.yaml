@@ -5,7 +5,7 @@ FormExcelData As screen:
         DataSource: =TestList
         DefaultMode: =FormMode.New
         Height: =439
-        Item: =LookUp(TestList, TestList.RoleID = varTestListItem.RoleID));
+        Item: =LookUp(TestList, RoleID = varTestListItem.RoleID)
         NumberOfColumns: =2
         Width: =1275
         X: =40
