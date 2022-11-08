@@ -588,7 +588,7 @@ NewScreen1 As screen:
 
     Button7 As button:
         Height: =39
-        OnSelect: =Navigate(UploadExcel)
+        OnSelect: =Navigate(ImportExcelData)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0

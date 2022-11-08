@@ -1,0 +1,340 @@
+ImportExcelData As screen:
+    OnVisible: =Refresh(TestList)
+
+    Label4 As label:
+        Height: =44
+        Text: |-
+            ="Total number of contacts: " & CountRows(TestList)
+        Width: =265
+        X: =954
+        Y: =684
+        ZIndex: =2
+
+    Button4_1 As button:
+        Height: =49
+        OnSelect: |-
+            =Set(varResponse, Blank());
+            Set(varAttachment, JSON(Image1_1.Image, JSONFormat.IncludeBinaryData));
+            Set(varBase64Only, Mid(varAttachment, Find(",", varAttachment)+1, Len(varAttachment)-Find(",", varAttachment) - 1));
+            Set(varResponse, ExcelUpload.Run(Last(AttachmentControl_1.Attachments).Name, varBase64Only).status);
+            Reset(AttachmentControl_1);
+            If(!IsBlank(varResponse), Refresh(TestList));
+        Text: ="Import data"
+        X: =496
+        Y: =38
+        ZIndex: =3
+
+    AttachmentControl_1 As attachments:
+        BorderColor: =
+        Height: =100
+        IsInDataCard: =true
+        Items: =
+        OnAddFile: =
+        PaddingBottom: =5
+        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+        PaddingRight: =5
+        PaddingTop: =5
+        Tooltip: =
+        Width: =333
+        X: =130
+        Y: =38
+        ZIndex: =5
+
+    Image1_1 As image:
+        Height: =49
+        Image: =Last(AttachmentControl_1.Attachments).Value
+        Width: =202
+        X: =1089
+        Y: =38
+        ZIndex: =6
+
+    "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =523
+        Items: =TestList
+        Layout: =Layout.Vertical
+        TemplatePadding: =10
+        TemplateSize: =Min(ContainerRow1.Height + ContainerRow2.Height + 10, Self.Height - 60)
+        Width: =1240
+        X: =40
+        Y: =160
+        ZIndex: =7
+
+        NextArrow1 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Separator1 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =2
+
+        ContainerRow2 As groupContainer.horizontalAutoLayoutContainer:
+            Height: =Container3_3.Height + 10
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =10
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =10
+            Width: =Parent.Width - 100
+            Y: =ContainerRow1.Height
+            ZIndex: =3
+
+            Container3_3 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                FillPortions: =2
+                Height: =RoleDescriptionValue.Height + RoleDescriptionLabel.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =4
+
+                RoleDescriptionLabel As label:
+                    FontWeight: =FontWeight.Bold
+                    Text: ="Role Description"
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                RoleDescriptionValue As label:
+                    OnSelect: =
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =13
+                    Text: =ThisItem.RoleDescription
+                    Width: =Parent.Width
+                    X: =ProjectValue.X
+                    Y: =ProjectValue.Y + ProjectValue.Height + 4
+                    ZIndex: =2
+
+            Container3_2 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Height: =RoleContactLabel.Height + RoleContactValue.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =5
+
+                RoleContactLabel As label:
+                    FontWeight: =FontWeight.Bold
+                    Text: ="Role Fulfillment Contact"
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                RoleContactValue As label:
+                    OnSelect: =
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =13
+                    Text: =ThisItem.'Role Fulfillment Contact'
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Parent.Width
+                    X: =ProjectValue.X
+                    Y: =ProjectValue.Y + ProjectValue.Height + 4
+                    ZIndex: =2
+
+            Container3_4 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Height: =RoleContactLabel_1.Height + RoleContactValue_1.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =6
+
+                RoleContactLabel_1 As label:
+                    FontWeight: =FontWeight.Bold
+                    Text: ="Role Primary Contact"
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                RoleContactValue_1 As label:
+                    OnSelect: =
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =13
+                    Text: =ThisItem.'Role Primary Contact'
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Parent.Width
+                    X: =ProjectValue.X
+                    Y: =ProjectValue.Y + ProjectValue.Height + 4
+                    ZIndex: =2
+
+            Container3_5 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Height: =RoleContactLabel_2.Height + RoleContactValue_2.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =7
+
+                RoleContactLabel_2 As label:
+                    FontWeight: =FontWeight.Bold
+                    Text: ="Role Skills"
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                RoleContactValue_2 As label:
+                    OnSelect: =
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =13
+                    Text: =ThisItem.'Role Skills'
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Parent.Width
+                    X: =ProjectValue.X
+                    Y: =ProjectValue.Y + ProjectValue.Height + 4
+                    ZIndex: =2
+
+        ContainerRow1 As groupContainer.horizontalAutoLayoutContainer:
+            Height: =Container2.Height + 10
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =10
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =10
+            Width: =Parent.Width - 100
+            ZIndex: =4
+
+            Container2 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Height: =RoleTitleLabel.Height + RoleTitleValue.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =3
+
+                RoleTitleLabel As label:
+                    FontWeight: =FontWeight.Bold
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: ="Role Title"
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                RoleTitleValue As label:
+                    FontWeight: =FontWeight.Normal
+                    OnSelect: =
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =13
+                    Text: =ThisItem.Title
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+            Container3 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Height: =RoleIdValue.Height + RoleIdLabel.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =4
+
+                RoleIdLabel As label:
+                    FontWeight: =FontWeight.Bold
+                    Text: ="Role Id"
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                RoleIdValue As label:
+                    OnSelect: =
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =13
+                    Text: =ThisItem.RoleID
+                    Width: =Parent.Width
+                    X: =RoleTitleValue.X
+                    Y: =RoleTitleValue.Y + RoleTitleValue.Height + 4
+                    ZIndex: =2
+
+            Container3_1 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                FillPortions: =2
+                Height: =ProjectClientLabel.Height + ProjectClientValue.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =5
+
+                ProjectClientLabel As label:
+                    FontWeight: =FontWeight.Bold
+                    Text: ="Project Master Client"
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                ProjectClientValue As label:
+                    OnSelect: =
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =13
+                    Text: =ThisItem.'Project Master Client'
+                    Width: =Parent.Width
+                    X: =RoleTitleValue.X
+                    Y: =RoleTitleValue.Y + RoleTitleValue.Height + 4
+                    ZIndex: =2
+
+            Container2_1 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Height: =ProjectLabel.Height + ProjectValue.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =6
+
+                ProjectLabel As label:
+                    FontWeight: =FontWeight.Bold
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: ="Project"
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                ProjectValue As label:
+                    FontWeight: =FontWeight.Normal
+                    OnSelect: =
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =13
+                    Text: =ThisItem.Project
+                    Width: =Parent.Width
+                    ZIndex: =2
+

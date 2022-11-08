@@ -14,12 +14,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "UploadExcel.Label4.Text"
+                  "fullyQualifiedName": "ImportExcelData.Label4.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "UploadExcel.Label4.Text",
+                  "fullyQualifiedName": "ImportExcelData.Label4.Text",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -32,8 +32,8 @@
               },
               "properties": {
                 "member": "Text",
-                "module": "UploadExcel",
-                "type": "UploadExcel.Label4"
+                "module": "ImportExcelData",
+                "type": "ImportExcelData.Label4"
               }
             }
           ],
@@ -1734,19 +1734,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "UploadExcel.AttachmentControl_1.AccessibleLabel"
+                  "fullyQualifiedName": "ImportExcelData.AttachmentControl_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "UploadExcel.AttachmentControl_1.AccessibleLabel",
+                  "fullyQualifiedName": "ImportExcelData.AttachmentControl_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "UploadExcel",
-                "type": "UploadExcel.AttachmentControl_1"
+                "module": "ImportExcelData",
+                "type": "ImportExcelData.AttachmentControl_1"
               }
             }
           ],
@@ -2167,6 +2167,66 @@
                 "member": "TabIndex",
                 "module": "CampaignScreen",
                 "type": "CampaignScreen.BrowseGallery1_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ImportExcelData.Gallery1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ImportExcelData.Gallery1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ImportExcelData",
+                "type": "ImportExcelData.Gallery1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ImportExcelData.Gallery1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ImportExcelData.Gallery1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "ImportExcelData",
+                "type": "ImportExcelData.Gallery1"
               }
             }
           ],
