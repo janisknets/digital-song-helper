@@ -1,5 +1,5 @@
 CampaignScreen As screen:
-    OnVisible: =
+    OnVisible: =Set(varCurrentCampaign, Blank());
 
     Icon3_2 As icon.Reload:
         Color: =RGBA(56, 96, 178, 1)
@@ -11,11 +11,10 @@ CampaignScreen As screen:
         Y: =38
         ZIndex: =1
 
-    "BrowseGallery1_3 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+    "ExistingCampaignGallery As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
         Height: =414
         Items: =SortByColumns(Filter([@NewCampaign], StartsWith(Title, TextSearchBox2_2.Text)), "Title", If(SortDescending1, Descending, Ascending))
         Layout: =Layout.Vertical
-        OnSelect: =Navigate(EditScreen1, ScreenTransition.None)
         TemplatePadding: =0
         TemplateSize: =127
         Width: =725
@@ -69,7 +68,10 @@ CampaignScreen As screen:
             AccessibleLabel: =Self.Tooltip
             Height: =60
             Icon: =Icon.ChevronRight
-            OnSelect: =Navigate(EditScreen1);
+            OnSelect: |-
+                =Select(Parent);
+                Set(varCurrentCampaign, ExistingCampaignGallery.Selected);
+                Navigate(EditCampaignScreen);
             PaddingBottom: =10
             PaddingLeft: =10
             PaddingRight: =10
@@ -130,7 +132,7 @@ CampaignScreen As screen:
         ZIndex: =6
 
     Button6_5 As button:
-        OnSelect: =NewForm(EditForm1);Navigate(NewScreen1, ScreenTransition.None); Set(varShowForm,true)
+        OnSelect: =NewForm(EditForm1);Navigate(CreateNewScreen, ScreenTransition.None); Set(varShowForm,true)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -141,7 +143,7 @@ CampaignScreen As screen:
         ZIndex: =7
 
     Button6_4 As button:
-        OnSelect: =Navigate(BrowseScreen1);
+        OnSelect: =Navigate(TemplatesScreen);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0

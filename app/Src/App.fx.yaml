@@ -1,5 +1,5 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: =BrowseScreen1
+    OnStart: =TemplatesScreen
     StartScreen: =CampaignScreen
 

@@ -1,4 +1,4 @@
-NewScreen1 As screen:
+CreateNewScreen As screen:
     OnVisible: =
 
     Preview As button:
@@ -13,7 +13,7 @@ NewScreen1 As screen:
         ZIndex: =1
 
     Cancel As button:
-        OnSelect: =If(varTabSelected = 1, Navigate(CampaignScreen), Navigate(BrowseScreen1));
+        OnSelect: =If(varTabSelected = 1, Navigate(CampaignScreen), Navigate(TemplatesScreen));
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -25,7 +25,7 @@ NewScreen1 As screen:
 
     Save As button:
         OnSelect: |
-            =If(varTabSelected = 1, SubmitForm(EditForm1_2), SubmitForm(EditForm2_1)); 
+            =If(varTabSelected = 1, SubmitForm(NewCampaignForm), SubmitForm(NewTemplateForm)); 
             Notify(
                 "Success: form was successfully saved",
                 NotificationType.Success
@@ -39,12 +39,12 @@ NewScreen1 As screen:
         Y: =684
         ZIndex: =3
 
-    EditForm2_1 As form:
+    NewTemplateForm As form:
         DataSource: =TemplateList
         DefaultMode: =FormMode.New
         Height: =377
         NumberOfColumns: =1
-        OnSuccess: =ResetForm(EditForm2_1); NewForm(EditForm2_1); Navigate(BrowseScreen1);
+        OnSuccess: =ResetForm(NewTemplateForm); NewForm(NewTemplateForm); Navigate(TemplatesScreen);
         Visible: =If(varTabSelected = 2, true, false)
         Width: =855
         X: =282
@@ -179,13 +179,13 @@ NewScreen1 As screen:
                 Y: =33
                 ZIndex: =6
 
-    EditForm1_2 As form:
+    NewCampaignForm As form:
         DataSource: =NewCampaign
         DefaultMode: =FormMode.New
         Height: =541
-        Item: =BrowseGallery1_3.Selected
+        Item: =ExistingCampaignGallery.Selected
         NumberOfColumns: =1
-        OnSuccess: =ResetForm(EditForm1_2); NewForm(EditForm1_2); Navigate(CampaignScreen);
+        OnSuccess: =ResetForm(NewCampaignForm); NewForm(NewCampaignForm); Navigate(CampaignScreen);
         Visible: =If(varTabSelected = 1, true, false)
         Width: =910
         X: =227
@@ -581,7 +581,7 @@ NewScreen1 As screen:
     Icon5_2 As icon.BackArrow:
         Height: =48
         Icon: =Icon.BackArrow
-        OnSelect: =ResetForm(EditForm1_2);Back();
+        OnSelect: =ResetForm(NewCampaignForm);Back();
         X: =258
         Y: =27
         ZIndex: =8

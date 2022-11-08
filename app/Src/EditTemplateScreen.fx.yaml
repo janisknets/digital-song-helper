@@ -1,4 +1,4 @@
-EditTemplate As screen:
+EditTemplateScreen As screen:
     OnVisible: |-
         =UpdateContext({varShowPopup :false})
 
@@ -172,7 +172,7 @@ EditTemplate As screen:
         ZIndex: =9
 
     Button12_3 As button:
-        OnSelect: =Navigate(BrowseScreen1);
+        OnSelect: =Navigate(TemplatesScreen);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -202,7 +202,7 @@ EditTemplate As screen:
             Fill: =RGBA(0, 134, 208, 1)
             Height: =44
             OnSelect: |-
-                =UpdateContext({varShowPopup:false}); Navigate(BrowseScreen1);
+                =UpdateContext({varShowPopup:false}); Navigate(TemplatesScreen);
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0

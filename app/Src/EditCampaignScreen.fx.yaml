@@ -1,11 +1,11 @@
-EditScreen1 As screen:
+EditCampaignScreen As screen:
     OnVisible: |-
         =UpdateContext({varShowPopup :false})
 
     EditForm1 As form:
         DataSource: =NewCampaign
         Height: =556
-        Item: =BrowseGallery1_3.Selected
+        Item: =ExistingCampaignGallery.Selected
         NumberOfColumns: =1
         OnSuccess: =Back()
         Width: =910
@@ -429,7 +429,7 @@ EditScreen1 As screen:
             Fill: =RGBA(0, 134, 208, 1)
             Height: =44
             OnSelect: |-
-                =UpdateContext({varShowPopup:false}); Remove([@NewCampaign], BrowseGallery1_3.Selected); If (IsEmpty(Errors([@NewCampaign], BrowseGallery1_3.Selected)), Back())
+                =UpdateContext({varShowPopup:false}); Remove([@NewCampaign], ExistingCampaignGallery.Selected); If (IsEmpty(Errors([@NewCampaign], ExistingCampaignGallery.Selected)), Back())
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0

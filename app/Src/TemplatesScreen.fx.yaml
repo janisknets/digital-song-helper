@@ -1,4 +1,4 @@
-BrowseScreen1 As screen:
+TemplatesScreen As screen:
     OnVisible: =
 
     Icon3 As icon.Reload:
@@ -27,7 +27,7 @@ BrowseScreen1 As screen:
         Height: =414
         Items: =SortByColumns(Filter([@TemplateList], StartsWith(Title, TextSearchBox2.Text)), "Title", If(SortDescending1, Descending, Ascending))
         Layout: =Layout.Vertical
-        OnSelect: =Navigate(EditScreen1, ScreenTransition.None)
+        OnSelect: =Navigate(EditCampaignScreen, ScreenTransition.None)
         TemplatePadding: =0
         TemplateSize: =Min(104, Self.Height - 60)
         Width: =725
@@ -67,7 +67,7 @@ BrowseScreen1 As screen:
             AccessibleLabel: =Self.Tooltip
             Height: =60
             Icon: =Icon.ChevronRight
-            OnSelect: =Navigate(EditTemplate);
+            OnSelect: =Navigate(EditTemplateScreen);
             PaddingBottom: =10
             PaddingLeft: =10
             PaddingRight: =10
@@ -116,7 +116,7 @@ BrowseScreen1 As screen:
         ZIndex: =6
 
     Button6 As button:
-        OnSelect: =NewForm(EditForm1);Navigate(NewScreen1, ScreenTransition.None); Set(varShowForm,true)
+        OnSelect: =NewForm(EditForm1);Navigate(CreateNewScreen, ScreenTransition.None); Set(varShowForm,true)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0

@@ -53,7 +53,7 @@ ImportExcelData As screen:
         Y: =38
         ZIndex: =6
 
-    "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+    "RecepientGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         Height: =523
         Items: =TestList
         Layout: =Layout.Vertical
@@ -70,7 +70,7 @@ ImportExcelData As screen:
             Icon: =Icon.ChevronRight
             OnSelect: |-
                 =Select(Parent);
-                Set(varTestListItem, Gallery1.Selected);
+                Set(varTestListItem, RecepientGallery.Selected);
                 Navigate(FormExcelData);
             PaddingBottom: =10
             PaddingLeft: =10
@@ -375,7 +375,7 @@ ImportExcelData As screen:
             Icon: =Icon.Trash
             OnSelect: |-
                 =Select(Parent);
-                Set(varTestListItem, Gallery1.Selected);
+                Set(varTestListItem, RecepientGallery.Selected);
                 RemoveIf(TestList, RoleID = varTestListItem.RoleID);
                 Refresh(TestList);
             PaddingBottom: =10
