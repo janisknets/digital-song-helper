@@ -1974,6 +1974,126 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "CampaignScreen.Icon4.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CampaignScreen.Icon4.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "CampaignScreen",
+                "type": "CampaignScreen.Icon4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CampaignScreen.Icon4.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CampaignScreen.Icon4.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "CampaignScreen",
+                "type": "CampaignScreen.Icon4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "NavMenu.Container1.NavGallery.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "NavMenu.Container1.NavGallery.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "NavMenu",
+                "type": "NavMenu.Container1.NavGallery"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "NavMenu.Container1.NavGallery.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "NavMenu.Container1.NavGallery.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "NavMenu",
+                "type": "NavMenu.Container1.NavGallery"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.varCurrentCampaign"
                 }
               ],
@@ -2004,6 +2124,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.varMenuIsOpen"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varMenuIsOpen",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varMenuIsOpen",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App._selectedUser"
                 }
               ],
@@ -2015,6 +2165,36 @@
               },
               "properties": {
                 "member": "_selectedUser",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.varMenuItems"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varMenuItems",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varMenuItems",
                 "module": "App",
                 "type": "App"
               }

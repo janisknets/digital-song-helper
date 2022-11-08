@@ -1,16 +1,6 @@
 CampaignScreen As screen:
     OnVisible: =Set(varCurrentCampaign, Blank());
 
-    Icon3_2 As icon.Reload:
-        Color: =RGBA(56, 96, 178, 1)
-        Height: =54
-        Icon: =Icon.Reload
-        OnSelect: =Refresh([@NewCampaign])
-        Width: =41
-        X: =819
-        Y: =38
-        ZIndex: =1
-
     "ExistingCampaignGallery As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
         Height: =414
         Items: =SortByColumns(Filter([@NewCampaign], StartsWith(Title, TextSearchBox2_2.Text)), "Title", If(SortDescending1, Descending, Ascending))
@@ -90,6 +80,16 @@ CampaignScreen As screen:
             Y: =Parent.TemplateHeight - 1
             ZIndex: =5
 
+    Icon3_2 As icon.Reload:
+        Color: =RGBA(56, 96, 178, 1)
+        Height: =54
+        Icon: =Icon.Reload
+        OnSelect: =Refresh([@NewCampaign])
+        Width: =41
+        X: =819
+        Y: =38
+        ZIndex: =2
+
     Icon2_2 As icon.ArrowsUpDown:
         Color: =RGBA(56, 96, 178, 1)
         Fill: =RGBA(255, 255, 255, 1)
@@ -100,7 +100,7 @@ CampaignScreen As screen:
         Width: =56
         X: =860
         Y: =45
-        ZIndex: =2
+        ZIndex: =3
 
     TextSearchBox2_2 As text:
         BorderThickness: =1
@@ -165,4 +165,11 @@ CampaignScreen As screen:
         X: =474
         Y: =30
         ZIndex: =9
+
+    Icon4 As icon.Hamburger:
+        Icon: =Icon.Hamburger
+        OnSelect: =Set(varMenuIsOpen, true);
+        X: =40
+        Y: =40
+        ZIndex: =10
 

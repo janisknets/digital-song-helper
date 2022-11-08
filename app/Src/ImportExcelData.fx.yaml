@@ -404,7 +404,7 @@ ImportExcelData As screen:
         ZIndex: =8
 
     Button10_1 As button:
-        DisplayMode: =If(!IsBlank(TestList), DisplayMode.Edit, DisplayMode.Disabled)
+        DisplayMode: =If(IsBlank(First(TestList)), DisplayMode.Disabled, DisplayMode.Edit)
         Fill: =RGBA(255, 0, 0, 1)
         FontWeight: =FontWeight.Bold
         Height: =49

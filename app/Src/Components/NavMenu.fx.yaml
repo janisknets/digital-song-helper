@@ -1,0 +1,38 @@
+NavMenu As CanvasComponent:
+    CurrentScreen: =App.ActiveScreen
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =640
+    NavItems: |-
+        =Table({SampleStringField: "SampleText", SampleNumberField: 10, SampleBooleanField: true})
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Container1 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =Parent.Height
+        Width: =Parent.Width
+        ZIndex: =1
+
+        "NavGallery As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+            Layout: =Layout.Vertical
+            TemplatePadding: =0
+            TemplateSize: =Min(96, Self.Height - 60)
+            Y: =40
+            ZIndex: =1
+
+            Separator6 As rectangle:
+                Height: =1
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight - 1
+                ZIndex: =3
+
+            Button4 As button:
+                Align: =Align.Left
+                OnSelect: =Select(Parent)
+                Text: =
+                Width: =Parent.Width
+                ZIndex: =4
+
