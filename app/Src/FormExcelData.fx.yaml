@@ -2,6 +2,7 @@ FormExcelData As screen:
 
     TestListForm As form:
         DataSource: =TestList
+        DefaultMode: =FormMode.New
         Height: =439
         NumberOfColumns: =2
         Width: =1275
