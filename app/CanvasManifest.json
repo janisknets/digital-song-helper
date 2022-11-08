@@ -121,6 +121,7 @@
     "TestExcelScreenWithGallery",
     "TestAttachFile",
     "TestExcelDisplayScreen",
-    "ImportExcelData"
+    "ImportExcelData",
+    "FormExcelData"
   ]
 }
