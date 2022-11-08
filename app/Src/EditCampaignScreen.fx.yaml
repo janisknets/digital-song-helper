@@ -320,7 +320,7 @@ EditCampaignScreen As screen:
 
     Button1 As button:
         Height: =55
-        OnSelect: =SendUserEmail.Run();
+        OnSelect: =SendEmailFlow.Run(ExistingCampaignGallery.Selected.Subject, ExistingCampaignGallery.Selected.Template.Value);
         Text: ="Send Test"
         X: =1161
         Y: =450
