@@ -285,7 +285,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "11/08/2022 13:53:50",
+  "HeaderLastSavedDateTimeUTC": "11/08/2022 13:54:30",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "1511313e-9875-4d63-8a7a-5f47782d793d": "\"/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/fde44ad402fe454987e7a0d69d560d43\"",
@@ -293,6 +293,7 @@
     "4eed186c-64c0-449a-bbb0-8a395236b7fb": "\"/providers/microsoft.powerapps/apis/shared_excel/connections/e526667e741e402e867d03b967f13e4f\"",
     "6ea35d85-93af-4c5d-9a7a-bf033dd7f190": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/a7d550f55dd743f1a1114be34051eda8\"",
     "91e0d2b3-654f-4c07-bd05-321ea8e5882a": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/4f45a9c6a5b543c19f7b7eb63d6fae77-53934c434d28714a\"",
+    "93efba3d-302f-40c3-a3c7-3afd5a3d17d4": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/0E7AA25739EE45A1BFFD098A4C7D8A61-53934C434D28714A\"",
     "9dbc8f0e-45a9-4c28-83c0-f549b858ecf8": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/1350b1b4d75d4af0a521abc8be73990b\"",
     "b4633f66-b717-45d8-953a-dc4727bbed6a": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/7ab1e249e9984b44b5697cb70344615f\"",
     "cb7d9ef6-d2ef-466c-aa89-24ca403bfdcf": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/98e3168a0f414e45b6f85d34b162de47\"",
@@ -314,29 +315,30 @@
     "c776de9331294fea9c3519d9e868677c": 0
   },
   "OrderDataSource": {
-    "AttachFiles": 4,
-    "CampaignList": 7,
-    "CampaignList_1": 17,
-    "ComboBoxSample": 8,
-    "CustomGallerySample": 9,
-    "Data": 10,
-    "Data_1": 11,
-    "DropDownSample": 12,
-    "EasyUpload": 3,
-    "EmailTemplate": 13,
-    "EmailTemplate_1": 14,
-    "ExcelList": 20,
-    "ExcelUpload": 5,
-    "MyPeople": 22,
-    "NewCampaign": 15,
+    "AttachFiles": 5,
+    "CampaignList": 8,
+    "CampaignList_1": 18,
+    "ComboBoxSample": 9,
+    "CustomGallerySample": 10,
+    "Data": 11,
+    "Data_1": 12,
+    "DropDownSample": 13,
+    "EasyUpload": 4,
+    "EmailTemplate": 14,
+    "EmailTemplate_1": 15,
+    "ExcelList": 21,
+    "ExcelUpload": 6,
+    "MyPeople": 23,
+    "NewCampaign": 16,
     "Office365Outlook": 0,
     "Office365Users": 1,
     "SendEmail": 2,
-    "Table1": 16,
-    "Table1_1": 19,
-    "TemplateList": 18,
-    "TestList": 21,
-    "UploadFileTest": 6
+    "SendUserEmail": 3,
+    "Table1": 17,
+    "Table1_1": 20,
+    "TemplateList": 19,
+    "TestList": 22,
+    "UploadFileTest": 7
   },
   "OrderGroupControls": {
     "DeletePopup_1": {
@@ -687,7 +689,7 @@
       "typedDataCard": 16
     },
     "DeserializationLoadTime": 5.6925632,
-    "ErrorCount": 4
+    "ErrorCount": 1
   },
   "WasLocalDatabaseReferencesEmpty": true
 }
