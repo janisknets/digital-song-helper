@@ -11,8 +11,12 @@ NavMenu As CanvasComponent:
     ZIndex: =1
 
     Container1 As groupContainer.manualLayoutContainer:
-        Fill: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(0, 0, 0, .3)
         Height: =Parent.Height
+        PaddingBottom: =10
+        PaddingLeft: =10
+        PaddingRight: =10
+        PaddingTop: =10
         Width: =Parent.Width
         ZIndex: =1
 
@@ -22,17 +26,21 @@ NavMenu As CanvasComponent:
             Layout: =Layout.Vertical
             TemplatePadding: =0
             TemplateSize: =NavButton.Height + 5
+            Width: =Parent.Width - 20
+            X: =10
             Y: =(Parent.Height / 2) - (Self.Height / 2)
             ZIndex: =1
 
             NavButton As button:
                 Align: =Align.Left
                 AutoDisableOnSelect: =false
+                BorderColor: =Transparent
                 BorderThickness: =0
                 DisabledBorderColor: =RGBA(0, 18, 107, 1)
                 DisabledFill: =RGBA(0, 18, 107, 1)
                 DisplayMode: =If(ThisItem.Screen = NavMenu.CurrentScreen, DisplayMode.Disabled, DisplayMode.Edit)
                 Fill: =RGBA(136, 160, 209, 1)
+                FocusedBorderThickness: =0
                 OnSelect: =Navigate(ThisItem.Screen);
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
