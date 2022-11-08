@@ -1,7 +1,10 @@
 TestAttachFile As screen:
 
     Button4 As button:
-        OnSelect: =Launch(varFileLink)
+        OnSelect: |-
+            =Set(varAttachmentTest, JSON(Image1.Image, JSONFormat.IncludeBinaryData));
+            Set(varBase64Only, Mid(varAttachmentTest, Find(",", varAttachmentTest)+1, Len(varAttachmentTest)-Find(",", varAttachmentTest) - 1));
+            UploadFileTest.Run(Last(AttachmentControl.Attachments).Name, varBase64Only)
         Text: ="Button"
         X: =1065
         Y: =155
@@ -12,10 +15,7 @@ TestAttachFile As screen:
         Height: =120
         IsInDataCard: =true
         Items: =
-        OnAddFile: |-
-            =Set(varAttachment, JSON(Image1.Image, JSONFormat.IncludeBinaryData));
-            Set(varBase64Only, Mid(varAttachment, Find(",", varAttachment)+1, Len(varAttachment)-Find(",", varAttachment) - 1));
-            Set(varFileLink,EasyUpload.Run(Last(AttachmentControl.Attachments).Name, varBase64Only).sharepointfilelink);
+        OnAddFile: =
         PaddingBottom: =5
         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
         PaddingRight: =5
