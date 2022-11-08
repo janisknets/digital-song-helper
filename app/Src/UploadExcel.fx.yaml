@@ -157,20 +157,6 @@ UploadExcel As screen:
             Y: =0
             ZIndex: =9
 
-        Attachments_Column1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Attachments"
-            FieldName: ="{Attachments}"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =10
-            Text: =ThisItem.Attachments
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =10
-
     AttachmentControl_1 As attachments:
         BorderColor: =
         Height: =100
