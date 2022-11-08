@@ -33,7 +33,7 @@ EditScreen1 As screen:
                 AutoHeight: =true
                 Height: =34
                 Text: =Parent.DisplayName
-                Width: =(Parent.Width - 60) * 0.4
+                Width: =180
                 Wrap: =false
                 X: =30
                 Y: =10 + (DataCardValue2.Height / 2) - (Self.Height / 2)
@@ -52,8 +52,8 @@ EditScreen1 As screen:
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Tooltip: =Parent.DisplayName
-                Width: =715
-                X: =165
+                Width: =653
+                X: =225
                 Y: =12
                 ZIndex: =2
 
@@ -102,7 +102,7 @@ EditScreen1 As screen:
                 AutoHeight: =true
                 Height: =34
                 Text: =Parent.DisplayName
-                Width: =(Parent.Width - 60) * 0.4
+                Width: =180
                 Wrap: =false
                 X: =30
                 Y: =10 + (DataCardValue5.Height / 2) - (Self.Height / 2)
@@ -121,8 +121,8 @@ EditScreen1 As screen:
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Tooltip: =Parent.DisplayName
-                Width: =685
-                X: =195
+                Width: =653
+                X: =225
                 Y: =11
                 ZIndex: =2
 
@@ -170,7 +170,7 @@ EditScreen1 As screen:
                 AutoHeight: =true
                 Height: =34
                 Text: =Parent.DisplayName
-                Width: =(Parent.Width - 60) * 0.4
+                Width: =180
                 Wrap: =false
                 X: =30
                 Y: =10 + (DataCardValue7.Height / 2) - (Self.Height / 2)
@@ -189,8 +189,8 @@ EditScreen1 As screen:
                 SearchItems: =[]
                 SelectMultiple: =false
                 Tooltip: =Parent.DisplayName
-                Width: =660
-                X: =220
+                Width: =653
+                X: =225
                 Y: =13
                 ZIndex: =2
 
@@ -238,7 +238,7 @@ EditScreen1 As screen:
                 AutoHeight: =true
                 Height: =34
                 Text: =Parent.DisplayName
-                Width: =(Parent.Width - 60) * 0.4
+                Width: =180
                 Wrap: =false
                 X: =30
                 Y: =10 + (DataCardValue14.Height / 2) - (Self.Height / 2)
@@ -304,7 +304,7 @@ EditScreen1 As screen:
             DataCardKey8 As label:
                 Height: =36
                 Text: =Parent.DisplayName
-                Width: =178
+                Width: =180
                 Wrap: =false
                 X: =30
                 Y: =80
