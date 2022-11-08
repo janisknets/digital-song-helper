@@ -1,4 +1,5 @@
 UploadExcel As screen:
+    OnVisible: =Refresh(TestList)
 
     Label4 As label:
         Height: =44
