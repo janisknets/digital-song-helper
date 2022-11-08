@@ -259,17 +259,15 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "11/08/2022 08:04:22",
+  "HeaderLastSavedDateTimeUTC": "11/08/2022 08:10:34",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "1511313e-9875-4d63-8a7a-5f47782d793d": "\"/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/fde44ad402fe454987e7a0d69d560d43\"",
     "4066e6ec-1418-4c13-a7f3-326c7495cf14": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/c512630a4a6a477dbc908c7eb6767b7e\"",
     "4eed186c-64c0-449a-bbb0-8a395236b7fb": "\"/providers/microsoft.powerapps/apis/shared_excel/connections/e526667e741e402e867d03b967f13e4f\"",
     "6ea35d85-93af-4c5d-9a7a-bf033dd7f190": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/a7d550f55dd743f1a1114be34051eda8\"",
-    "8c56dd59-96bd-40c7-984d-2f3a2af9740a": "\"/providers/microsoft.powerapps/apis/shared_excelonlinebusiness/connections/dcc2657f2191404499eb70e0bf5bd23e\"",
     "91c449b1-422d-472e-b29e-e06c18e20448": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/52bbb816ff0b4e45b9107c94e60ba1b6\"",
     "9dbc8f0e-45a9-4c28-83c0-f549b858ecf8": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/1350b1b4d75d4af0a521abc8be73990b\"",
-    "a73eab5f-69f7-4096-b343-9e87c36d7bbf": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/5192320D8F97407BA03E4098063391E2-53934C434D28714A\"",
     "b4633f66-b717-45d8-953a-dc4727bbed6a": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/7ab1e249e9984b44b5697cb70344615f\"",
     "cb7d9ef6-d2ef-466c-aa89-24ca403bfdcf": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/98e3168a0f414e45b6f85d34b162de47\"",
     "f67f7638-5f07-403e-adf5-63845e38fb57": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/407cb3d7c2e443a7a760709a48c31196\""
@@ -288,30 +286,29 @@
     "c776de9331294fea9c3519d9e868677c": 0
   },
   "OrderDataSource": {
-    "AttachExcel_New": 6,
     "AttachFiles": 5,
-    "CampaignList": 7,
-    "CampaignList_1": 17,
-    "colGridData": 23,
-    "ComboBoxSample": 8,
-    "CustomGallerySample": 9,
-    "Data": 10,
-    "Data_1": 11,
-    "DropDownSample": 12,
+    "CampaignList": 6,
+    "CampaignList_1": 16,
+    "colGridData": 22,
+    "ComboBoxSample": 7,
+    "CustomGallerySample": 8,
+    "Data": 9,
+    "Data_1": 10,
+    "DropDownSample": 11,
     "EasyUpload": 4,
-    "EmailTemplate": 13,
-    "EmailTemplate_1": 14,
-    "ExcelList": 20,
-    "MyPeople": 22,
-    "NewCampaign": 15,
+    "EmailTemplate": 12,
+    "EmailTemplate_1": 13,
+    "ExcelList": 19,
+    "MyPeople": 21,
+    "NewCampaign": 14,
     "Office365Outlook": 0,
     "Office365Users": 1,
     "SendEmail": 2,
     "SendUserEmail": 3,
-    "Table1": 16,
-    "Table1_1": 19,
-    "TemplateList": 18,
-    "TestList": 21
+    "Table1": 15,
+    "Table1_1": 18,
+    "TemplateList": 17,
+    "TestList": 20
   },
   "OrderGroupControls": {
     "DeletePopup_1": {
@@ -637,7 +634,7 @@
       "typedDataCard": 16
     },
     "DeserializationLoadTime": 4.845658,
-    "ErrorCount": 1
+    "ErrorCount": 2
   },
   "WasLocalDatabaseReferencesEmpty": true
 }
