@@ -1,9 +1,11 @@
 FormExcelData As screen:
+    OnVisible: =ResetForm(TestListForm);
 
     TestListForm As form:
         DataSource: =TestList
         DefaultMode: =FormMode.New
         Height: =439
+        Item: =LookUp(TestList, TestList.RoleID = varTestListItem.RoleID));
         NumberOfColumns: =2
         Width: =1275
         X: =40
@@ -557,9 +559,20 @@ FormExcelData As screen:
     Button8 As button:
         OnSelect: |-
             =SubmitForm(TestListForm);
+            Set(varTestListItem, Blank());
             Navigate(ImportExcelData);
         Text: ="Save"
         X: =1120
         Y: =616
         ZIndex: =2
+
+    Button9 As button:
+        Fill: =RGBA(255, 0, 0, 1)
+        OnSelect: |-
+            =Set(varTestListItem, Blank());
+            Navigate(ImportExcelData);
+        Text: ="Cancel"
+        X: =891
+        Y: =616
+        ZIndex: =3
 

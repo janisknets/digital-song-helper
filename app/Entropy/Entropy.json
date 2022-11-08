@@ -46,6 +46,7 @@
     "Button8_2": 177,
     "Button8_3": 84,
     "Button8_4": 154,
+    "Button9": 348,
     "CampaignScreen": 238,
     "Cancel": 135,
     "Checkbox2_1": 47,
@@ -323,7 +324,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "11/08/2022 11:47:16",
+  "HeaderLastSavedDateTimeUTC": "11/08/2022 12:02:50",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "1511313e-9875-4d63-8a7a-5f47782d793d": "\"/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/fde44ad402fe454987e7a0d69d560d43\"",
@@ -456,10 +457,11 @@
     "Button7_2": 149,
     "Button7_3": 59,
     "Button7_4": 81,
-    "Button8": 297,
+    "Button8": 298,
     "Button8_2": 150,
     "Button8_3": 60,
     "Button8_4": 82,
+    "Button9": 297,
     "CampaignScreen": 0,
     "Cancel": 129,
     "Checkbox2_1": 190,
@@ -598,14 +600,14 @@
     "iconRemove2": 169,
     "Image1": 198,
     "Image1_1": 224,
-    "Image2": 299,
+    "Image2": 300,
     "ImportExcelData": 0,
     "Label1": 15,
     "Label1_1": 0,
     "Label1_2": 182,
-    "Label2": 298,
+    "Label2": 299,
     "Label4": 255,
-    "Label6": 300,
+    "Label6": 301,
     "Label7_1": 90,
     "Label7_2": 133,
     "Label7_3": 154,
@@ -767,7 +769,7 @@
       "typedDataCard": 16
     },
     "DeserializationLoadTime": 5.6925632,
-    "ErrorCount": 1
+    "ErrorCount": 4
   },
   "WasLocalDatabaseReferencesEmpty": true
 }

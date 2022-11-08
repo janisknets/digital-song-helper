@@ -1,5 +1,7 @@
 ImportExcelData As screen:
-    OnVisible: =Refresh(TestList)
+    OnVisible: |-
+        =Refresh(TestList);
+        Set(varTestListItem, Blank());
 
     Label4 As label:
         Height: =44
@@ -7,7 +9,7 @@ ImportExcelData As screen:
             ="Total number of contacts: " & CountRows(TestList)
         Width: =265
         X: =954
-        Y: =684
+        Y: =698
         ZIndex: =2
 
     Button4_1 As button:
@@ -63,7 +65,10 @@ ImportExcelData As screen:
             AccessibleLabel: =Self.Tooltip
             Height: =60
             Icon: =Icon.ChevronRight
-            OnSelect: =Select(Parent)
+            OnSelect: |-
+                =Select(Parent);
+                Set(varTestListItem, Gallery1.Selected);
+                Navigate(FormExcelData);
             PaddingBottom: =10
             PaddingLeft: =10
             PaddingRight: =10
