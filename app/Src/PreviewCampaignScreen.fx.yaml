@@ -1,10 +1,10 @@
-PreviewCampaign As screen:
+PreviewCampaignScreen As screen:
     OnVisible: |-
         =UpdateContext({varShowPopup: false})
 
-    EditForm1_1 As form:
+    CampaignPreviewForm As form:
         DataSource: =NewCampaign
-        DefaultMode: =FormMode.New
+        DefaultMode: =FormMode.View
         Height: =644
         NumberOfColumns: =1
         OnSuccess: =Back()
@@ -13,66 +13,7 @@ PreviewCampaign As screen:
         Y: =79
         ZIndex: =3
 
-        "'Message (html)_DataCard3_1' As typedDataCard.textualEditCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Message_x0028_html_x0029_"
-            Default: =ThisItem.'Message (html)'
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"Message_x0028_html_x0029_")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =197
-            MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "Message_x0028_html_x0029_")
-            Required: =false
-            Update: =RichTextEditor4_1.HtmlText
-            Width: =1194
-            X: =0
-            Y: =2
-            ZIndex: =1
-
-            DataCardKey6_1 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =(Parent.Width - 60) * 0.4
-                Wrap: =false
-                X: =30
-                Y: =10 + (RichTextEditor4_1.Height / 2) - (Self.Height / 2)
-                ZIndex: =1
-
-            ErrorMessage6_1 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =RichTextEditor4_1.Y + RichTextEditor4_1.Height
-                ZIndex: =3
-
-            StarVisible6_1 As label:
-                Align: =Align.Center
-                Height: =DataCardKey6_1.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey6_1.Y
-                ZIndex: =4
-
-            RichTextEditor4_1 As richTextEditor:
-                Default: =RichTextEditor1
-                Height: =212
-                Width: =853
-                X: =192
-                Y: =20
-                ZIndex: =5
-
-        Subject_DataCard1_1 As typedDataCard.textualEditCard:
+        Subject_DataCard3 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Subject"
             Default: =ThisItem.Subject
@@ -82,30 +23,26 @@ PreviewCampaign As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "Subject")
             Required: =false
-            Update: =DataCardValue3_1.Text
-            Visible: =true
+            Update: =DataCardValue18.Text
             Width: =1194
             X: =0
             Y: =0
-            ZIndex: =2
+            ZIndex: =1
 
-            DataCardKey3_1 As label:
+            DataCardKey21 As label:
                 AutoHeight: =true
                 Height: =34
                 Text: =Parent.DisplayName
-                Width: =(Parent.Width - 60) * 0.4
                 Wrap: =false
                 X: =30
-                Y: =10 + (DataCardValue3_1.Height / 2) - (Self.Height / 2)
+                Y: =10 + (DataCardValue18.Height / 2) - (Self.Height / 2)
                 ZIndex: =1
 
-            DataCardValue3_1 As text:
+            DataCardValue18 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =DataCardValue3
+                Default: =Parent.Default
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
-                Height: =38
-                HintText: ="Support From Baltic Song for <Client Name>"
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
@@ -113,12 +50,12 @@ PreviewCampaign As screen:
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Tooltip: =Parent.DisplayName
-                Width: =855
-                X: =190
-                Y: =11
+                Width: =853
+                X: =192
+                Y: =10
                 ZIndex: =2
 
-            ErrorMessage3_1 As label:
+            ErrorMessage21 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -130,17 +67,75 @@ PreviewCampaign As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue3_1.Y + DataCardValue3_1.Height
+                Y: =DataCardValue18.Y + DataCardValue18.Height
                 ZIndex: =3
 
-            StarVisible3_1 As label:
+            StarVisible21 As label:
                 Align: =Align.Center
-                Height: =DataCardKey3_1.Height
+                Height: =DataCardKey21.Height
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey3_1.Y
+                Y: =DataCardKey21.Y
+                ZIndex: =4
+
+        "'Message (html)_DataCard4' As typedDataCard.richTextEditorEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Message_x0028_html_x0029_"
+            Default: =ThisItem.'Message (html)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"Message_x0028_html_x0029_")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =305
+            Required: =false
+            Update: =DataCardValue20.HtmlText
+            Width: =1194
+            X: =0
+            Y: =1
+            ZIndex: =1
+
+            DataCardKey23 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Wrap: =false
+                X: =30
+                Y: =10 + (DataCardValue20.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            DataCardValue20 As richTextEditor:
+                Default: =Parent.Default
+                DisplayMode: =Parent.DisplayMode
+                Height: =289
+                Width: =853
+                X: =192
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage23 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue20.Y + DataCardValue20.Height
+                ZIndex: =3
+
+            StarVisible23 As label:
+                Align: =Align.Center
+                Height: =DataCardKey23.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey23.Y
                 ZIndex: =4
 
     Label7_2 As label:
@@ -167,7 +162,7 @@ PreviewCampaign As screen:
     Icon5_1 As icon.BackArrow:
         Height: =48
         Icon: =Icon.BackArrow
-        OnSelect: =ResetForm(EditForm1_1);Back()
+        OnSelect: =ResetForm(CampaignPreviewForm);Back()
         X: =286
         Y: =23
         ZIndex: =12
@@ -192,7 +187,7 @@ PreviewCampaign As screen:
             Fill: =RGBA(0, 134, 208, 1)
             Height: =44
             OnSelect: |-
-                =UpdateContext({varShowPopup:false}); Navigate(PreviewCampaign);
+                =UpdateContext({varShowPopup:false}); Navigate(PreviewCampaignScreen);
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0

@@ -116,7 +116,10 @@ TemplatesScreen As screen:
         ZIndex: =6
 
     Button6 As button:
-        OnSelect: =NewForm(EditForm1);Navigate(CreateNewScreen, ScreenTransition.None); Set(varShowForm,true)
+        OnSelect: |-
+            =NewForm(NewTemplateForm);
+            Set(varTabSelected, 2);
+            Navigate(CreateNewScreen);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -132,7 +135,7 @@ TemplatesScreen As screen:
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Text: ="Campaign List"
+        Text: ="Campaigns List"
         X: =481
         Y: =685
         ZIndex: =8
@@ -141,7 +144,7 @@ TemplatesScreen As screen:
         FontWeight: =FontWeight.Bold
         Height: =54
         Size: =24
-        Text: ="Template List"
+        Text: ="Templates List"
         Width: =333
         X: =474
         Y: =30

@@ -115,8 +115,8 @@
     "EditCampaignScreen",
     "EditTemplateScreen",
     "CreateNewScreen",
-    "PreviewCampaign",
-    "PreviewTemplate",
+    "PreviewCampaignScreen",
+    "PreviewTemplateScreen",
     "SendOutScreen",
     "ImportExcelData",
     "FormExcelData"
