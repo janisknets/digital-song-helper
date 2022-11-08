@@ -1,13 +1,11 @@
 FormExcelDataScreen As screen:
-    OnVisible: |-
-        =ResetForm(TestListForm);
-        If(!IsBlank(varTestListItem), EditForm(TestListForm));
+    OnVisible: =If(!IsBlank(varSelectedRecipientItem), EditForm(RecipientListForm));
 
-    TestListForm As form:
+    RecipientListForm As form:
         DataSource: =TestList
         DefaultMode: =FormMode.New
         Height: =439
-        Item: =LookUp(TestList, RoleID = varTestListItem.RoleID)
+        Item: =If(!IsBlank(varSelectedRecipientItem), RecipientGallery.Selected)
         NumberOfColumns: =2
         Width: =Parent.Width - 80
         X: =40
@@ -25,7 +23,7 @@ FormExcelDataScreen As screen:
             MaxLength: =DataSourceInfo([@TestList], DataSourceInfo.MaxLength, "Title")
             Required: =true
             Update: =DataCardValue6.Text
-            Width: =637
+            Width: =643
             X: =0
             Y: =0
             ZIndex: =2
@@ -93,7 +91,7 @@ FormExcelDataScreen As screen:
             MaxLength: =DataSourceInfo([@TestList], DataSourceInfo.MaxLength, "Email")
             Required: =false
             Update: =DataCardValue8.Text
-            Width: =637
+            Width: =643
             X: =1
             Y: =0
             ZIndex: =2
@@ -161,7 +159,7 @@ FormExcelDataScreen As screen:
             MaxLength: =DataSourceInfo([@TestList], DataSourceInfo.MaxLength, "RoleID")
             Required: =false
             Update: =DataCardValue9.Text
-            Width: =637
+            Width: =643
             X: =0
             Y: =1
             ZIndex: =2
@@ -229,7 +227,7 @@ FormExcelDataScreen As screen:
             MaxLength: =DataSourceInfo([@TestList], DataSourceInfo.MaxLength, "ProjectName")
             Required: =false
             Update: =DataCardValue10.Text
-            Width: =637
+            Width: =643
             X: =1
             Y: =1
             ZIndex: =2
@@ -297,7 +295,7 @@ FormExcelDataScreen As screen:
             MaxLength: =DataSourceInfo([@TestList], DataSourceInfo.MaxLength, "ClientName")
             Required: =false
             Update: =DataCardValue11.Text
-            Width: =637
+            Width: =643
             X: =0
             Y: =2
             ZIndex: =2
@@ -365,7 +363,7 @@ FormExcelDataScreen As screen:
             MaxLength: =DataSourceInfo([@TestList], DataSourceInfo.MaxLength, "RolePrimaryContact")
             Required: =false
             Update: =DataCardValue12.Text
-            Width: =637
+            Width: =643
             X: =1
             Y: =2
             ZIndex: =2
@@ -433,7 +431,7 @@ FormExcelDataScreen As screen:
             MaxLength: =DataSourceInfo([@TestList], DataSourceInfo.MaxLength, "RoleSkills")
             Required: =false
             Update: =DataCardValue13.Text
-            Width: =637
+            Width: =643
             X: =0
             Y: =3
             ZIndex: =2
@@ -501,7 +499,7 @@ FormExcelDataScreen As screen:
             MaxLength: =DataSourceInfo([@TestList], DataSourceInfo.MaxLength, "RoleSkills0")
             Required: =false
             Update: =DataCardValue16.Text
-            Width: =637
+            Width: =643
             X: =1
             Y: =3
             ZIndex: =2
@@ -560,8 +558,8 @@ FormExcelDataScreen As screen:
 
     Button8 As button:
         OnSelect: |-
-            =SubmitForm(TestListForm);
-            Set(varTestListItem, Blank());
+            =SubmitForm(RecipientListForm);
+            Set(varSelectedRecipientItem, Blank());
             Navigate(ImportExcelDataScreen);
         Text: ="Save"
         X: =1120
@@ -572,7 +570,7 @@ FormExcelDataScreen As screen:
         Fill: =RGBA(255, 0, 0, 1)
         HoverFill: =ColorFade(Self.BorderColor, 20%)
         OnSelect: |-
-            =Set(varTestListItem, Blank());
+            =Set(varSelectedRecipientItem, Blank());
             Navigate(ImportExcelDataScreen);
         Text: ="Cancel"
         X: =891
@@ -582,7 +580,7 @@ FormExcelDataScreen As screen:
     Label9 As label:
         FontWeight: =FontWeight.Semibold
         Size: =23
-        Text: =If(IsBlank(varTestListItem), "Create new item", "Edit " & varTestListItem.Title)
+        Text: =If(IsBlank(varSelectedRecipientItem), "Create new item", "Edit " & varSelectedRecipientItem.Title)
         Width: =Parent.Width - 160
         X: =70
         Y: =60

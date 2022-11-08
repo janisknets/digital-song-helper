@@ -663,14 +663,3 @@ PreviewCampaignScreen As screen:
         Y: =450
         ZIndex: =13
 
-    Button3 As button:
-        OnSelect: =SendUserEmail.Run();
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Text: ="Test Send"
-        X: =1132
-        Y: =604
-        ZIndex: =15
-

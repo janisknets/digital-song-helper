@@ -2,7 +2,6 @@ ImportExcelDataScreen As screen:
     OnVisible: |-
         =Set(varMenuIsOpen, Blank());
         Refresh(TestList);
-        Set(varTestListItem, Blank());
         Set(varAttachment, Blank());
 
     Label4 As label:
@@ -54,7 +53,7 @@ ImportExcelDataScreen As screen:
         Y: =38
         ZIndex: =6
 
-    "RecepientGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+    "RecipientGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         Height: =523
         Items: =TestList
         Layout: =Layout.Vertical
@@ -71,7 +70,7 @@ ImportExcelDataScreen As screen:
             Icon: =Icon.ChevronRight
             OnSelect: |-
                 =Select(Parent);
-                Set(varTestListItem, RecepientGallery.Selected);
+                Set(varSelectedRecipientItem, RecipientGallery.Selected);
                 Navigate(FormExcelDataScreen);
             PaddingBottom: =10
             PaddingLeft: =10
@@ -379,7 +378,7 @@ ImportExcelDataScreen As screen:
             Icon: =Icon.Trash
             OnSelect: |-
                 =Select(Parent);
-                Set(varTestListItem, RecepientGallery.Selected);
+                Set(varTestListItem, RecipientGallery.Selected);
                 RemoveIf(TestList, ID = varTestListItem.ID);
                 Refresh(TestList);
             PaddingBottom: =10
@@ -399,7 +398,8 @@ ImportExcelDataScreen As screen:
         Height: =49
         HoverFill: =ColorFade(Self.BorderColor, 20%)
         OnSelect: |-
-            =Set(varTestListItem, Blank());
+            =Set(varSelectedRecipientItem, Blank());
+            NewForm(RecipientListForm);
             Navigate(FormExcelDataScreen);
         Text: ="Create new item"
         Width: =258

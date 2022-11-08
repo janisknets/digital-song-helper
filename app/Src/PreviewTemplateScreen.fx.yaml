@@ -237,14 +237,3 @@ PreviewTemplateScreen As screen:
         Y: =23
         ZIndex: =12
 
-    Button3_1 As button:
-        OnSelect: =SendUserEmail.Run();
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Text: ="Test Send"
-        X: =861
-        Y: =687
-        ZIndex: =15
-
