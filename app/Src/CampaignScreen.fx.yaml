@@ -71,7 +71,7 @@ CampaignScreen As screen:
             TabIndex: =0
             Tooltip: ="View item details"
             Width: =48
-            X: =Parent.TemplateWidth - Self.Width - 5
+            X: =658
             Y: =68
             ZIndex: =4
 
@@ -99,7 +99,7 @@ CampaignScreen As screen:
             TabIndex: =0
             Tooltip: ="View item details"
             Width: =48
-            X: =Parent.TemplateWidth - Self.Width - 5
+            X: =658
             ZIndex: =6
 
     Icon3_2 As icon.Reload:
