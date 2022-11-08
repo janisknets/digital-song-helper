@@ -2,6 +2,7 @@ ImportExcelData As screen:
     OnVisible: |-
         =Refresh(TestList);
         Set(varTestListItem, Blank());
+        Set(varAttachment, Blank());
 
     Label4 As label:
         Height: =44
@@ -13,6 +14,7 @@ ImportExcelData As screen:
         ZIndex: =2
 
     Button4_1 As button:
+        DisplayMode: =If(IsBlank(Last(AttachmentControl_1.Attachments).Value), DisplayMode.Disabled, DisplayMode.Edit)
         Height: =49
         OnSelect: |-
             =Set(varResponse, Blank());
@@ -21,6 +23,7 @@ ImportExcelData As screen:
             Set(varResponse, ExcelUpload.Run(Last(AttachmentControl_1.Attachments).Name, varBase64Only).status);
             Reset(AttachmentControl_1);
             If(!IsBlank(varResponse), Refresh(TestList));
+            Set(varAttachment, Blank())
         Text: ="Import data"
         X: =496
         Y: =38
@@ -45,8 +48,8 @@ ImportExcelData As screen:
     Image1_1 As image:
         Height: =49
         Image: =Last(AttachmentControl_1.Attachments).Value
-        Width: =202
-        X: =1089
+        Width: =11
+        X: =1280
         Y: =38
         ZIndex: =6
 
@@ -77,7 +80,7 @@ ImportExcelData As screen:
             Tooltip: ="View item details"
             Width: =60
             X: =Parent.TemplateWidth - Self.Width - 5
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            Y: =Parent.TemplateHeight - Self.Height - 20
             ZIndex: =1
 
         Separator1 As rectangle:
@@ -110,6 +113,10 @@ ImportExcelData As screen:
 
                 RoleDescriptionLabel As label:
                     FontWeight: =FontWeight.Bold
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
                     Text: ="Role Description"
                     Width: =Parent.Width
                     ZIndex: =1
@@ -138,6 +145,10 @@ ImportExcelData As screen:
 
                 RoleContactLabel As label:
                     FontWeight: =FontWeight.Bold
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
                     Text: ="Role Fulfillment Contact"
                     Width: =Parent.Width
                     ZIndex: =1
@@ -150,7 +161,6 @@ ImportExcelData As screen:
                     PaddingTop: =0
                     Size: =13
                     Text: =ThisItem.'Role Fulfillment Contact'
-                    VerticalAlign: =VerticalAlign.Top
                     Width: =Parent.Width
                     X: =ProjectValue.X
                     Y: =ProjectValue.Y + ProjectValue.Height + 4
@@ -167,6 +177,10 @@ ImportExcelData As screen:
 
                 RoleContactLabel_1 As label:
                     FontWeight: =FontWeight.Bold
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
                     Text: ="Role Primary Contact"
                     Width: =Parent.Width
                     ZIndex: =1
@@ -179,7 +193,6 @@ ImportExcelData As screen:
                     PaddingTop: =0
                     Size: =13
                     Text: =ThisItem.'Role Primary Contact'
-                    VerticalAlign: =VerticalAlign.Top
                     Width: =Parent.Width
                     X: =ProjectValue.X
                     Y: =ProjectValue.Y + ProjectValue.Height + 4
@@ -196,6 +209,10 @@ ImportExcelData As screen:
 
                 RoleContactLabel_2 As label:
                     FontWeight: =FontWeight.Bold
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
                     Text: ="Role Skills"
                     Width: =Parent.Width
                     ZIndex: =1
@@ -208,7 +225,6 @@ ImportExcelData As screen:
                     PaddingTop: =0
                     Size: =13
                     Text: =ThisItem.'Role Skills'
-                    VerticalAlign: =VerticalAlign.Top
                     Width: =Parent.Width
                     X: =ProjectValue.X
                     Y: =ProjectValue.Y + ProjectValue.Height + 4
@@ -266,6 +282,10 @@ ImportExcelData As screen:
 
                 RoleIdLabel As label:
                     FontWeight: =FontWeight.Bold
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
                     Text: ="Role Id"
                     Width: =Parent.Width
                     ZIndex: =1
@@ -295,6 +315,10 @@ ImportExcelData As screen:
 
                 ProjectClientLabel As label:
                     FontWeight: =FontWeight.Bold
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
                     Text: ="Project Master Client"
                     Width: =Parent.Width
                     ZIndex: =1
@@ -342,4 +366,40 @@ ImportExcelData As screen:
                     Text: =ThisItem.Project
                     Width: =Parent.Width
                     ZIndex: =2
+
+        NextArrow1_1 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(255, 0, 0, 1)
+            Height: =60
+            Icon: =Icon.Trash
+            OnSelect: |-
+                =Select(Parent);
+                Set(varTestListItem, Gallery1.Selected);
+                RemoveIf(TestList, RoleID = varTestListItem.RoleID);
+                Refresh(TestList);
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =20
+            ZIndex: =5
+
+    Button10 As button:
+        Fill: =RGBA(152, 208, 70, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =49
+        HoverFill: =ColorFade(Self.BorderColor, 20%)
+        OnSelect: |-
+            =Set(varTestListItem, Blank());
+            Navigate(FormExcelData);
+        Text: ="Create new item"
+        Width: =258
+        X: =1011
+        Y: =38
+        ZIndex: =8
 
