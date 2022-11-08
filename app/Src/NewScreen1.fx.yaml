@@ -430,7 +430,7 @@ NewScreen1 As screen:
                 IsInDataCard: =true
                 Items: =Parent.Default
                 OnAddFile: |-
-                    =Set(varAttachment, JSON(Image1.Image, JSONFormat.IncludeBinaryData));
+                    =Set(varAttachment, JSON(Image4.Image, JSONFormat.IncludeBinaryData));
                     Set(varBase64Only, Mid(varAttachment, Find(",", varAttachment)+1, Len(varAttachment)-Find(",", varAttachment) - 1));
                     AttachFiles.Run(Last(Attachment.Attachments).Name, varBase64Only);
                 PaddingBottom: =5
@@ -600,4 +600,10 @@ NewScreen1 As screen:
         X: =1150
         Y: =345
         ZIndex: =9
+
+    Image4 As image:
+        Image: =Last(Attachment.Attachments).Value
+        X: =40
+        Y: =40
+        ZIndex: =10
 
