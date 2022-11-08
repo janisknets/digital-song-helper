@@ -1224,19 +1224,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "EditCampaignScreen.EditCampaignForm.'Message (html)_DataCard2'.RichTextEditor2.AccessibleLabel"
+                  "fullyQualifiedName": "EditCampaignScreen.EditCampaignForm.'Message (html)_DataCard8'.DataCardValue26.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "EditCampaignScreen.EditCampaignForm.'Message (html)_DataCard2'.RichTextEditor2.AccessibleLabel",
+                  "fullyQualifiedName": "EditCampaignScreen.EditCampaignForm.'Message (html)_DataCard8'.DataCardValue26.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "EditCampaignScreen",
-                "type": "EditCampaignScreen.EditCampaignForm.'Message (html)_DataCard2'.RichTextEditor2"
+                "type": "EditCampaignScreen.EditCampaignForm.'Message (html)_DataCard8'.DataCardValue26"
               }
             }
           ],

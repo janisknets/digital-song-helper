@@ -79,6 +79,65 @@ EditCampaignScreen As screen:
                 Y: =DataCardKey6.Y
                 ZIndex: =4
 
+        "'Message (html)_DataCard8' As typedDataCard.richTextEditorEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Message_x0028_html_x0029_"
+            Default: =ThisItem.'Message (html)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"Message_x0028_html_x0029_")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =368
+            Required: =false
+            Update: =DataCardValue26.HtmlText
+            Width: =910
+            X: =0
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey29 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =180
+                Wrap: =false
+                X: =30
+                Y: =10 + (DataCardValue26.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            DataCardValue26 As richTextEditor:
+                Default: =Parent.Default
+                DisplayMode: =Parent.DisplayMode
+                Height: =352
+                Width: =653
+                X: =225
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage29 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue26.Y + DataCardValue26.Height
+                ZIndex: =3
+
+            StarVisible29 As label:
+                Align: =Align.Center
+                Height: =DataCardKey29.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey29.Y
+                ZIndex: =4
+
         Title_DataCard2 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Title"
@@ -216,64 +275,6 @@ EditCampaignScreen As screen:
                 Wrap: =false
                 Y: =DataCardKey3.Y
                 ZIndex: =4
-
-        "'Message (html)_DataCard2' As typedDataCard.textualEditCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Message_x0028_html_x0029_"
-            Default: =ThisItem.'Message (html)'
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"Message_x0028_html_x0029_")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =259
-            MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "Message_x0028_html_x0029_")
-            Required: =false
-            Update: =RichTextEditor2.HtmlText
-            Width: =910
-            X: =0
-            Y: =3
-            ZIndex: =4
-
-            DataCardKey8 As label:
-                Height: =36
-                Text: =Parent.DisplayName
-                Width: =180
-                Wrap: =false
-                X: =30
-                Y: =80
-                ZIndex: =1
-
-            ErrorMessage8 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =RichTextEditor2.Y + RichTextEditor2.Height
-                ZIndex: =3
-
-            StarVisible8 As label:
-                Align: =Align.Center
-                Height: =DataCardKey8.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey8.Y
-                ZIndex: =4
-
-            RichTextEditor2 As richTextEditor:
-                Default: =Parent.Default
-                Height: =240
-                Width: =653
-                X: =225
-                Y: =5
-                ZIndex: =5
 
     Button11 As button:
         OnSelect: |-

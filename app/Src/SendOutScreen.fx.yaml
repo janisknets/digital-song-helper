@@ -236,9 +236,8 @@
         OnSelect: |-
             =Set(_emailRecipientString, Concat(MyPeople, Mail & ";"));           
             Office365Outlook.SendEmailV2(_emailRecipientString, TextEmailSubject2.Text, HtmlText1_1.HtmlText, {Importance:"Normal"});           
-            Reset(TextEmailSubject2);           
-                       
-            Clear(MyPeople)
+            Reset(TextEmailSubject2);
+            Clear(MyPeople);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
