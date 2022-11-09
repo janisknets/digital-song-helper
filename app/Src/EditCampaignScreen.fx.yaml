@@ -320,7 +320,7 @@ EditCampaignScreen As screen:
 
     Button1 As button:
         Height: =55
-        OnSelect: =SendEmailFlow.Run(ExistingCampaignGallery.Selected.Template.Id, ExistingCampaignGallery.Selected.Subject, ExistingCampaignGallery.Selected.'Message (html)');
+        OnSelect: =SendEmailFlow.Run(ExistingCampaignGallery.Selected.Subject, ExistingCampaignGallery.Selected.'Message (html)', ExistingCampaignGallery.Selected.Template.Id);
         Text: ="Send to Contacts"
         Width: =223
         X: =1116

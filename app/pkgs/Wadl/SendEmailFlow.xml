@@ -2,13 +2,13 @@
   <doc title="SendEmailFlow" />
   <grammars>
     <jsonTypes targetNamespace="https://unitedstates-002.azure-apim.net/apim/logicflows" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
-      <integer name="ManualTriggerInput_Gettemplate_Id_def" />
       <string name="ManualTriggerInput_Sendanemail_ux28_V2_ux29__Subject_def" />
       <string name="ManualTriggerInput_Sendanemail_ux28_V2_ux29__Body_def" />
+      <integer name="ManualTriggerInput_Getitem_Id_def" />
       <object name="ManualTriggerInput">
-        <property name="Gettemplate_Id" type="integer" />
         <property name="Sendanemail(V2)_Subject" type="string" />
         <property name="Sendanemail(V2)_Body" type="string" />
+        <property name="Getitem_Id" type="integer" />
       </object>
       <string name="ResponseActionOutput_status_def" />
       <object name="ResponseActionOutput">
@@ -27,9 +27,9 @@
             <doc title="The api version" />
           </param>
           <representation mediaType="application/json">
-            <param style="plain" name="Gettemplate_Id" path="/Gettemplate_Id" type="xs:long" required="true" />
             <param style="plain" name="Sendanemail(V2)_Subject" path="/Sendanemail(V2)_Subject" type="xs:string" required="true" />
             <param style="plain" name="Sendanemail(V2)_Body" path="/Sendanemail(V2)_Body" type="xs:string" required="true" />
+            <param style="plain" name="Getitem_Id" path="/Getitem_Id" type="xs:long" required="true" />
           </representation>
         </request>
         <response>
