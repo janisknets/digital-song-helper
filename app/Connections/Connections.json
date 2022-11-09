@@ -1,5 +1,5 @@
 {
-  "195f7bfa-1afa-4de1-8606-fbc98f7ebbde": {
+  "508d415e-51f3-4727-9ec1-f49c7b0decea": {
     "connectionParameters": {
       "workFlowCallbackUri": "https://prod-182.westus.logic.azure.com:443/workflows/14e7c4b8cd744c44a0b6d0150bdc7d3f/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=zNZRH5MRGvin2umhXOfMydAbOPoBR7-vWi2Q2IWp4ZM",
       "workflowEndpoint": "/subscriptions/be4c2756-6fa8-4d1b-91ba-70dc75410b5a/resourceGroups/e0793d390939496db129198edd916feb-80e5e4ad4ad14259abe2e638abb681e9/providers/Microsoft.Logic/workflows/6185b201-411f-4686-a7ee-8fc88c75d516",
@@ -11,24 +11,12 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
-        "6ea35d85-93af-4c5d-9a7a-bf033dd7f190": {
-          "value": "shared_office365"
-        },
-        "cb7d9ef6-d2ef-466c-aa89-24ca403bfdcf": {
-          "value": "shared_sharepointonline"
-        },
         "workflowEntityId": {},
         "workflowName": {
           "value": "6185b201-411f-4686-a7ee-8fc88c75d516"
         }
       },
       "parameterHintsV2": {
-        "shared_office365": {
-          "value": "6ea35d85-93af-4c5d-9a7a-bf033dd7f190"
-        },
-        "shared_sharepointonline": {
-          "value": "cb7d9ef6-d2ef-466c-aa89-24ca403bfdcf"
-        },
         "workflowEntityId": {},
         "workflowName": {
           "value": "6185b201-411f-4686-a7ee-8fc88c75d516"
@@ -44,7 +32,7 @@
       "shared_sharepointonline": "cb7d9ef6-d2ef-466c-aa89-24ca403bfdcf"
     },
     "dependents": [],
-    "id": "195f7bfa-1afa-4de1-8606-fbc98f7ebbde"
+    "id": "508d415e-51f3-4727-9ec1-f49c7b0decea"
   },
   "6ea35d85-93af-4c5d-9a7a-bf033dd7f190": {
     "connectionParameters": {
@@ -64,7 +52,7 @@
     ],
     "dependencies": {},
     "dependents": [
-      "195f7bfa-1afa-4de1-8606-fbc98f7ebbde"
+      "508d415e-51f3-4727-9ec1-f49c7b0decea"
     ],
     "id": "6ea35d85-93af-4c5d-9a7a-bf033dd7f190"
   },
@@ -184,9 +172,6 @@
     "datasets": {
       "https://ts.accenture.com/sites/THERIGA": {
         "dataSources": {
-          "ExcelList": {
-            "tableName": "fa162762-ad7c-41c8-991b-4996a94ba85c"
-          },
           "NewCampaign": {
             "tableName": "ad6f6764-1cdb-41e2-887a-47cf4a574528"
           },
@@ -202,7 +187,6 @@
     "dataSources": [
       "NewCampaign",
       "TemplateList",
-      "ExcelList",
       "TestList"
     ],
     "dependencies": {},
@@ -210,7 +194,7 @@
       "b4633f66-b717-45d8-953a-dc4727bbed6a",
       "f67f7638-5f07-403e-adf5-63845e38fb57",
       "91e0d2b3-654f-4c07-bd05-321ea8e5882a",
-      "195f7bfa-1afa-4de1-8606-fbc98f7ebbde"
+      "508d415e-51f3-4727-9ec1-f49c7b0decea"
     ],
     "id": "cb7d9ef6-d2ef-466c-aa89-24ca403bfdcf"
   },
