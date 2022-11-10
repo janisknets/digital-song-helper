@@ -90,7 +90,7 @@ CampaignScreen As screen:
                 =Select(Parent);
                 Set(varCurrentCampaign, ExistingCampaignGallery.Selected);
                 RemoveIf(NewCampaign, ID = varCurrentCampaign.ID);
-                Refresh(TestList);
+                Refresh(RecipientsList);
             PaddingBottom: =10
             PaddingLeft: =10
             PaddingRight: =10

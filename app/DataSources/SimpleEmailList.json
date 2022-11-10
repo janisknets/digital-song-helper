@@ -29,17 +29,15 @@
       "Created": "Created",
       "Editor": "Modified By",
       "Editor#Claims": "Modified By Claims",
-      "html": "html ",
       "ID": "ID",
       "Modified": "Modified",
-      "TemplateTitle": "Template Title",
-      "Title": "Title"
+      "Title": "Email"
     },
     "DatasetName": "https://ts.accenture.com/sites/THERIGA",
     "EncodeDataset": true,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "TemplateList",
+    "Name": "SimpleEmailList",
     "Type": "ConnectedDataSourceInfo"
   }
 ]

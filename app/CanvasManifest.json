@@ -119,6 +119,7 @@
     "PreviewTemplateScreen",
     "SendOutScreen",
     "ImportExcelDataScreen",
+    "ImportEmailsScreen",
     "FormExcelDataScreen"
   ]
 }

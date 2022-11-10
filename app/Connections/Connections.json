@@ -11,12 +11,24 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
+        "6ea35d85-93af-4c5d-9a7a-bf033dd7f190": {
+          "value": "shared_office365"
+        },
+        "cb7d9ef6-d2ef-466c-aa89-24ca403bfdcf": {
+          "value": "shared_sharepointonline"
+        },
         "workflowEntityId": {},
         "workflowName": {
           "value": "6185b201-411f-4686-a7ee-8fc88c75d516"
         }
       },
       "parameterHintsV2": {
+        "shared_office365": {
+          "value": "6ea35d85-93af-4c5d-9a7a-bf033dd7f190"
+        },
+        "shared_sharepointonline": {
+          "value": "cb7d9ef6-d2ef-466c-aa89-24ca403bfdcf"
+        },
         "workflowEntityId": {},
         "workflowName": {
           "value": "6185b201-411f-4686-a7ee-8fc88c75d516"
@@ -135,19 +147,23 @@
           "NewCampaign": {
             "tableName": "ad6f6764-1cdb-41e2-887a-47cf4a574528"
           },
+          "RecipientsList": {
+            "tableName": "f455c56a-9cc4-4be6-a2e2-a1d67c7486f2"
+          },
+          "SimpleEmailList": {
+            "tableName": "a8c79721-409f-45b9-8424-b3afa2754ab5"
+          },
           "TemplateList": {
             "tableName": "492f519b-ed56-4112-a982-2d2e8963289a"
-          },
-          "TestList": {
-            "tableName": "f455c56a-9cc4-4be6-a2e2-a1d67c7486f2"
           }
         }
       }
     },
     "dataSources": [
       "NewCampaign",
-      "TemplateList",
-      "TestList"
+      "SimpleEmailList",
+      "RecipientsList",
+      "TemplateList"
     ],
     "dependencies": {},
     "dependents": [

@@ -1,13 +1,13 @@
 ImportExcelDataScreen As screen:
     OnVisible: |-
         =Set(varMenuIsOpen, Blank());
-        Refresh(TestList);
+        Refresh(RecipientsList);
         Set(varAttachment, Blank());
 
     Label4 As label:
         Height: =44
         Text: |-
-            ="Total number of contacts: " & CountRows(TestList)
+            ="Total number of contacts: " & CountRows(RecipientsList)
         Width: =265
         X: =954
         Y: =698
@@ -22,7 +22,7 @@ ImportExcelDataScreen As screen:
             Set(varBase64Only, Mid(varAttachment, Find(",", varAttachment)+1, Len(varAttachment)-Find(",", varAttachment) - 1));
             Set(varResponse, ExcelUpload.Run(Last(AttachmentControl_1.Attachments).Name, varBase64Only).status);
             Reset(AttachmentControl_1);
-            If(!IsBlank(varResponse), Refresh(TestList));
+            If(!IsBlank(varResponse), Refresh(RecipientsList));
             Set(varAttachment, Blank())
         Text: ="Import data"
         X: =517
@@ -55,7 +55,7 @@ ImportExcelDataScreen As screen:
 
     "RecipientGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         Height: =523
-        Items: =TestList
+        Items: =RecipientsList
         Layout: =Layout.Vertical
         TemplatePadding: =10
         TemplateSize: =Min(ContainerRow1.Height + ContainerRow2.Height + 10, Self.Height - 60)
@@ -378,9 +378,9 @@ ImportExcelDataScreen As screen:
             Icon: =Icon.Trash
             OnSelect: |-
                 =Select(Parent);
-                Set(varTestListItem, RecipientGallery.Selected);
-                RemoveIf(TestList, ID = varTestListItem.ID);
-                Refresh(TestList);
+                Set(varRecipientsListItem, RecipientGallery.Selected);
+                RemoveIf(RecipientsList, ID = varRecipientsListItem.ID);
+                Refresh(RecipientsList);
             PaddingBottom: =10
             PaddingLeft: =10
             PaddingRight: =10
@@ -408,12 +408,12 @@ ImportExcelDataScreen As screen:
         ZIndex: =8
 
     Button10_1 As button:
-        DisplayMode: =If(IsBlank(First(TestList)), DisplayMode.Disabled, DisplayMode.Edit)
+        DisplayMode: =If(IsBlank(First(RecipientsList)), DisplayMode.Disabled, DisplayMode.Edit)
         Fill: =RGBA(255, 0, 0, 1)
         FontWeight: =FontWeight.Bold
         Height: =49
         HoverFill: =ColorFade(Self.BorderColor, 20%)
-        OnSelect: =RemoveIf(TestList, true)
+        OnSelect: =RemoveIf(RecipientsList, true)
         Text: ="Delete all"
         Width: =258
         X: =717

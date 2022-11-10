@@ -2,7 +2,7 @@ FormExcelDataScreen As screen:
     OnVisible: =If(!IsBlank(varSelectedRecipientItem), EditForm(RecipientListForm));
 
     RecipientListForm As form:
-        DataSource: =TestList
+        DataSource: =RecipientsList
         DefaultMode: =FormMode.New
         Height: =439
         Item: =If(!IsBlank(varSelectedRecipientItem), RecipientGallery.Selected)
@@ -17,10 +17,10 @@ FormExcelDataScreen As screen:
             DataField: ="Title"
             Default: =ThisItem.Title
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@TestList],DataSourceInfo.DisplayName,"Title")
+            DisplayName: =DataSourceInfo([@RecipientsList],DataSourceInfo.DisplayName,"Title")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@TestList], DataSourceInfo.MaxLength, "Title")
+            MaxLength: =DataSourceInfo([@RecipientsList], DataSourceInfo.MaxLength, "Title")
             Required: =true
             Update: =DataCardValue6.Text
             Width: =643
@@ -85,10 +85,10 @@ FormExcelDataScreen As screen:
             DataField: ="Email"
             Default: =ThisItem.'Project Master Client'
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@TestList],DataSourceInfo.DisplayName,"Email")
+            DisplayName: =DataSourceInfo([@RecipientsList],DataSourceInfo.DisplayName,"Email")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@TestList], DataSourceInfo.MaxLength, "Email")
+            MaxLength: =DataSourceInfo([@RecipientsList], DataSourceInfo.MaxLength, "Email")
             Required: =false
             Update: =DataCardValue8.Text
             Width: =643
@@ -153,10 +153,10 @@ FormExcelDataScreen As screen:
             DataField: ="RoleID"
             Default: =ThisItem.RoleID
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@TestList],DataSourceInfo.DisplayName,"RoleID")
+            DisplayName: =DataSourceInfo([@RecipientsList],DataSourceInfo.DisplayName,"RoleID")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@TestList], DataSourceInfo.MaxLength, "RoleID")
+            MaxLength: =DataSourceInfo([@RecipientsList], DataSourceInfo.MaxLength, "RoleID")
             Required: =false
             Update: =DataCardValue9.Text
             Width: =643
@@ -221,10 +221,10 @@ FormExcelDataScreen As screen:
             DataField: ="ProjectName"
             Default: =ThisItem.Project
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@TestList],DataSourceInfo.DisplayName,"ProjectName")
+            DisplayName: =DataSourceInfo([@RecipientsList],DataSourceInfo.DisplayName,"ProjectName")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@TestList], DataSourceInfo.MaxLength, "ProjectName")
+            MaxLength: =DataSourceInfo([@RecipientsList], DataSourceInfo.MaxLength, "ProjectName")
             Required: =false
             Update: =DataCardValue10.Text
             Width: =643
@@ -289,10 +289,10 @@ FormExcelDataScreen As screen:
             DataField: ="ClientName"
             Default: =ThisItem.RoleDescription
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@TestList],DataSourceInfo.DisplayName,"ClientName")
+            DisplayName: =DataSourceInfo([@RecipientsList],DataSourceInfo.DisplayName,"ClientName")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@TestList], DataSourceInfo.MaxLength, "ClientName")
+            MaxLength: =DataSourceInfo([@RecipientsList], DataSourceInfo.MaxLength, "ClientName")
             Required: =false
             Update: =DataCardValue11.Text
             Width: =643
@@ -357,10 +357,10 @@ FormExcelDataScreen As screen:
             DataField: ="RolePrimaryContact"
             Default: =ThisItem.'Role Fulfillment Contact'
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@TestList],DataSourceInfo.DisplayName,"RolePrimaryContact")
+            DisplayName: =DataSourceInfo([@RecipientsList],DataSourceInfo.DisplayName,"RolePrimaryContact")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@TestList], DataSourceInfo.MaxLength, "RolePrimaryContact")
+            MaxLength: =DataSourceInfo([@RecipientsList], DataSourceInfo.MaxLength, "RolePrimaryContact")
             Required: =false
             Update: =DataCardValue12.Text
             Width: =643
@@ -425,10 +425,10 @@ FormExcelDataScreen As screen:
             DataField: ="RoleSkills"
             Default: =ThisItem.'Role Primary Contact'
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@TestList],DataSourceInfo.DisplayName,"RoleSkills")
+            DisplayName: =DataSourceInfo([@RecipientsList],DataSourceInfo.DisplayName,"RoleSkills")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@TestList], DataSourceInfo.MaxLength, "RoleSkills")
+            MaxLength: =DataSourceInfo([@RecipientsList], DataSourceInfo.MaxLength, "RoleSkills")
             Required: =false
             Update: =DataCardValue13.Text
             Width: =643
@@ -493,10 +493,10 @@ FormExcelDataScreen As screen:
             DataField: ="RoleSkills0"
             Default: =ThisItem.'Role Skills'
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@TestList],DataSourceInfo.DisplayName,"RoleSkills0")
+            DisplayName: =DataSourceInfo([@RecipientsList],DataSourceInfo.DisplayName,"RoleSkills0")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@TestList], DataSourceInfo.MaxLength, "RoleSkills0")
+            MaxLength: =DataSourceInfo([@RecipientsList], DataSourceInfo.MaxLength, "RoleSkills0")
             Required: =false
             Update: =DataCardValue16.Text
             Width: =643

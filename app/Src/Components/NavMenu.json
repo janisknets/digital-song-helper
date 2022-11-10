@@ -84,7 +84,7 @@
             "Name": "Icon6",
             "Parent": "Container1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 274,
+            "PublishOrderIndex": 291,
             "Rules": [
               {
                 "Category": "Design",
@@ -269,7 +269,7 @@
                 "Name": "galleryTemplate2",
                 "Parent": "NavGallery",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 276,
+                "PublishOrderIndex": 293,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -475,7 +475,7 @@
                 "Name": "NavButton",
                 "Parent": "NavGallery",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 277,
+                "PublishOrderIndex": 294,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -798,7 +798,7 @@
             "Name": "NavGallery",
             "Parent": "Container1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 275,
+            "PublishOrderIndex": 292,
             "Rules": [
               {
                 "Category": "Data",
@@ -1062,7 +1062,7 @@
         "Name": "Container1",
         "Parent": "NavMenu",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 273,
+        "PublishOrderIndex": 290,
         "Rules": [
           {
             "Category": "Design",
@@ -1233,7 +1233,7 @@
       },
       "OnReset"
     ],
-    "LastModifiedTimestamp": "638035354106338350",
+    "LastModifiedTimestamp": "638036842345168353",
     "Name": "NavMenu",
     "Rules": [
       {
@@ -1344,7 +1344,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638035354106338350",
+  "LastModifiedTimestamp": "638036842345168353",
   "Name": "387f742cffb44065adbe7cbe1c49dd8b",
   "OverridableProperties": {},
   "Version": "638035295239587498"
