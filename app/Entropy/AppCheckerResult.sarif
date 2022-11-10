@@ -2584,36 +2584,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.varSelectedEmailItem"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.varSelectedEmailItem",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varSelectedEmailItem",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.np_research_1762317_FF9500 Copy"
                 }
               ],

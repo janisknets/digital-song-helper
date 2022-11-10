@@ -131,9 +131,9 @@ ImportEmailsScreen As screen:
             Icon: =Icon.Trash
             OnSelect: |-
                 =Select(Parent);
-                Set(varRecipientsListItem, SimpleRecipientGallery.Selected);
-                RemoveIf(RecipientsList, ID = varRecipientsListItem.ID);
-                Refresh(RecipientsList);
+                Set(varEmailListItem, SimpleRecipientGallery.Selected);
+                RemoveIf(SimpleEmailList, ID = varEmailListItem.ID);
+                Refresh(SimpleEmailList);
             PaddingBottom: =10
             PaddingLeft: =10
             PaddingRight: =10
@@ -151,7 +151,7 @@ ImportEmailsScreen As screen:
         Height: =49
         HoverFill: =ColorFade(Self.BorderColor, 20%)
         OnSelect: |-
-            =Set(varSelectedEmailItem, Blank());
+            =Set(varEmailListItem, Blank());
             NewForm(RecipientListForm);
             Navigate(FormExcelDataScreen);
         Text: ="Create new item"
