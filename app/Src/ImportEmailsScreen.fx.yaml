@@ -1,7 +1,7 @@
 ImportEmailsScreen As screen:
     OnVisible: |-
         =Set(varMenuIsOpen, Blank());
-        Refresh(RecipientsList);
+        Refresh(SimpleEmailList);
         Set(varAttachment, Blank());
 
     Label4_1 As label:
@@ -71,7 +71,7 @@ ImportEmailsScreen As screen:
             Icon: =Icon.ChevronRight
             OnSelect: |-
                 =Select(Parent);
-                Set(varSelectedRecipientItem, SimpleRecipientGallery.Selected);
+                EditForm(RecipientListForm);
                 UpdateContext({isPopupVisible: true});
             PaddingBottom: =10
             PaddingLeft: =10
@@ -132,8 +132,7 @@ ImportEmailsScreen As screen:
             Icon: =Icon.Trash
             OnSelect: |-
                 =Select(Parent);
-                Set(varEmailListItem, SimpleRecipientGallery.Selected);
-                RemoveIf(SimpleEmailList, ID = varEmailListItem.ID);
+                RemoveIf(SimpleEmailList, ID = SimpleRecipientGallery.Selected.ID);
                 Refresh(SimpleEmailList);
             PaddingBottom: =10
             PaddingLeft: =10
@@ -152,9 +151,8 @@ ImportEmailsScreen As screen:
         Height: =49
         HoverFill: =ColorFade(Self.BorderColor, 20%)
         OnSelect: |-
-            =Set(varEmailListItem, Blank());
-            NewForm(RecipientListForm);
-            Navigate(FormExcelDataScreen);
+            =NewForm(EmailForm);
+            UpdateContext({isPopupVisible: true});
         Text: ="Create new item"
         Width: =258
         X: =1011
@@ -203,6 +201,7 @@ ImportEmailsScreen As screen:
 
         EmailForm As form:
             DataSource: =SimpleEmailList
+            DefaultMode: =FormMode.New
             Fill: =RGBA(255, 255, 255, 1)
             Height: =Parent.Height - 400
             Item: =SimpleRecipientGallery.Selected
