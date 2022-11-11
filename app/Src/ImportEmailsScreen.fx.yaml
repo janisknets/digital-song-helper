@@ -203,7 +203,7 @@ ImportEmailsScreen As screen:
         EmailForm As form:
             DataSource: =SimpleEmailList
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =Parent.Height - 200
+            Height: =Parent.Height - 400
             NumberOfColumns: =1
             SnapToColumns: =false
             Width: =Parent.Width - 380
@@ -218,11 +218,11 @@ ImportEmailsScreen As screen:
                 DisplayMode: =Parent.DisplayMode
                 DisplayName: =DataSourceInfo([@SimpleEmailList],DataSourceInfo.DisplayName,"Title")
                 Fill: =RGBA(0, 0, 0, 0)
-                Height: =50
+                Height: =150
                 MaxLength: =DataSourceInfo([@SimpleEmailList], DataSourceInfo.MaxLength, "Title")
                 Required: =true
                 Update: =DataCardValue3.Text
-                Width: =986
+                Width: =984
                 X: =20
                 Y: =20
                 ZIndex: =2
@@ -278,4 +278,13 @@ ImportEmailsScreen As screen:
                     Wrap: =false
                     Y: =DataCardKey4.Y
                     ZIndex: =4
+
+        SubmitButton2 As button:
+            OnSelect: |-
+                =SubmitForm(EmailForm);
+                UpdateContext({isPopupVisible: false})
+            Text: ="Save"
+            X: =EmailForm.X + EmailForm.Width - Self.Width - 30
+            Y: =EmailForm.Y + EmailForm.Height - Self.Height - 30
+            ZIndex: =2
 
