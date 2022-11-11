@@ -197,6 +197,7 @@ ImportEmailsScreen As screen:
     PopupContainer1 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(0, 0, 0, 0.5)
         Height: =Parent.Height
+        Visible: =isPopupVisible
         Width: =Parent.Width
         ZIndex: =12
 
@@ -204,6 +205,7 @@ ImportEmailsScreen As screen:
             DataSource: =SimpleEmailList
             Fill: =RGBA(255, 255, 255, 1)
             Height: =Parent.Height - 400
+            Item: =SimpleRecipientGallery.Selected
             NumberOfColumns: =1
             SnapToColumns: =false
             Width: =Parent.Width - 380
