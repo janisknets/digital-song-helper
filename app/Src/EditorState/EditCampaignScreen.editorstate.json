@@ -4306,14 +4306,7 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "false",
-          "InvariantPropertyName": "OnSuccess",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "OnSuccess",
         "Visible"
       ],
       "HasDynamicProperties": false,

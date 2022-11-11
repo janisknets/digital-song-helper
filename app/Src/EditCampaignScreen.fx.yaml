@@ -7,7 +7,6 @@ EditCampaignScreen As screen:
         Height: =556
         Item: =ExistingCampaignGallery.Selected
         NumberOfColumns: =1
-        OnSuccess: =Back()
         Width: =910
         X: =227
         Y: =92
@@ -289,7 +288,8 @@ EditCampaignScreen As screen:
         ZIndex: =4
 
     Button12 As button:
-        OnSelect: =SubmitForm(EditCampaignForm);
+        OnSelect: |
+            =SubmitForm(EditCampaignForm);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
