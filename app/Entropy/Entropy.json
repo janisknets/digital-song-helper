@@ -328,12 +328,13 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "11/11/2022 11:34:09",
+  "HeaderLastSavedDateTimeUTC": "11/11/2022 12:33:17",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "11209837-3ced-48c7-a7a2-83a66c067d5a": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/6185b201411f4686a7ee8fc88c75d516-53934c434d28714a\"",
     "13d103cd-59bd-43d1-9d45-7a5107e34b97": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/090086E48A9842F1B184F36D1C6EB6FC-53934C434D28714A\"",
     "21c7dd26-005c-4b01-a6c5-6d265d8562e5": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/6cdfadf62c99421fb605c397cc350302-53934c434d28714a\"",
+    "55ba99d1-86c8-46e3-a5ce-bb314f2a8b0b": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/95E520C59BC348E994545EE197E323ED-53934C434D28714A\"",
     "6ea35d85-93af-4c5d-9a7a-bf033dd7f190": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/a7d550f55dd743f1a1114be34051eda8\"",
     "9dbc8f0e-45a9-4c28-83c0-f549b858ecf8": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/1350b1b4d75d4af0a521abc8be73990b\"",
     "cb7d9ef6-d2ef-466c-aa89-24ca403bfdcf": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/98e3168a0f414e45b6f85d34b162de47\"",
@@ -354,20 +355,21 @@
     "387f742cffb44065adbe7cbe1c49dd8b": 0
   },
   "OrderDataSource": {
-    "ComboBoxSample": 6,
-    "CustomGallerySample": 7,
-    "DropDownSample": 8,
+    "ComboBoxSample": 7,
+    "CustomGallerySample": 8,
+    "DropDownSample": 9,
     "ExcelEmailsUpload": 4,
     "ExcelUpload": 2,
-    "MyPeople": 13,
-    "NewCampaign": 9,
+    "MyPeople": 14,
+    "NewCampaign": 10,
     "Office365Outlook": 0,
     "Office365Users": 1,
-    "RecipientsList": 11,
+    "RecipientsList": 12,
     "SendEmailFlow": 3,
     "SendSimpleFlow": 5,
-    "SimpleEmailList": 12,
-    "TemplateList": 10
+    "SendTemplateFlow": 6,
+    "SimpleEmailList": 13,
+    "TemplateList": 11
   },
   "OrderGroupControls": {
     "DeletePopup_1": {

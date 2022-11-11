@@ -389,7 +389,7 @@ EditCampaignScreen As screen:
 
     Button1_1 As button:
         Height: =55
-        OnSelect: =SendSimpleFlow.Run(ExistingCampaignGallery.Selected.Subject, ExistingCampaignGallery.Selected.'Message (html)', ExistingCampaignGallery.Selected.Template.Id);
+        OnSelect: =SendTemplateFlow.Run(ExistingCampaignGallery.Selected.Subject, ExistingCampaignGallery.Selected.'Message (html)', ExistingCampaignGallery.Selected.Template.Id);
         Text: ="Send to Simple list"
         Width: =223
         X: =1116
