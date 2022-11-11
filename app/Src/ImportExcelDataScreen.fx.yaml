@@ -18,12 +18,13 @@ ImportExcelDataScreen As screen:
         Height: =49
         OnSelect: |-
             =Set(varResponse, Blank());
-            Set(varAttachment, JSON(Image1_1.Image, JSONFormat.IncludeBinaryData));
+            Set(varAttachment, JSON(DataBase64.Image, JSONFormat.IncludeBinaryData));
             Set(varBase64Only, Mid(varAttachment, Find(",", varAttachment)+1, Len(varAttachment)-Find(",", varAttachment) - 1));
             Set(varResponse, ExcelUpload.Run(Last(AttachmentControl_1.Attachments).Name, varBase64Only).status);
             Reset(AttachmentControl_1);
             If(!IsBlank(varResponse), Refresh(RecipientsList));
-            Set(varAttachment, Blank())
+            Set(varAttachment, Blank());
+            Set(varResponse, Blank());
         Text: ="Import data"
         X: =517
         Y: =38
@@ -45,7 +46,7 @@ ImportExcelDataScreen As screen:
         Y: =38
         ZIndex: =5
 
-    Image1_1 As image:
+    DataBase64 As image:
         Height: =49
         Image: =Last(AttachmentControl_1.Attachments).Value
         Width: =11
