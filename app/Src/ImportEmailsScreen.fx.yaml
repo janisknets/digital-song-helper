@@ -22,7 +22,7 @@ ImportEmailsScreen As screen:
             Set(varBase64Only, Mid(varAttachment, Find(",", varAttachment)+1, Len(varAttachment)-Find(",", varAttachment) - 1));
             Set(varResponse, ExcelEmailsUpload.Run(Last(AttachmentControl_2.Attachments).Name, varBase64Only).status);
             Reset(AttachmentControl_2);
-            If(!IsBlank(varResponse), Refresh(RecipientsList));
+            If(!IsBlank(varResponse), Refresh(SimpleEmailList));
             Set(varAttachment, Blank());
             Set(varResponse, Blank());
         Text: ="Import data"
