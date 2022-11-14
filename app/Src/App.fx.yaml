@@ -4,7 +4,8 @@ App As appinfo:
         =Set(varMenuItems, Table(
             {Title: "Campaings List", Screen: CampaignScreen}, 
             {Title: "Templates List", Screen: TemplatesScreen},
-            {Title: "Recipient List", Screen: ImportExcelDataScreen}
+            {Title: "Recipient List", Screen: ImportExcelDataScreen},
+            {Title: "Simple recepient List", Screen: ImportEmailsScreen}
         ));
         TemplatesScreen
     StartScreen: =CampaignScreen
