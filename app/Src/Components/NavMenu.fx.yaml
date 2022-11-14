@@ -21,7 +21,7 @@ NavMenu As CanvasComponent:
         ZIndex: =1
 
         "NavGallery As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
-            Height: =NavGallery.TemplateHeight * 3
+            Height: =NavGallery.TemplateHeight * 4
             Items: =NavMenu.NavItems
             Layout: =Layout.Vertical
             TemplatePadding: =0

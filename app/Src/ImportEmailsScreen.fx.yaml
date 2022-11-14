@@ -184,13 +184,13 @@ ImportEmailsScreen As screen:
     Container4_3 As groupContainer.manualLayoutContainer:
         Height: =Parent.Height - 80
         Visible: =varMenuIsOpen
-        Width: =240
+        Width: =300
         X: =20
         Y: =40
         ZIndex: =11
 
         NavMenu_4 As NavMenu:
-            Width: =220
+            Width: =Parent.Width
 
     PopupContainer1 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(0, 0, 0, 0.5)

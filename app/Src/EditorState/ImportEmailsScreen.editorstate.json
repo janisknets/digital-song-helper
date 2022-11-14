@@ -2738,7 +2738,7 @@
       "LayoutName": "vertical",
       "MetaDataIDKey": "",
       "Name": "EmailForm",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4561,7 +4561,14 @@
       "ControlPropertyState": [
         "Fill",
         "Height",
-        "Width",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "220",
+          "InvariantPropertyName": "Width",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "X",
         "Y",
         "ZIndex",
@@ -5733,7 +5740,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "SubmitButton2",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

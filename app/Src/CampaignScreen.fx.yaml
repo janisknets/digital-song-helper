@@ -199,12 +199,12 @@ CampaignScreen As screen:
     Container4 As groupContainer.manualLayoutContainer:
         Height: =Parent.Height - 80
         Visible: =varMenuIsOpen
-        Width: =240
+        Width: =300
         X: =20
         Y: =40
         ZIndex: =11
 
         NavMenu_1 As NavMenu:
             OnChange: =Set(varMenuIsOpen, false);
-            Width: =220
+            Width: =Parent.Width
 
