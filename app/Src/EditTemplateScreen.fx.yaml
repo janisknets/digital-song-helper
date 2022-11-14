@@ -2,7 +2,7 @@ EditTemplateScreen As screen:
     OnVisible: |-
         =UpdateContext({varShowPopup :false})
 
-    EditForm1_3 As form:
+    EditTemplateForm As form:
         DataSource: =TemplateList
         Height: =556
         Item: =BrowseGallery1.Selected
@@ -20,7 +20,7 @@ EditTemplateScreen As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@TemplateList],DataSourceInfo.DisplayName,"html")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =476
+            Height: =170
             Required: =false
             Update: =DataCardValue28.HtmlText
             Width: =910
@@ -41,7 +41,7 @@ EditTemplateScreen As screen:
             DataCardValue28 As richTextEditor:
                 Default: =Parent.Default
                 DisplayMode: =Parent.DisplayMode
-                Height: =450
+                Height: =350
                 Width: =653
                 X: =225
                 Y: =10
@@ -70,6 +70,72 @@ EditTemplateScreen As screen:
                 Width: =30
                 Wrap: =false
                 Y: =DataCardKey31.Y
+                ZIndex: =4
+
+        "'Template File_DataCard1' As typedDataCard.comboBoxEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Template_x0020_File"
+            Default: =ThisItem.'Template File'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@TemplateList],DataSourceInfo.DisplayName,"Template_x0020_File")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue4.Selected
+            Width: =910
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey5 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10 + (DataCardValue4.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            DataCardValue4 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Items: =Choices([@TemplateList].Template_x0020_File)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =Choices(TemplateList.Template_x0020_File,DataCardValue4.SearchText)
+                SelectMultiple: =false
+                Tooltip: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey5.X + DataCardKey5.Width
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage5 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue4.Y + DataCardValue4.Height
+                ZIndex: =3
+
+            StarVisible5 As label:
+                Align: =Align.Center
+                Height: =DataCardKey5.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey5.Y
                 ZIndex: =4
 
         Title_DataCard3 As typedDataCard.textualEditCard:
@@ -153,7 +219,7 @@ EditTemplateScreen As screen:
         ZIndex: =4
 
     Button12_2 As button:
-        OnSelect: =SubmitForm(EditForm1_3);
+        OnSelect: =SubmitForm(EditTemplateForm);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -166,7 +232,7 @@ EditTemplateScreen As screen:
     Icon5_3 As icon.BackArrow:
         Height: =48
         Icon: =Icon.BackArrow
-        OnSelect: =ResetForm(EditForm1_3);Back();
+        OnSelect: =ResetForm(EditTemplateForm);Back();
         X: =258
         Y: =27
         ZIndex: =9
