@@ -150,24 +150,15 @@ EditCampaignScreen As screen:
             MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "ExcelFileContent")
             Required: =false
             Update: =varBase64Only
+            Visible: =false
             Width: =864
             X: =0
             Y: =4
             ZIndex: =1
 
-            DataCardKey16 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
             DataCardValue23 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
+                Default: =Parent.Update
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 MaxLength: =Parent.MaxLength
@@ -179,7 +170,6 @@ EditCampaignScreen As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey16.Y + DataCardKey16.Height + 5
                 ZIndex: =2
 
         Title_DataCard2 As typedDataCard.textualEditCard:
