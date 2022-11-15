@@ -1,6 +1,7 @@
 EditCampaignScreen As screen:
     OnVisible: |-
-        =UpdateContext({varShowPopup :false})
+        =UpdateContext({varShowPopup :false});
+        Set(varBase64Only, Blank());
 
     EditCampaignForm As form:
         DataSource: =NewCampaign
@@ -499,14 +500,10 @@ EditCampaignScreen As screen:
         DisplayMode: =If(IsBlank(Last(AttachmentControl_3.Attachments).Value), DisplayMode.Disabled, DisplayMode.Edit)
         Height: =49
         OnSelect: |-
-            =Set(varResponse, Blank());
-            Set(varAttachment, JSON(DataBase64_1.Image, JSONFormat.IncludeBinaryData));
+            =Set(varAttachment, JSON(DataBase64_1.Image, JSONFormat.IncludeBinaryData));
             Set(varBase64Only, Mid(varAttachment, Find(",", varAttachment)+1, Len(varAttachment)-Find(",", varAttachment) - 1));
-            
             Reset(AttachmentControl_3);
-            If(!IsBlank(varResponse), Refresh(RecipientsList));
             Set(varAttachment, Blank());
-            Set(varResponse, Blank());
         Text: ="Import data"
         X: =715
         Y: =38
