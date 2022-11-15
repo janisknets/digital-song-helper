@@ -138,24 +138,25 @@ EditCampaignScreen As screen:
                 Y: =DataCardKey29.Y
                 ZIndex: =4
 
-        RecipientsListContent_DataCard2 As typedDataCard.textualViewCard:
+        RecipientsListContent_DataCard3 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="ExcelFileContent"
             Default: =ThisItem.RecipientsListContent
-            DisplayMode: =DisplayMode.View
+            DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"ExcelFileContent")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =40
+            Height: =50
+            MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "ExcelFileContent")
             Required: =false
+            Update: =varBase64Only
             Width: =864
             X: =0
             Y: =4
             ZIndex: =1
 
-            DataCardKey8 As label:
+            DataCardKey16 As label:
                 AutoHeight: =true
                 Height: =34
-                PaddingBottom: =0
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
@@ -163,17 +164,21 @@ EditCampaignScreen As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue19 As label:
-                AutoHeight: =true
+            DataCardValue23 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
-                Height: =27
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Default
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey8.Y + DataCardKey8.Height + 5
+                Y: =DataCardKey16.Y + DataCardKey16.Height + 5
                 ZIndex: =2
 
         Title_DataCard2 As typedDataCard.textualEditCard:
@@ -497,7 +502,7 @@ EditCampaignScreen As screen:
             =Set(varResponse, Blank());
             Set(varAttachment, JSON(DataBase64_1.Image, JSONFormat.IncludeBinaryData));
             Set(varBase64Only, Mid(varAttachment, Find(",", varAttachment)+1, Len(varAttachment)-Find(",", varAttachment) - 1));
-            UpdateContext({FileContent}, ExcelUpload.Run(Last(AttachmentControl_3.Attachments).Name, varBase64Only).status);
+            
             Reset(AttachmentControl_3);
             If(!IsBlank(varResponse), Refresh(RecipientsList));
             Set(varAttachment, Blank());
