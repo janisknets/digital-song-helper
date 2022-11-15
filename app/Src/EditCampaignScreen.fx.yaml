@@ -85,7 +85,7 @@ EditCampaignScreen As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"Message_x0028_html_x0029_")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =368
+            Height: =196
             Required: =false
             Update: =DataCardValue26.HtmlText
             Width: =910
@@ -106,7 +106,7 @@ EditCampaignScreen As screen:
             DataCardValue26 As richTextEditor:
                 Default: =Parent.Default
                 DisplayMode: =Parent.DisplayMode
-                Height: =352
+                Height: =175
                 Width: =653
                 X: =225
                 Y: =10
