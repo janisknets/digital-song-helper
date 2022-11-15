@@ -356,7 +356,7 @@ EditCampaignScreen As screen:
     Button1 As button:
         Height: =55
         OnSelect: =SendEmailFlow.Run(ExistingCampaignGallery.Selected.Template.Id, ExistingCampaignGallery.Selected.Subject, ExistingCampaignGallery.Selected.'Message (html)', varCurrentUser.Email);
-        Text: ="Send to Role list"
+        Text: ="Send to Role"
         Width: =223
         X: =1116
         Y: =572
@@ -424,7 +424,7 @@ EditCampaignScreen As screen:
 
     Button1_1 As button:
         Height: =55
-        OnSelect: =SendTemplateFlow.Run(ExistingCampaignGallery.Selected.Subject, ExistingCampaignGallery.Selected.'Message (html)', ExistingCampaignGallery.Selected.Template.Id);
+        OnSelect: =SendTemplateFlow.Run(ExistingCampaignGallery.Selected.Subject, ExistingCampaignGallery.Selected.Template.Id);
         Text: ="Send to Simple list"
         Width: =223
         X: =1116
