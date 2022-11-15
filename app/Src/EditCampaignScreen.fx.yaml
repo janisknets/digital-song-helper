@@ -4,12 +4,12 @@ EditCampaignScreen As screen:
 
     EditCampaignForm As form:
         DataSource: =NewCampaign
-        Height: =556
+        Height: =434
         Item: =ExistingCampaignGallery.Selected
         NumberOfColumns: =1
-        Width: =910
-        X: =227
-        Y: =92
+        Width: =864
+        X: =240
+        Y: =222
         ZIndex: =3
 
         Template_DataCard2 As typedDataCard.comboBoxEditCard:
@@ -22,7 +22,7 @@ EditCampaignScreen As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue7.Selected
-            Width: =910
+            Width: =864
             X: =0
             Y: =2
             ZIndex: =1
@@ -31,10 +31,10 @@ EditCampaignScreen As screen:
                 AutoHeight: =true
                 Height: =34
                 Text: =Parent.DisplayName
-                Width: =180
+                Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10 + (DataCardValue7.Height / 2) - (Self.Height / 2)
+                Y: =10
                 ZIndex: =1
 
             DataCardValue7 As combobox:
@@ -48,9 +48,9 @@ EditCampaignScreen As screen:
                 SearchItems: =Choices(NewCampaign.Template,DataCardValue7.SearchText)
                 SelectMultiple: =false
                 Tooltip: =Parent.DisplayName
-                Width: =653
-                X: =225
-                Y: =10
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey6.Y + DataCardKey6.Height + 5
                 ZIndex: =2
 
             ErrorMessage6 As label:
@@ -88,7 +88,7 @@ EditCampaignScreen As screen:
             Height: =196
             Required: =false
             Update: =DataCardValue26.HtmlText
-            Width: =910
+            Width: =864
             X: =0
             Y: =3
             ZIndex: =1
@@ -96,20 +96,21 @@ EditCampaignScreen As screen:
             DataCardKey29 As label:
                 AutoHeight: =true
                 Height: =34
+                PaddingBottom: =0
                 Text: =Parent.DisplayName
-                Width: =180
+                Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10 + (DataCardValue26.Height / 2) - (Self.Height / 2)
+                Y: =10
                 ZIndex: =1
 
             DataCardValue26 As richTextEditor:
                 Default: =Parent.Default
                 DisplayMode: =Parent.DisplayMode
                 Height: =175
-                Width: =653
-                X: =225
-                Y: =10
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey29.Y + DataCardKey29.Height + 5
                 ZIndex: =2
 
             ErrorMessage29 As label:
@@ -137,6 +138,44 @@ EditCampaignScreen As screen:
                 Y: =DataCardKey29.Y
                 ZIndex: =4
 
+        RecipientsListContent_DataCard2 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ExcelFileContent"
+            Default: =ThisItem.RecipientsListContent
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"ExcelFileContent")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =864
+            X: =0
+            Y: =4
+            ZIndex: =1
+
+            DataCardKey8 As label:
+                AutoHeight: =true
+                Height: =34
+                PaddingBottom: =0
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue19 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey8.Y + DataCardKey8.Height + 5
+                ZIndex: =2
+
         Title_DataCard2 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Title"
@@ -148,7 +187,7 @@ EditCampaignScreen As screen:
             MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "Title")
             Required: =false
             Update: =DataCardValue2.Text
-            Width: =910
+            Width: =864
             X: =0
             Y: =0
             ZIndex: =4
@@ -157,10 +196,10 @@ EditCampaignScreen As screen:
                 AutoHeight: =true
                 Height: =34
                 Text: =Parent.DisplayName
-                Width: =180
+                Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10 + (DataCardValue2.Height / 2) - (Self.Height / 2)
+                Y: =10
                 ZIndex: =1
 
             DataCardValue2 As text:
@@ -176,9 +215,9 @@ EditCampaignScreen As screen:
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Tooltip: =Parent.DisplayName
-                Width: =653
-                X: =225
-                Y: =12
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey2.Y + DataCardKey2.Height + 5
                 ZIndex: =2
 
             ErrorMessage2 As label:
@@ -217,7 +256,7 @@ EditCampaignScreen As screen:
             MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "Subject")
             Required: =false
             Update: =DataCardValue5.Text
-            Width: =910
+            Width: =864
             X: =0
             Y: =1
             ZIndex: =4
@@ -226,10 +265,10 @@ EditCampaignScreen As screen:
                 AutoHeight: =true
                 Height: =34
                 Text: =Parent.DisplayName
-                Width: =180
+                Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10 + (DataCardValue5.Height / 2) - (Self.Height / 2)
+                Y: =10
                 ZIndex: =1
 
             DataCardValue5 As text:
@@ -245,9 +284,9 @@ EditCampaignScreen As screen:
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Tooltip: =Parent.DisplayName
-                Width: =653
-                X: =225
-                Y: =11
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey3.Y + DataCardKey3.Height + 5
                 ZIndex: =2
 
             ErrorMessage3 As label:
@@ -450,4 +489,45 @@ EditCampaignScreen As screen:
             Width: =Parent.Width
             Y: =Label3.Height + Label5.Height + Label5_1.Height + Label5_2.Height + Label5_3.Height
             ZIndex: =6
+
+    Button4_3 As button:
+        DisplayMode: =If(IsBlank(Last(AttachmentControl_3.Attachments).Value), DisplayMode.Disabled, DisplayMode.Edit)
+        Height: =49
+        OnSelect: |-
+            =Set(varResponse, Blank());
+            Set(varAttachment, JSON(DataBase64_1.Image, JSONFormat.IncludeBinaryData));
+            Set(varBase64Only, Mid(varAttachment, Find(",", varAttachment)+1, Len(varAttachment)-Find(",", varAttachment) - 1));
+            UpdateContext({FileContent}, ExcelUpload.Run(Last(AttachmentControl_3.Attachments).Name, varBase64Only).status);
+            Reset(AttachmentControl_3);
+            If(!IsBlank(varResponse), Refresh(RecipientsList));
+            Set(varAttachment, Blank());
+            Set(varResponse, Blank());
+        Text: ="Import data"
+        X: =715
+        Y: =38
+        ZIndex: =18
+
+    AttachmentControl_3 As attachments:
+        BorderColor: =
+        Height: =100
+        IsInDataCard: =true
+        Items: =
+        OnAddFile: =
+        PaddingBottom: =5
+        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+        PaddingRight: =5
+        PaddingTop: =5
+        Tooltip: =
+        Width: =333
+        X: =349
+        Y: =38
+        ZIndex: =19
+
+    DataBase64_1 As image:
+        Height: =49
+        Image: =Last(AttachmentControl_3.Attachments).Value
+        Width: =11
+        X: =1300
+        Y: =58
+        ZIndex: =20
 

@@ -3,7 +3,7 @@
     "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
     "CdpRevision": {
       "BaseUrl": "/",
-      "LastChangedTimeString": "2022-11-01T17:46:29.8320000Z",
+      "LastChangedTimeString": "2022-11-09T20:26:35.1500000Z",
       "RevisionNumber": 1
     },
     "ConnectedDataSourceInfoNameMapping": {
@@ -26,19 +26,17 @@
       "Author": "Created By",
       "Author#Claims": "Created By Claims",
       "ComplianceAssetId": "Compliance Asset Id",
-      "Countofcontacts": "Count of contacts",
       "Created": "Created",
       "Editor": "Modified By",
       "Editor#Claims": "Modified By Claims",
+      "ExcelFileContent": "RecipientsListContent",
       "ID": "ID",
       "Message_x0028_html_x0029_": "Message (html)",
       "Modified": "Modified",
       "Subject": "Subject",
       "TemplateList": "Template",
       "TemplateList#Id": "Template Id",
-      "Title": "Title",
-      "UploadFile": "Upload File",
-      "UploadFile#Id": "Upload File Id"
+      "Title": "Title"
     },
     "DatasetName": "https://ts.accenture.com/sites/THERIGA",
     "EncodeDataset": true,

@@ -49,7 +49,7 @@ CampaignScreen As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =Concatenate(ThisItem.'Count of contacts', " contacts reached")
+            Text: =Concatenate(ThisItem.Countofcontacts, " contacts reached")
             VerticalAlign: =VerticalAlign.Top
             Width: =621
             X: =32
