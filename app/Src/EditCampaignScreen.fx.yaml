@@ -422,15 +422,6 @@ EditCampaignScreen As screen:
             Y: =173
             ZIndex: =14
 
-    Button1_1 As button:
-        Height: =55
-        OnSelect: =SendTemplateFlow.Run(ExistingCampaignGallery.Selected.Subject, "", ExistingCampaignGallery.Selected.Template.Id);
-        Text: ="Send to Simple list"
-        Width: =223
-        X: =1116
-        Y: =487
-        ZIndex: =16
-
     Container5 As groupContainer.manualLayoutContainer:
         Height: =346
         Width: =222
