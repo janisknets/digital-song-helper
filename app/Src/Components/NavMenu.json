@@ -1233,7 +1233,7 @@
       },
       "OnReset"
     ],
-    "LastModifiedTimestamp": "638040995270201927",
+    "LastModifiedTimestamp": "638042866084472905",
     "Name": "NavMenu",
     "Rules": [
       {
@@ -1344,7 +1344,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638040995270201927",
+  "LastModifiedTimestamp": "638042866084472905",
   "Name": "387f742cffb44065adbe7cbe1c49dd8b",
   "OverridableProperties": {},
   "Version": "638035295239587498"

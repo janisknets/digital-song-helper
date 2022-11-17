@@ -3,9 +3,7 @@ App As appinfo:
     OnStart: |-
         =Set(varMenuItems, Table(
             {Title: "Campaings List", Screen: CampaignScreen}, 
-            {Title: "Templates List", Screen: TemplatesScreen},
-            {Title: "Recipient List", Screen: ImportExcelDataScreen},
-            {Title: "Simple recepient List", Screen: ImportEmailsScreen}
+            {Title: "Templates List", Screen: TemplatesScreen}
         ));
         Set(varCurrentUser, User());
         TemplatesScreen
