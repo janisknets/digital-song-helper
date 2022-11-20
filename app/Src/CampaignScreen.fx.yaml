@@ -157,7 +157,7 @@ CampaignScreen As screen:
         OnSelect: |-
             =NewForm(NewCampaignForm);
             Set(varTabSelected, 1);
-            Navigate(CreateNewScreen);
+            Navigate(CreateNew);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -182,6 +182,7 @@ CampaignScreen As screen:
         Height: =48
         Icon: =Icon.Hamburger
         OnSelect: =Set(varMenuIsOpen, true);
+        Visible: =false
         Width: =48
         X: =40
         Y: =40

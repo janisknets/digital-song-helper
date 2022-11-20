@@ -1,5 +1,5 @@
-CreateNewScreen As screen:
-    OnVisible: =
+CreateNew As screen:
+    OnVisible: =Set(varTabSelected, 1);
 
     Preview As button:
         OnSelect: =If(varTabSelected = 1, Navigate(PreviewCampaignScreen), Navigate(PreviewTemplateScreen));
@@ -471,7 +471,7 @@ CreateNewScreen As screen:
             =Table({ID:1,Label:"Campaigns"},{ID:2,Label:"Templates"})
         TemplatePadding: =0
         TemplateSize: =163
-        Visible: =If(FormMode.New, true, false)
+        Visible: =false
         Width: =330
         X: =532
         Y: =27
@@ -512,4 +512,59 @@ CreateNewScreen As screen:
         X: =258
         Y: =27
         ZIndex: =8
+
+    Container5_1 As groupContainer.manualLayoutContainer:
+        Height: =346
+        Width: =222
+        X: =18
+        Y: =281
+        ZIndex: =9
+
+        Label3_1 As label:
+            AutoHeight: =true
+            FontWeight: =FontWeight.Semibold
+            Text: |-
+                ="Available variables:"
+            Width: =Parent.Width
+            ZIndex: =1
+
+        Label5_5 As label:
+            AutoHeight: =true
+            Size: =12
+            Text: ="[$MyName] -- Current username"
+            Width: =Parent.Width
+            Y: =Label3_1.Height
+            ZIndex: =2
+
+        Label5_6 As label:
+            AutoHeight: =true
+            Size: =12
+            Text: ="[$PrimaryContactName] -- Role Primary Contact Name"
+            Width: =Parent.Width
+            Y: =Label3_1.Height + Label5_5.Height
+            ZIndex: =3
+
+        Label5_7 As label:
+            AutoHeight: =true
+            Size: =12
+            Text: ="[$RoleId] -- Role ID"
+            Width: =Parent.Width
+            Y: =Label3_1.Height + Label5_5.Height + Label5_6.Height
+            ZIndex: =4
+
+        Label5_8 As label:
+            AutoHeight: =true
+            Size: =12
+            Text: ="[$RoleTitle] -- Role Title"
+            Width: =Parent.Width
+            Y: =Label3_1.Height + Label5_5.Height + Label5_6.Height + Label5_7.Height
+            ZIndex: =5
+
+        Label5_9 As label:
+            AutoHeight: =true
+            Size: =12
+            Text: ="[$RoleDescription] -- Role Description"
+            Width: =Parent.Width
+            Y: =Label3_1.Height + Label5_5.Height + Label5_6.Height + Label5_7.Height + Label5_8.Height
+            ZIndex: =6
 

@@ -119,7 +119,7 @@ TemplatesScreen As screen:
         OnSelect: |-
             =NewForm(NewTemplateForm);
             Set(varTabSelected, 2);
-            Navigate(CreateNewScreen);
+            Navigate(CreateNew);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
