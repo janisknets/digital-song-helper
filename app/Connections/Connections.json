@@ -178,6 +178,40 @@
     ],
     "id": "6ea35d85-93af-4c5d-9a7a-bf033dd7f190"
   },
+  "7b2408d4-58bf-4082-ac35-b176f4c50865": {
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-100.westus.logic.azure.com:443/workflows/11bbcb5497d846f4b591f4ac8f6e058f/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=WI_vUIdof3PXUl6_5N-vS2UHH7dP0x4n3nycnJ8ut0U",
+      "workflowEndpoint": "/subscriptions/be4c2756-6fa8-4d1b-91ba-70dc75410b5a/resourceGroups/e0793d390939496db129198edd916feb-80e5e4ad4ad14259abe2e638abb681e9/providers/Microsoft.Logic/workflows/10a13dbd-4d53-46aa-ab32-216fe3a99a9c",
+      "workflowName": "10a13dbd-4d53-46aa-ab32-216fe3a99a9c",
+      "workflowPath": "/subscriptions/be4c2756-6fa8-4d1b-91ba-70dc75410b5a/resourceGroups/e0793d390939496db129198edd916feb-80e5e4ad4ad14259abe2e638abb681e9/providers/Microsoft.Logic/workflows/10a13dbd-4d53-46aa-ab32-216fe3a99a9c"
+    },
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "10a13dbd-4d53-46aa-ab32-216fe3a99a9c"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "10a13dbd-4d53-46aa-ab32-216fe3a99a9c"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "GetTemplateHTML"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "cb7d9ef6-d2ef-466c-aa89-24ca403bfdcf"
+    },
+    "dependents": [],
+    "id": "7b2408d4-58bf-4082-ac35-b176f4c50865"
+  },
   "9a969cc5-31f7-42cd-9fb0-b361729c3b9b": {
     "connectionParameters": {
       "workFlowCallbackUri": "https://prod-46.westus.logic.azure.com:443/workflows/f304a2fa352049299c91b8daf128e253/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=z5fR2Q43f3krpiwDBw3QQjDIr_RyJaluZT4zFR5uwGI",
@@ -330,7 +364,8 @@
       "0efcbe7e-1308-41c0-88d2-3a6178d15807",
       "c2c4965c-93bb-442d-9dee-128d35bf696b",
       "9a969cc5-31f7-42cd-9fb0-b361729c3b9b",
-      "20059ba8-87b2-4e82-ad96-7ba92164b97a"
+      "20059ba8-87b2-4e82-ad96-7ba92164b97a",
+      "7b2408d4-58bf-4082-ac35-b176f4c50865"
     ],
     "id": "cb7d9ef6-d2ef-466c-aa89-24ca403bfdcf"
   },
