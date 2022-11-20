@@ -6,6 +6,11 @@
       <object name="ManualTriggerInput">
         <property name="Getattachmentcontent_Id" type="integer" />
       </object>
+      <string name="ResponseActionOutput_htmltext_def" />
+      <object name="ResponseActionOutput">
+        <property name="htmltext" type="string" />
+      </object>
+      <object name="Run_responses_default_def" />
     </jsonTypes>
   </grammars>
   <resources siena:authenticationProviderHref="#PowerAppAuth" base="https://unitedstates-002.azure-apim.net/apim/logicflows">
@@ -21,6 +26,9 @@
             <param style="plain" name="Getattachmentcontent_Id" path="/Getattachmentcontent_Id" type="xs:long" required="true" />
           </representation>
         </request>
+        <response>
+          <representation mediaType="application/json" element="service:ResponseActionOutput" />
+        </response>
       </method>
     </resource>
   </resources>

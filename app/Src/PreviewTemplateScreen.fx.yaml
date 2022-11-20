@@ -1,6 +1,6 @@
 PreviewTemplateScreen As screen:
     OnVisible: |-
-        =UpdateContext({TemplateContent: GetTemplateHTML.Run(TemplatesGallery.Selected.ID)});
+        =UpdateContext({TemplateContent: GetTemplateHTML.Run(TemplatesGallery.Selected.ID).htmltext});
 
     TemplatePreviewForm As form:
         DataSource: =TemplateList
