@@ -2824,6 +2824,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "EditCampaignScreen.varShowPopup"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "EditCampaignScreen.varShowPopup",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varShowPopup",
+                "module": "EditCampaignScreen",
+                "type": "EditCampaignScreen"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "EditCampaignScreen.EditCampaignForm.Item"
                 }
               ],
@@ -2848,6 +2878,36 @@
           },
           "ruleId": "app-InefficientDelayLoading",
           "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PreviewCampaignScreen.varShowPopup"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "PreviewCampaignScreen.varShowPopup",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varShowPopup",
+                "module": "PreviewCampaignScreen",
+                "type": "PreviewCampaignScreen"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 4
         },
         {
           "locations": [
