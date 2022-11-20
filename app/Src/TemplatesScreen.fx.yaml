@@ -154,6 +154,7 @@ TemplatesScreen As screen:
         Height: =48
         Icon: =Icon.Hamburger
         OnSelect: =Set(varMenuIsOpen, true);
+        Visible: =false
         Width: =48
         X: =40
         Y: =40
