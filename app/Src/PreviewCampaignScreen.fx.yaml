@@ -1,6 +1,6 @@
 PreviewCampaignScreen As screen:
     OnVisible: |-
-        =UpdateContext({isSendVisible: false, TemplateContent: GetTemplateHTML.Run(TemplatesGallery.Selected.ID).htmltext});
+        =UpdateContext({isSendVisible: false, TemplateContent: GetTemplateHTML.Run(DataCardValue19.Selected.Id).htmltext});
 
     CampaignPreviewForm As form:
         DataSource: =NewCampaign
