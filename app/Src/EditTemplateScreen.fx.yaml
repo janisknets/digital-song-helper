@@ -192,12 +192,12 @@ EditTemplateScreen As screen:
 
     Label7 As label:
         FontWeight: =FontWeight.Bold
-        Height: =38
-        Size: =15
+        Height: =48
+        Size: =24
         Text: ="Edit " & TemplatesGallery.Selected.Title
-        Width: =891
-        X: =227
-        Y: =104
+        Width: =759
+        X: =358
+        Y: =27
         ZIndex: =15
 
     DeletePopup_3 As group:
