@@ -5,7 +5,7 @@ EditTemplateScreen As screen:
     EditTemplateForm As form:
         DataSource: =TemplateList
         Height: =452
-        Item: =BrowseGallery1.Selected
+        Item: =TemplatesGallery.Selected
         NumberOfColumns: =1
         OnSuccess: =Back()
         Width: =910
@@ -194,7 +194,7 @@ EditTemplateScreen As screen:
         FontWeight: =FontWeight.Bold
         Height: =38
         Size: =15
-        Text: ="Edit " & BrowseGallery1.Selected.Title
+        Text: ="Edit " & TemplatesGallery.Selected.Title
         Width: =891
         X: =227
         Y: =104
@@ -236,7 +236,7 @@ EditTemplateScreen As screen:
             Fill: =RGBA(0, 134, 208, 1)
             Height: =44
             OnSelect: |-
-                =UpdateContext({varShowPopup:false}); Remove([@TemplateList], BrowseGallery1.Selected); If (IsEmpty(Errors([@TemplateList], BrowseGallery1.Selected)), Back())
+                =UpdateContext({varShowPopup:false}); Remove([@TemplateList], TemplatesGallery.Selected); If (IsEmpty(Errors([@TemplateList], TemplatesGallery.Selected)), Back())
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0

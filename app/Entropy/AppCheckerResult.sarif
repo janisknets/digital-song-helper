@@ -364,19 +364,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "PreviewTemplateScreen.TemplatePreviewForm.Title_DataCard5.DataCardValue21.AccessibleLabel"
+                  "fullyQualifiedName": "CreateNew.Icon4_6.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "PreviewTemplateScreen.TemplatePreviewForm.Title_DataCard5.DataCardValue21.AccessibleLabel",
+                  "fullyQualifiedName": "CreateNew.Icon4_6.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "PreviewTemplateScreen",
-                "type": "PreviewTemplateScreen.TemplatePreviewForm.Title_DataCard5.DataCardValue21"
+                "module": "CreateNew",
+                "type": "CreateNew.Icon4_6"
               }
             }
           ],
@@ -394,19 +394,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "PreviewTemplateScreen.TemplatePreviewForm.Subject_DataCard4.DataCardValue22.AccessibleLabel"
+                  "fullyQualifiedName": "CreateNew.Icon4_6.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "PreviewTemplateScreen.TemplatePreviewForm.Subject_DataCard4.DataCardValue22.AccessibleLabel",
+                  "fullyQualifiedName": "CreateNew.Icon4_6.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "AccessibleLabel",
-                "module": "PreviewTemplateScreen",
-                "type": "PreviewTemplateScreen.TemplatePreviewForm.Subject_DataCard4.DataCardValue22"
+                "member": "TabIndex",
+                "module": "CreateNew",
+                "type": "CreateNew.Icon4_6"
               }
             }
           ],
@@ -416,27 +416,27 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "PreviewTemplateScreen.TemplatePreviewForm.'Message (html)_DataCard6'.DataCardValue24.AccessibleLabel"
+                  "fullyQualifiedName": "PreviewTemplateScreen.TemplatePreviewForm.Title_DataCard5.DataCardValue27.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "PreviewTemplateScreen.TemplatePreviewForm.'Message (html)_DataCard6'.DataCardValue24.AccessibleLabel",
+                  "fullyQualifiedName": "PreviewTemplateScreen.TemplatePreviewForm.Title_DataCard5.DataCardValue27.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "PreviewTemplateScreen",
-                "type": "PreviewTemplateScreen.TemplatePreviewForm.'Message (html)_DataCard6'.DataCardValue24"
+                "type": "PreviewTemplateScreen.TemplatePreviewForm.Title_DataCard5.DataCardValue27"
               }
             }
           ],
@@ -694,19 +694,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "CreateNew.Icon5_2.AccessibleLabel"
+                  "fullyQualifiedName": "PreviewTemplateScreen.TemplatePreviewForm.Attachments_DataCard4.DataCardValue30.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "CreateNew.Icon5_2.AccessibleLabel",
+                  "fullyQualifiedName": "PreviewTemplateScreen.TemplatePreviewForm.Attachments_DataCard4.DataCardValue30.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "CreateNew",
-                "type": "CreateNew.Icon5_2"
+                "module": "PreviewTemplateScreen",
+                "type": "PreviewTemplateScreen.TemplatePreviewForm.Attachments_DataCard4.DataCardValue30"
               }
             }
           ],
@@ -718,36 +718,6 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "CreateNew.Icon5_2.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "CreateNew.Icon5_2.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "CreateNew",
-                "type": "CreateNew.Icon5_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
         },
         {
           "locations": [
@@ -964,19 +934,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "CreateNew.NewTemplateForm.'html _DataCard1_1'.RichTextEditor1_1.AccessibleLabel"
+                  "fullyQualifiedName": "CreateNew.NewTemplateForm.Attachments_DataCard3.DataCardValue25.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "CreateNew.NewTemplateForm.'html _DataCard1_1'.RichTextEditor1_1.AccessibleLabel",
+                  "fullyQualifiedName": "CreateNew.NewTemplateForm.Attachments_DataCard3.DataCardValue25.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "CreateNew",
-                "type": "CreateNew.NewTemplateForm.'html _DataCard1_1'.RichTextEditor1_1"
+                "type": "CreateNew.NewTemplateForm.Attachments_DataCard3.DataCardValue25"
               }
             }
           ],
@@ -1984,19 +1954,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "TemplatesScreen.BrowseGallery1.AccessibleLabel"
+                  "fullyQualifiedName": "TemplatesScreen.TemplatesGallery.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "TemplatesScreen.BrowseGallery1.AccessibleLabel",
+                  "fullyQualifiedName": "TemplatesScreen.TemplatesGallery.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "TemplatesScreen",
-                "type": "TemplatesScreen.BrowseGallery1"
+                "type": "TemplatesScreen.TemplatesGallery"
               }
             }
           ],
@@ -2014,19 +1984,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "TemplatesScreen.BrowseGallery1.TabIndex"
+                  "fullyQualifiedName": "TemplatesScreen.TemplatesGallery.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "TemplatesScreen.BrowseGallery1.TabIndex",
+                  "fullyQualifiedName": "TemplatesScreen.TemplatesGallery.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "TemplatesScreen",
-                "type": "TemplatesScreen.BrowseGallery1"
+                "type": "TemplatesScreen.TemplatesGallery"
               }
             }
           ],
@@ -2728,6 +2698,66 @@
           },
           "ruleId": "app-UnusedVariables",
           "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PreviewTemplateScreen.TemplatePreviewForm.Item"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "PreviewTemplateScreen.TemplatePreviewForm.Item",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Item",
+                "module": "PreviewTemplateScreen",
+                "type": "PreviewTemplateScreen.TemplatePreviewForm"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PreviewTemplateScreen.HtmlText1_3.HtmlText"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "PreviewTemplateScreen.HtmlText1_3.HtmlText",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "HtmlText",
+                "module": "PreviewTemplateScreen",
+                "type": "PreviewTemplateScreen.HtmlText1_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
         },
         {
           "locations": [

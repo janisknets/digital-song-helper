@@ -23,7 +23,7 @@ TemplatesScreen As screen:
         Y: =45
         ZIndex: =2
 
-    "BrowseGallery1 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
+    "TemplatesGallery As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
         Height: =414
         Items: =SortByColumns(Filter([@TemplateList], StartsWith(Title, TextSearchBox2.Text)), "Title", If(SortDescending1, Descending, Ascending))
         Layout: =Layout.Vertical
@@ -116,6 +116,7 @@ TemplatesScreen As screen:
         ZIndex: =6
 
     Button6 As button:
+        Height: =43
         OnSelect: |-
             =NewForm(NewTemplateForm);
             Set(varTabSelected, 2);
@@ -124,21 +125,11 @@ TemplatesScreen As screen:
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Text: ="Create New"
-        X: =700
+        Text: ="Create New Template"
+        Width: =305
+        X: =Parent.Width / 2 - Self.Width / 2
         Y: =685
         ZIndex: =7
-
-    Button6_1 As button:
-        OnSelect: =Navigate(CampaignScreen);
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Text: ="Campaigns List"
-        X: =481
-        Y: =685
-        ZIndex: =8
 
     Label1 As label:
         FontWeight: =FontWeight.Bold
@@ -154,7 +145,6 @@ TemplatesScreen As screen:
         Height: =48
         Icon: =Icon.Hamburger
         OnSelect: =Set(varMenuIsOpen, true);
-        Visible: =false
         Width: =48
         X: =40
         Y: =40
