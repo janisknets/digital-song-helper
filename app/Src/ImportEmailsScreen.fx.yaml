@@ -289,3 +289,13 @@ ImportEmailsScreen As screen:
             Y: =EmailForm.Y + EmailForm.Height - Self.Height - 30
             ZIndex: =2
 
+        SubmitButton2_1 As button:
+            Fill: =RGBA(255, 0, 0, 1)
+            HoverFill: =ColorFade(Self.Color, -20%)
+            OnSelect: |-
+                =UpdateContext({isPopupVisible: false})
+            Text: ="Cancel"
+            X: =EmailForm.X + 30
+            Y: =EmailForm.Y + EmailForm.Height - Self.Height - 30
+            ZIndex: =3
+
