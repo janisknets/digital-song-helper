@@ -2464,6 +2464,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.varCurrentCampaign"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varCurrentCampaign",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varCurrentCampaign",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.np_research_1762317_FF9500 Copy"
                 }
               ],
