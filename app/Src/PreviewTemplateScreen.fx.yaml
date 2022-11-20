@@ -91,11 +91,11 @@ PreviewTemplateScreen As screen:
         ZIndex: =6
 
     HtmlText1_3 As htmlViewer:
-        Height: =213
+        Height: =658
         HtmlText: =TemplateContent
         Width: =1274
         X: =52
-        Y: =140
+        Y: =88
         ZIndex: =13
 
     Icon4_2 As icon.Hamburger:
