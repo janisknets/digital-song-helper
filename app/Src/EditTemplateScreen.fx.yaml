@@ -7,7 +7,7 @@ EditTemplateScreen As screen:
         Height: =452
         Item: =TemplatesGallery.Selected
         NumberOfColumns: =1
-        OnSuccess: =Back()
+        OnSuccess: =
         Width: =910
         X: =227
         Y: =195

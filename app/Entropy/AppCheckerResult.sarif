@@ -244,49 +244,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "PreviewTemplateScreen.Icon5_4.AccessibleLabel"
+                  "fullyQualifiedName": "PreviewTemplateScreen.Icon4_2.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "PreviewTemplateScreen.Icon5_4.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "PreviewTemplateScreen",
-                "type": "PreviewTemplateScreen.Icon5_4"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "PreviewTemplateScreen.Icon5_4.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "PreviewTemplateScreen.Icon5_4.TabIndex",
+                  "fullyQualifiedName": "PreviewTemplateScreen.Icon4_2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "PreviewTemplateScreen",
-                "type": "PreviewTemplateScreen.Icon5_4"
+                "type": "PreviewTemplateScreen.Icon4_2"
               }
             }
           ],
@@ -298,6 +268,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PreviewTemplateScreen.Icon4_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "PreviewTemplateScreen.Icon4_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "PreviewTemplateScreen",
+                "type": "PreviewTemplateScreen.Icon4_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [
