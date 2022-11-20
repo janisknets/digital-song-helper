@@ -517,7 +517,7 @@ EditCampaignScreen As screen:
         Height: =55
         HoverFill: =ColorFade(Self.Fill, -20%)
         OnSelect: |-
-            =Download("https://ts.accenture.com/:x:/r/_layouts/download.aspx?SourceUrl=/sites/THERIGA/HtmlFolder/TemplateData.xlsx")
+            =Download("https://ts.accenture.com/:x:/r/_layouts/download.aspx?SourceUrl=/sites/THERIGA/HtmlFolder/TemplateData.xlsx?d=web2f595ee60f4338969d07cec9b9582e&csf=1&web=1&e=jHOiyT")
         Text: ="Download Excel template"
         Width: =223
         X: =1116
