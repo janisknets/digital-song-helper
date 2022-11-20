@@ -1,6 +1,6 @@
 PreviewCampaignScreen As screen:
     OnVisible: |-
-        =UpdateContext({isSendVisible: false})
+        =UpdateContext({isSendVisible: false, TemplateContent: GetTemplateHTML.Run(TemplatesGallery.Selected.ID).htmltext});
 
     CampaignPreviewForm As form:
         DataSource: =NewCampaign
@@ -238,7 +238,7 @@ PreviewCampaignScreen As screen:
 
     HtmlText1_2 As htmlViewer:
         Height: =294
-        HtmlText: =First(Filter(TemplateList, ID = DataCardValue19.Selected.Id)).'html '
+        HtmlText: =TemplateContent
         Width: =1274
         X: =52
         Y: =450
