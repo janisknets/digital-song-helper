@@ -153,6 +153,7 @@ CampaignScreen As screen:
         ZIndex: =6
 
     Button6_5 As button:
+        Height: =43
         OnSelect: |-
             =NewForm(NewCampaignForm);
             Set(varTabSelected, 1);
@@ -161,21 +162,11 @@ CampaignScreen As screen:
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Text: ="Create New"
-        X: =700
+        Text: ="Create New Campaign"
+        Width: =261
+        X: =Parent.Width / 2 - Self.Width / 2
         Y: =685
         ZIndex: =7
-
-    Button6_4 As button:
-        OnSelect: =Navigate(TemplatesScreen);
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Text: ="Templates List"
-        X: =481
-        Y: =685
-        ZIndex: =8
 
     Label1_1 As label:
         FontWeight: =FontWeight.Bold
