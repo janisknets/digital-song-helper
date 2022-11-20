@@ -523,11 +523,13 @@ EditCampaignScreen As screen:
             Y: =338
             ZIndex: =5
 
-        Button7_3 As button:
+        DeleteButton7_3 As button:
             Fill: =RGBA(0, 134, 208, 1)
             Height: =44
             OnSelect: |-
-                =UpdateContext({varShowPopup:false}); Remove([@NewCampaign], ExistingCampaignGallery.Selected); If (IsEmpty(Errors([@NewCampaign], ExistingCampaignGallery.Selected)), Back())
+                =UpdateContext({varShowPopup:false}); 
+                Remove([@NewCampaign], ExistingCampaignGallery.Selected); 
+                If (IsEmpty(Errors([@NewCampaign], ExistingCampaignGallery.Selected)), Back());
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0

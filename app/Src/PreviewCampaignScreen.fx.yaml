@@ -171,10 +171,10 @@ PreviewCampaignScreen As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =270
-                Items: =Choices([@NewCampaign].TemplateList)
+                Items: =Choices([@NewCampaign].Template)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices(NewCampaign.TemplateList,DataCardValue19.SearchText)
+                SearchItems: =Choices(NewCampaign.Template,DataCardValue19.SearchText)
                 SelectMultiple: =false
                 Tooltip: =Parent.DisplayName
                 Width: =(Parent.Width - 60) * 0.6
@@ -209,11 +209,11 @@ PreviewCampaignScreen As screen:
 
     Label7_2 As label:
         FontWeight: =FontWeight.Bold
-        Height: =37
+        Height: =42
         Size: =24
-        Text: ="Preview Campaign"
-        Width: =351
-        X: =554
+        Text: ="Preview " & ExistingCampaignGallery.Selected.Title
+        Width: =542
+        X: =362
         Y: =29
         ZIndex: =2
 
@@ -231,8 +231,10 @@ PreviewCampaignScreen As screen:
     Icon5_1 As icon.BackArrow:
         Height: =48
         Icon: =Icon.BackArrow
-        OnSelect: =ResetForm(CampaignPreviewForm);Back()
-        X: =286
+        OnSelect: |-
+            =ResetForm(CampaignPreviewForm);
+            Back();
+        X: =76
         Y: =23
         ZIndex: =4
 

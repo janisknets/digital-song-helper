@@ -20,24 +20,13 @@ PreviewTemplateScreen As screen:
         Y: =88
         ZIndex: =13
 
-    Icon4_2 As icon.Hamburger:
+    Icon5_2 As icon.BackArrow:
         Height: =48
-        Icon: =Icon.Hamburger
-        OnSelect: =Set(varMenuIsOpen, true);
-        Width: =48
-        X: =40
-        Y: =40
+        Icon: =Icon.BackArrow
+        OnSelect: |-
+            =UpdateContext({TemplateContent: Blank()});
+            Back();
+        X: =76
+        Y: =23
         ZIndex: =14
-
-    Container4_5 As groupContainer.manualLayoutContainer:
-        Height: =Parent.Height - 80
-        Visible: =varMenuIsOpen
-        Width: =300
-        X: =20
-        Y: =40
-        ZIndex: =15
-
-        NavMenu_6 As NavMenu:
-            OnChange: =Set(varMenuIsOpen, false);
-            Width: =Parent.Width
 
