@@ -5,12 +5,12 @@ EditCampaignScreen As screen:
 
     EditCampaignForm As form:
         DataSource: =NewCampaign
-        Height: =434
+        Height: =629
         Item: =ExistingCampaignGallery.Selected
         NumberOfColumns: =1
         Width: =864
         X: =240
-        Y: =222
+        Y: =27
         ZIndex: =3
 
         Template_DataCard2 As typedDataCard.comboBoxEditCard:
@@ -405,7 +405,8 @@ EditCampaignScreen As screen:
         Height: =48
         Icon: =Icon.BackArrow
         OnSelect: =ResetForm(EditCampaignForm);Back();
-        X: =258
+        Width: =58
+        X: =16
         Y: =27
         ZIndex: =9
 
@@ -543,41 +544,4 @@ EditCampaignScreen As screen:
             Width: =Parent.Width
             Y: =Label3.Height + Label5.Height + Label5_1.Height + Label5_2.Height + Label5_3.Height
             ZIndex: =6
-
-    Button4_3 As button:
-        DisplayMode: =If(IsBlank(Last(AttachmentControl_3.Attachments).Value), DisplayMode.Disabled, DisplayMode.Edit)
-        Height: =49
-        OnSelect: |-
-            =Set(varAttachment, JSON(DataBase64_1.Image, JSONFormat.IncludeBinaryData));
-            Set(varBase64Only, Mid(varAttachment, Find(",", varAttachment)+1, Len(varAttachment)-Find(",", varAttachment) - 1));
-            Reset(AttachmentControl_3);
-            Set(varAttachment, Blank());
-        Text: ="Import data"
-        X: =715
-        Y: =38
-        ZIndex: =18
-
-    AttachmentControl_3 As attachments:
-        BorderColor: =
-        Height: =100
-        IsInDataCard: =true
-        Items: =
-        OnAddFile: =
-        PaddingBottom: =5
-        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-        PaddingRight: =5
-        PaddingTop: =5
-        Tooltip: =
-        Width: =333
-        X: =349
-        Y: =38
-        ZIndex: =19
-
-    DataBase64_1 As image:
-        Height: =49
-        Image: =Last(AttachmentControl_3.Attachments).Value
-        Width: =11
-        X: =1300
-        Y: =58
-        ZIndex: =20
 
