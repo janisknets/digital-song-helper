@@ -151,7 +151,7 @@ EditCampaignScreen As screen:
             Update: =DataCardValue4.Attachments
             Width: =864
             X: =0
-            Y: =5
+            Y: =4
             ZIndex: =1
 
             DataCardKey5 As label:
@@ -205,39 +205,6 @@ EditCampaignScreen As screen:
                 Wrap: =false
                 Y: =DataCardKey5.Y
                 ZIndex: =4
-
-        RecipientsListContent_DataCard3 As typedDataCard.textualEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="ExcelFileContent"
-            Default: =ThisItem.RecipientsListContent
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"ExcelFileContent")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "ExcelFileContent")
-            Required: =false
-            Update: =varBase64Only
-            Visible: =false
-            Width: =864
-            X: =0
-            Y: =4
-            ZIndex: =1
-
-            DataCardValue23 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Update
-                DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                ZIndex: =2
 
         Title_DataCard2 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
