@@ -1084,19 +1084,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "EditTemplateScreen.EditTemplateForm.'html _DataCard2'.DataCardValue28.AccessibleLabel"
+                  "fullyQualifiedName": "EditTemplateScreen.EditTemplateForm.Attachments_DataCard2.DataCardValue23.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "EditTemplateScreen.EditTemplateForm.'html _DataCard2'.DataCardValue28.AccessibleLabel",
+                  "fullyQualifiedName": "EditTemplateScreen.EditTemplateForm.Attachments_DataCard2.DataCardValue23.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "EditTemplateScreen",
-                "type": "EditTemplateScreen.EditTemplateForm.'html _DataCard2'.DataCardValue28"
+                "type": "EditTemplateScreen.EditTemplateForm.Attachments_DataCard2.DataCardValue23"
               }
             }
           ],
@@ -2927,6 +2927,36 @@
                 "member": "Item",
                 "module": "PreviewCampaignScreen",
                 "type": "PreviewCampaignScreen.CampaignPreviewForm"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "EditTemplateScreen.Label7.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "EditTemplateScreen.Label7.Text",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "EditTemplateScreen",
+                "type": "EditTemplateScreen.Label7"
               }
             }
           ],

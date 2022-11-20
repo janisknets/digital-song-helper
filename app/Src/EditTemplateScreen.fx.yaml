@@ -4,50 +4,58 @@ EditTemplateScreen As screen:
 
     EditTemplateForm As form:
         DataSource: =TemplateList
-        Height: =556
+        Height: =452
         Item: =BrowseGallery1.Selected
         NumberOfColumns: =1
         OnSuccess: =Back()
         Width: =910
         X: =227
-        Y: =92
+        Y: =195
         ZIndex: =3
 
-        "'html _DataCard2' As typedDataCard.richTextEditorEditCard":
+        Attachments_DataCard2 As typedDataCard.attachmentsEditCard:
             BorderStyle: =BorderStyle.Solid
-            DataField: ="html"
-            Default: =ThisItem.'html '
+            DataField: ="{Attachments}"
+            Default: =ThisItem.Attachments
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@TemplateList],DataSourceInfo.DisplayName,"html")
+            DisplayName: =DataSourceInfo([@TemplateList],DataSourceInfo.DisplayName,"{Attachments}")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =170
+            Height: =50
             Required: =false
-            Update: =DataCardValue28.HtmlText
+            Update: =DataCardValue23.Attachments
             Width: =910
             X: =0
             Y: =1
             ZIndex: =1
 
-            DataCardKey31 As label:
+            DataCardKey16 As label:
                 AutoHeight: =true
                 Height: =34
                 Text: =Parent.DisplayName
-                Width: =180
+                Width: =187
                 Wrap: =false
                 X: =30
-                Y: =10 + (DataCardValue28.Height / 2) - (Self.Height / 2)
+                Y: =10 + (DataCardValue23.Height / 2) - (Self.Height / 2)
                 ZIndex: =1
 
-            DataCardValue28 As richTextEditor:
-                Default: =Parent.Default
+            DataCardValue23 As attachments:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DisplayMode: =Parent.DisplayMode
-                Height: =350
-                Width: =653
+                Height: =110
+                IsInDataCard: =true
+                Items: =Parent.Default
+                MaxAttachments: =1
+                PaddingBottom: =5
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingRight: =5
+                PaddingTop: =5
+                Tooltip: =Parent.DisplayName
+                Width: =655
                 X: =225
                 Y: =10
                 ZIndex: =2
 
-            ErrorMessage31 As label:
+            ErrorMessage16 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -59,17 +67,17 @@ EditTemplateScreen As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue28.Y + DataCardValue28.Height
+                Y: =DataCardValue23.Y + DataCardValue23.Height
                 ZIndex: =3
 
-            StarVisible31 As label:
+            StarVisible16 As label:
                 Align: =Align.Center
-                Height: =DataCardKey31.Height
+                Height: =DataCardKey16.Height
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey31.Y
+                Y: =DataCardKey16.Y
                 ZIndex: =4
 
         Title_DataCard3 As typedDataCard.textualEditCard:
@@ -181,6 +189,16 @@ EditTemplateScreen As screen:
         X: =429
         Y: =684
         ZIndex: =10
+
+    Label7 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =38
+        Size: =15
+        Text: ="Edit " & BrowseGallery1.Selected.Title
+        Width: =891
+        X: =227
+        Y: =104
+        ZIndex: =15
 
     DeletePopup_3 As group:
         Height: =5
