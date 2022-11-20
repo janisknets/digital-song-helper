@@ -417,7 +417,8 @@ EditCampaignScreen As screen:
 
     Button1 As button:
         Height: =55
-        OnSelect: =SendEmailFlow.Run(ExistingCampaignGallery.Selected.ID, varCurrentUser.Email);
+        OnSelect: |-
+            =UpdateContext({isSendVisible: true});
         Text: ="Send Campaign"
         Width: =223
         X: =1116
@@ -574,7 +575,7 @@ EditCampaignScreen As screen:
             Height: =44
             HoverFill: =ColorFade(Self.Fill, -20%)
             OnSelect: |-
-                =UpdateContext({varShowPopup:false});
+                =UpdateContext({isSendVisible:false});
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -591,7 +592,7 @@ EditCampaignScreen As screen:
             Height: =44
             OnSelect: |-
                 =SendEmailFlow.Run(ExistingCampaignGallery.Selected.ID, varCurrentUser.Email);
-                UpdateContext({varShowPopup:false}); 
+                UpdateContext({isSendVisible:false}); 
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
