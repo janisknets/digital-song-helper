@@ -267,7 +267,7 @@ PreviewCampaignScreen As screen:
             Height: =44
             HoverFill: =ColorFade(Self.Fill, -20%)
             OnSelect: |-
-                =UpdateContext({varShowPopup:false});
+                =UpdateContext({isSendVisible:false});
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -284,7 +284,7 @@ PreviewCampaignScreen As screen:
             Height: =44
             OnSelect: |-
                 =SendEmailFlow.Run(ExistingCampaignGallery.Selected.ID, varCurrentUser.Email);
-                UpdateContext({varShowPopup:false}); 
+                UpdateContext({isSendVisible:false}); 
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0

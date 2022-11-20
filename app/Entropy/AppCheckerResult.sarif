@@ -2704,36 +2704,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "PreviewCampaignScreen.varShowPopup"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "PreviewCampaignScreen.varShowPopup",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varShowPopup",
-                "module": "PreviewCampaignScreen",
-                "type": "PreviewCampaignScreen"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "PreviewCampaignScreen.Label7_2.Text"
                 }
               ],
