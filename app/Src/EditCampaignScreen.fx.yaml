@@ -512,3 +512,13 @@ EditCampaignScreen As screen:
             Y: =Label3.Height + Label5.Height + Label5_1.Height + Label5_2.Height + Label5_3.Height
             ZIndex: =6
 
+    Button1_1 As button:
+        Height: =55
+        OnSelect: |-
+            =Download("https://ts.accenture.com/:x:/r/sites/THERIGA/HtmlFolder/TemplateData.xlsx?d=web2f595ee60f4338969d07cec9b9582e&csf=1&web=1&e=jHOiyT")
+        Text: ="Download Excel template"
+        Width: =223
+        X: =1116
+        Y: =34
+        ZIndex: =18
+
