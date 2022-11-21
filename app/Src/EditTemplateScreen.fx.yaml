@@ -93,7 +93,7 @@ EditTemplateScreen As screen:
             DataCardKey16 As label:
                 AutoHeight: =true
                 Height: =34
-                Text: =Parent.DisplayName
+                Text: ="Template HTML file"
                 Width: =187
                 Wrap: =false
                 X: =30
