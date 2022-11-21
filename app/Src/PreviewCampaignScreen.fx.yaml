@@ -212,8 +212,9 @@ PreviewCampaignScreen As screen:
         Height: =42
         Size: =24
         Text: ="Preview " & ExistingCampaignGallery.Selected.Title
-        Width: =542
-        X: =362
+        Width: =846
+        Wrap: =false
+        X: =175
         Y: =29
         ZIndex: =2
 

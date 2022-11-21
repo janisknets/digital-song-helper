@@ -1624,186 +1624,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SendOutScreen.AddIcon2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "SendOutScreen.AddIcon2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "SendOutScreen",
-                "type": "SendOutScreen.AddIcon2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "SendOutScreen.EmailPeopleGallery2.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "SendOutScreen.EmailPeopleGallery2.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "SendOutScreen",
-                "type": "SendOutScreen.EmailPeopleGallery2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "SendOutScreen.PeopleBrowseGallery2.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "SendOutScreen.PeopleBrowseGallery2.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "SendOutScreen",
-                "type": "SendOutScreen.PeopleBrowseGallery2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "SendOutScreen.PeopleBrowseGallery2.Rectangle6.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "SendOutScreen.PeopleBrowseGallery2.Rectangle6.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "SendOutScreen",
-                "type": "SendOutScreen.PeopleBrowseGallery2.Rectangle6"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "SendOutScreen.PeopleBrowseGallery2.Rectangle6.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "SendOutScreen.PeopleBrowseGallery2.Rectangle6.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "SendOutScreen",
-                "type": "SendOutScreen.PeopleBrowseGallery2.Rectangle6"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "SendOutScreen.PeopleBrowseGallery2.Subtitle2.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "SendOutScreen.PeopleBrowseGallery2.Subtitle2.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "SendOutScreen",
-                "type": "SendOutScreen.PeopleBrowseGallery2.Subtitle2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "CampaignScreen.Icon3_2.AccessibleLabel"
                 }
               ],
@@ -2434,19 +2254,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App._selectedUser"
+                  "fullyQualifiedName": "CreateNew.NewCampaignForm.Attachments_DataCard4.DataCardValue21.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App._selectedUser",
+                  "fullyQualifiedName": "CreateNew.NewCampaignForm.Attachments_DataCard4.DataCardValue21.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "_selectedUser",
-                "module": "App",
-                "type": "App"
+                "member": "AccessibleLabel",
+                "module": "CreateNew",
+                "type": "CreateNew.NewCampaignForm.Attachments_DataCard4.DataCardValue21"
               }
             }
           ],
@@ -2456,8 +2276,8 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 4
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [
