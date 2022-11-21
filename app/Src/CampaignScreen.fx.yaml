@@ -51,6 +51,7 @@ CampaignScreen As screen:
             PaddingTop: =0
             Text: =Concatenate(ThisItem.Countofcontacts, " contacts reached")
             VerticalAlign: =VerticalAlign.Top
+            Visible: =false
             Width: =621
             X: =32
             Y: =Subtitle3.Y + Subtitle3.Height + 4

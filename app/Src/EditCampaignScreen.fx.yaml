@@ -7,7 +7,7 @@ EditCampaignScreen As screen:
         Height: =40
         LayoutGap: =40
         LayoutMode: =LayoutMode.Auto
-        Width: =910
+        Width: =1076
         X: =227
         Y: =681
         ZIndex: =1
@@ -64,6 +64,20 @@ EditCampaignScreen As screen:
             X: =930
             Y: =684
             ZIndex: =4
+
+        Button1 As button:
+            FillPortions: =1
+            OnSelect: |-
+                =UpdateContext({isSendVisible: true});
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: ="Send Campaign"
+            Width: =223
+            X: =1116
+            Y: =572
+            ZIndex: =5
 
     EditCampaignForm As form:
         DataSource: =NewCampaign
@@ -219,7 +233,7 @@ EditCampaignScreen As screen:
             DataCardKey5 As label:
                 AutoHeight: =true
                 Height: =34
-                Text: =Parent.DisplayName
+                Text: ="Excel file with recepient list"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
@@ -415,16 +429,6 @@ EditCampaignScreen As screen:
         Y: =27
         ZIndex: =3
 
-    Button1 As button:
-        Height: =55
-        OnSelect: |-
-            =UpdateContext({isSendVisible: true});
-        Text: ="Send Campaign"
-        Width: =223
-        X: =1116
-        Y: =572
-        ZIndex: =8
-
     Container5 As groupContainer.manualLayoutContainer:
         Height: =346
         Width: =222
@@ -488,8 +492,8 @@ EditCampaignScreen As screen:
             =Download("https://ts.accenture.com/sites/THERIGA/_layouts/download.aspx?SourceUrl=/sites/THERIGA/HtmlFolder/TemplateData.xlsx?e=AXSkTH")
         Text: ="Download Excel template"
         Width: =223
-        X: =1116
-        Y: =34
+        X: =1121
+        Y: =518
         ZIndex: =10
 
     DeletePopup_2 As group:
