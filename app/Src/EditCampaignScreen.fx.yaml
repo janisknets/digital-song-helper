@@ -288,7 +288,7 @@ EditCampaignScreen As screen:
                 DisplayMode: =If(IsBlank(TempResipientList), DisplayMode.Disabled, DisplayMode.Edit)
                 Height: =30
                 OnSelect: |-
-                    =ExcelPreview.Run();
+                    =ExcelPreview.Run(ExistingCampaignGallery.Selected.ID);
                     UpdateContext({isRecepientPreviewVisible: true});
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
