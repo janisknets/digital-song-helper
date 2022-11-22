@@ -2,7 +2,7 @@ EditCampaignScreen As screen:
     OnVisible: |-
         =UpdateContext({isDeleteVisible: false, isSendVisible: false, isRecepientPreviewVisible: false});
         Set(varBase64Only, Blank());
-        Collect(TempResipientList, {Contact: "janis.rasins", Title: "Business 1"})
+        Clear(PreviewResipientList);
 
     Container8 As groupContainer.horizontalAutoLayoutContainer:
         Height: =40
@@ -248,6 +248,7 @@ EditCampaignScreen As screen:
                 IsInDataCard: =true
                 Items: =Parent.Default
                 MaxAttachments: =1
+                OnRemoveFile: =Clear(PreviewResipientList);
                 PaddingBottom: =5
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PaddingRight: =5
@@ -285,10 +286,10 @@ EditCampaignScreen As screen:
 
             Button2 As button:
                 BorderThickness: =0
-                DisplayMode: =If(IsBlank(TempResipientList), DisplayMode.Disabled, DisplayMode.Edit)
+                DisplayMode: =If(IsBlank(PreviewResipientList), DisplayMode.Disabled, DisplayMode.Edit)
                 Height: =30
                 OnSelect: |-
-                    =Collect(Collect, ExcelPreview.Run(ExistingCampaignGallery.Selected.ID));
+                    =If(IsBlank(PreviewResipientList), Collect(PreviewResipientList, ExcelPreview.Run(ExistingCampaignGallery.Selected.ID)));
                     UpdateContext({isRecepientPreviewVisible: true});
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
@@ -655,7 +656,7 @@ EditCampaignScreen As screen:
             TempRecipientGallery As gallery.galleryHorizontal:
                 FocusedBorderThickness: =0
                 Height: =Parent.Height - 70
-                Items: =TempResipientList
+                Items: =PreviewResipientList
                 TemplatePadding: =10
                 TemplateSize: =350
                 Width: =Parent.Width - 40
