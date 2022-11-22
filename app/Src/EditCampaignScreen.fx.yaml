@@ -670,7 +670,7 @@ EditCampaignScreen As screen:
 
                     TempTitle As label:
                         Text: |-
-                            ="Role title: " & ThisItem.'Role Primary Contact'
+                            ="Role title: " & ThisItem.Title
                         Width: =Parent.Width
                         Y: =TempEmail.Height
                         ZIndex: =1
