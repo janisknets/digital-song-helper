@@ -235,7 +235,7 @@ EditCampaignScreen As screen:
                 AutoHeight: =true
                 Height: =34
                 Text: ="Excel file with recepient list"
-                Width: =Parent.Width - 60
+                Width: =Parent.Width / 2
                 Wrap: =false
                 X: =30
                 Y: =10
@@ -282,6 +282,22 @@ EditCampaignScreen As screen:
                 Wrap: =false
                 Y: =DataCardKey5.Y
                 ZIndex: =4
+
+            Button2 As button:
+                BorderThickness: =0
+                DisplayMode: =If(IsBlank(TempResipientList), DisplayMode.Disabled, DisplayMode.Edit)
+                Height: =30
+                OnSelect: |-
+                    =UpdateContext({isRecepientPreviewVisible: true})
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =13
+                Text: ="List preview"
+                X: =Parent.Width - Self.Width - 30
+                Y: =12
+                ZIndex: =5
 
         Title_DataCard2 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
@@ -491,6 +507,10 @@ EditCampaignScreen As screen:
         HoverFill: =ColorFade(Self.Fill, -20%)
         OnSelect: |-
             =Download("https://ts.accenture.com/sites/THERIGA/_layouts/download.aspx?SourceUrl=/sites/THERIGA/HtmlFolder/TemplateData.xlsx?e=AXSkTH")
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Text: ="Download Excel template"
         Width: =223
         X: =1121
@@ -632,28 +652,42 @@ EditCampaignScreen As screen:
             ZIndex: =1
 
             TempRecipientGallery As gallery.galleryHorizontal:
-                Height: =Parent.Height - 40
+                FocusedBorderThickness: =0
+                Height: =Parent.Height - 70
                 Items: =TempResipientList
                 TemplatePadding: =10
-                TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(320, Self.Width - 60), Min(320, Self.Height - 60))
+                TemplateSize: =350
                 Width: =Parent.Width - 40
                 WrapCount: =6
                 X: =20
                 Y: =20
                 ZIndex: =1
 
-                TempTitle As label:
-                    OnSelect: =Select(Parent)
-                    Text: |-
-                        ="Role title: " & ThisItem.'Role Primary Contact'
+                Container12 As groupContainer:
+                    Height: =TempEmail.Height + TempTitle.Height
                     Width: =Parent.TemplateWidth
-                    Y: =TempEmail.Height
-                    ZIndex: =1
+                    ZIndex: =3
 
-                TempEmail As label:
-                    OnSelect: =Select(Parent)
-                    Text: |-
-                        ="Email: " & ThisItem.'Role Primary Contact'
-                    Width: =Parent.TemplateWidth
-                    ZIndex: =2
+                    TempTitle As label:
+                        Text: |-
+                            ="Role title: " & ThisItem.'Role Primary Contact'
+                        Width: =Parent.Width
+                        Y: =TempEmail.Height
+                        ZIndex: =1
+
+                    TempEmail As label:
+                        Text: |-
+                            ="Contact: " & ThisItem.'Role Primary Contact'
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+            Icon7 As icon.Cancel:
+                Height: =48
+                Icon: =Icon.Cancel
+                OnSelect: |-
+                    =UpdateContext({isRecepientPreviewVisible: false})
+                Width: =48
+                X: =Parent.Width - Self.Width - 5
+                Y: =5
+                ZIndex: =2
 
