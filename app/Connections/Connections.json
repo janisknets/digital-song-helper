@@ -371,7 +371,8 @@
       "c2c4965c-93bb-442d-9dee-128d35bf696b",
       "9a969cc5-31f7-42cd-9fb0-b361729c3b9b",
       "9daba296-d1c9-4f28-be35-4d088fc927b2",
-      "3df9e049-8dc5-4ff7-b31a-fc4742349406"
+      "3df9e049-8dc5-4ff7-b31a-fc4742349406",
+      "f85fff70-e480-4a13-b4b8-460ca727f0c5"
     ],
     "id": "cb7d9ef6-d2ef-466c-aa89-24ca403bfdcf"
   },
@@ -390,8 +391,44 @@
     "dependents": [
       "21c7dd26-005c-4b01-a6c5-6d265d8562e5",
       "0efcbe7e-1308-41c0-88d2-3a6178d15807",
-      "3df9e049-8dc5-4ff7-b31a-fc4742349406"
+      "3df9e049-8dc5-4ff7-b31a-fc4742349406",
+      "f85fff70-e480-4a13-b4b8-460ca727f0c5"
     ],
     "id": "d2f8bef3-feca-4148-996b-6d4f10633e75"
+  },
+  "f85fff70-e480-4a13-b4b8-460ca727f0c5": {
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-53.westus.logic.azure.com:443/workflows/2c47ab88dcf64212bea00f0a29de05ad/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=GxYY3btMa0zlg4nViMkhT6B9ElURYXRJEzihetE4Bbo",
+      "workflowEndpoint": "/subscriptions/be4c2756-6fa8-4d1b-91ba-70dc75410b5a/resourceGroups/e0793d390939496db129198edd916feb-80e5e4ad4ad14259abe2e638abb681e9/providers/Microsoft.Logic/workflows/7e677574-1de2-49ab-8c24-dc2de68f0177",
+      "workflowName": "7e677574-1de2-49ab-8c24-dc2de68f0177",
+      "workflowPath": "/subscriptions/be4c2756-6fa8-4d1b-91ba-70dc75410b5a/resourceGroups/e0793d390939496db129198edd916feb-80e5e4ad4ad14259abe2e638abb681e9/providers/Microsoft.Logic/workflows/7e677574-1de2-49ab-8c24-dc2de68f0177"
+    },
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "7e677574-1de2-49ab-8c24-dc2de68f0177"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "7e677574-1de2-49ab-8c24-dc2de68f0177"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "ExcelPreview"
+    ],
+    "dependencies": {
+      "shared_excelonlinebusiness": "d2f8bef3-feca-4148-996b-6d4f10633e75",
+      "shared_sharepointonline": "cb7d9ef6-d2ef-466c-aa89-24ca403bfdcf"
+    },
+    "dependents": [],
+    "id": "f85fff70-e480-4a13-b4b8-460ca727f0c5"
   }
 }

@@ -316,7 +316,7 @@
     "SubmitButton2_1": 12,
     "Subtitle3": 152,
     "Subtitle5": 49,
-    "TempEmail": 335,
+    "TempContact": 335,
     "Template_DataCard1": 284,
     "Template_DataCard2": 225,
     "Template_DataCard3": 176,
@@ -336,7 +336,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "11/22/2022 08:45:36",
+  "HeaderLastSavedDateTimeUTC": "11/22/2022 09:44:36",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0efcbe7e-1308-41c0-88d2-3a6178d15807": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/4f45a9c6-a5b5-43c1-9f7b-7eb63d6fae77\"",
@@ -348,7 +348,8 @@
     "9dbc8f0e-45a9-4c28-83c0-f549b858ecf8": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/1350b1b4d75d4af0a521abc8be73990b\"",
     "c2c4965c-93bb-442d-9dee-128d35bf696b": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/090086e48a9842f1b184f36d1c6eb6fc-53934c434d28714a\"",
     "cb7d9ef6-d2ef-466c-aa89-24ca403bfdcf": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/98e3168a0f414e45b6f85d34b162de47\"",
-    "d2f8bef3-feca-4148-996b-6d4f10633e75": "\"/providers/microsoft.powerapps/apis/shared_excelonlinebusiness/connections/ad7d1ee7b08243c4a59dd59020505e44\""
+    "d2f8bef3-feca-4148-996b-6d4f10633e75": "\"/providers/microsoft.powerapps/apis/shared_excelonlinebusiness/connections/ad7d1ee7b08243c4a59dd59020505e44\"",
+    "f85fff70-e480-4a13-b4b8-460ca727f0c5": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/7E6775741DE249AB8C24DC2DE68F0177-53934C434D28714A\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {
@@ -364,22 +365,23 @@
     "387f742cffb44065adbe7cbe1c49dd8b": 0
   },
   "OrderDataSource": {
-    "ComboBoxSample": 8,
-    "CustomGallerySample": 9,
-    "DropDownSample": 10,
+    "ComboBoxSample": 9,
+    "CustomGallerySample": 10,
+    "DropDownSample": 11,
     "ExcelEmailsUpload": 4,
+    "ExcelPreview": 8,
     "ExcelUpload": 2,
     "GetTemplateHTML": 7,
-    "NewCampaign": 11,
+    "NewCampaign": 12,
     "Office365Outlook": 0,
     "Office365Users": 1,
-    "RecipientsList": 13,
+    "RecipientsList": 14,
     "SendEmailFlow": 6,
     "SendSimpleFlow": 5,
     "SendTemplateFlow": 3,
-    "SimpleEmailList": 14,
-    "TemplateList": 12,
-    "TempResipientList": 15
+    "SimpleEmailList": 15,
+    "TemplateList": 13,
+    "TempResipientList": 16
   },
   "OrderGroupControls": {
     "DeletePopup_2": {
@@ -541,7 +543,7 @@
     "Delete1_2": 259,
     "DeleteButton7_3": 84,
     "DeletePopup_2": 75,
-    "DeletePopup_3": 94,
+    "DeletePopup_3": 95,
     "EditCampaignForm": 47,
     "EditCampaignScreen": 0,
     "EditTemplateForm": 97,
@@ -666,7 +668,7 @@
     "RecipientListForm": 264,
     "Rectangle1_2": 172,
     "Rectangle1_3": 74,
-    "Rectangle1_4": 95,
+    "Rectangle1_4": 94,
     "Rectangle1_5": 34,
     "Rectangle2": 31,
     "Rectangle2_2": 15,
@@ -726,14 +728,14 @@
     "SubmitButton2_1": 239,
     "Subtitle3": 12,
     "Subtitle5": 29,
-    "TempEmail": 45,
+    "TempContact": 44,
     "Template_DataCard1": 185,
     "Template_DataCard2": 58,
     "Template_DataCard3": 133,
     "TemplatesGallery": 25,
     "TemplatesScreen": 0,
     "TempRecipientGallery": 41,
-    "TempTitle": 44,
+    "TempTitle": 45,
     "TextSearchBox2": 24,
     "TextSearchBox2_2": 7,
     "Title_DataCard1": 123,
@@ -773,7 +775,7 @@
       "typedDataCard": 26
     },
     "DeserializationLoadTime": 4.1436085,
-    "ErrorCount": 2
+    "ErrorCount": 3
   },
   "WasLocalDatabaseReferencesEmpty": true
 }

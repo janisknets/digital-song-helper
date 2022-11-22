@@ -2,7 +2,7 @@ EditCampaignScreen As screen:
     OnVisible: |-
         =UpdateContext({isDeleteVisible: false, isSendVisible: false, isRecepientPreviewVisible: false});
         Set(varBase64Only, Blank());
-        Collect(TempResipientList, {'Role Primary Contact': "janis.rasins", Title: "Business 1"})
+        Collect(TempResipientList, {Contact: "janis.rasins", Title: "Business 1"})
 
     Container8 As groupContainer.horizontalAutoLayoutContainer:
         Height: =40
@@ -288,7 +288,8 @@ EditCampaignScreen As screen:
                 DisplayMode: =If(IsBlank(TempResipientList), DisplayMode.Disabled, DisplayMode.Edit)
                 Height: =30
                 OnSelect: |-
-                    =UpdateContext({isRecepientPreviewVisible: true})
+                    =ExcelPreview.Run();
+                    UpdateContext({isRecepientPreviewVisible: true});
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
@@ -664,7 +665,7 @@ EditCampaignScreen As screen:
                 ZIndex: =1
 
                 Container12 As groupContainer:
-                    Height: =TempEmail.Height + TempTitle.Height
+                    Height: =TempContact.Height + TempTitle.Height
                     Width: =Parent.TemplateWidth
                     ZIndex: =3
 
@@ -672,12 +673,12 @@ EditCampaignScreen As screen:
                         Text: |-
                             ="Role title: " & ThisItem.Title
                         Width: =Parent.Width
-                        Y: =TempEmail.Height
+                        Y: =TempContact.Height
                         ZIndex: =1
 
-                    TempEmail As label:
+                    TempContact As label:
                         Text: |-
-                            ="Contact: " & ThisItem.'Role Primary Contact'
+                            ="Contact: " & ThisItem.Contact
                         Width: =Parent.Width
                         ZIndex: =2
 
