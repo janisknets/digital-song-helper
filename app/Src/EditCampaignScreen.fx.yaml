@@ -558,21 +558,20 @@ EditCampaignScreen As screen:
             Y: =173
             ZIndex: =7
 
-    SendPopup_1 As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =23
+    Container9 As groupContainer:
+        Fill: =RGBA(0, 0, 0, 0.9)
+        Height: =768
+        Visible: =isSendVisible
+        Width: =1366
+        ZIndex: =16
 
         Rectangle1_5 As rectangle:
-            Fill: =RGBA(255, 255, 255, 0.95)
-            Height: =Parent.Height - 80
-            Visible: =isSendVisible
-            Width: =Parent.Width - 80
-            X: =40
-            Y: =40
-            ZIndex: =11
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =Parent.Height - 160
+            Width: =Parent.Width - 160
+            X: =80
+            Y: =80
+            ZIndex: =1
 
         Button8_5 As button:
             Fill: =RGBA(255, 0, 0, 1)
@@ -585,11 +584,10 @@ EditCampaignScreen As screen:
             RadiusTopLeft: =0
             RadiusTopRight: =0
             Text: ="Cancel"
-            Visible: =isSendVisible
             Width: =190
-            X: =685
-            Y: =338
-            ZIndex: =12
+            X: =725
+            Y: =378
+            ZIndex: =2
 
         Button7_5 As button:
             Fill: =RGBA(0, 134, 208, 1)
@@ -602,20 +600,18 @@ EditCampaignScreen As screen:
             RadiusTopLeft: =0
             RadiusTopRight: =0
             Text: ="Send"
-            Visible: =isSendVisible
             Width: =190
-            X: =447
-            Y: =338
-            ZIndex: =13
+            X: =487
+            Y: =378
+            ZIndex: =3
 
         Label8_4 As label:
             Align: =Align.Center
             Height: =108
             Size: =15
             Text: ="Are you sure you want to send email to all recipients?"
-            Visible: =isSendVisible
             Width: =369
-            X: =480
-            Y: =173
-            ZIndex: =14
+            X: =520
+            Y: =213
+            ZIndex: =4
 
