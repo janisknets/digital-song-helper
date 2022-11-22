@@ -904,19 +904,79 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "EditCampaignScreen.Container10.Container11.TempRecipientGallery.AccessibleLabel"
+                  "fullyQualifiedName": "EditCampaignScreen.Container10.Container11.PreviewRecipientGallery.Container12.TempTitle.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "EditCampaignScreen.Container10.Container11.TempRecipientGallery.AccessibleLabel",
+                  "fullyQualifiedName": "EditCampaignScreen.Container10.Container11.PreviewRecipientGallery.Container12.TempTitle.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "EditCampaignScreen",
+                "type": "EditCampaignScreen.Container10.Container11.PreviewRecipientGallery.Container12.TempTitle"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "EditCampaignScreen.Container10.Container11.PreviewRecipientGallery.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "EditCampaignScreen.Container10.Container11.PreviewRecipientGallery.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "EditCampaignScreen",
+                "type": "EditCampaignScreen.Container10.Container11.PreviewRecipientGallery"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "EditCampaignScreen.Container10.Container11.PreviewRecipientGallery.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "EditCampaignScreen.Container10.Container11.PreviewRecipientGallery.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "EditCampaignScreen",
-                "type": "EditCampaignScreen.Container10.Container11.TempRecipientGallery"
+                "type": "EditCampaignScreen.Container10.Container11.PreviewRecipientGallery"
               }
             }
           ],
@@ -934,49 +994,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "EditCampaignScreen.Container10.Container11.TempRecipientGallery.FocusedBorderThickness"
+                  "fullyQualifiedName": "EditCampaignScreen.Container10.Container11.PreviewRecipientGallery.Container12.TempContact.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "EditCampaignScreen.Container10.Container11.TempRecipientGallery.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "EditCampaignScreen",
-                "type": "EditCampaignScreen.Container10.Container11.TempRecipientGallery"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "EditCampaignScreen.Container10.Container11.TempRecipientGallery.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "EditCampaignScreen.Container10.Container11.TempRecipientGallery.TabIndex",
+                  "fullyQualifiedName": "EditCampaignScreen.Container10.Container11.PreviewRecipientGallery.Container12.TempContact.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "EditCampaignScreen",
-                "type": "EditCampaignScreen.Container10.Container11.TempRecipientGallery"
+                "type": "EditCampaignScreen.Container10.Container11.PreviewRecipientGallery.Container12.TempContact"
               }
             }
           ],
@@ -994,19 +1024,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "EditCampaignScreen.Container10.Container11.TempRecipientGallery.Container12.TempContact.FocusedBorderThickness"
+                  "fullyQualifiedName": "EditCampaignScreen.Container10.Container11.PreviewRecipientGallery.Container12.TempContact.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "EditCampaignScreen.Container10.Container11.TempRecipientGallery.Container12.TempContact.FocusedBorderThickness",
+                  "fullyQualifiedName": "EditCampaignScreen.Container10.Container11.PreviewRecipientGallery.Container12.TempContact.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "EditCampaignScreen",
-                "type": "EditCampaignScreen.Container10.Container11.TempRecipientGallery.Container12.TempContact"
+                "type": "EditCampaignScreen.Container10.Container11.PreviewRecipientGallery.Container12.TempContact"
               }
             }
           ],
@@ -1024,79 +1054,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "EditCampaignScreen.Container10.Container11.TempRecipientGallery.Container12.TempContact.TabIndex"
+                  "fullyQualifiedName": "EditCampaignScreen.Container10.Container11.PreviewRecipientGallery.Container12.TempTitle.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "EditCampaignScreen.Container10.Container11.TempRecipientGallery.Container12.TempContact.TabIndex",
+                  "fullyQualifiedName": "EditCampaignScreen.Container10.Container11.PreviewRecipientGallery.Container12.TempTitle.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "EditCampaignScreen",
-                "type": "EditCampaignScreen.Container10.Container11.TempRecipientGallery.Container12.TempContact"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "EditCampaignScreen.Container10.Container11.TempRecipientGallery.Container12.TempTitle.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "EditCampaignScreen.Container10.Container11.TempRecipientGallery.Container12.TempTitle.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "EditCampaignScreen",
-                "type": "EditCampaignScreen.Container10.Container11.TempRecipientGallery.Container12.TempTitle"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "EditCampaignScreen.Container10.Container11.TempRecipientGallery.Container12.TempTitle.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "EditCampaignScreen.Container10.Container11.TempRecipientGallery.Container12.TempTitle.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "EditCampaignScreen",
-                "type": "EditCampaignScreen.Container10.Container11.TempRecipientGallery.Container12.TempTitle"
+                "type": "EditCampaignScreen.Container10.Container11.PreviewRecipientGallery.Container12.TempTitle"
               }
             }
           ],
@@ -2687,6 +2657,36 @@
                 "member": "Item",
                 "module": "EditCampaignScreen",
                 "type": "EditCampaignScreen.EditCampaignForm"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "EditCampaignScreen.EditCampaignForm.Attachments_DataCard1.Button2.DisplayMode"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "EditCampaignScreen.EditCampaignForm.Attachments_DataCard1.Button2.DisplayMode",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "DisplayMode",
+                "module": "EditCampaignScreen",
+                "type": "EditCampaignScreen.EditCampaignForm.Attachments_DataCard1.Button2"
               }
             }
           ],
