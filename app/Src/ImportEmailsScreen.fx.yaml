@@ -20,7 +20,7 @@ ImportEmailsScreen As screen:
             =Set(varResponse, Blank());
             Set(varAttachment, JSON(EmailsBase64.Image, JSONFormat.IncludeBinaryData));
             Set(varBase64Only, Mid(varAttachment, Find(",", varAttachment)+1, Len(varAttachment)-Find(",", varAttachment) - 1));
-            Set(varResponse, ExcelEmailsUpload.Run(Last(AttachmentControl_2.Attachments).Name, varBase64Only).status);
+            //Set(varResponse, ExcelEmailsUpload.Run(Last(AttachmentControl_2.Attachments).Name, varBase64Only).status);
             Reset(AttachmentControl_2);
             If(!IsBlank(varResponse), Refresh(SimpleEmailList));
             Set(varAttachment, Blank());
