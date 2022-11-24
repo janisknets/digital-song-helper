@@ -15,6 +15,69 @@ CampaignScreen As screen:
         Y: =209
         ZIndex: =1
 
+        Owner As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =14
+            Text: |-
+                ="Owner: " & Office365Users.UserProfile(ThisItem.'Created By'.Email).GivenName & " " & Office365Users.UserProfile(ThisItem.'Created By'.Email).Surname
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth / 2 + 50
+            X: =Subtitle3_1.Width + Subtitle3_1.X + 15
+            Y: =Subtitle3.Y + Subtitle3.Height + 10
+            ZIndex: =1
+
+        Subtitle3_1 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =14
+            Text: =If(ThisItem.IsSent > 0, "Campaign was sent", "Draft")
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth / 2 - 200
+            X: =32
+            Y: =Subtitle3.Y + Subtitle3.Height + 10
+            ZIndex: =2
+
+        ContactsCount As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =14
+            Text: |-
+                = "Total contacts: " & ThisItem.Countofcontacts
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth / 2 + 50
+            X: =Subtitle3.X + Subtitle3.Width + 15
+            Y: =Title2.Y + Title2.Height + 2
+            ZIndex: =3
+
+        Subtitle3 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =14
+            Text: = Text(ThisItem.Created,"dd-mmm-yyyy")
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth / 2 - 200
+            X: =32
+            Y: =Title2.Y + Title2.Height + 2
+            ZIndex: =4
+
         Title2 As label:
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
@@ -27,37 +90,7 @@ CampaignScreen As screen:
             Width: =Parent.TemplateWidth - 104
             X: =32
             Y: =16
-            ZIndex: =1
-
-        Subtitle3 As label:
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =15
-            Text: = Text(ThisItem.Created,"dd-mmm-yyyy")
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth / 2 - 104
-            X: =32
-            Y: =Title2.Y + Title2.Height + 2
-            ZIndex: =2
-
-        Body2 As label:
-            Height: =38
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: =Concatenate(ThisItem.Countofcontacts, " contacts reached")
-            VerticalAlign: =VerticalAlign.Top
-            Visible: =false
-            Width: =621
-            X: =32
-            Y: =Subtitle3.Y + Subtitle3.Height + 4
-            ZIndex: =3
+            ZIndex: =5
 
         NextArrow2 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
@@ -75,45 +108,13 @@ CampaignScreen As screen:
             Width: =48
             X: =658
             Y: =ExistingCampaignGallery.TemplateHeight / 2 - Self.Height / 2
-            ZIndex: =4
+            ZIndex: =6
 
         Separator3 As rectangle:
             Height: =1
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - 1
-            ZIndex: =5
-
-        ContactsCount As label:
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =15
-            Text: |-
-                = "Total contacts: " & ThisItem.Countofcontacts
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth / 2 - 104
-            X: =Subtitle3.X + Subtitle3.Width + 15
-            Y: =Title2.Y + Title2.Height + 2
-            ZIndex: =6
-
-        Subtitle3_1 As label:
-            FontWeight: =FontWeight.Bold
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =15
-            Text: =If(ThisItem.IsSent > 0, "Campaign was sent", "Draft")
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth / 2 - 104
-            X: =32
-            Y: =Subtitle3.Y + Subtitle3.Height + 2
             ZIndex: =7
 
     Icon3_2 As icon.Reload:
