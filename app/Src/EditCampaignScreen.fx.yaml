@@ -34,7 +34,7 @@ EditCampaignScreen As screen:
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Text: ="Preview"
+            Text: ="Save and Preview"
             X: =447
             Y: =684
             ZIndex: =2
@@ -701,6 +701,7 @@ EditCampaignScreen As screen:
 
     Button3 As button:
         Fill: =RGBA(109, 49, 162, 1)
+        OnSelect: =SendToSelfFlow.Run(ExistingCampaignGallery.Selected.ID, varCurrentUser.Email);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
