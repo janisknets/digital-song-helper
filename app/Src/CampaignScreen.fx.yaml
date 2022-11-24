@@ -2,10 +2,11 @@ CampaignScreen As screen:
     OnVisible: |-
         =Set(varCurrentCampaign, Blank());
         Set(varMenuIsOpen, Blank());
+        UpdateContext({SortDescending: true});
 
     "ExistingCampaignGallery As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
         Height: =414
-        Items: =SortByColumns(Filter([@NewCampaign], StartsWith(Title, TextSearchBox2_2.Text)), "Created", If(SortDescending, Ascending, Descending))
+        Items: =SortByColumns(Filter([@NewCampaign], StartsWith(Title, TextSearchBox2_2.Text)), "Created", If(SortDescending, Descending, Ascending))
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =127

@@ -1,5 +1,7 @@
 TemplatesScreen As screen:
-    OnVisible: =Set(varMenuIsOpen, Blank());
+    OnVisible: |-
+        =Set(varMenuIsOpen, Blank());
+        UpdateContext({SortDescending: true});
 
     Icon3 As icon.Reload:
         Color: =RGBA(56, 96, 178, 1)
@@ -25,7 +27,7 @@ TemplatesScreen As screen:
 
     "TemplatesGallery As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
         Height: =414
-        Items: =SortByColumns(Filter([@TemplateList], StartsWith(Title, TextSearchBox2.Text)), "Created", If(SortDescending, Ascending, Descending))
+        Items: =SortByColumns(Filter([@TemplateList], StartsWith(Title, TextSearchBox2.Text)), "Created", If(SortDescending, Descending, Ascending))
         Layout: =Layout.Vertical
         OnSelect: =Navigate(EditCampaignScreen, ScreenTransition.None)
         TemplatePadding: =0
