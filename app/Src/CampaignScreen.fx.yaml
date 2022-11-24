@@ -56,7 +56,7 @@ CampaignScreen As screen:
             PaddingTop: =0
             Size: =14
             Text: |-
-                = "Total contacts: " & ThisItem.Countofcontacts
+                = "Total contacts: " & If(ThisItem.Countofcontacts > 0, ThisItem.Countofcontacts, "Not counted")
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth / 2 + 50
             X: =Subtitle3.X + Subtitle3.Width + 15
