@@ -40,7 +40,8 @@ CampaignScreen As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =14
-            Text: =If(ThisItem.IsSent > 0, "Campaign was sent", "Draft")
+            Text: |-
+                ="Satus: " & If(ThisItem.IsSent > 0, "Sent", "Draft")
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth / 2 - 200
             X: =32
