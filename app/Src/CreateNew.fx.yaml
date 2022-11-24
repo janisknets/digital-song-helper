@@ -193,8 +193,8 @@ CreateNew As screen:
         NumberOfColumns: =1
         OnSuccess: =ResetForm(NewCampaignForm); NewForm(NewCampaignForm); Navigate(CampaignScreen);
         Visible: =If(varTabSelected = 1, true, false)
-        Width: =910
-        X: =227
+        Width: =864
+        X: =240
         Y: =131
         ZIndex: =5
 
@@ -209,7 +209,7 @@ CreateNew As screen:
             MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "Subject")
             Required: =false
             Update: =DataCardValue17.Text
-            Width: =910
+            Width: =Parent.Width
             X: =0
             Y: =1
             ZIndex: =1
@@ -218,10 +218,10 @@ CreateNew As screen:
                 AutoHeight: =true
                 Height: =34
                 Text: =Parent.DisplayName
-                Width: =180
+                Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10 + (DataCardValue17.Height / 2) - (Self.Height / 2)
+                Y: =10
                 ZIndex: =1
 
             DataCardValue17 As text:
@@ -236,9 +236,9 @@ CreateNew As screen:
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Tooltip: =Parent.DisplayName
-                Width: =653
-                X: =225
-                Y: =10
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey14.Y + DataCardKey14.Height + 5
                 ZIndex: =2
 
             ErrorMessage14 As label:
@@ -276,7 +276,7 @@ CreateNew As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue14.Selected
-            Width: =910
+            Width: =Parent.Width
             X: =0
             Y: =2
             ZIndex: =1
@@ -285,10 +285,10 @@ CreateNew As screen:
                 AutoHeight: =true
                 Height: =34
                 Text: =Parent.DisplayName
-                Width: =180
+                Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10 + (DataCardValue14.Height / 2) - (Self.Height / 2)
+                Y: =10
                 ZIndex: =1
 
             DataCardValue14 As combobox:
@@ -302,9 +302,9 @@ CreateNew As screen:
                 SearchItems: =Choices(NewCampaign.Template,DataCardValue14.SearchText)
                 SelectMultiple: =false
                 Tooltip: =Parent.DisplayName
-                Width: =653
-                X: =225
-                Y: =10
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey11.Y + DataCardKey11.Height + 5
                 ZIndex: =2
 
             ErrorMessage11 As label:
@@ -342,7 +342,7 @@ CreateNew As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue21.Attachments
-            Width: =910
+            Width: =Parent.Width
             X: =0
             Y: =4
             ZIndex: =1
@@ -351,9 +351,9 @@ CreateNew As screen:
                 AutoHeight: =true
                 Height: =34
                 Text: ="Excel file with recepient list"
-                Width: =198
+                Width: =Parent.Width - 60
                 X: =30
-                Y: =10 + (DataCardValue21.Height / 2) - (Self.Height / 2)
+                Y: =10
                 ZIndex: =1
 
             DataCardValue21 As attachments:
@@ -368,9 +368,9 @@ CreateNew As screen:
                 PaddingRight: =5
                 PaddingTop: =5
                 Tooltip: =Parent.DisplayName
-                Width: =653
-                X: =228
-                Y: =10
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey24.Y + DataCardKey24.Height + 5
                 ZIndex: =2
 
             ErrorMessage24 As label:
@@ -409,7 +409,7 @@ CreateNew As screen:
             MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "Title")
             Required: =false
             Update: =DataCardValue1.Text
-            Width: =910
+            Width: =Parent.Width
             X: =0
             Y: =0
             ZIndex: =4
@@ -418,10 +418,10 @@ CreateNew As screen:
                 AutoHeight: =true
                 Height: =34
                 Text: =Parent.DisplayName
-                Width: =180
+                Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10 + (DataCardValue1.Height / 2) - (Self.Height / 2)
+                Y: =10
                 ZIndex: =1
 
             DataCardValue1 As text:
@@ -437,9 +437,9 @@ CreateNew As screen:
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Tooltip: =Parent.DisplayName
-                Width: =653
-                X: =225
-                Y: =13
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey1.Y + DataCardKey1.Height + 5
                 ZIndex: =2
 
             ErrorMessage1 As label:
@@ -478,7 +478,7 @@ CreateNew As screen:
             MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "Message_x0028_html_x0029_")
             Required: =false
             Update: =RichTextEditor1.HtmlText
-            Width: =910
+            Width: =Parent.Width
             X: =0
             Y: =3
             ZIndex: =4
@@ -487,10 +487,10 @@ CreateNew As screen:
                 AutoHeight: =true
                 Height: =34
                 Text: =Parent.DisplayName
-                Width: =(Parent.Width - 60) * 0.4
+                Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10 + (RichTextEditor1.Height / 2) - (Self.Height / 2)
+                Y: =10
                 ZIndex: =1
 
             ErrorMessage7 As label:
@@ -523,9 +523,9 @@ CreateNew As screen:
                     =$"Hello !<br></br>
                     My name is . Writing you regarding Open role  for .<br></br>Let me know if this role is still open, will be happy to jump on a call to discuss potential candidates."
                 Height: =222
-                Width: =660
-                X: =220
-                Y: =10
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey7.Height + DataCardKey7.Y + 5
                 ZIndex: =5
 
     Label7_1 As label:
@@ -652,4 +652,21 @@ CreateNew As screen:
         NavMenu_5 As NavMenu:
             OnChange: =Set(varMenuIsOpen, false);
             Width: =Parent.Width
+
+    Button1_2 As button:
+        Fill: =RGBA(54, 176, 75, 1)
+        Height: =72
+        HoverFill: =ColorFade(Self.Fill, -20%)
+        OnSelect: |-
+            =Download("https://ts.accenture.com/sites/THERIGA/_layouts/download.aspx?SourceUrl=/sites/THERIGA/HtmlFolder/TemplateData.xlsx?e=AXSkTH")
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Download Excel template"
+        Visible: =If(varTabSelected = 1, true, false)
+        Width: =223
+        X: =1121
+        Y: =518
+        ZIndex: =12
 
