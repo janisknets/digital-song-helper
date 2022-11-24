@@ -220,6 +220,17 @@ EditTemplateScreen As screen:
         Y: =27
         ZIndex: =11
 
+    Icon5_3 As icon.BackArrow:
+        Height: =48
+        Icon: =Icon.BackArrow
+        OnSelect: |-
+            =ResetForm(EditTemplateForm);
+            Navigate(CampaignScreen);
+        Width: =58
+        X: =36
+        Y: =47
+        ZIndex: =12
+
     DeletePopup_3 As group:
         Height: =5
         Width: =5
