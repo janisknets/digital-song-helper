@@ -17,7 +17,7 @@ TemplatesScreen As screen:
         Height: =39
         Icon: =Icon.Sort
         OnSelect: |-
-            =UpdateContext({SortDescending1: !SortDescending1})
+            =UpdateContext({SortDescending: !SortDescending})
         Width: =56
         X: =860
         Y: =45
@@ -25,7 +25,7 @@ TemplatesScreen As screen:
 
     "TemplatesGallery As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
         Height: =414
-        Items: =SortByColumns(Filter([@TemplateList], StartsWith(Title, TextSearchBox2.Text)), "Title", If(SortDescending1, Descending, Ascending))
+        Items: =SortByColumns(Filter([@TemplateList], StartsWith(Title, TextSearchBox2.Text)), "Title", If(SortDescending, Descending, Ascending))
         Layout: =Layout.Vertical
         OnSelect: =Navigate(EditCampaignScreen, ScreenTransition.None)
         TemplatePadding: =0

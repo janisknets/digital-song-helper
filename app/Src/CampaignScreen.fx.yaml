@@ -5,7 +5,7 @@ CampaignScreen As screen:
 
     "ExistingCampaignGallery As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
         Height: =414
-        Items: =SortByColumns(Filter([@NewCampaign], StartsWith(Title, TextSearchBox2_2.Text)), "Title", If(SortDescending1, Descending, Ascending))
+        Items: =SortByColumns(Filter([@NewCampaign], StartsWith(Title, TextSearchBox2_2.Text)), "Title", If(SortDescending, Descending, Ascending))
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =127
@@ -98,7 +98,7 @@ CampaignScreen As screen:
         Height: =39
         Icon: =Icon.Sort
         OnSelect: |-
-            =UpdateContext({SortDescending1: !SortDescending1})
+            =UpdateContext({SortDescending: !SortDescending});
         Width: =56
         X: =860
         Y: =45
