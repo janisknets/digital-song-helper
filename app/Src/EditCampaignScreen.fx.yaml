@@ -286,6 +286,7 @@ EditCampaignScreen As screen:
             Button2 As button:
                 BorderThickness: =0
                 DisplayMode: =If(CountRows(ExistingCampaignGallery.Selected.Attachments), DisplayMode.Edit, DisplayMode.Disabled)
+                Fill: =RGBA(54, 176, 75, 1)
                 Height: =30
                 OnSelect: |-
                     =If(!CountRows(PreviewResipientList), Collect(PreviewResipientList, ExcelPreview.Run(ExistingCampaignGallery.Selected.ID)));
@@ -295,7 +296,8 @@ EditCampaignScreen As screen:
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Size: =13
-                Text: ="List preview"
+                Text: ="Count contacts and preview"
+                Width: =260
                 X: =Parent.Width - Self.Width - 30
                 Y: =12
                 ZIndex: =5
