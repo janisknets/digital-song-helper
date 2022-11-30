@@ -284,8 +284,8 @@ PreviewCampaignScreen As screen:
             Fill: =RGBA(0, 134, 208, 1)
             Height: =44
             OnSelect: |-
-                =SendEmailFlow.Run(ExistingCampaignGallery.Selected.ID, varCurrentUser.Email);
-                Patch(NewCampaign, LookUp(NewCampaign, ID = ExistingCampaignGallery.Selected.ID), {IsSent:1});
+                =SendEmailFlow.Run(varCurrentCampaignId, varCurrentUser.Email);
+                Patch(NewCampaign, LookUp(NewCampaign, ID = varCurrentCampaignId), {IsSent:1});
                 UpdateContext({isSendVisible:false}); 
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
