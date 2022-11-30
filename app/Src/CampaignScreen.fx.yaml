@@ -99,6 +99,7 @@ CampaignScreen As screen:
             Icon: =Icon.ChevronRight
             OnSelect: |-
                 =Select(Parent);
+                Set(varCurrentCampaign, ExistingCampaignGallery.Selected);
                 Navigate(EditCampaignScreen);
             PaddingBottom: =10
             PaddingLeft: =10
