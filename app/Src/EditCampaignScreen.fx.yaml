@@ -95,7 +95,7 @@ EditCampaignScreen As screen:
     EditCampaignForm As form:
         DataSource: =NewCampaign
         Height: =629
-        Item: =ExistingCampaignGallery.Selected
+        Item: =LookUp(NewCampaign, varCurrentCampaignId = ID)
         NumberOfColumns: =1
         Width: =864
         X: =240

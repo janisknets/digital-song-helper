@@ -1,6 +1,6 @@
 CampaignScreen As screen:
     OnVisible: |-
-        =Set(varCurrentCampaign, Blank());
+        =Set(varCurrentCampaignId, Blank());
         Set(varMenuIsOpen, Blank());
         UpdateContext({SortDescending: true});
 
@@ -99,7 +99,7 @@ CampaignScreen As screen:
             Icon: =Icon.ChevronRight
             OnSelect: |-
                 =Select(Parent);
-                Set(varCurrentCampaign, ExistingCampaignGallery.Selected);
+                Set(varCurrentCampaignId, ExistingCampaignGallery.Selected.ID);
                 Navigate(EditCampaignScreen);
             PaddingBottom: =10
             PaddingLeft: =10
