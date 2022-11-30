@@ -2734,36 +2734,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "CreateNew.NewCampaignForm.Item"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "CreateNew.NewCampaignForm.Item",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Item",
-                "module": "CreateNew",
-                "type": "CreateNew.NewCampaignForm"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "EditCampaignScreen.varShowPopup"
                 }
               ],

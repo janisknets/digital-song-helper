@@ -189,7 +189,6 @@ CreateNew As screen:
         DataSource: =NewCampaign
         DefaultMode: =FormMode.New
         Height: =541
-        Item: =ExistingCampaignGallery.Selected
         NumberOfColumns: =1
         OnSuccess: =ResetForm(NewCampaignForm); NewForm(NewCampaignForm); Navigate(CampaignScreen);
         Visible: =If(varTabSelected = 1, true, false)
