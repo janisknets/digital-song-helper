@@ -1,12 +1,12 @@
 PreviewCampaignScreen As screen:
     OnVisible: |-
-        =UpdateContext({isSendVisible: false, TemplateContent: GetTemplateHTML.Run(DataCardValue19.Selected.Id).htmltext});
+        =UpdateContext({isSendVisible: false, TemplateContent: GetTemplateHTML.Run(LookUp(NewCampaign, ID = varCurrentCampaignId).Template.Id).htmltext});
 
     CampaignPreviewForm As form:
         DataSource: =NewCampaign
         DefaultMode: =FormMode.View
         Height: =644
-        Item: =ExistingCampaignGallery.Selected
+        Item: =LookUp(NewCampaign, ID = varCurrentCampaignId)
         NumberOfColumns: =1
         OnSuccess: =Back()
         Width: =1194
@@ -211,7 +211,7 @@ PreviewCampaignScreen As screen:
         FontWeight: =FontWeight.Bold
         Height: =42
         Size: =24
-        Text: ="Preview " & ExistingCampaignGallery.Selected.Title
+        Text: ="Preview " & LookUp(NewCampaign, ID = varCurrentCampaignId).Title
         Width: =846
         Wrap: =false
         X: =175
