@@ -5,7 +5,7 @@ EditCampaignScreen As screen:
 
     Button3 As button:
         Fill: =RGBA(109, 49, 162, 1)
-        OnSelect: =SendToSelfFlow.Run(ExistingCampaignGallery.Selected.ID, varCurrentUser.Email);
+        OnSelect: =SendToSelfFlow.Run(varCurrentCampaignId, varCurrentUser.Email);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -571,8 +571,8 @@ EditCampaignScreen As screen:
             Fill: =RGBA(0, 134, 208, 1)
             Height: =44
             OnSelect: |-
-                =SendEmailFlow.Run(ExistingCampaignGallery.Selected.ID, varCurrentUser.Email);
-                Patch(NewCampaign, LookUp(NewCampaign, ID = ExistingCampaignGallery.Selected.ID), {IsSent:1});
+                =SendEmailFlow.Run(varCurrentCampaignId, varCurrentUser.Email);
+                Patch(NewCampaign, LookUp(NewCampaign, ID = varCurrentCampaignId), {IsSent:1});
                 UpdateContext({isSendVisible:false}); 
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
@@ -696,8 +696,8 @@ EditCampaignScreen As screen:
             Height: =44
             OnSelect: |-
                 =UpdateContext({varShowPopup:false}); 
-                Remove([@NewCampaign], ExistingCampaignGallery.Selected); 
-                If (IsEmpty(Errors([@NewCampaign], ExistingCampaignGallery.Selected)), Back());
+                Remove([@NewCampaign], LookUp(NewCampaign, ID = varCurrentCampaignId)); 
+                If (IsEmpty(Errors([@NewCampaign], LookUp(NewCampaign, ID = varCurrentCampaignId))), Back());
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
