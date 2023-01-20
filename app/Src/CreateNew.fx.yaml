@@ -15,7 +15,7 @@ CreateNew As screen:
     Save As button:
         DisplayMode: |-
             =If(
-                Len(DataCardValue1.Text) < 1 || !hasAttachment,
+                Len(DataCardValue1_1.Text) < 1 || !hasTemplateAttachment,
                 DisplayMode.Disabled,
                 DisplayMode.Edit
             )
@@ -30,6 +30,7 @@ CreateNew As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Text: ="Save"
+        Visible: =varTabSelected = 2
         X: =685
         Y: =684
         ZIndex: =3
@@ -77,6 +78,10 @@ CreateNew As screen:
                 IsInDataCard: =true
                 Items: =Parent.Default
                 MaxAttachments: =1
+                OnAddFile: |-
+                    =UpdateContext({hasTemplateAttachment: true})
+                OnRemoveFile: |-
+                    =UpdateContext({hasTemplateAttachment: true})
                 PaddingBottom: =5
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PaddingRight: =5
@@ -735,4 +740,27 @@ CreateNew As screen:
         X: =1121
         Y: =518
         ZIndex: =12
+
+    Save_1 As button:
+        DisplayMode: |-
+            =If(
+                Len(DataCardValue1.Text) < 1 || !hasAttachment,
+                DisplayMode.Disabled,
+                DisplayMode.Edit
+            )
+        OnSelect: |
+            =If(varTabSelected = 1, SubmitForm(NewCampaignForm), SubmitForm(NewTemplateForm)); 
+            Notify(
+                "Success: form was successfully saved",
+                NotificationType.Success
+            );
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Save"
+        Visible: =varTabSelected = 1
+        X: =685
+        Y: =684
+        ZIndex: =13
 
