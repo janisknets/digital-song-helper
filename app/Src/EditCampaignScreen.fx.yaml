@@ -311,8 +311,7 @@ EditCampaignScreen As screen:
                 OnSelect: |-
                     =If(
                         !CountRows(PreviewResipientList), 
-                        Collect(PreviewResipientList, 
-                        ExcelPreview.Run(ExistingCampaignGallery.Selected.ID))
+                        Collect(PreviewResipientList, ExcelPreview.Run(ExistingCampaignGallery.Selected.ID))
                     );
                     UpdateContext({isRecepientPreviewVisible: true});
                     Patch(
@@ -325,7 +324,7 @@ EditCampaignScreen As screen:
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Size: =13
-                Text: ="Preview and count contacts"
+                Text: ="Preview contacts"
                 Width: =260
                 X: =Parent.Width - Self.Width - 30
                 Y: =12
