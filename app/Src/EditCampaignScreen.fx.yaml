@@ -12,7 +12,12 @@ EditCampaignScreen As screen:
             )
         Fill: =RGBA(109, 49, 162, 1)
         OnSelect: |-
-            =SubmitForm(EditCampaignForm);
+            =Patch(
+                NewCampaign, 
+                LookUp(NewCampaign, ID = ExistingCampaignGallery.Selected.ID), 
+                {IsTestSent:true}
+            );
+            SubmitForm(EditCampaignForm);
             SendToSelfFlow.Run(varCurrentCampaignId, varCurrentUser.Email);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
