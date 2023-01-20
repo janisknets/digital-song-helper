@@ -1,17 +1,6 @@
 CreateNew As screen:
     OnVisible: =Set(varTabSelected, 1);
 
-    Preview As button:
-        OnSelect: =If(varTabSelected = 1, Navigate(PreviewCampaignScreen), Navigate(PreviewTemplateScreen));
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Text: ="Preview"
-        X: =920
-        Y: =684
-        ZIndex: =1
-
     Cancel As button:
         OnSelect: =If(varTabSelected = 1, Navigate(CampaignScreen), Navigate(TemplatesScreen));
         RadiusBottomLeft: =0
@@ -24,6 +13,12 @@ CreateNew As screen:
         ZIndex: =2
 
     Save As button:
+        DisplayMode: |-
+            =If(
+                Len(DataCardValue1.Text) < 1 || !hasAttachment,
+                DisplayMode.Disabled,
+                DisplayMode.Edit
+            )
         OnSelect: |
             =If(varTabSelected = 1, SubmitForm(NewCampaignForm), SubmitForm(NewTemplateForm)); 
             Notify(
@@ -197,6 +192,74 @@ CreateNew As screen:
         Y: =131
         ZIndex: =5
 
+        BCC_DataCard3 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="BCC"
+            Default: =ThisItem.BCC
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@NewCampaign],DataSourceInfo.DisplayName,"BCC")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@NewCampaign], DataSourceInfo.MaxLength, "BCC")
+            Required: =false
+            Update: =DataCardValue27.Text
+            Width: =864
+            X: =0
+            Y: =1
+            ZIndex: =1
+
+            DataCardKey27 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue27 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey27.Y + DataCardKey27.Height + 5
+                ZIndex: =2
+
+            ErrorMessage26 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue27.Y + DataCardValue27.Height
+                ZIndex: =3
+
+            StarVisible26 As label:
+                Align: =Align.Center
+                Height: =DataCardKey27.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey27.Y
+                ZIndex: =4
+
         Subject_DataCard1 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Subject"
@@ -210,7 +273,7 @@ CreateNew As screen:
             Update: =DataCardValue17.Text
             Width: =Parent.Width
             X: =0
-            Y: =1
+            Y: =2
             ZIndex: =1
 
             DataCardKey14 As label:
@@ -277,7 +340,7 @@ CreateNew As screen:
             Update: =DataCardValue14.Selected
             Width: =Parent.Width
             X: =0
-            Y: =2
+            Y: =3
             ZIndex: =1
 
             DataCardKey11 As label:
@@ -343,7 +406,7 @@ CreateNew As screen:
             Update: =DataCardValue21.Attachments
             Width: =Parent.Width
             X: =0
-            Y: =4
+            Y: =5
             ZIndex: =1
 
             DataCardKey24 As label:
@@ -362,6 +425,10 @@ CreateNew As screen:
                 IsInDataCard: =true
                 Items: =Parent.Default
                 MaxAttachments: =1
+                OnAddFile: |-
+                    =UpdateContext({hasAttachment: true})
+                OnRemoveFile: |-
+                    =UpdateContext({hasAttachment: false})
                 PaddingBottom: =5
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PaddingRight: =5
@@ -479,7 +546,7 @@ CreateNew As screen:
             Update: =RichTextEditor1.HtmlText
             Width: =Parent.Width
             X: =0
-            Y: =3
+            Y: =4
             ZIndex: =4
 
             DataCardKey7 As label:
