@@ -5,7 +5,9 @@ EditCampaignScreen As screen:
 
     Button3 As button:
         Fill: =RGBA(109, 49, 162, 1)
-        OnSelect: =SendToSelfFlow.Run(varCurrentCampaignId, varCurrentUser.Email);
+        OnSelect: |-
+            =SubmitForm(EditCampaignForm);
+            SendToSelfFlow.Run(varCurrentCampaignId, varCurrentUser.Email);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -47,7 +49,7 @@ EditCampaignScreen As screen:
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Text: ="Save and Preview"
+            Text: ="Preview"
             X: =447
             Y: =684
             ZIndex: =2
@@ -94,7 +96,8 @@ EditCampaignScreen As screen:
 
         Button1 As button:
             OnSelect: |-
-                =UpdateContext({isSendVisible: true});
+                =SubmitForm(EditCampaignForm);
+                UpdateContext({isSendVisible: true});
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
