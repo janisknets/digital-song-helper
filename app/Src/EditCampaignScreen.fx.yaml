@@ -4,6 +4,12 @@ EditCampaignScreen As screen:
         Clear(PreviewResipientList);
 
     Button3 As button:
+        DisplayMode: |-
+            =If(
+                IsBlank(DataCardValue2.Text) || IsBlank(DataCardValue5.Text),
+                DisplayMode.Disabled,
+                DisplayMode.Edit
+            )
         Fill: =RGBA(109, 49, 162, 1)
         OnSelect: |-
             =SubmitForm(EditCampaignForm);
@@ -57,7 +63,7 @@ EditCampaignScreen As screen:
         Button12 As button:
             DisplayMode: |-
                 =If(
-                    IsBlank(DataCardValue2.Text) || IsEmpty(DataCardValue4.Attachments),
+                    IsBlank(DataCardValue2.Text) || IsEmpty(DataCardValue4.Attachments) || IsBlank(DataCardValue5.Text),
                     DisplayMode.Disabled,
                     DisplayMode.Edit
                 )
@@ -95,6 +101,13 @@ EditCampaignScreen As screen:
             ZIndex: =4
 
         Button1 As button:
+            DisplayMode: |-
+                =If(
+                    IsBlank(DataCardValue2.Text) || IsEmpty(DataCardValue4.Attachments) || IsBlank(DataCardValue5.Text) ||
+                    !LookUp(NewCampaign, varCurrentCampaignId = ID).IsTestSent,
+                    DisplayMode.Disabled,
+                    DisplayMode.Edit
+                )
             OnSelect: |-
                 =SubmitForm(EditCampaignForm);
                 UpdateContext({isSendVisible: true});

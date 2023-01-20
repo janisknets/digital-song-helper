@@ -33,6 +33,7 @@
       "Editor#Claims": "Modified By Claims",
       "ID": "ID",
       "IsSent": "IsSent",
+      "IsTestSent": "IsTestSent",
       "Message_x0028_html_x0029_": "Message (html)",
       "Modified": "Modified",
       "Subject": "Subject",
