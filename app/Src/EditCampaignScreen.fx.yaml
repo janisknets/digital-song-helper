@@ -54,7 +54,14 @@ EditCampaignScreen As screen:
 
         Button12 As button:
             FillPortions: =1
-            OnSelect: =SubmitForm(EditCampaignForm);
+            OnSelect: |-
+                =SubmitForm(EditCampaignForm);
+                Collect(PreviewResipientList, ExcelPreview.Run(ExistingCampaignGallery.Selected.ID));
+                Patch(
+                    NewCampaign, 
+                    LookUp(NewCampaign, ID = ExistingCampaignGallery.Selected.ID), 
+                    {Countofcontacts:CountRows(PreviewResipientList)}
+                );
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -260,16 +267,6 @@ EditCampaignScreen As screen:
                 IsInDataCard: =true
                 Items: =Parent.Default
                 MaxAttachments: =1
-                OnAddFile: |-
-                    =Collect(
-                        PreviewResipientList, 
-                        ExcelPreview.Run(ExistingCampaignGallery.Selected.ID)
-                    );
-                    Patch(
-                        NewCampaign, 
-                        LookUp(NewCampaign, ID = ExistingCampaignGallery.Selected.ID), 
-                        {Countofcontacts:CountRows(PreviewResipientList)}
-                    );
                 OnRemoveFile: =Clear(PreviewResipientList);
                 PaddingBottom: =5
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
