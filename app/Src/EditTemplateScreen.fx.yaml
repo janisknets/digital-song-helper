@@ -38,6 +38,12 @@ EditTemplateScreen As screen:
             ZIndex: =2
 
         Button12_2 As button:
+            DisplayMode: |-
+                =If(
+                    IsBlank(DataCardValue15.Text) || IsEmpty(DataCardValue23.Attachments),
+                    DisplayMode.Disabled,
+                    DisplayMode.Edit
+                )
             FillPortions: =1
             OnSelect: =SubmitForm(EditTemplateForm);
             RadiusBottomLeft: =0

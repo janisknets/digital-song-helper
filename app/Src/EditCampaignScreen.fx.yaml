@@ -53,6 +53,12 @@ EditCampaignScreen As screen:
             ZIndex: =2
 
         Button12 As button:
+            DisplayMode: |-
+                =If(
+                    IsBlank(DataCardValue2.Text) || IsEmpty(DataCardValue4.Attachments),
+                    DisplayMode.Disabled,
+                    DisplayMode.Edit
+                )
             FillPortions: =1
             OnSelect: |-
                 =SubmitForm(EditCampaignForm);
