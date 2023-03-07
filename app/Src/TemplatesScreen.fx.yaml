@@ -27,7 +27,7 @@ TemplatesScreen As screen:
 
     "TemplatesGallery As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
         Height: =414
-        Items: =SortByColumns(Filter([@TemplateList], StartsWith(Title, TextSearchBox2.Text)), "Created", If(SortDescending, Descending, Ascending))
+        Items: =SortByColumns(Filter([@TemplateList], StartsWith(Title, TextSearchBox2.Text)), "Created", If(SortDescending, SortOrder.Descending, SortOrder.Ascending))
         Layout: =Layout.Vertical
         OnSelect: =Navigate(EditCampaignScreen, ScreenTransition.None)
         TemplatePadding: =0

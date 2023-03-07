@@ -616,7 +616,7 @@ CreateNew As screen:
         Button10_7 As button:
             BorderThickness: =0
             Color: |-
-                =If(varTabSelected = ThisItem.ID, White, ColorValue("#A6A6A6"))
+                =If(varTabSelected = ThisItem.ID, Color.White, ColorValue("#A6A6A6"))
             DisabledBorderColor: =
             DisabledColor: =RGBA(255, 255, 255, 1)
             DisabledFill: |-
@@ -627,7 +627,7 @@ CreateNew As screen:
             FocusedBorderThickness: =
             Height: =42
             HoverBorderColor: =
-            HoverColor: =White
+            HoverColor: =Color.White
             HoverFill: =If(varTabSelected = ThisItem.ID, ColorFade(RGBA(0, 120, 212, 1), -20%), ColorFade(RGBA(244, 244, 244, 1), -20%))
             OnSelect: =Set(varTabSelected, ThisItem.ID);
             PressedBorderColor: =

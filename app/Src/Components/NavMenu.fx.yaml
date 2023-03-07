@@ -34,7 +34,7 @@ NavMenu As CanvasComponent:
             NavButton As button:
                 Align: =Align.Left
                 AutoDisableOnSelect: =false
-                BorderColor: =Transparent
+                BorderColor: =Color.Transparent
                 BorderThickness: =0
                 DisabledBorderColor: =RGBA(0, 18, 107, 1)
                 DisabledFill: =RGBA(0, 18, 107, 1)
